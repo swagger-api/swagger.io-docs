@@ -597,7 +597,7 @@
 	#header-wrapper
 	{
 		position: relative;
-		background: #88be04;
+		background:	#88be04 url(../images/gridTile03.png);
 		text-align: center;
 	}
 
@@ -613,9 +613,10 @@
 		background: #fff;
 		color: #fff;
 		text-align: center;
-		border-top: solid 2px #e5e5e5;
-		border-bottom: solid 2px #e5e5e5;
-		box-shadow: inset 0px -8px 0px 0px #fff, inset 0px -10px 0px 0px #e5e5e5, inset 0px 8px 0px 0px #fff, inset 0px 10px 0px 0px #e5e5e5;
+		padding: 10px 0;
+		border-top: 1px solid #ddd;
+		border-bottom: 1px solid #ddd;
+	
 	}
 
 		#banner-wrapper .inner
@@ -626,7 +627,7 @@
 
 		#banner-wrapper p
 		{
-			text-align: center;
+			
 		}
 	
 	#features-wrapper
@@ -635,7 +636,6 @@
 		overflow: hidden;
 		background: #fff;
 		text-align: center;
-		border-bottom: solid 2px #e5e5e5;
 	}
 	
 		#features-wrapper p
@@ -806,12 +806,11 @@
 	#banner
 	{
 		position: relative;
-		text-transform: uppercase;
 	}
 	
 		#banner p
 		{
-			font-weight: 400;
+			
 		}
 
 		#banner strong
