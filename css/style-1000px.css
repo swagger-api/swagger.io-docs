@@ -47,6 +47,7 @@
 
 	#header-wrapper
 	{
+		background: url("../images/robot1000.png") no-repeat center top #88be04;
 	}
 
 	#features-wrapper
@@ -56,7 +57,7 @@
 	
 	#banner-wrapper
 	{
-		padding: 2em 0 2em 0;
+		padding: 1em 0;
 	}
 	
 	#main-wrapper
@@ -75,12 +76,12 @@
 
 	#header
 	{
-		padding: 9em 0 4em 0;
+		padding: 5em 0;
 	}
 
 		#header h1
 		{
-			font-size: 2em;
+			font-size: 4.5em;
 		}
 		
 		#header p
@@ -107,7 +108,7 @@
 	
 	#banner
 	{
-		padding: 7em 0 7em 0;
+		padding: 3em 0;
 	}
 		
 /*********************************************************************************/
