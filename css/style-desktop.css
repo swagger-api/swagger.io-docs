@@ -119,6 +119,7 @@
 
 	#header-wrapper
 	{
+		background: url("../images/robotDesktop.png") no-repeat center top #88be04;
 	}
 
 	#features-wrapper
@@ -301,7 +302,7 @@
 		{
 			font-size: 1.5em;
 			line-height: 1.5em;
-			margin-bottom: 0px;
+			margin-bottom: .5em;
 		}
 		
 		#banner p.attribution
@@ -350,7 +351,7 @@
 		#content > section,
 		#content > article
 		{
-			margin: 3em 0 0 0;
+			margin: 2em 0 0 0;
 			padding: 3em 0 0 0;
 		}
 		
@@ -372,7 +373,7 @@
 		#sidebar > section,
 		#sidebar > article
 		{
-			margin: 3em 0 0 0;
+			margin: 2em 0 0 0;
 			padding: 3em 0 0 0;
 		}
 		

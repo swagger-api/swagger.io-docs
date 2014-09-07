@@ -19,11 +19,31 @@
 	{
 	}
 
-	h2, h3, h4, h5, h6
+	h2
+	{
+		font-size: 1.7em;
+		letter-spacing: 2px;
+		margin: 0 0 1.5em 0;
+	}
+
+	h3
+	{
+		font-size: 1.4em;
+		letter-spacing: 2px;
+		margin: 0 0 1.5em 0;
+	}
+	
+	h4
 	{
 		font-size: 1.2em;
 		letter-spacing: 2px;
-		text-align: center;
+		margin: 0 0 .5em 0;
+	}
+	
+	h5, h6
+	{
+		font-size: 1.2em;
+		letter-spacing: 2px;
 		margin: 0 0 1.5em 0;
 	}
 
@@ -149,7 +169,7 @@
 
 			#titleBar .toggle:before
 			{
-				display: inline-block;
+				display: none;
 				font-family: FontAwesome;
 				text-decoration: none;
 				font-style: normal;
@@ -158,7 +178,7 @@
 				-moz-osx-font-smoothing:grayscale;
 				
 				content: '\f0c9';
-				display: block;
+				display: none;
 				width: 60px;
 				height: 40px;
 				background: rgba(232,232,232,0.9);
@@ -235,7 +255,7 @@
 	
 	#banner-wrapper
 	{
-		padding: 2em 0 2em 0;
+		padding: 1em 0;
 	}
 	
 	#main-wrapper
@@ -254,19 +274,25 @@
 
 	#header
 	{
-		padding: 6em 0 4em 0;
+		padding: 4em 0;
+	}
+	
+	#homeLogo
+	{
+		width: 140px;
 	}
 	
 		#header h1
 		{
-			font-size: 2em;
+			font-size: 3em;
 			letter-spacing: 8px;
 			line-height: 1.25em;
 		}
 		
+		
 		#header p
 		{
-			margin: 1.25em 0 0 0;
+			margin: 0;
 			letter-spacing: 2px;
 		}
 
@@ -285,15 +311,22 @@
 	
 	#banner
 	{
-		padding: 5em 20px 5em 20px;
+		padding: 2em 20px;
 		margin: 0 !important;
 	}	
 
 		#banner p
 		{
-			font-size: 1.75em;
+			font-size: 1.5em;
 			line-height: 1.25em;
-			letter-spacing: 3px;
+			margin-bottom: 1em;
+		}
+		
+		#banner p.attribution
+		{
+			font-size: 1em;
+			font-weight: 400;
+			text-align: right;	
 		}
 		
 			#banner p br
@@ -312,7 +345,7 @@
 		#content > section,
 		#content > article
 		{
-			margin: 4em 0 0 0 !important;
+			margin: 0 !important;
 			padding: 4em 0 0 0 !important;
 		}
 		
@@ -331,14 +364,14 @@
 	{
 		border-top: solid 2px #e5e5e5;
 		box-shadow: inset 0px 8px 0px 0px #fff, inset 0px 10px 0px 0px #e5e5e5;
-		margin-top: 4em !important;
+		margin-top: 0 !important;
 		padding-top: 4em !important;
 	}
 
 		#sidebar > section,
 		#sidebar > article
 		{
-			margin: 4em 0 0 0 !important;
+			margin: 0 !important;
 			padding: 4em 0 0 0 !important;
 		}
 		

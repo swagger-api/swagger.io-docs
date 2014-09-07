@@ -54,9 +54,10 @@
 
 	a
 	{
-		color: #666;
+		color: #88be04;
 		text-decoration: none;
-		border-bottom: solid 1px #ddd;
+		font-weight: 700;
+		border-bottom: solid 1px rgba(255,255,255,0);
 		-moz-transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
 		-webkit-transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
 		-o-transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
@@ -75,8 +76,8 @@
 	
 		a:hover
 		{
-			color: green;
-			border-bottom-color: rgba(255,255,255,0);
+			color: #6d9a00;
+			border-bottom-color: #6d9a00;
 		}
 		
 		a:hover strong
@@ -660,7 +661,7 @@
 		position: relative;
 		overflow: hidden;
 		border-top: solid 2px #e5e5e5;
-		background: #f0f0f0;
+		background: #fffaf0;
 	}
 	
 		#footer-wrapper form input[type="text"],
@@ -825,7 +826,7 @@
 	#content
 	{
 	}
-		
+
 		#content > section,
 		#content > article
 		{
@@ -870,13 +871,4 @@
 	{
 		border-top: solid 2px #e5e5e5;
 		text-align: center;
-	}
-
-/*********************************************************************************/
-/* Swagger                                                                       */
-/*********************************************************************************/
-	
-	div.tools > h4 
-	{
-	padding-top: 77px;
 	}
