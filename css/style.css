@@ -705,6 +705,7 @@
 		{
 			font-family: 'Source Sans Pro';
 			font-weight: 700;
+			font-style:	italic;
 			color: #fff;
 			text-shadow: 0.05em 0.075em 0 rgba(0,0,0,0.1);
 		}
