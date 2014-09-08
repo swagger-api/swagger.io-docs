@@ -11,7 +11,7 @@
 	body,input,textarea,select
 	{
 		line-height: 1.75em;
-		font-size: 12pt;
+		font-size: 13pt;
 	}
 
 	h2
@@ -108,7 +108,7 @@
 	
 	#banner
 	{
-		padding: 3em 0;
+		padding: 2em 0;
 	}
 		
 /*********************************************************************************/

@@ -1,6 +1,7 @@
 @charset 'UTF-8';
 @import url("font-awesome.min.css");
 @import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Arvo:700");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600,700");
 
 /*
 	Strongly Typed by HTML5 UP
@@ -33,7 +34,7 @@
 
 	body,input,textarea,select
 	{
-		font-family: 'Source Sans Pro';
+		font-family: 'Open Sans';
 		font-weight: 300;
 		color: #777;
 	}
@@ -642,6 +643,7 @@
 		#features-wrapper p
 		{
 			text-align: left;
+			font-weight: 400;
 		}
 	
 		#features-wrapper .actions

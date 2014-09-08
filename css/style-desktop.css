@@ -11,7 +11,7 @@
 	body,input,textarea,select
 	{
 		line-height: 1.65em;
-		font-size: 13pt;
+		font-size: 14pt;
 	}
 
 	h2
@@ -167,7 +167,7 @@
 		{
 			margin: 2.5em 0 0 0;
 			font-size: 0.85em;
-			letter-spacing: 3px;
+			letter-spacing: 2.3px;
 		}
 
 /*********************************************************************************/
@@ -295,7 +295,7 @@
 	
 	#banner
 	{
-		padding: 4em 5em;
+		padding: 2em 5em;
 	}
 	
 		#banner p
