@@ -602,10 +602,10 @@
 		text-align: center;
 	}
 
-		#header-wrapper p
-		{
-			text-align: center;
-		}
+	#header-wrapper p
+	{
+		text-align: center;
+	}
 	
 	#banner-wrapper
 	{
@@ -701,7 +701,7 @@
 
 		#header h1
 		{
-			font-family: 'Source Sans Pro';
+			font-family: 'Droid Sans', sans-serif;
 			font-weight: 700;
 			color: #fff;
 			text-shadow: 0.05em 0.075em 0 rgba(0,0,0,0.1);
