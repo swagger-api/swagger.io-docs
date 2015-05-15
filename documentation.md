@@ -1,4 +1,4 @@
-##Be a part of Swagger.io
+##Contributing to Swagger.io
 You don't have to code to contribute to the Swagger project. We want this website to be as community-driven as the spec and tooling are. With few exceptions, the pages on this site are generated from content on github. That means we can keep the content open to the community so you can have the site you need (instead of just the site we build).
 
 ###Submitting changes to the content
