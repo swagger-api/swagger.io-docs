@@ -1,9 +1,17 @@
-##Getting Started with Swagger
+##What is Swagger?
+
 The goal of Swagger™ is to define a standard, language-agnostic interface to REST APIs which allows both humans and computers to discover and understand the capabilities of the service without access to source code, documentation, or through network traffic inspection. When properly defined via Swagger, a consumer can understand and interact with the remote service with a minimal amount of implementation logic. Similar to what interfaces have done for lower-level programming, Swagger removes the guesswork in calling the service.
-## Getting Started Guide
-See the guide on [getting started with swagger](https://github.com/swagger-api/swagger-core/wiki/Swagger-Core-JAX-RS-Project-Setup) to get started with adding swagger to your API.
-##Give it a try
-You can check out a live demo of Swagger here: [http://petstore.swagger.io](http://petstore.swagger.io/)
+
+## How do I get started?
+
+If you're an API provider and want to use Swagger to describe your APIs - there are several approaches available:
+- A top-down approach where you would use the [Swagger Editor](http://editor.swagger.io) to create your Swagger definition and the use the integrated [Swagger Codegen](swagger-codegen) tools to generate server implementation.
+- A bottom-up approach where you have an existing REST API for which you want to automatically generate Swagger definitions (if you're doing JAX-RS for example, have a look at (https://github.com/swagger-api/swagger-core/wiki/Swagger-Core-JAX-RS-Project-Setup).)
+
+If on the other hand you're an API Consumer who wants to integrate with an API that has a Swagger definition you can use the online version of the [Swagger UI](http://petstore.swagger.io/) to explorer the API (given that you have a URL to the APIs Swagger definition) - and then use [Swagger Codegen](swagger-codegen) to generate the client library of your choice.
+
+In either case - be sure to check out the long list of both [open source projects](open-source-integrations) and [commercial vendors](commercial-tools) that are available for Swagger - perhaps there is something there targeting your specific needs.
+
 ## Compatibility
 The Swagger Specification has undergone 3 revisions since initial creation in 2010.  The swagger-core project has the following compatibilities with the swagger specification:
 
