@@ -14,15 +14,6 @@ If on the other hand you're an API Consumer who wants to integrate with an API t
 
 In either case - be sure to check out the long list of both [open source projects](open-source-integrations) and [commercial vendors](commercial-tools) that are available for Swagger - perhaps there is something there targeting your specific needs.
 
-## Compatibility
-The Swagger Specification has undergone 3 revisions since initial creation in 2010.  The swagger-core project has the following compatibilities with the swagger specification:
-
-Swagger core Version      | Release Date | Swagger Spec compatibility | Notes | Status
-------------------------- | ------------ | -------------------------- | ----- | ----
-1.5.1-M2                  | 2015-04-05   | 2.0           | [master](https://github.com/swagger-api/swagger-core) | Supported
-1.3.12                    | 2014-12-23   | 1.2           | [tag v1.3.12](https://github.com/swagger-api/swagger-core/tree/v1.3.12) | Supported
-1.2.4                     | 2013-06-19   | 1.1           | [tag swagger-project_2.10.0-1.2.4](https://github.com/swagger-api/swagger-core/tree/swagger-project_2.10.0-1.2.4) | Deprecated
-1.0.0                     | 2011-10-16   | 1.0           | [tag v1.0](https://github.com/swagger-api/swagger-core/tree/v1.0) | Deprecated
 ## Support
 The following methods are available to obtain support for Swagger:
 
