@@ -9,6 +9,11 @@ Tool | Description
 [Swagger Codegen](swagger-codegen) | Command-line tool for generating both client and server side code from a Swagger definition
 [Swagger UI](swagger-ui) | Browser based UI for exploring a Swagger defined API
 [Swagger Editor](swagger-editor) | Browser based editor for authoring Swagger definitions in YAML or JSON format
+
+Adjacent tools also provided by the Swagger project are
+
+Tool | Description 
+--- | ---
 [Swagger JS](https://github.com/swagger-api/swagger-js) | Javascript library for consuming Swagger-defined APIs from both client and node.js applications
 [Swagger Node-Express](https://github.com/swagger-api/swagger-node-express) | Swagger module for node.js w/express module
 [Swagger-Socket](https://github.com/swagger-api/swagger-socket) | expose/invoke Swagger defined APIs over WebSockets
