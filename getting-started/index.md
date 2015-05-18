@@ -2,7 +2,8 @@
 The goal of Swagger™ is to define a standard, language-agnostic interface to REST APIs which allows both humans and computers to discover and understand the capabilities of the service without access to source code, documentation, or through network traffic inspection. When properly defined via Swagger, a consumer can understand and interact with the remote service with a minimal amount of implementation logic. Similar to what interfaces have done for lower-level programming, Swagger removes the guesswork in calling the service.
 ## Get started with Swagger!
 See the guide on [getting started with swagger](https://github.com/swagger-api/swagger-core/wiki/Swagger-Core-JAX-RS-Project-Setup) to get started with adding swagger to your API.
-
+##Give it a try
+You can check out a live demo of Swagger here: [http://petstore.swagger.io](http://petstore.swagger.io/)
 ## Compatibility
 The Swagger Specification has undergone 3 revisions since initial creation in 2010.  The swagger-core project has the following compatibilities with the swagger specification:
 
