@@ -1,5 +1,5 @@
 ## Swagger Tools
-The Swagger project contains a set of core tools that enable the usage of Swagger in a variety of situations (see table below) - in addition to all the [great community tools](open-source-integrations) available around out there. All of these tools are free and open-source projects available under the Apache License on [GitHub](https://github.com/swagger-api), if you find them useful but have some great ideas for improving them, please feel free to contribute to them so we can continue to evolve and improve them.
+The Swagger project contains a set of core tools that enable the usage of Swagger in a variety of situations (see table below) - in addition to all the [community tools](open-source-integrations) available around out there. All of these tools are free and open-source projects available under the [Apache License](http://www.apache.org/licenses/LICENSE-2.0.html) on [GitHub](https://github.com/swagger-api), if you find them useful but have some great ideas for improving them, please feel free to contribute to them so we can continue to evolve and improve them.
 
 The major core tools are:
 
