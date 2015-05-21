@@ -17,7 +17,7 @@ You can rebuild swagger-ui on your own to tweak it or just so you can say you di
 
 1. `npm install`
 2. `gulp`
-3. You should see the distribution under the dist folder. Open [`./dist/index.html`](./dist/index.html) to launch Swagger UI in a browser
+3. You should see the distribution under the dist folder. Open [`./dist/index.html`](https://github.com/swagger-api/swagger-ui/tree/develop_2.0/dist/index.html) to launch Swagger UI in a browser
 
 ### Development
 Use `gulp watch` to make a new build and watch for changes in files.
@@ -110,7 +110,7 @@ swaggerUi.api.clientAuthorizations.add("key", new SwaggerClient.ApiKeyAuthorizat
 Note!  You can pass multiple header params on a single request, just use unique names for them (`key` is used in the above example).
 
 ### Localization and translation
-The localization files are in the [lang](/lang) directory. Note that language files and translator is not included in SwaggerUI by default. You need to add them manually.
+The localization files are in the [lang](https://github.com/swagger-api/swagger-ui/tree/develop_2.0/lang) directory. Note that language files and translator is not included in SwaggerUI by default. You need to add them manually.
 
 To enable translation you should append next two lines in your Swagger's index.html (or another entry point you use)
 ```html
