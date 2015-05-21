@@ -22,7 +22,7 @@ http://editor.swagger.io/#/?import=http://generator.wordnik.com/online/api/swagg
 
 ## Why "Try this operation" is not working?
 
-Please read the [CORS](docs/cors.md) document
+Please read the [CORS](https://github.com/swagger-api/swagger-editor/blob/master/docs/cors.md) document
 
 ## Running Locally
 
@@ -37,7 +37,7 @@ npm start
 That's it! This will open a browser window running current development version. It will reload the app if you make changes to source files.
 
 ## Development Guide
-See [**Development Guide document**](./docs/development.md)
+See [**Development Guide document**](https://github.com/swagger-api/swagger-editor/blob/master/docs/development.md
 
 ### Contributing
 File issues in GitHub's to report bugs or issue a pull request.
