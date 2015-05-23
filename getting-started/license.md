@@ -1,4 +1,4 @@
-The Swagger Specification and all the tools under the [swagger-api GitHub account](https://github.com/swagger-api) are licensed under the Apache 2.0 License. 
+The Swagger Specification and all the tools under the [swagger-api GitHub account](https://github.com/swagger-api) are free to use and licensed under the Apache 2.0 License. 
 
 
                                  Apache License
