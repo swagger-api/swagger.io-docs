@@ -1,7 +1,7 @@
 ##Swagger UI
 
 Swagger UI is a dependency-free collection of HTML, Javascript, and CSS assets that dynamically
-generate beautiful documentation and sandbox from a Swagger-compliant API. Because Swagger UI has no dependencies, you can host it in any server environment, or on your local machine. Head over to the [online demo](http://petstore.swagger.ui) to see what it looks like for any publically accessible Swagger definition.
+generate beautiful documentation and sandbox from a Swagger-compliant API. Because Swagger UI has no dependencies, you can host it in any server environment, or on your local machine. Head over to the [online demo](http://petstore.swagger.io) to see what it looks like for any publically accessible Swagger definition.
 
 
 ## How to Use It
