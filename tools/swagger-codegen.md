@@ -17,6 +17,8 @@ mvn package
 
 Note!  The templates are included in the library generated.  If you want to modify the templates, you'll need to either repackage the library OR specify a path to your scripts
 
+## Samples, Getting Started, etc
+
 Head over to the [GitHub page](https://github.com/swagger-api/swagger-codegen/blob/master/README.md) for detailed documentation for now.
 
 ## Compatibility
