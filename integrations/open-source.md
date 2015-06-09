@@ -1,24 +1,29 @@
 # Tools and Integrations
 
-### Swagger-Group Projects (2.0 support)
+Here you can find a list of libraries and frameworks serving the Swagger ecosystem.
+
+The main list consists of tools that provide support for the latest **Swagger 2.0**. Below, you can find a list of tools that have not yet been updated.
+
+## Swagger-Group Projects
 
 These are the projects that were created by the same people who authored the Swagger Specification:
 
-Name | Description
----|---
-[swagger-js](https://github.com/swagger-api/swagger-js) | A Swagger implementation for JavaScript.
-[swagger-ui](https://github.com/swagger-api/swagger-ui) | A dependency-free collection of HTML, Javascript, and CSS assets that dynamically generate beautiful documentation from a Swagger-compliant API.
-[swagger-tools](https://github.com/apigee-127/swagger-tools) | A Node.js and browser module that provides tooling for validation and more around Swagger
-[swagger-editor](https://github.com/swagger-api/swagger-editor) | Swagger Editor lets you edit API specifications in YAML inside your browser and to preview documentations in real time. Valid Swagger JSON descriptions can then be generated and used with the full Swagger tooling (code generation, documentation, etc).
-[swagger-core](https://github.com/swagger-api/swagger-core) | A Swagger implementation for Java/Scala. Has integration with JAX-RS (Jersey, Resteasy, CXF...), Servlets and Play Framework.
-[swagger-parser](https://github.com/swagger-api/swagger-parser) | A reader of Swagger definitions in Java.
-[swagger-codegen](https://github.com/swagger-api/swagger-codegen) | A template-driven engine to generate client code in different languages by parsing your Swagger documentation.
-[swagger-node](https://github.com/swagger-api/swagger-node) | A Swagger module for node.js with express module.
-[validator-badge](https://github.com/swagger-api/validator-badge) | Validate your Swagger definitions as a service.
+Name | Main Purpose | Description
+---|---|---
+[swagger-js](https://github.com/swagger-api/swagger-js) | Javascript integration |A Swagger implementation for JavaScript.
+[swagger-ui](https://github.com/swagger-api/swagger-ui) | Swagger description rendering | A dependency-free collection of HTML, Javascript, and CSS assets that dynamically generate beautiful documentation from a Swagger-compliant API.
+[swagger-tools](https://github.com/apigee-127/swagger-tools) | Node.js middleware | A Node.js and browser module that provides tooling for validation and more around Swagger
+[swagger-editor](https://github.com/swagger-api/swagger-editor) | Swagger description editing | Swagger Editor lets you edit API specifications in YAML inside your browser and to preview documentations in real time. Valid Swagger JSON descriptions can then be generated and used with the full Swagger tooling (code generation, documentation, etc).
+[swagger-core](https://github.com/swagger-api/swagger-core) | Java integration | A Swagger implementation for Java/Scala. Has integration with JAX-RS (Jersey, Resteasy, CXF...), Servlets and Play Framework.
+[swagger-parser](https://github.com/swagger-api/swagger-parser) | Java integration | A reader of Swagger definitions in Java.
+[swagger-codegen](https://github.com/swagger-api/swagger-codegen) | Client/Server code generation | A template-driven engine to generate client code in different languages by parsing your Swagger documentation.
+[swagger-node](https://github.com/swagger-api/swagger-node) | Node.js integration | A Swagger module for node.js with express module.
+[validator-badge](https://github.com/swagger-api/validator-badge) | Validation service | Validate your Swagger definitions as a service.
 
 
+## Community-Driven Language Integrations
 
-### Community-Driven Language Integrations (2.0 support)
+All the tools under this section support Swagger 2.0.
 
 #### Clojure
 
@@ -117,6 +122,8 @@ Name | Description
 [swagger.ed](https://github.com/chefArchitect/apispots-browser-swaggered) | A Chrome extenstion that will change the way you look at APIs.
 
 ### Tools for previous Swagger versions
+
+The tools below do not produce Swagger 2.0 yet. They are listed here as they may still have value for users. Feel free to contribute these projects and help them move to Swagger 2.0!
 
 #### Clojure
 
