@@ -17,7 +17,7 @@ Name | Main Purpose | Description
 [swagger-core](https://github.com/swagger-api/swagger-core) | Java integration | A Swagger implementation for Java/Scala. Has integration with JAX-RS (Jersey, Resteasy, CXF...), Servlets and Play Framework.
 [swagger-parser](https://github.com/swagger-api/swagger-parser) | Java integration | A reader of Swagger definitions in Java.
 [swagger-codegen](https://github.com/swagger-api/swagger-codegen) | Client/Server code generation | A template-driven engine to generate client code in different languages by parsing your Swagger documentation.
-[swagger-node](https://github.com/swagger-api/swagger-node) | Node.js integration | A Swagger module for node.js with express module.
+[swagger-node](https://github.com/swagger-api/swagger-node) | Node.js integration | Tool for building APIs in Node.js with integration for Express, hapi, restify, and Sails.
 [validator-badge](https://github.com/swagger-api/validator-badge) | Validation service | Validate your Swagger definitions as a service.
 
 
