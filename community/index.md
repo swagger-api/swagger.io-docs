@@ -14,6 +14,9 @@ There are many ways to find Swagger support - from groups to chat to professiona
 ###Meetups
 There are a number of meetups going on around the globe. Here's when you can see the latest and greatest in your area:
 
-[Swagger-API Meetups](http://swagger.io/meetups)
+[Swagger-API Meetups](http://swagger.io/news-and-events)
 
-If you would like to host a meetup or offer your services to speak at meetups, please [let us know](mailto:lorinda@swagger.io).
+If you would like to host a meetup or offer your services to speak at meetups, please [let us know](mailto:community@swagger.io).
+
+###Champions
+We are very grateful to those Swagger experts who volunteer their time to help the community, evangelize Swagger and help out at local events. You can learn more about our Champions [here](http://swagger.io/swagger-champions).
