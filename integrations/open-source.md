@@ -85,6 +85,9 @@ Name | Description
 Name | Description
 ---|---
 [Raisin](https://github.com/khrt/Raisin) | A framework with a built-in Swagger support.
+[Swagger2](https://metacpan.org/pod/Swagger2) | Perl Swagger validator and documentation generator
+[Swagger2::Client](https://metacpan.org/pod/Swagger2::Client) | Perl generator for user agent code
+[Mojolicious::Plugin::Swagger2](https://metacpan.org/pod/Mojolicious::Plugin::Swagger2) | Generates [Mojolicious](http://mojolicio.us/) routes and input/output validation rules.
 
 #### PHP
 
