@@ -100,6 +100,7 @@ Name | Description
 
 Name | Description
 ---|---
+[swagger-py-codegen](https://github.com/guokr/swagger-py-codegen) | Generate Flask-RESTful application code from a Swagger Specification doc.
 [pyramid-swagger](https://github.com/striglia/pyramid_swagger) | Convenient tools for using Swagger to define and validate your interfaces in a Pyramid webapp.
 [flask-restplus](https://github.com/noirbizarre/flask-restplus) | Helpers, syntaxic sugar and Swagger documentation for Flask-Restful
 [pyswagger](https://github.com/AntXlab/pyswagger) | A type-safe, dynamic, spec-compliant Swagger client.
