@@ -108,6 +108,7 @@ Name | Description
 [bravado](https://github.com/Yelp/bravado) | Swagger 2.0 client with support for both synchronous and asynchronous http.
 [bravado-core](https://github.com/Yelp/bravado-core) | Library for Swagger 2.0 schema ingestion, validation, request/response validation, etc.
 [swagger-spec-validator](https://github.com/Yelp/swagger_spec_validator) | Library for validating Swagger 1.2 and 2.0 schemas.
+[swagger-py-codegen](https://github.com/guokr/swagger-py-codegen) | Generate Flask-RESTful application code from a Swagger Specification doc.
 
 #### Ruby
 
