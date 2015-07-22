@@ -79,6 +79,7 @@ Name | Description
 [Swagger Parser](https://github.com/BigstickCarpet/swagger-parser#swagger-parser) | Parses, validates, and dereferences JSON/YAML Swagger specs in Node and browsers
 [Swagger Express Middleware](https://github.com/BigstickCarpet/swagger-express-middleware/#swagger-express-middleware) | Swagger middleware and mocks for Express.js
 [swagger-mongodb](https://github.com/kaizhu256/node-swagger-mongodb) | lightweight swagger-ui crud-api backed by mongodb
+[api-spec-converter](https://github.com/lucybot/api-spec-converter) | A tool for converting from other API specification formats (e.g. I/O Docs and API Blueprint) to Swagger
 
 #### Perl
 
