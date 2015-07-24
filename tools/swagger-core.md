@@ -31,7 +31,7 @@ Of course if you don't want to build locally you can grab artifacts from maven c
 `http://repo1.maven.org/maven2/com/wordnik/`
 
 ## Sample Apps
-There are a number of sample apps in the [samples](https://github.com/swagger-api/swagger-core/blob/master/samples) folder.
+There are a number of sample apps in the [samples](https://github.com/swagger-api/swagger-samples) folder.
 
 ## Compatibility
 The Swagger Specification has undergone 3 revisions since initial creation in 2010.  The swagger-core project has the following compatibilities with the swagger specification:
