@@ -15,6 +15,6 @@ Adjacent tools also provided by the Swagger project are
 Tool | Description 
 --- | ---
 [Swagger JS](https://github.com/swagger-api/swagger-js) | Javascript library for consuming Swagger-defined APIs from both client and node.js applications
-[Swagger Node-Express](https://github.com/swagger-api/swagger-node-express) | Swagger module for node.js w/express module
+[Swagger Node](https://github.com/swagger-api/swagger-node) | Swagger module for node.js 
 [Swagger-Socket](https://github.com/swagger-api/swagger-socket) | expose/invoke Swagger defined APIs over WebSockets
 [Swagger Parser](https://github.com/swagger-api/swagger-parser) | Standalone library for parsing Swagger definitions from Java
