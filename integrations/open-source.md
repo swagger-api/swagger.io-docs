@@ -49,9 +49,9 @@ Name | Description
 [swagger-maven-plugin](http://kongchen.github.io/swagger-maven-plugin/) | Support Swagger Spec 2.0, integrate with JAX-RS & Spring MVC project, and easily generate `swagger.json` & a static document during build phase.
 [swagger-codegen-maven-plugin](https://github.com/garethjevans/swagger-codegen-maven-plugin) | A maven build plugin which allows the codegen project to be triggered for generating clients, etc. during the build process.
 [dropwizard-swagger](https://github.com/federecio/dropwizard-swagger) | A dropwizard bundle that wraps Swagger-Core.
-[swagger2markup](https://github.com/RobWin/swagger2markup) | Swagger2Markup converts a Swagger JSON or YAML file into AsciiDoc or Markdown documents which can be combined with hand-written documentation. The AsciiDoc documents can be converted into HTML5, PDF and EPUB. The Swagger2MarkupConverter supports the Swagger 1.2 and 2.0 specification. 
-[swagger2markup-gradle-plugin](https://github.com/RobWin/swagger2markup-gradle-plugin) | A Swagger2Markup Gradle Plugin which converts a Swagger JSON or YAML file into AsciiDoc or Markdown documents which can be combined with hand-written documentation. The AsciiDoc documents can be converted into HTML5, PDF and EPUB. 
-[assertj-swagger](https://github.com/RobWin/assertj-swagger) | assertj-swagger is a library which compares a design-first Swagger YAML with an implementation-first Swagger JSON output (e.g. from springfox). assertj-swagger allows to validate that the implementation in compliance with the design specification. 
+[swagger2markup](https://github.com/RobWin/swagger2markup) | Swagger2Markup converts a Swagger JSON or YAML file into AsciiDoc or Markdown documents which can be combined with hand-written documentation. The AsciiDoc documents can be converted into HTML5, PDF and EPUB. The Swagger2MarkupConverter supports the Swagger 1.2 and 2.0 specification.
+[swagger2markup-gradle-plugin](https://github.com/RobWin/swagger2markup-gradle-plugin) | A Swagger2Markup Gradle Plugin which converts a Swagger JSON or YAML file into AsciiDoc or Markdown documents which can be combined with hand-written documentation. The AsciiDoc documents can be converted into HTML5, PDF and EPUB.
+[assertj-swagger](https://github.com/RobWin/assertj-swagger) | assertj-swagger is a library which compares a design-first Swagger YAML with an implementation-first Swagger JSON output (e.g. from springfox). assertj-swagger allows to validate that the implementation in compliance with the design specification.
 
 #### JavaScript
 
@@ -105,6 +105,7 @@ Name | Description
 [flask-restplus](https://github.com/noirbizarre/flask-restplus) | Helpers, syntaxic sugar and Swagger documentation for Flask-Restful
 [pyswagger](https://github.com/AntXlab/pyswagger) | A type-safe, dynamic, spec-compliant Swagger client.
 [flex](https://github.com/pipermerriam/flex) | Swagger 2.0 schema validation, and tooling for validating arbitrary request/response objects.
+[Flasgger](https://github.com/rochacbruno/flasgger) | Flask Extension to provide Swagger 2.0 to any view  using docstrings (embeds swagger UI)
 [flask-swagger](https://github.com/gangverk/flask-swagger) | A Swagger 2.0 extractor for Flask via YAML in docstrings
 [bravado](https://github.com/Yelp/bravado) | Swagger 2.0 client with support for both synchronous and asynchronous http.
 [bravado-core](https://github.com/Yelp/bravado-core) | Library for Swagger 2.0 schema ingestion, validation, request/response validation, etc.
@@ -155,7 +156,7 @@ Name | Description
 [go-restful](https://github.com/emicklei/go-restful) | library to build REST based Web Services using Google Go.
 [Sashay](https://bitbucket.org/seanerussell/sashay) | a Go code generator for REST services that expose a Swagger specification.
 [beego](https://github.com/astaxie/beego) | A framework support support auto generate swagger spec from comments
-[Swagger spec generator](https://github.com/yvasiyarov/swagger) | A swagger spec auto generator. Doesn't depends on any framework  
+[Swagger spec generator](https://github.com/yvasiyarov/swagger) | A swagger spec auto generator. Doesn't depends on any framework
 
 #### Groovy
 
@@ -234,7 +235,7 @@ Name | Description
 Name | Description
 ---|---
 [Scalatra](http://www.scalatra.org/) | see the [Swagger Guide](http://www.scalatra.org/2.2/guides/swagger.html)
-[spray-swagger](https://github.com/gettyimages/spray-swagger) | Spray-Swagger brings Swagger support for Spray Apis. 
+[spray-swagger](https://github.com/gettyimages/spray-swagger) | Spray-Swagger brings Swagger support for Spray Apis.
 [Api-doc](https://github.com/sun-opsys/api-doc) | Creates swagger docs from easily readable ascii text placed in the code. Depends on [playframework](http://www.playframework.com), but may also be used in other frameworks.
 
 
