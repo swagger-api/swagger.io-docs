@@ -101,6 +101,7 @@ Name | Description
 
 Name | Description
 ---|---
+[Connexion](https://github.com/zalando/connexion) | Swagger-first REST framework on top of Flask with validation and OAuth 2 support.
 [pyramid-swagger](https://github.com/striglia/pyramid_swagger) | Convenient tools for using Swagger to define and validate your interfaces in a Pyramid webapp.
 [flask-restplus](https://github.com/noirbizarre/flask-restplus) | Helpers, syntaxic sugar and Swagger documentation for Flask-Restful
 [pyswagger](https://github.com/AntXlab/pyswagger) | A type-safe, dynamic, spec-compliant Swagger client.
