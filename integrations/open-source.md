@@ -227,6 +227,7 @@ Name | Description
 [django-rest-swagger](https://github.com/marcgibbons/django-rest-swagger) | Swagger Documentation Generator for Django REST Framework
 [django-tastypie-swagger](https://github.com/concentricsky/django-tastypie-swagger) | An adapter to use Swagger with django-tastypie.
 [flask-restful-swagger](https://github.com/rantav/flask-restful-swagger) | A Swagger spec extractor for flask-restful.
+[pecan-swagger](https://github.com/elmiko/pecan-swagger) | Partial swagger extractor for pecan.
 
 #### Ruby
 
