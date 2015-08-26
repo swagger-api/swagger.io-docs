@@ -112,6 +112,7 @@ Name | Description
 [swagger-spec-validator](https://github.com/Yelp/swagger_spec_validator) | Library for validating Swagger 1.2 and 2.0 schemas.
 [swagger-py-codegen](https://github.com/guokr/swagger-py-codegen) | Generate Flask-RESTful application code from a Swagger Specification doc.
 [Connexion](https://github.com/zalando/connexion) | Swagger-first REST framework on top of Flask with validation and OAuth 2 support.
+[pecan-swagger](https://github.com/elmiko/pecan-swagger) | Partial swagger extractor for pecan.
 
 #### Ruby
 
@@ -227,7 +228,6 @@ Name | Description
 [django-rest-swagger](https://github.com/marcgibbons/django-rest-swagger) | Swagger Documentation Generator for Django REST Framework
 [django-tastypie-swagger](https://github.com/concentricsky/django-tastypie-swagger) | An adapter to use Swagger with django-tastypie.
 [flask-restful-swagger](https://github.com/rantav/flask-restful-swagger) | A Swagger spec extractor for flask-restful.
-[pecan-swagger](https://github.com/elmiko/pecan-swagger) | Partial swagger extractor for pecan.
 
 #### Ruby
 
