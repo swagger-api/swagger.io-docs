@@ -70,6 +70,7 @@ Name | Description
 
 Name | Description
 ---|---
+[sails-swagger](https://github.com/tjwebb/sails-swagger) | A [Sails.js](http://sailsjs.org) plugin that generates a Swagger (v2.0) document from your application Models, Controllers, and Routes. Also see [swagger.balderdash.io](http://swagger.balderdash.io) for a Sails-themed Swagger UI.
 [hapi-swaggered](https://github.com/z0mt3c/hapi-swaggered) | A hapi.js plugin to generate swagger v2.0 compliant specifications based on hapi routes and joi schemas.
 [swaggerize-express](https://github.com/krakenjs/swaggerize-express) | Design-driven RESTful apis with swagger and express from [@PayPalDev](https://twitter.com/PayPalDev).
 [swaggerize-hapi](https://github.com/krakenjs/swaggerize-hapi) | Design-driven RESTful apis with swagger and hapi from [@PayPalDev](https://twitter.com/PayPalDev).
