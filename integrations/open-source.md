@@ -45,13 +45,14 @@ Name | Description
 
 Name | Description
 ---|---
-[springfox](https://springfox.github.io/springfox) | Integrates with Spring MVC with support for Swagger 1.2 and Swagger 2.0 spec.
-[swagger-maven-plugin](http://kongchen.github.io/swagger-maven-plugin/) | Support Swagger Spec 2.0, integrate with JAX-RS & Spring MVC project, and easily generate `swagger.json` & a static document during build phase.
-[swagger-codegen-maven-plugin](https://github.com/garethjevans/swagger-codegen-maven-plugin) | A maven build plugin which allows the codegen project to be triggered for generating clients, etc. during the build process.
+[assertj-swagger](https://github.com/RobWin/assertj-swagger) | assertj-swagger is a library which compares a design-first Swagger YAML with an implementation-first Swagger JSON output (e.g. from springfox). assertj-swagger allows to validate that the implementation in compliance with the design specification.
 [dropwizard-swagger](https://github.com/federecio/dropwizard-swagger) | A dropwizard bundle that wraps Swagger-Core.
+[restlet-framework](http://restlet.com/technical-resources/restlet-framework/guide/2.3/extensions/swagger) | Restlet Framework extension that supports auto-generation of Swagger 2.0 from Restlet API and JAX-API applications
+[springfox](https://springfox.github.io/springfox) | Integrates with Spring MVC with support for Swagger 1.2 and Swagger 2.0 spec.
+[swagger-codegen-maven-plugin](https://github.com/garethjevans/swagger-codegen-maven-plugin) | A maven build plugin which allows the codegen project to be triggered for generating clients, etc. during the build process.
 [swagger2markup](https://github.com/RobWin/swagger2markup) | Swagger2Markup converts a Swagger JSON or YAML file into AsciiDoc or Markdown documents which can be combined with hand-written documentation. The AsciiDoc documents can be converted into HTML5, PDF and EPUB. The Swagger2MarkupConverter supports the Swagger 1.2 and 2.0 specification.
 [swagger2markup-gradle-plugin](https://github.com/RobWin/swagger2markup-gradle-plugin) | A Swagger2Markup Gradle Plugin which converts a Swagger JSON or YAML file into AsciiDoc or Markdown documents which can be combined with hand-written documentation. The AsciiDoc documents can be converted into HTML5, PDF and EPUB.
-[assertj-swagger](https://github.com/RobWin/assertj-swagger) | assertj-swagger is a library which compares a design-first Swagger YAML with an implementation-first Swagger JSON output (e.g. from springfox). assertj-swagger allows to validate that the implementation in compliance with the design specification.
+[swagger-maven-plugin](http://kongchen.github.io/swagger-maven-plugin/) | Support Swagger Spec 2.0, integrate with JAX-RS & Spring MVC project, and easily generate `swagger.json` & a static document during build phase.
 
 #### JavaScript
 
