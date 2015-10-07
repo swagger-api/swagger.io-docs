@@ -14,6 +14,11 @@ If on the other hand you're an API Consumer who wants to integrate with an API t
 
 In either case - be sure to check out the long list of both [open source projects](open-source-integrations) and [commercial vendors](commercial-tools) that are available for Swagger - perhaps there is something there targeting your specific needs.
 
+## Other Resources
+
+["What is Swagger?"](http://swagger.io/getting-started-with-swagger-i-what-is-swagger/)
+
+
 ## Support
 The following methods are available to obtain support for Swagger:
 
