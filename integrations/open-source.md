@@ -231,6 +231,7 @@ Name | Description
 [Restler](https://github.com/Luracast/Restler) | PHP framework, swagger support in 3.0.
 [swagger-assert](https://github.com/gong023/swagger-assert) | enable to assert keys in swagger document and API response
 [Swaggervel](https://packagist.org/packages/jlapp/swaggervel) | a package for Laravel that uses Swagger-PHP and swagger-ui to auto-generate docs for your project.
+[php-swaggerize-fastroute-library](https://packagist.org/packages/iadvize/php-swaggerize-fastroute-library#0.2.0) | a package to automatically generate FastRoute from swagger json definition. It's compatible with Lumen as long as you use controller class
 
 #### Python
 
