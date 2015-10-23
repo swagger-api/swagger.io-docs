@@ -104,6 +104,7 @@ Name | Description
 ---|---
 [Swagger-PHP](https://packagist.org/packages/zircote/swagger-php) | a library implementing the swagger.io specification to describe web services, operations/actions and models enabling a uniform means of producing, consuming, and visualizing RESTful web services.
 [SwaggerAssertions](https://github.com/Maks3w/SwaggerAssertions) | Swagger 2 test assertions for validate your API requests and responses
+[php-swaggerize-fastroute-library](https://packagist.org/packages/iadvize/php-swaggerize-fastroute-library#0.2.0) | a package to automatically generate FastRoute from swagger json definition. It's compatible with Lumen as long as you use controller class
 
 #### Python
 
