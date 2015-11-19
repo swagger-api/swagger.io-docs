@@ -72,6 +72,7 @@ Name | Description
 ---|---
 [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle) |  Adds some Swagger to your WebApi.
 [AutoRest](https://github.com/Azure/AutoRest) | The AutoRest tool generates client libraries for accessing RESTful web services from a Swagger specification.
+[SwaggerProvider](http://sergey-tihon.github.io/SwaggerProvider/) | F# Type Provider for Swagger
 
 #### Node.js
 
