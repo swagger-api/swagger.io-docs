@@ -147,6 +147,7 @@ Name | Description
 [bootprint-swagger](https://github.com/nknapp/bootprint-swagger) | A tool for creating static documentation from Swagger definitions, with customizable styles and templates using [Handlebars](http://handlebarsjs.com), [LessCss](http://lesscss.org) and [Bootstrap](http://getbootstrap.com).
 [swagger-diff](https://github.com/civisanalytics/swagger-diff) | A command-line utility, RSpec matcher, and Ruby library for comparing two Swagger specifications.
 [swagger.ed](https://github.com/chefArchitect/apispots-browser-swaggered) | A Chrome extenstion that will change the way you look at APIs.
+[ember-swagger-ui](https://github.com/rynam0/ember-swagger-ui) | An [ember-cli](http://www.ember-cli.com) addon for quickly and easily adding [swagger-ui](https://github.com/swagger-api/swagger-ui) to your [EmberJS](http://emberjs.com/) application.
 
 ### Tools for previous Swagger versions
 
