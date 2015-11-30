@@ -9,7 +9,7 @@ You need the following installed and available in your $PATH:
 * Apache maven 3.0.4 or greater (http://maven.apache.org/)
 * Jackson 2.4.5 or greater
 
-### To build from source (currently 1.5.4-SNAPSHOT)
+### To build from source (currently 1.5.5-SNAPSHOT)
 ```
 # first time building locally
 mvn -N
