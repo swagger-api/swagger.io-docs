@@ -149,6 +149,7 @@ Name | Description
 [swagger-diff](https://github.com/civisanalytics/swagger-diff) | A command-line utility, RSpec matcher, and Ruby library for comparing two Swagger specifications.
 [swagger.ed](https://github.com/chefArchitect/apispots-browser-swaggered) | A Chrome extenstion that will change the way you look at APIs.
 [ember-swagger-ui](https://github.com/rynam0/ember-swagger-ui) | An [ember-cli](http://www.ember-cli.com) addon for quickly and easily adding [swagger-ui](https://github.com/swagger-api/swagger-ui) to your [EmberJS](http://emberjs.com/) application.
+[commandcar](https://github.com/tikalk/commandcar) | cURL on steroids. Invoke any API from the commandline.
 
 ### Tools for previous Swagger versions
 
