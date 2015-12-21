@@ -271,3 +271,4 @@ Name | Description
 [gform-admin](https://github.com/stemey/gform-admin) | An alternative UI client for Swagger.
 [swagger-cli-client](https://github.com/signalfx/swagger-cli-client) | Command-line interface generator to communicate with Swagger servers.
 [Swagger2Postman](https://github.com/josephpconley/swagger2postman) | Creates a [Postman](http://www.getpostman.com) collection from live Swagger documentation
+[linter-swagger](https://atom.io/packages/linter-swagger) | [Atom](https://atom.io) Package for linting Swagger spec
