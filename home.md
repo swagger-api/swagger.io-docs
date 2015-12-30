@@ -1,7 +1,7 @@
 # Important Notice
 
 **In the next few hours some of the pages and links may not work properly.
-We apologize for the inconvenience and work on getting everything resolved as soon as possible**
+We apologize for the inconvenience and work on getting everything resolved as soon as possible.**
 
 # A Powerful Interface to your API
 
