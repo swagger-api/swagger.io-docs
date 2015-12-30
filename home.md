@@ -1,3 +1,8 @@
+# Important Notice
+
+In the next few hours some of the pages and links may not work properly.
+We apologize for the inconvenience and work on getting everything resolved as soon as possible.
+
 # A Powerful Interface to your API
 
 Swagger is a simple yet powerful representation of your RESTful API. With the largest ecosystem of API tooling on the planet, thousands of developers are supporting Swagger in almost every modern programming language and deployment environment. With a Swagger-enabled API, you get interactive documentation, client SDK generation and discoverability.
