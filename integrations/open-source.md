@@ -46,6 +46,7 @@ Name | Description
 Name | Description
 ---|---
 [go-swagger](https://github.com/casualjim/go-swagger) | A toolkit to support your API development with Swagger.
+[goa](https://github.com/raphael/goa) | goa is a framework for building RESTful microservices in Go with first class Swagger support.
 
 #### Java
 
