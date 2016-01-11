@@ -41,6 +41,12 @@ Name | Description
 ---|---
 [swaggerize](https://github.com/gedaiu/swaggarize) | Specification parsing and structures, request validation and handler bindings.
 
+#### Erlang
+
+Name | Description
+---|---
+[cowboy-swagger](https://github.com/inaka/cowboy-swagger) | Add swagger compliant specifications to your [cowboy](https://github.com/ninenines/cowboy) web server. Available on [hex.pm](https://hex.pm/packages/cowboy_swagger).
+
 #### Go
 
 Name | Description
