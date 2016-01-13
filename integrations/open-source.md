@@ -238,7 +238,11 @@ Name | Description
 [swagger-node-client](https://github.com/signalfx/swagger-node-client) | Node client to communicate with Swagger servers. Includes detailed client-side validation against the API spec.
 [ratify](https://github.com/mac-/ratify) | A [Hapi](http://hapijs.com/) plugin that automatically creates Swagger documentation AND validates request/response parameters using the [JSON Schema](http://json-schema.org/) spec.
 [swagger-express](https://github.com/fliptoo/swagger-express) | A simple and clean solution to integrate swagger with express straight away from jsdoc or a yaml file.
-[fleek-router](https://github.com/fleekjs/fleek-router) | A simple router which allows intergration of swagger with Koa.js
+[fleek-router](https://github.com/fleekjs/fleek-router) | A simple router integrated of swagger with Koa.js
+[fleek-validator](https://github.com/fleekjs/fleek-validator) | A simple validator integrated with swagger on top of Koa.js
+[fleek-parser](https://github.com/fleekjs/fleek-parser) | A simple parser integrated with swagger on top of Koa.js
+[fleek-response](https://github.com/fleekjs/fleek-response) | A simple response library integrated with swagger on top of Koa.js
+
 
 #### PHP
 
