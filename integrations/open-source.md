@@ -232,16 +232,17 @@ Name | Description
 Name | Description
 ---|---
 [Swagger Framework](https://github.com/silas/swagger-framework) | a module for creating Swagger-based apis using the standard HTTP request listener interface (including Express). It supports request normalization/validation, pluggable consumes/produces, spec validation, and more.
+[fleek-router](https://github.com/fleekjs/fleek-router) | A simple router integrated of swagger with Koa.js
+[fleek-validator](https://github.com/fleekjs/fleek-validator) | A simple validator integrated with swagger on top of Koa.js
+[fleek-parser](https://github.com/fleekjs/fleek-parser) | A simple parser integrated with swagger on top of Koa.js
+[fleek-response](https://github.com/fleekjs/fleek-response) | A simple response library integrated with swagger on top of Koa.js
 [swagger-jack](https://github.com/worldline/swagger-jack) | Express middleware to automatically create route and validate inputs from a swagger descriptor (for NodeJS).
 [hapi-swagger](https://github.com/glennjones/hapi-swagger) | A Swagger interface for HAPI.
 [Swagger Validation](https://github.com/wonderlic/swagger-validation) | A library to validate a request that integrates with swagger-node-express.
 [swagger-node-client](https://github.com/signalfx/swagger-node-client) | Node client to communicate with Swagger servers. Includes detailed client-side validation against the API spec.
 [ratify](https://github.com/mac-/ratify) | A [Hapi](http://hapijs.com/) plugin that automatically creates Swagger documentation AND validates request/response parameters using the [JSON Schema](http://json-schema.org/) spec.
 [swagger-express](https://github.com/fliptoo/swagger-express) | A simple and clean solution to integrate swagger with express straight away from jsdoc or a yaml file.
-[fleek-router](https://github.com/fleekjs/fleek-router) | A simple router integrated of swagger with Koa.js
-[fleek-validator](https://github.com/fleekjs/fleek-validator) | A simple validator integrated with swagger on top of Koa.js
-[fleek-parser](https://github.com/fleekjs/fleek-parser) | A simple parser integrated with swagger on top of Koa.js
-[fleek-response](https://github.com/fleekjs/fleek-response) | A simple response library integrated with swagger on top of Koa.js
+
 
 
 #### PHP
