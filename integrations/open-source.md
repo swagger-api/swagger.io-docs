@@ -88,6 +88,10 @@ Name | Description
 Name | Description
 ---|---
 [hapi-swaggered](https://github.com/z0mt3c/hapi-swaggered) | A hapi.js plugin to generate swagger v2.0 compliant specifications based on hapi routes and joi schemas.
+[fleek-router](https://github.com/fleekjs/fleek-router) | A simple router integrated of swagger with Koa.js
+[fleek-validator](https://github.com/fleekjs/fleek-validator) | A simple validator integrated with swagger on top of Koa.js
+[fleek-parser](https://github.com/fleekjs/fleek-parser) | A simple parser integrated with swagger on top of Koa.js
+[fleek-response](https://github.com/fleekjs/fleek-response) | A simple response library integrated with swagger on top of Koa.js
 [hippie-swagger](https://github.com/cachecontrol/hippie-swagger) | API testing tool with automatic swagger assertions
 [swaggerize-express](https://github.com/krakenjs/swaggerize-express) | Design-driven RESTful apis with swagger and express from [@PayPalDev](https://twitter.com/PayPalDev).
 [swaggerize-hapi](https://github.com/krakenjs/swaggerize-hapi) | Design-driven RESTful apis with swagger and hapi from [@PayPalDev](https://twitter.com/PayPalDev).
@@ -232,10 +236,6 @@ Name | Description
 Name | Description
 ---|---
 [Swagger Framework](https://github.com/silas/swagger-framework) | a module for creating Swagger-based apis using the standard HTTP request listener interface (including Express). It supports request normalization/validation, pluggable consumes/produces, spec validation, and more.
-[fleek-router](https://github.com/fleekjs/fleek-router) | A simple router integrated of swagger with Koa.js
-[fleek-validator](https://github.com/fleekjs/fleek-validator) | A simple validator integrated with swagger on top of Koa.js
-[fleek-parser](https://github.com/fleekjs/fleek-parser) | A simple parser integrated with swagger on top of Koa.js
-[fleek-response](https://github.com/fleekjs/fleek-response) | A simple response library integrated with swagger on top of Koa.js
 [swagger-jack](https://github.com/worldline/swagger-jack) | Express middleware to automatically create route and validate inputs from a swagger descriptor (for NodeJS).
 [hapi-swagger](https://github.com/glennjones/hapi-swagger) | A Swagger interface for HAPI.
 [Swagger Validation](https://github.com/wonderlic/swagger-validation) | A library to validate a request that integrates with swagger-node-express.
