@@ -54,6 +54,13 @@ Name | Description
 [go-swagger](https://github.com/casualjim/go-swagger) | A toolkit to support your API development with Swagger.
 [goa](https://github.com/raphael/goa) | goa is a framework for building RESTful microservices in Go with first class Swagger support.
 
+#### Haskell
+
+Name | Description
+---|---
+[swagger2](http://hackage.haskell.org/package/swagger2) |  Express swagger 2.0 schemas in Haskell
+[servant-swagger](http://hackage.haskell.org/haskell-servant/servant-swagger) |  Servant is a framework for building RESTful microservices in Haskell with first class Swagger support via servant-swagger.
+
 #### Java
 
 Name | Description
