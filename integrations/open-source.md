@@ -94,6 +94,7 @@ Name | Description
 
 Name | Description
 ---|---
+[express-openapi](https://github.com/kogosoftwarellc/express-openapi) | Effortlessly add routes and middleware to express apps with openapi documents.
 [hapi-swaggered](https://github.com/z0mt3c/hapi-swaggered) | A hapi.js plugin to generate swagger v2.0 compliant specifications based on hapi routes and joi schemas.
 [fleek-router](https://github.com/fleekjs/fleek-router) | A simple router integrated of swagger with Koa.js
 [fleek-validator](https://github.com/fleekjs/fleek-validator) | A simple validator integrated with swagger on top of Koa.js
