@@ -59,7 +59,7 @@ Name | Description
 Name | Description
 ---|---
 [swagger2](http://hackage.haskell.org/package/swagger2) |  Express swagger 2.0 schemas in Haskell
-[servant-swagger](http://hackage.haskell.org/haskell-servant/servant-swagger) |  Servant is a framework for building RESTful microservices in Haskell with first class Swagger support via servant-swagger.
+[servant-swagger](http://hackage.haskell.org/package/servant-swagger) |  Servant is a framework for building RESTful microservices in Haskell with first class Swagger support via servant-swagger.
 
 #### Java
 
