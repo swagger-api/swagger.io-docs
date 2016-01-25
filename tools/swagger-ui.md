@@ -7,7 +7,7 @@ generate beautiful documentation and sandbox from a Swagger-compliant API. Becau
 ## How to Use It
 
 ### Download
-You can use the swagger-ui code AS-IS!  No need to build or recompile--just download from the GitHub release page, unzip the archive and serve the `dist` folder from either your filesystem or a web server.  You're done!
+You can use the swagger-ui code AS-IS!  No need to build or recompile--just download from the [GitHub release page](https://github.com/swagger-api/swagger-ui/releases), unzip the archive and serve the `dist` folder from either your filesystem or a web server.  You're done!
 
 ##### Browser support
 Swagger UI works in all evergreen desktop browsers (Chrome, Safari, Firefox). Internet Explorer support is version 8 (IE8) and above.
