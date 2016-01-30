@@ -148,6 +148,10 @@ Name | Description
 [swagger-py-codegen](https://github.com/guokr/swagger-py-codegen) | Generate Flask-RESTful application code from a Swagger Specification doc.
 [Connexion](https://github.com/zalando/connexion) | Swagger-first REST framework on top of Flask with validation and OAuth 2 support.
 [pecan-swagger](https://github.com/elmiko/pecan-swagger) | Partial swagger extractor for pecan.
+[swagger-parser](https://github.com/Trax-air/swagger-parser) | Give useful informations about your swagger files.
+[swagger-tester](https://github.com/Trax-air/swagger-tester) | Automatic swagger API tester.
+[swagger-aggregator](https://github.com/Trax-air/swagger-aggregator) | Aggregate several swagger APIs in one.
+[swagger-stub](https://github.com/Trax-air/swagger-stub) | Generate a stub from a swagger file.
 
 #### Ruby
 
