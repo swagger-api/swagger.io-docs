@@ -11,7 +11,7 @@ These are the projects that were created by the same people who authored the Swa
 Name | Main Purpose | Description
 ---|---|---
 [swagger-js](https://github.com/swagger-api/swagger-js) | Javascript integration |A Swagger implementation for JavaScript.
-[swagger-ui](https://github.com/swagger-api/swagger-ui) | Swagger description rendering | A dependency-free collection of HTML, Javascript, and CSS assets that dynamically generate beautiful documentation from a Swagger-compliant API.
+[swagger-ui](https://github.com/swagger-api/swagger-ui) | Swagger description rendering | A dependency-free collection of H.TML, Javascript, and CSS assets that dynamically generate beautiful documentation from a Swagger-compliant API.
 [swagger-tools](https://github.com/apigee-127/swagger-tools) | Node.js middleware | A Node.js and browser module that provides tooling for validation and more around Swagger
 [swagger-editor](https://github.com/swagger-api/swagger-editor) | Swagger description editing | Swagger Editor lets you edit API specifications in YAML inside your browser and to preview documentations in real time. Valid Swagger JSON descriptions can then be generated and used with the full Swagger tooling (code generation, documentation, etc).
 [swagger-core](https://github.com/swagger-api/swagger-core) | Java integration | A Swagger implementation for Java/Scala. Has integration with JAX-RS (Jersey, Resteasy, CXF...), Servlets and Play Framework.
@@ -81,14 +81,20 @@ Name | Description
 ---|---
 [Swagger Parser](https://github.com/BigstickCarpet/swagger-parser#swagger-parser) | Parses, validates, and dereferences JSON/YAML Swagger specs in Node and browsers
 
-#### .Net
+#### TypeScript
+
+Name | Description
+---|---
+[NSwag](http://nswag.org) | The toolset generates TypeScript client classes and DTO interfaces to call web service operations (supports JQuery, AngularJS, Angular 2 and more). 
+
+#### .NET
 
 Name | Description
 ---|---
 [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle) |  Adds some Swagger to your WebApi.
 [AutoRest](https://github.com/Azure/AutoRest) | The AutoRest tool generates client libraries for accessing RESTful web services from a Swagger specification.
 [SwaggerProvider](http://sergey-tihon.github.io/SwaggerProvider/) | F# Type Provider for Swagger
-[NSwag](http://nswag.org) | Toolchain to generate Swagger specifications from Web API controllers and client code to access them via C# and TypeScript.
+[NSwag](http://nswag.org) | The toolchain generates Swagger specifications from Web API controllers and client code to access them via C#.
 
 #### Node.js
 
