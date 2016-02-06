@@ -11,7 +11,7 @@ These are the projects that were created by the same people who authored the Swa
 Name | Main Purpose | Description
 ---|---|---
 [swagger-js](https://github.com/swagger-api/swagger-js) | Javascript integration |A Swagger implementation for JavaScript.
-[swagger-ui](https://github.com/swagger-api/swagger-ui) | Swagger description rendering | A dependency-free collection of H.TML, Javascript, and CSS assets that dynamically generate beautiful documentation from a Swagger-compliant API.
+[swagger-ui](https://github.com/swagger-api/swagger-ui) | Swagger description rendering | A dependency-free collection of HTML, Javascript, and CSS assets that dynamically generate beautiful documentation from a Swagger-compliant API.
 [swagger-tools](https://github.com/apigee-127/swagger-tools) | Node.js middleware | A Node.js and browser module that provides tooling for validation and more around Swagger
 [swagger-editor](https://github.com/swagger-api/swagger-editor) | Swagger description editing | Swagger Editor lets you edit API specifications in YAML inside your browser and to preview documentations in real time. Valid Swagger JSON descriptions can then be generated and used with the full Swagger tooling (code generation, documentation, etc).
 [swagger-core](https://github.com/swagger-api/swagger-core) | Java integration | A Swagger implementation for Java/Scala. Has integration with JAX-RS (Jersey, Resteasy, CXF...), Servlets and Play Framework.
