@@ -1,6 +1,6 @@
 # Great News to the Swagger Community!
 
-**Starting January 1st 2016 the Swagger Specification has been donated to to the [Open API Initiative (OAI)](https://openapis.org) and has been renamed to the [OpenAPI Specification](https://github.com/OAI/OpenAPI-Specification).**
+**Starting January 1st 2016 the Swagger Specification has been donated to the [Open API Initiative (OAI)](https://openapis.org) and has been renamed to the [OpenAPI Specification](https://github.com/OAI/OpenAPI-Specification).**
 
 # A Powerful Interface to your API
 
