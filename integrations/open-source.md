@@ -35,23 +35,45 @@ Name | Description
 [pedestal-swagger](https://github.com/frankiesardo/pedestal-swagger) | Swagger for pedestal
 [swagger1st](https://github.com/sarnowski/swagger1st) | A Clojure/Ring handler that does parsing, validation and routing based on swagger definitions.
 
+#### D
+
+Name | Description
+---|---
+[swaggerize](https://github.com/gedaiu/swaggarize) | Specification parsing and structures, request validation and handler bindings.
+
+#### Erlang
+
+Name | Description
+---|---
+[cowboy-swagger](https://github.com/inaka/cowboy-swagger) | Add swagger compliant specifications to your [cowboy](https://github.com/ninenines/cowboy) web server. Available on [hex.pm](https://hex.pm/packages/cowboy_swagger).
+
 #### Go
 
 Name | Description
 ---|---
 [go-swagger](https://github.com/casualjim/go-swagger) | A toolkit to support your API development with Swagger.
+[goa](https://github.com/raphael/goa) | goa is a framework for building RESTful microservices in Go with first class Swagger support.
+
+#### Haskell
+
+Name | Description
+---|---
+[swagger2](http://hackage.haskell.org/package/swagger2) |  Express swagger 2.0 schemas in Haskell
+[servant-swagger](http://hackage.haskell.org/package/servant-swagger) |  Servant is a framework for building RESTful microservices in Haskell with first class Swagger support via servant-swagger.
 
 #### Java
 
 Name | Description
 ---|---
-[springfox](https://springfox.github.io/springfox) | Integrates with Spring MVC with support for Swagger 1.2 and Swagger 2.0 spec.
-[swagger-maven-plugin](http://kongchen.github.io/swagger-maven-plugin/) | Support Swagger Spec 2.0, integrate with JAX-RS & Spring MVC project, and easily generate `swagger.json` & a static document during build phase.
-[swagger-codegen-maven-plugin](https://github.com/garethjevans/swagger-codegen-maven-plugin) | A maven build plugin which allows the codegen project to be triggered for generating clients, etc. during the build process.
+[assertj-swagger](https://github.com/RobWin/assertj-swagger) | assertj-swagger is a library which compares a design-first Swagger YAML with an implementation-first Swagger JSON output (e.g. from springfox). assertj-swagger allows to validate that the implementation in compliance with the design specification.
+[binder-swagger-java](https://github.com/tminglei/binder-swagger-java) | binder-swagger-java was designed to help construct the swagger object, corresponding to swagger.json, and let it accessible from swagger ui or other http visitors.
 [dropwizard-swagger](https://github.com/federecio/dropwizard-swagger) | A dropwizard bundle that wraps Swagger-Core.
+[restlet-framework](http://restlet.com/technical-resources/restlet-framework/guide/2.3/extensions/swagger) | Restlet Framework extension that supports auto-generation of Swagger 2.0 from Restlet API and JAX-API applications
+[springfox](https://springfox.github.io/springfox) | Integrates with Spring MVC with support for Swagger 1.2 and Swagger 2.0 spec.
+[swagger-codegen-maven-plugin](https://github.com/garethjevans/swagger-codegen-maven-plugin) | A maven build plugin which allows the codegen project to be triggered for generating clients, etc. during the build process.
 [swagger2markup](https://github.com/RobWin/swagger2markup) | Swagger2Markup converts a Swagger JSON or YAML file into AsciiDoc or Markdown documents which can be combined with hand-written documentation. The AsciiDoc documents can be converted into HTML5, PDF and EPUB. The Swagger2MarkupConverter supports the Swagger 1.2 and 2.0 specification.
 [swagger2markup-gradle-plugin](https://github.com/RobWin/swagger2markup-gradle-plugin) | A Swagger2Markup Gradle Plugin which converts a Swagger JSON or YAML file into AsciiDoc or Markdown documents which can be combined with hand-written documentation. The AsciiDoc documents can be converted into HTML5, PDF and EPUB.
-[assertj-swagger](https://github.com/RobWin/assertj-swagger) | assertj-swagger is a library which compares a design-first Swagger YAML with an implementation-first Swagger JSON output (e.g. from springfox). assertj-swagger allows to validate that the implementation in compliance with the design specification.
+[swagger-maven-plugin](http://kongchen.github.io/swagger-maven-plugin/) | Support Swagger Spec 2.0, integrate with JAX-RS & Spring MVC project, and easily generate `swagger.json` & a static document during build phase.
 
 #### JavaScript
 
@@ -59,18 +81,33 @@ Name | Description
 ---|---
 [Swagger Parser](https://github.com/BigstickCarpet/swagger-parser#swagger-parser) | Parses, validates, and dereferences JSON/YAML Swagger specs in Node and browsers
 
-#### .Net
+#### TypeScript
+
+Name | Description
+---|---
+[NSwag](http://nswag.org) | The toolset generates TypeScript client classes and DTO interfaces to call web service operations (supports JQuery, AngularJS, Angular 2 and more). 
+
+#### .NET
 
 Name | Description
 ---|---
 [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle) |  Adds some Swagger to your WebApi.
 [AutoRest](https://github.com/Azure/AutoRest) | The AutoRest tool generates client libraries for accessing RESTful web services from a Swagger specification.
+[SwaggerProvider](http://sergey-tihon.github.io/SwaggerProvider/) | F# Type Provider for Swagger
+[NSwag](http://nswag.org) | The toolchain generates Swagger specifications from Web API controllers and client code to access them via C#.
 
 #### Node.js
 
 Name | Description
 ---|---
+[blueoak-server](https://github.com/BlueOakJS/blueoak-server) | BlueOak Server maximizes the value of your Swagger API by using it to drive runtime behavior.
+[express-openapi](https://github.com/kogosoftwarellc/express-openapi) | Effortlessly add routes and middleware to express apps with openapi documents.
 [hapi-swaggered](https://github.com/z0mt3c/hapi-swaggered) | A hapi.js plugin to generate swagger v2.0 compliant specifications based on hapi routes and joi schemas.
+[fleek-router](https://github.com/fleekjs/fleek-router) | A simple router integrated of swagger with Koa.js
+[fleek-validator](https://github.com/fleekjs/fleek-validator) | A simple validator integrated with swagger on top of Koa.js
+[fleek-parser](https://github.com/fleekjs/fleek-parser) | A simple parser integrated with swagger on top of Koa.js
+[fleek-response](https://github.com/fleekjs/fleek-response) | A simple response library integrated with swagger on top of Koa.js
+[hippie-swagger](https://github.com/cachecontrol/hippie-swagger) | API testing tool with automatic swagger assertions
 [swaggerize-express](https://github.com/krakenjs/swaggerize-express) | Design-driven RESTful apis with swagger and express from [@PayPalDev](https://twitter.com/PayPalDev).
 [swaggerize-hapi](https://github.com/krakenjs/swaggerize-hapi) | Design-driven RESTful apis with swagger and hapi from [@PayPalDev](https://twitter.com/PayPalDev).
 [generator-swaggerize](https://github.com/krakenjs/generator-swaggerize) | Yeoman generator for krakenjs/swaggerize tools from [@PayPalDev](https://twitter.com/PayPalDev).
@@ -80,6 +117,7 @@ Name | Description
 [Swagger Express Middleware](https://github.com/BigstickCarpet/swagger-express-middleware/#swagger-express-middleware) | Swagger middleware and mocks for Express.js
 [swagger-mongodb](https://github.com/kaizhu256/node-swagger-mongodb) | lightweight swagger-ui crud-api backed by mongodb
 [api-spec-converter](https://github.com/lucybot/api-spec-converter) | A tool for converting from other API specification formats (e.g. I/O Docs and API Blueprint) to Swagger
+[sails-swagger](https://github.com/tjwebb/sails-swagger) | A [Sails.js](http://sailsjs.org) plugin that generates a Swagger (v2.0) document from your application Models, Controllers, and Routes. Also see [swagger.balderdash.io](http://swagger.balderdash.io) for a Sails-themed Swagger UI.
 
 #### Perl
 
@@ -94,8 +132,12 @@ Name | Description
 
 Name | Description
 ---|---
+[cakephp-swagger](https://packagist.org/packages/alt3/cakephp-swagger) | CakePHP 3.x plugin that adds auto-generated Swagger 2.0 documentation to your projects using swagger-php and swagger-ui.
 [Swagger-PHP](https://packagist.org/packages/zircote/swagger-php) | a library implementing the swagger.io specification to describe web services, operations/actions and models enabling a uniform means of producing, consuming, and visualizing RESTful web services.
 [SwaggerAssertions](https://github.com/Maks3w/SwaggerAssertions) | Swagger 2 test assertions for validate your API requests and responses
+[php-swaggerize-fastroute-library](https://packagist.org/packages/iadvize/php-swaggerize-fastroute-library#0.2.0) | a package to automatically generate FastRoute from swagger json definition. It's compatible with Lumen as long as you use controller class
+[SwaggerGen](https://github.com/vanderlee/PHPSwaggerGen) | a Swagger 2.0 documentation generator for existing PHP source code, using human-writeable PHP-Documentor style comments like `@rest\form int[0,123> age Age of the person`. With builtin preprocessor.
+[Jane OpenAPI](https://github.com/jolicode/jane-openapi) | An API client generator compatible with [PSR7](http://www.php-fig.org/psr/psr-7/) and [HTTPlug](http://httplug.io/)
 
 #### Python
 
@@ -112,11 +154,17 @@ Name | Description
 [swagger-spec-validator](https://github.com/Yelp/swagger_spec_validator) | Library for validating Swagger 1.2 and 2.0 schemas.
 [swagger-py-codegen](https://github.com/guokr/swagger-py-codegen) | Generate Flask-RESTful application code from a Swagger Specification doc.
 [Connexion](https://github.com/zalando/connexion) | Swagger-first REST framework on top of Flask with validation and OAuth 2 support.
+[pecan-swagger](https://github.com/elmiko/pecan-swagger) | Partial swagger extractor for pecan.
+[swagger-parser](https://github.com/Trax-air/swagger-parser) | Give useful informations about your swagger files.
+[swagger-tester](https://github.com/Trax-air/swagger-tester) | Automatic swagger API tester.
+[swagger-aggregator](https://github.com/Trax-air/swagger-aggregator) | Aggregate several swagger APIs in one.
+[swagger-stub](https://github.com/Trax-air/swagger-stub) | Generate a stub from a swagger file.
 
 #### Ruby
 
 Name | Description
 ---|---
+[Apivore](https://github.com/westfieldlabs/apivore) | RSpec based tool to test your API against its Swagger 2.0 specification.
 [swagger-blocks](https://github.com/fotinakis/swagger-blocks) | Define and serve live-updating Swagger JSON for Ruby apps.
 [swagger_engine](https://github.com/batdevis/swagger_engine) | include [Swagger-ui](https://github.com/swagger-api/swagger-ui) as mountable rails engine.
 
@@ -126,12 +174,17 @@ Name | Description
 ---|---
 [sbt-swagger-codegen](https://github.com/unicredit/sbt-swagger-codegen) | Models, Client and Server code generation integrated as an SBT plugin. Generate code from your Swagger files | Client and Server depends on [playframework](http://www.playframework.com).
 
+
 ### Community-Driven Tools
 These are third party tools generated by the Swagger community:
 
 Name | Description
 ---|---
+[bootprint-swagger](https://github.com/nknapp/bootprint-swagger) | A tool for creating static documentation from Swagger definitions, with customizable styles and templates using [Handlebars](http://handlebarsjs.com), [LessCss](http://lesscss.org) and [Bootstrap](http://getbootstrap.com).
+[swagger-diff](https://github.com/civisanalytics/swagger-diff) | A command-line utility, RSpec matcher, and Ruby library for comparing two Swagger specifications.
 [swagger.ed](https://github.com/chefArchitect/apispots-browser-swaggered) | A Chrome extenstion that will change the way you look at APIs.
+[ember-swagger-ui](https://github.com/rynam0/ember-swagger-ui) | An [ember-cli](http://www.ember-cli.com) addon for quickly and easily adding [swagger-ui](https://github.com/swagger-api/swagger-ui) to your [EmberJS](http://emberjs.com/) application.
+[linter-swagger](https://atom.io/packages/linter-swagger) | [Atom](https://atom.io) Package for linting Swagger spec
 
 ### Tools for previous Swagger versions
 
@@ -209,6 +262,8 @@ Name | Description
 [swagger-node-client](https://github.com/signalfx/swagger-node-client) | Node client to communicate with Swagger servers. Includes detailed client-side validation against the API spec.
 [ratify](https://github.com/mac-/ratify) | A [Hapi](http://hapijs.com/) plugin that automatically creates Swagger documentation AND validates request/response parameters using the [JSON Schema](http://json-schema.org/) spec.
 [swagger-express](https://github.com/fliptoo/swagger-express) | A simple and clean solution to integrate swagger with express straight away from jsdoc or a yaml file.
+
+
 
 #### PHP
 

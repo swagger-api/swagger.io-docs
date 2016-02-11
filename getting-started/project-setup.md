@@ -31,7 +31,7 @@ There are three artifacts that can be applied to JAX-RS:
 2 | `swagger-jersey-jaxrs` | 1.0 | Supports documentation of Jersey-based file uploads.
 3 | `swagger-jersey2-jaxrs` | 2.0 | Supports documentation of Jersey2-based file uploads.
 
-From the table above, you can see that `swagger-jersey2-jaxrs` supports JAX-RS 2.0. This is basically by adding support to the `@BeanParam` annotation, which was introduced in JAX-RS 2.0. This dependency can be used by *any* JAX-RS 2.0 implemenation including RestEasy. The only limitation is the support for file upload documentation, which can be done otherwise.
+From the table above, you can see that `swagger-jersey2-jaxrs` supports JAX-RS 2.0. This is basically by adding support to the `@BeanParam` annotation, which was introduced in JAX-RS 2.0. This dependency can be used by *any* JAX-RS 2.0 implementation including RestEasy. The only limitation is the support for file upload documentation, which can be done otherwise.
 
 Swagger-Core's 1.3.X versions and prior version use scala, and as such depend on the scala version. All 1.3.X are available with scala 2.10, and starting from 1.3.10, the dependencies are available with scala 2.11 as well.
 
