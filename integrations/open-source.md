@@ -68,6 +68,7 @@ Name | Description
 [assertj-swagger](https://github.com/RobWin/assertj-swagger) | assertj-swagger is a library which compares a design-first Swagger YAML with an implementation-first Swagger JSON output (e.g. from springfox). assertj-swagger allows to validate that the implementation in compliance with the design specification.
 [binder-swagger-java](https://github.com/tminglei/binder-swagger-java) | binder-swagger-java was designed to help construct the swagger object, corresponding to swagger.json, and let it accessible from swagger ui or other http visitors.
 [dropwizard-swagger](https://github.com/federecio/dropwizard-swagger) | A dropwizard bundle that wraps Swagger-Core.
+[jooby-swagger](http://jooby.org/doc/swagger) | Export [jooby apps](http://jooby.org) to Swagger Spec 2.0.
 [restlet-framework](http://restlet.com/technical-resources/restlet-framework/guide/2.3/extensions/swagger) | Restlet Framework extension that supports auto-generation of Swagger 2.0 from Restlet API and JAX-API applications
 [springfox](https://springfox.github.io/springfox) | Integrates with Spring MVC with support for Swagger 1.2 and Swagger 2.0 spec.
 [swagger-codegen-maven-plugin](https://github.com/garethjevans/swagger-codegen-maven-plugin) | A maven build plugin which allows the codegen project to be triggered for generating clients, etc. during the build process.
