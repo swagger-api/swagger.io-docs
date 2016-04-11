@@ -34,6 +34,19 @@ cd swagger-editor
 npm start
 ```
 
+### Running with Docker
+
+The swagger-editor is published in a public repository on Dockerhub:
+
+[https://hub.docker.com/r/swaggerapi/swagger-editor/](https://hub.docker.com/r/swaggerapi/swagger-editor/)
+
+You can run editor easily with docker:
+
+```
+docker pull swaggerapi/swagger-editor
+docker run -p 80:8080 swaggerapi/swagger-editor
+```
+
 That's it! This will open a browser window running current development version. It will reload the app if you make changes to source files.
 
 ## Development Guide
