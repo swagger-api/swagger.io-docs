@@ -140,6 +140,7 @@ Name | Description
 [php-swaggerize-fastroute-library](https://packagist.org/packages/iadvize/php-swaggerize-fastroute-library#0.2.0) | a package to automatically generate FastRoute from swagger json definition. It's compatible with Lumen as long as you use controller class
 [SwaggerGen](https://github.com/vanderlee/PHPSwaggerGen) | a Swagger 2.0 documentation generator for existing PHP source code, using human-writeable PHP-Documentor style comments like `@rest\form int[0,123> age Age of the person`. With builtin preprocessor.
 [Jane OpenAPI](https://github.com/jolicode/jane-openapi) | An API client generator compatible with [PSR7](http://www.php-fig.org/psr/psr-7/) and [HTTPlug](http://httplug.io/)
+[gossi/swagger](https://github.com/gossi/swagger) | A php library to manipulate swagger specifications
 
 #### Python
 
