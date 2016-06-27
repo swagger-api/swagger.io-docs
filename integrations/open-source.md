@@ -167,8 +167,8 @@ Name | Description
 
 Name | Description
 ---|---
-[grape-swagger](https://github.com/ruby-grape/grape-swagger) | Add Swagger compliant documentation to your grape API.
 [Apivore](https://github.com/westfieldlabs/apivore) | RSpec based tool to test your API against its Swagger 2.0 specification.
+[grape-swagger](https://github.com/ruby-grape/grape-swagger) | Add Swagger compliant documentation to your grape API.
 [swagger-blocks](https://github.com/fotinakis/swagger-blocks) | Define and serve live-updating Swagger JSON for Ruby apps.
 [swagger_engine](https://github.com/batdevis/swagger_engine) | include [Swagger-ui](https://github.com/swagger-api/swagger-ui) as mountable rails engine.
 [svelte](https://github.com/notonthehighstreet/svelte) | Dynamic Ruby client generator for Swagger 2.0 compliant APIs.
@@ -294,7 +294,6 @@ Name | Description
 
 Name | Description
 ---|---
-[grape-swagger](https://github.com/tim-vandecasteele/grape-swagger) | Add Swagger compliant documentation to your grape API.
 [swagger-docs](https://github.com/richhollis/swagger-docs) | Generates Swagger files for Rails APIs with a simple DSL.
 [source2swagger](https://github.com/solso/source2swagger) | Builds a swagger compliant JSON specification from annotations on the comments of your source code.
 [swagger_engine](https://github.com/batdevis/swagger_engine) | include [Swagger-ui](https://github.com/swagger-api/swagger-ui) as mountable rails engine.
