@@ -193,6 +193,7 @@ Name | Description
 [ember-swagger-ui](https://github.com/rynam0/ember-swagger-ui) | An [ember-cli](http://www.ember-cli.com) addon for quickly and easily adding [swagger-ui](https://github.com/swagger-api/swagger-ui) to your [EmberJS](http://emberjs.com/) application.
 [linter-swagger](https://atom.io/packages/linter-swagger) | [Atom](https://atom.io) Package for linting Swagger spec
 [intellij-swagger](https://github.com/zalando/intellij-swagger) | [Swagger Plugin](https://plugins.jetbrains.com/plugin/8347) helps you to easily edit Swagger specification files inside [IntelliJ IDEA](https://www.jetbrains.com/idea)
+[swagger-commander](https://github.com/khangiskhan/swagger-commander) | Plug & play command line interface to Swagger APIs.
 
 ### Tools for previous Swagger versions
 
