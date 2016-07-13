@@ -5,10 +5,10 @@ The major core tools are:
 
 Tool | Description 
 --- | ---
-[Swagger Core](swagger-core) | Java-related libraries for generating and reading Swagger definitions
-[Swagger Codegen](swagger-codegen) | Command-line tool for generating both client and server side code from a Swagger definition
-[Swagger UI](swagger-ui) | Browser based UI for exploring a Swagger defined API
-[Swagger Editor](swagger-editor) | Browser based editor for authoring Swagger definitions in YAML or JSON format
+[Swagger Core](https://github.com/swagger-api/swagger-core) | Java-related libraries for generating and reading Swagger definitions
+[Swagger Codegen](https://github.com/swagger-api/swagger-codegen) | Command-line tool for generating both client and server side code from a Swagger definition
+[Swagger UI](https://github.com/swagger-api/swagger-ui) | Browser based UI for exploring a Swagger defined API
+[Swagger Editor](https://github.com/swagger-api/swagger-editor) | Browser based editor for authoring Swagger definitions in YAML or JSON format
 
 Adjacent tools also provided by the Swagger project are
 
