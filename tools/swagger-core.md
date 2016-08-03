@@ -1,6 +1,6 @@
 ##Swagger-Core
 
-swagger-core is a set of java libraries for generating and consuming Swagger defintions built around JAX-RS - head over to [GitHub](https://github.com/swagger-api/swagger-core) for the source-code and examples on how to start using it.
+swagger-core is a set of java libraries for generating and consuming Swagger definitions built around JAX-RS - head over to [GitHub](https://github.com/swagger-api/swagger-core) for the source-code and examples on how to start using it.
 
 ### Prerequisites
 You need the following installed and available in your $PATH:
