@@ -47,6 +47,12 @@ Name | Description
 ---|---
 [cowboy-swagger](https://github.com/inaka/cowboy-swagger) | Add swagger compliant specifications to your [cowboy](https://github.com/ninenines/cowboy) web server. Available on [hex.pm](https://hex.pm/packages/cowboy_swagger).
 
+#### Elixir
+
+Name | Description
+---|---
+[PhoenixSwagger](https://github.com/xerions/phoenix_swagger) | `PhoenixSwagger` is the library that provides Swagger integration to the [Phoenix](http://www.phoenixframework.org/) web framework. It generates Swagger specification for Phoenix controllers and validates the requests.
+
 #### Go
 
 Name | Description
