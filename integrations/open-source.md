@@ -34,6 +34,7 @@ Name | Description
 [fnhouse-swagger](https://github.com/metosin/fnhouse-swagger) | Swagger for fnhouse
 [pedestal-swagger](https://github.com/frankiesardo/pedestal-swagger) | Swagger for pedestal
 [swagger1st](https://github.com/sarnowski/swagger1st) | A Clojure/Ring handler that does parsing, validation and routing based on swagger definitions.
+[Friboo](https://github.com/zalando/friboo) | Utility library for writing microservices in Clojure, with support for Swagger and OAuth.
 
 #### D
 
