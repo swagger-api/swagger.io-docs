@@ -207,6 +207,7 @@ Name | Description
 [swagger-confluence](https://cloud.slkdev.net/swagger-confluence) | A tool for parsing a Swagger Schema and publishing API documentation to an Atlassian Confluence wiki. Includes a Java library, a command line executor, and a Gradle plugin.
 [swagger-diff](https://github.com/civisanalytics/swagger-diff) | A command-line utility, RSpec matcher, and Ruby library for comparing two Swagger specifications.
 [swagger.ed](https://github.com/chefArchitect/apispots-browser-swaggered) | A Chrome extenstion that will change the way you look at APIs.
+[vscode-apielements](https://marketplace.visualstudio.com/items?itemName=vncz.vscode-apielements) | A Visual Studio Code extension which will bring interactivity into your swagger documents!
 
 ### Tools for previous Swagger versions
 
