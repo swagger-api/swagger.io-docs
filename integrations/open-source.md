@@ -83,6 +83,7 @@ Name | Description
 [swagger2markup](https://github.com/RobWin/swagger2markup) | Swagger2Markup converts a Swagger JSON or YAML file into AsciiDoc or Markdown documents which can be combined with hand-written documentation. The AsciiDoc documents can be converted into HTML5, PDF and EPUB. The Swagger2MarkupConverter supports the Swagger 1.2 and 2.0 specification.
 [swagger2markup-gradle-plugin](https://github.com/RobWin/swagger2markup-gradle-plugin) | A Swagger2Markup Gradle Plugin which converts a Swagger JSON or YAML file into AsciiDoc or Markdown documents which can be combined with hand-written documentation. The AsciiDoc documents can be converted into HTML5, PDF and EPUB.
 [swagger-maven-plugin](http://kongchen.github.io/swagger-maven-plugin/) | Support Swagger Spec 2.0, integrate with JAX-RS & Spring MVC project, and easily generate `swagger.json` & a static document during build phase.
+[swagger-codegen-gradle-plugin](https://github.com/thebignet/swagger-codegen-gradle-plugin) | A Gradle Plugin which wraps swagger-codegen. 
 
 #### JavaScript
 
