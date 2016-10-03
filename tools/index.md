@@ -18,5 +18,5 @@ Tool | Description
 [Swagger Node](https://github.com/swagger-api/swagger-node) | Swagger module for node.js 
 [Swagger-Socket](https://github.com/swagger-api/swagger-socket) | expose/invoke Swagger defined APIs over WebSockets
 [Swagger Parser](https://github.com/swagger-api/swagger-parser) | Standalone library for parsing Swagger definitions from Java
-[Swagger Validator](https://hub.docker.com/r/swaggerapi/swagger-validator/) | Standalone web service provived by a docker image
+[Validator-Badge](https://hub.docker.com/r/swaggerapi/swagger-validator/) | Standalone web service provived by a docker image
 
