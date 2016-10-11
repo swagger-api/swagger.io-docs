@@ -127,6 +127,7 @@ Name | Description
 [fleek-response](https://github.com/fleekjs/fleek-response) | A simple response library integrated with swagger on top of Koa.js
 [hippie-swagger](https://github.com/cachecontrol/hippie-swagger) | API testing tool with automatic swagger assertions
 [swaggerize-express](https://github.com/krakenjs/swaggerize-express) | Design-driven RESTful apis with swagger and express from [@PayPalDev](https://twitter.com/PayPalDev).
+[oas-nodegen](https://github.com/capitalone/oas-nodegen) | A library for generating completely customizable code from the Open API Specification (FKA Swagger) RESTful API documentation using the scripting power of Node.js
 [swaggerize-hapi](https://github.com/krakenjs/swaggerize-hapi) | Design-driven RESTful apis with swagger and hapi from [@PayPalDev](https://twitter.com/PayPalDev).
 [generator-swaggerize](https://github.com/krakenjs/generator-swaggerize) | Yeoman generator for krakenjs/swaggerize tools from [@PayPalDev](https://twitter.com/PayPalDev).
 [swagmock](https://github.com/subeeshcbabu/swagmock) | Mock data generator for swagger api. Generates mock request and response according to swagger api specification of your application. [Examples](https://github.com/subeeshcbabu/swagmock/blob/master/docs/EXAMPLES.md)
