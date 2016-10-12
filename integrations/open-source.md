@@ -190,7 +190,7 @@ Name | Description
 [swagger-blocks](https://github.com/fotinakis/swagger-blocks) | Define and serve live-updating Swagger JSON for Ruby apps.
 [swagger_engine](https://github.com/batdevis/swagger_engine) | include [Swagger-ui](https://github.com/swagger-api/swagger-ui) as mountable rails engine.
 [svelte](https://github.com/notonthehighstreet/svelte) | Dynamic Ruby client generator for Swagger 2.0 compliant APIs.
-[swagger_rails](https://github.com/domaindrivendev/swagger_rails) | Adds a "swagger" to Rails-based API's by generating swagger descriptions from your api/integration test specs.
+[rswag](https://github.com/domaindrivendev/rswag) | Swagger tooling for Rails API's. Generate beautiful API documentation, including a UI to explore and test operations, directly from your rspec integration tests.
 
 #### Scala
 
