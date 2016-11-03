@@ -181,6 +181,7 @@ Name | Description
 [swagger-aggregator](https://github.com/Trax-air/swagger-aggregator) | Aggregate several swagger APIs in one.
 [swagger-stub](https://github.com/Trax-air/swagger-stub) | Generate a stub from a swagger file.
 [bottle-swagger](https://github.com/ampedandwired/bottle-swagger) | Swagger integration for the Bottle web framework
+[prance](https://github.com/jfinkhaeuser/prance) | Swagger parser that resolves JSON references.
 
 #### Ruby
 
