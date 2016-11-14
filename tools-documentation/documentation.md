@@ -25,7 +25,7 @@ Once NodeJS is installed successfully,  please install all the npm dependencies 
 
 
 #### Setup with http-server module from GitHub
-The Swagger Editor can be found in this public repository on GitHub.
+The Swagger Editor can be found in this [public repository on GitHub](https://github.com/swagger-api/swagger-editor).
 
 
 Please run the following to run the Editor using the http-server module from GitHub. After downloading the latest version from Github, you will need to run these scripts on your terminal.
@@ -231,9 +231,9 @@ If you have Homebrew installed:
 
 `swagger-codegen generate -i <path of your Swagger specification> -l <language>`
 
-		Example:
+Example:
 
-    `swagger-codegen generate -i http://petstore.swagger.io/v2/swagger.json -l chsarp`
+`swagger-codegen generate -i http://petstore.swagger.io/v2/swagger.json -l chsarp`
 
 
 Else, you could use:
