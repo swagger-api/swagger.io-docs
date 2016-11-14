@@ -1,7 +1,7 @@
 
 # Swagger Editor Documentation
 
-## Downloade
+## Download
 
 ### Using the Editor on the Web
 The Editor works in any web browser, and can be hosted locally or accessed from the web.
