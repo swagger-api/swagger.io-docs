@@ -1,24 +1,24 @@
 
-# Swagger Editor Documentation
+## Swagger Editor Documentation
 
 The Swagger Editor is an open source editor to design, define and document RESTful APIs in the Swagger Specifcation. The source code for the Swagger Editor can be found in GitHub.
 
 GitHub: https://github.com/swagger-api/swagger-editor
 
 
-## Download
+### Download
 
-### Using the Editor on the Web
+#### Using the Editor on the Web
 The Editor works in any web browser, and can be hosted locally or accessed from the web.
 
 <a href = "http://editor.swagger.io/#/ "><button class="button-save large">Take me to the web version </button> </a>
 
 
-### Using the Editor on a local machine
+#### Using the Editor on a local machine
 You can run and use the Swagger Editor on your machine as well.
 
 
-#### Prerequisites
+##### Prerequisites
 The following dependencies would need to be installed on your machine before downloading and running the Swagger Editor.
 
 * [NodeJS](https://nodejs.org/en/)
@@ -28,7 +28,7 @@ Once NodeJS is installed successfully,  please install all the npm dependencies 
 `npm install;`
 
 
-#### Setup with http-server module from GitHub
+##### Setup with http-server module from GitHub
 The Swagger Editor can be found in this [public repository on GitHub](https://github.com/swagger-api/swagger-editor).
 
 
@@ -42,7 +42,7 @@ http-server swagger-editor
 ```
 
 
-#### Setup from Docker
+##### Setup from Docker
 
 
 The Swagger Editor can be found in [this public repository on Docker](https://hub.docker.com/r/swaggerapi/swagger-editor/).  
@@ -55,7 +55,7 @@ docker pull swaggerapi/swagger-editor
 docker run -p 80:8080 swaggerapi/swagger-editor
 ```
 
-## Contribute
+### Contribute
 The Swagger Editor is an open source project under the Apache license. You can contribute to the project with suggestions, ideas, bug reports and pull requests in the [Swagger Editor GitHub repository](https://github.com/swagger-api/swagger-editor).
 
 
@@ -70,17 +70,17 @@ npm start
 ```
 
 
-### Common issues:
+#### Common issues:
 * If `npm start` does not work, delete the **node-module** folder, then run `npm install` and `npm start`
 * If there is a problem with **dist** folder after cloning, go to the root and run `npm run build`
 
-# Swagger Codegen Documentation
+## Swagger Codegen Documentation
 
 The Swagger Codegen is an open source code-generator to build server stubs and client SDKs directly from a Swagger defined RESTful API. The source code for the Swagger Codegen can be found in GitHub.
 
 GitHub: https://github.com/swagger-api/swagger-codegen
 
-## Compatibility
+### Compatibility
 | Swagger Codegen Version        | Release Date | Swagger Spec Compatibility | Notes                                    |
 |--------------------------------|--------------|----------------------------|------------------------------------------|
 | 2.3.0 (upcoming minor release) | TBD          | 1.0, 1.1, 1.2, 2.0         | Minor releases with breaking changes     |
@@ -91,14 +91,14 @@ GitHub: https://github.com/swagger-api/swagger-codegen
 | 1.0.4                          | 2012-04-12   | 1.0, 1.1                   | tag v1.0.4                               |
 
 
-## Installation
+### Installation
 
-### Prerequisites
+#### Prerequisites
 The following dependencies would need to be installed on your machine before downloading and running the Swagger Codegen.
 
 * Java, version 7 or higher
 
-### Installation with Homebrew
+#### Installation with Homebrew
 
 If you have a Mac or a Linux environment, then you could use Homebrew to install the Swagger Codegen.
 
@@ -106,7 +106,7 @@ If you have a Mac or a Linux environment, then you could use Homebrew to install
 `brew install swagger-codegen`
 
 
-### Installation from Maven Central
+#### Installation from Maven Central
 
 
 All versions of the Swagger Codegen project can be found on [Maven Central](https://oss.sonatype.org/content/repositories/releases/io/swagger/). [Visit this folder on Maven](https://oss.sonatype.org/content/repositories/releases/io/swagger/swagger-codegen-cli/), and choose the appropriate version (we recommend the latest version).
@@ -126,11 +126,11 @@ Example:
 wget https://oss.sonatype.org/content/repositories/releases/io/swagger/swagger-codegen-cli/2.2.1/swagger-codegen-cli-2.2.1.jar
 ```
 
-### Usage
+#### Usage
 For the sake of simplicity, we will assume you have the  [swagger-codegen-cli-2.2.1](https://oss.sonatype.org/content/repositories/releases/io/swagger/swagger-codegen-cli/2.2.1/swagger-codegen-cli-2.2.1.jar) installed. Please visit the installation section of the Swagger Codegen to learn about how to get the Codegen on your machine.
 
 
-#### List of supported languages
+##### List of supported languages
 To get a list of languages supported by the Swagger Codegen -
 
 
@@ -147,7 +147,7 @@ Else, you could use:
 
 
 
-#### Help options in terminal
+##### Help options in terminal
 To see the various help section options of the Swagger Codegen -  
 
 
@@ -230,7 +230,7 @@ Example:
 `java -jar swagger-codegen-cli-2.2.1.jar help generate`
 
 
-#### Generating Code
+##### Generating Code
 To generate code from an existing swagger specification -
 
 
@@ -259,12 +259,12 @@ In the above code, we pass two arguments : `- i` and `-l`.
 
 The Codegen creates a **README** file with all the information for running and building the API. Each language creates a different README, so please go through it to learn about how to build your Swagger defined API.
 
-### Contribute
+#### Contribute
 The Swagger Codegen  is an open source project under the Apache license. You can contribute to the project with suggestions, ideas, bug reports and pull requests in the GitHub repository, found here -https://github.com/swagger-api/swagger-codegen.
 
-#### Guidelines
+##### Guidelines
 
-##### Before submitting an issue
+###### Before submitting an issue
 
  - If you're not using the latest master to generate API clients or server stubs, please give it another try by pulling the latest master as the issue may have already been addressed. Ref: [Getting Started](https://github.com/swagger-api/swagger-codegen#getting-started)
  - Search the [open issue](https://github.com/swagger-api/swagger-codegen/issues) and [closed issue](https://github.com/swagger-api/swagger-codegen/issues?q=is%3Aissue+is%3Aclosed) to ensure no one else has reported something similar before.
@@ -272,26 +272,26 @@ The Swagger Codegen  is an open source project under the Apache license. You can
  - Test with the latest master by building the JAR locally to see if the issue has already been addressed.
  - You can also make a suggestion or ask a question by opening an "issue".
 
-##### Before submitting a PR
+###### Before submitting a PR
 
  - Search the [open issue](https://github.com/swagger-api/swagger-codegen/issues) to ensure no one else has reported something similar and no one is actively working on similar proposed change.
  - If no one has suggested something similar, open an ["issue"](https://github.com/swagger-api/swagger-codegen/issues) with your suggestion to gather feedback from the community.
  - It's recommended to **create a new git branch** for the change so that the merge commit message looks nicer in the commit history.
 
-#### How to contribute
+##### How to contribute
 
-##### Code generators
+###### Code generators
 
 All the code generators can be found in [modules/swagger-codegen/src/main/java/io/swagger/codegen/languages](https://github.com/swagger-api/swagger-codegen/tree/master/modules/swagger-codegen/src/main/java/io/swagger/codegen/languages)
 
-##### Templates
+###### Templates
 
 All the templates ([mustache](https://mustache.github.io/)) can be found in [modules/swagger-codegen/src/main/resources](https://github.com/swagger-api/swagger-codegen/tree/master/modules/swagger-codegen/src/main/resources).
 
 For a list of variables available in the template, please refer to this [page](https://github.com/swagger-api/swagger-codegen/wiki/Mustache-Template-Variables)
 
 
-##### Style guide
+###### Style guide
 Code change should conform to the programming style guide of the respective langauages:
 - Android: https://source.android.com/source/code-style.html
 - C#: https://msdn.microsoft.com/en-us/library/vstudio/ff926074.aspx
@@ -319,7 +319,7 @@ For [Vendor Extensions](https://github.com/OAI/OpenAPI-Specification/blob/master
 - For language-specified vendor extension, put it in the form of `x-{lang}-{extension-name}`. e.g. `x-objc-operation-id`, `x-java-feign-retry-limit`
 - For a list of existing vendor extensions in use, please refer to https://github.com/swagger-api/swagger-codegen/wiki/Vendor-Extensions. If you've addaed new vendor extensions as part of your PR, please update the wiki page.
 
-##### Testing
+###### Testing
 
 To add test cases (optional) covering the change in the code generator, please refer to [modules/swagger-codegen/src/test/java/io/swagger/codegen](https://github.com/swagger-api/swagger-codegen/tree/master/modules/swagger-codegen/src/test/java/io/swagger/codegen)
 
@@ -331,7 +331,7 @@ To test the templates, please perform the following:
 
 To start the CI tests, you can run `mvn verify -Psamples` (assuming you've all the required tools installed to run tests for different languages) or you can leverage http://travis-ci.org to run the CI tests by adding your own Swagger-Codegen repository.
 
-##### Tips
+###### Tips
 - Smaller changes are easier to review
 - [Optional] For bug fixes, provide a OpenAPI Spec to repeat the issue so that the reviewer can use it to confirm the fix
 - Add test case(s) to cover the change
@@ -341,15 +341,15 @@ To start the CI tests, you can run `mvn verify -Psamples` (assuming you've all t
 
 
 
-# Swagger UI Documentation
+## Swagger UI Documentation
 
 The Swagger UI is an open source project to visually render documentation for a Swagger defined API directly from the API's Swagger specifcation. The source code for the Swagger UI can be found in GitHub.
 
 GitHub: https://github.com/swagger-api/swagger-ui
 
-## Compatibility
+### Compatibility
 
-### Browser Compatibility
+#### Browser Compatibility
 The Swagger UI is automatically generated from any API defined in the Swagger specification, and can be viewed within a browser.  
 
 
@@ -357,7 +357,7 @@ The Swagger UI is automatically generated from any API defined in the Swagger sp
 * Google Chrome
 * Microsoft Internet Explorer
 
-### Swagger Specification Compatibility
+#### Swagger Specification Compatibility
 
 | Swagger UI Version | Release Date | Swagger Specification Compatibility | Notes       |
 |--------------------|--------------|-------------------------------------|-------------|
@@ -368,7 +368,7 @@ The Swagger UI is automatically generated from any API defined in the Swagger sp
 | 1.0.1              | 2011-10-11   | 1.0, 1.1                            | tag v1.0.1  |
 
 
-## Download
+### Download
 There is no need to install, build or recompile the Swagger UI. The Swagger UI can be used directly from the GitHub repository.
 You can use the swagger-ui code as is.  Please follow the instructions below to get started with the Swagger UI
 
@@ -378,7 +378,7 @@ Step 2: Clone or download the zip file of the repository
 
 ![GitHub Download](/images/docs/swaggerui-github-download.png)
 
-## Usage
+### Usage
 
 Step 1: Go to the folder containing the Swagger UI project in your local machine
 
@@ -398,7 +398,7 @@ Step 5: You can mention the YAML or JSON path of any existing specification host
 
 For example, in the above image, the JSON specification can be found in http://petstore.swagger.io/v2/swagger.json , and its documentation can be generated in the Swagger UI.
 
-### Changing the default API
+#### Changing the default API
 
 Opening the Swagger UI will render the Swagger Petstore API by default. You can change this default specification to your desired API.
 
@@ -432,7 +432,7 @@ There are different ways to set a default specification  to load:
 
 If the specification is without any syntax errors, the Swagger UI will render the API as interactive documentation.
 
-## Customization
+### Customization
 
 The Swagger UI is completely customizable, and can be incorporated with any user’s or organization’s branding assets. Here is an overview of what's in its various directories:
 
@@ -518,7 +518,7 @@ swaggerUi.load();
 </script>
 ```
 
-### Parameters
+#### Parameters
 The following parameters are acceptable by the Swagger UI constructor. This can be modified to better suit your needs.
 
 Parameter Name | Description
@@ -543,10 +543,10 @@ jsonEditor | Enables a graphical view for editing complex bodies.  Defaults to `
 
 All other parameters are explained in greater detail below.
 
-#### HTTP Methods and API Invocation
+##### HTTP Methods and API Invocation
 Swagger UI supports invocation of all HTTP methods APIs including `GET`, `PUT`, `POST`, `DELETE`, `PATCH`, `OPTIONS`. These are handled in the [swagger-js project](https://github.com/swagger-api/swagger-js), please look there for specifics on their usage.
 
-#### Header Parameters
+##### Header Parameters
 
 Header params are supported through a pluggable mechanism in swagger-js. You can see the **index.html** for a sample of how to dynamically set headers:
 
@@ -562,7 +562,7 @@ $('#input_apiKey').change(function() {
 
 This will add the header api_key with value key on calls that have the auth_name security scheme as part of their swaggerDefinitions. You can substitute query to send the values as a query param.
 
-#### Localization and translation
+##### Localization and translation
 The localization files are in the **lang** directory. Note that language files and translator is not included in Swagger UI by default. You need to add them manually.
 
 To enable translation you should append the next two lines in your Swagger's **index.html** (or another entry point you use)
@@ -585,12 +585,12 @@ or
 .
 At this moment only inner html, title-attribute and value-attribute are going to be translated.
 
-### Build
+#### Build
 Once you’ve added the required customizations, all the sources must be built to get the Swagger UI with the added customizations.
 
-#### Build from NPM
+##### Build from NPM
 
-##### Prerequisites
+###### Prerequisites
 
 The following dependencies would need to be installed on your machine.
 
@@ -609,7 +609,7 @@ npm run build
 You should see the distribution under the dist folder. Open **./dist/index.html** to launch the Swagger UI in a browser.
 
 
-#### Build from Docker
+##### Build from Docker
 Please run the following to build the Swagger UI from Docker.
 
 ```
@@ -619,9 +619,9 @@ docker run -p 127.0.0.1:8080:8080 swagger-ui-builder
 
 This will start the Swagger UI on your local port 8080, specifically at http://localhost:8080
 
-### Common Issues
+#### Common Issues
 
-#### CORS support
+##### CORS support
 
 **(OR: How to deal with the common "Can't read from server. It may not have the appropriate access-control-origin settings." issue)**
 
@@ -636,7 +636,7 @@ Otherwise, CORS support needs to be enabled for:
 * Your Swagger docs. For Swagger 2.0 it's the **swagger.json** and any externally `$refed` docs, and for prior version, it's the **Resource Listing** and **API Declaration** files.
 * For the `Try it now` button to work, CORS needs to be enabled on your API endpoints as well.
 
-##### Testing CORS Support
+###### Testing CORS Support
 You can verify CORS support with one of three techniques:
 * Curl your API and inspect the headers. For instance:
 
@@ -665,11 +665,11 @@ Swagger-UI cannot easily show this error state.
 
 * Using the http://www.test-cors.org website. Keep in mind this will show a successful result even if `Access-Control-Allow-Headers` is not available, which is still required for Swagger UI to function properly.
 
-##### Enabling CORS
+###### Enabling CORS
 The method of enabling CORS depends on the server and/or framework you use to host your application. http://enable-cors.org provides information on how to enable CORS in some common web servers.
 Other servers/frameworks may provide you information on how to enable it specifically in their use case.
 
-##### CORS and Header Parameters
+###### CORS and Header Parameters
 Swagger lets you easily send headers as parameters to requests. The name of these headers _MUST_ be supported in your CORS configuration as well. From our example above:
 
 `Access-Control-Allow-Headers: Content-Type, api_key, Authorization`
@@ -677,7 +677,7 @@ Swagger lets you easily send headers as parameters to requests. The name of thes
 
 Only headers with these names will be allowed to be sent by Swagger UI.
 
-### Contribute
+#### Contribute
 
 The Swagger UI  is an open source project under the Apache license. You can contribute to the project with suggestions, ideas, bug reports and pull requests in the GitHub repository, found here -https://github.com/swagger-api/swagger-ui.
 
