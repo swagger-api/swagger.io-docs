@@ -17,7 +17,7 @@ You can rebuild swagger-ui on your own to tweak it or just so you can say you di
 
 1. `npm install`
 2. `gulp`
-3. You should see the distribution under the dist folder. Open [`./dist/index.html`](https://github.com/swagger-api/swagger-ui/tree/develop_2.0/dist/index.html) to launch Swagger UI in a browser
+3. You should see the distribution under the dist folder. Open [`./dist/index.html`](https://github.com/swagger-api/swagger-ui/blob/master/dist/index.html) to launch Swagger UI in a browser
 
 ### Development
 Use `gulp watch` to make a new build and watch for changes in files.
@@ -51,7 +51,7 @@ Swagger UI Version | Release Date | Swagger Spec compatibility | Notes
 
 Create your own fork of [swagger-api/swagger-ui](https://github.com/swagger-api/swagger-ui)
 
-To share your changes, [submit a pull request](https://github.com/swagger-api/swagger-ui/pull/new/develop_2.0).
+To share your changes, [submit a pull request](https://github.com/swagger-api/swagger-ui/pull/new/master).
 
 ## Change Log
 
