@@ -125,6 +125,7 @@ Name | Description
 [fleek-validator](https://github.com/fleekjs/fleek-validator) | A simple validator integrated with swagger on top of Koa.js
 [fleek-parser](https://github.com/fleekjs/fleek-parser) | A simple parser integrated with swagger on top of Koa.js
 [fleek-response](https://github.com/fleekjs/fleek-response) | A simple response library integrated with swagger on top of Koa.js
+[fury-adapter-swagger](https://github.com/apiaryio/fury-adapter-swagger/) | Fury.js provides uniform interface to API description formats such as API Blueprint and Swagger. `fury-adapter-swagger` is an adapter for Swagger.
 [hippie-swagger](https://github.com/cachecontrol/hippie-swagger) | API testing tool with automatic swagger assertions
 [swaggerize-express](https://github.com/krakenjs/swaggerize-express) | Design-driven RESTful apis with swagger and express from [@PayPalDev](https://twitter.com/PayPalDev).
 [oas-nodegen](https://github.com/capitalone/oas-nodegen) | A library for generating completely customizable code from the Open API Specification (FKA Swagger) RESTful API documentation using the scripting power of Node.js
