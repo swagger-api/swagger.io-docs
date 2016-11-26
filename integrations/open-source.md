@@ -209,6 +209,7 @@ Name | Description
 ---|---
 [APIs.guru](https://github.com/APIs-guru/api-models) | Wikipedia for Web APIs. Directory of REST API specs in OpenAPI(fka Swagger) 2.0 format. https://APIs.guru
 [bootprint-swagger](https://github.com/nknapp/bootprint-swagger) | A tool for creating static documentation from Swagger definitions, with customizable styles and templates using [Handlebars](http://handlebarsjs.com), [LessCss](http://lesscss.org) and [Bootstrap](http://getbootstrap.com).
+[Dredd](https://github.com/apiaryio/dredd) | Language-agnostic command-line tool for validating Swagger document against backend implementation of the API.
 [ember-swagger-ui](https://github.com/rynam0/ember-swagger-ui) | An [ember-cli](http://www.ember-cli.com) addon for quickly and easily adding [swagger-ui](https://github.com/swagger-api/swagger-ui) to your [EmberJS](http://emberjs.com/) application.
 [generator-openapi-repo](https://github.com/Rebilly/generator-openapi-repo) | [Yeoman](http://yeoman.io/) generator to setup GitHub repo with spec, documentation ([ReDoc](https://github.com/Rebilly/ReDoc) + [swagger-ui](https://github.com/swagger-api/swagger-ui)) and live-editing with [swagger-editor](https://github.com/swagger-api/swagger-editor).
 [intellij-swagger](https://github.com/zalando/intellij-swagger) | [Swagger Plugin](https://plugins.jetbrains.com/plugin/8347) helps you to easily edit Swagger specification files inside [IntelliJ IDEA](https://www.jetbrains.com/idea)
