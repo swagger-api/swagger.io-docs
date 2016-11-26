@@ -45,7 +45,7 @@ You can run editor easily with docker:
 
 ```
 docker pull swaggerapi/swagger-editor
-docker run -p 80:8080 swaggerapi/swagger-editor
+docker run -p 8080:8080 swaggerapi/swagger-editor
 ```
 
 That's it! This will open a browser window running current development version. It will reload the app if you make changes to source files.
