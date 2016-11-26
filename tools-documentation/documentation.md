@@ -376,7 +376,7 @@ Step 1: Go to the [GitHub repository](https://github.com/swagger-api/swagger-ui)
 
 Step 2: Clone or download the zip file of the repository
 
-![GitHub Download](/images/docs/swaggerui-github-download.png)
+![GitHub Download](https://raw.githubusercontent.com/swagger-api/swagger.io/wordpress/images/docs/swaggerui-github-download.PNG)
 
 ### Usage
 
@@ -394,7 +394,7 @@ Step 4: The Swagger UI will now be live in the browser, with the default renderi
 
 Step 5: You can mention the YAML or JSON path of any existing specification hosted on a server in the field on the top navigation bar.
 
-![GitHub Download](/images/docs/swaggerui-github-download.png)
+![Swagger UI](https://raw.githubusercontent.com/swagger-api/swagger.io/wordpress/images/docs/swaggerui-navigation.PNG)
 
 For example, in the above image, the JSON specification can be found in http://petstore.swagger.io/v2/swagger.json , and its documentation can be generated in the Swagger UI.
 
