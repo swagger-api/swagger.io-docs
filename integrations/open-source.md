@@ -160,6 +160,7 @@ Name | Description
 [SwaggerGen](https://github.com/vanderlee/PHPSwaggerGen) | a Swagger 2.0 documentation generator for existing PHP source code, using human-writeable PHP-Documentor style comments like `@rest\form int[0,123> age Age of the person`. With builtin preprocessor.
 [Jane OpenAPI](https://github.com/jolicode/jane-openapi) | An API client generator compatible with [PSR7](http://www.php-fig.org/psr/psr-7/) and [HTTPlug](http://httplug.io/)
 [gossi/swagger](https://github.com/gossi/swagger) | A php library to manipulate swagger specifications
+[calcinai/strut](https://github.com/calcinai/strut) | A complete OpenAPI manipulation library. Allows full creation/loading, modification and serialization of specifications.
 
 #### Python
 
