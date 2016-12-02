@@ -71,7 +71,7 @@ npm start
 
 
 #### Common issues:
-* If `npm start` does not work, delete the **node-module** folder, then run `npm install` and `npm start`
+* If `npm start` does not work, delete the **node_modules** folder, then run `npm install` and `npm start`
 * If there is a problem with **dist** folder after cloning, go to the root and run `npm run build`
 
 ## Swagger Codegen Documentation
