@@ -113,6 +113,7 @@ Name | Description
 [SwaggerProvider](http://fsprojects.github.io/SwaggerProvider/) | F# Type Provider for Swagger
 [NSwag](http://nswag.org) | The toolchain generates Swagger specifications from Web API controllers and client code to access them via C#.
 [QSwag](https://github.com/swimlane/qswag) | Fast & Light Swagger generator for .NET Core
+[SwaggerWcf](https://github.com/abelsilva/swaggerwcf) | Generates Swagger (2.0) for WCF services and also provides swagger-ui
 
 #### Node.js
 
