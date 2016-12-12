@@ -241,7 +241,7 @@ If you have Homebrew installed:
 
 Example:
 
-`swagger-codegen generate -i http://petstore.swagger.io/v2/swagger.json -l chsarp`
+`swagger-codegen generate -i http://petstore.swagger.io/v2/swagger.json -l csharp`
 
 
 Else, you could use:
@@ -250,7 +250,7 @@ Else, you could use:
 `
 Example:
 
-`swagger-codegen generate -i http://petstore.swagger.io/v2/swagger.json -l chsarp`
+`swagger-codegen generate -i http://petstore.swagger.io/v2/swagger.json -l csharp`
 
 
 In the above code, we pass two arguments : `- i` and `-l`.
