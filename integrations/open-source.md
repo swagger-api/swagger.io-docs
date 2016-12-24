@@ -310,6 +310,7 @@ Name | Description
 [swagger-node-client](https://github.com/signalfx/swagger-node-client) | Node client to communicate with Swagger servers. Includes detailed client-side validation against the API spec.
 [ratify](https://github.com/mac-/ratify) | A [Hapi](http://hapijs.com/) plugin that automatically creates Swagger documentation AND validates request/response parameters using the [JSON Schema](http://json-schema.org/) spec.
 [swagger-express](https://github.com/fliptoo/swagger-express) | A simple and clean solution to integrate swagger with express straight away from jsdoc or a yaml file.
+[swagger-jsdoc](https://github.com/Surnet/swagger-jsdoc) | Takes JSDoc comments from any set of JavaScript files and generates a swagger specification file, that could be consumed by Swagger UI. Works also with CLI.
 
 
 
