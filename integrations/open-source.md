@@ -60,7 +60,7 @@ Name | Description
 ---|---
 [go-swagger](https://github.com/casualjim/go-swagger) | A toolkit to support your API development with Swagger.
 [goa](https://github.com/raphael/goa) | goa is a framework for building RESTful microservices in Go with first class Swagger support.
-[grpc-gateway](https://github.com/gengo/grpc-gateway) | generate a REST gateway and swagger definition from a [gRPC](https://grpc.io) protobuf definition
+[grpc-gateway](https://github.com/gengo/grpc-gateway) | generate a REST gateway and swagger definition from a [gRPC](http://grpc.io) protobuf definition
 
 #### Haskell
 
