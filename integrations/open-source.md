@@ -119,29 +119,30 @@ Name | Description
 
 Name | Description
 ---|---
+[a127](http://a127.io) | a127 is toolkit for modeling & building rich, enterprise-class APIs in Node.js on your laptop. The focal point of a127 is the Swagger 2.0 specification for defining and describing an API model. From the Swagger model you can generate clients, servers and interactive documentation for your API. From [@apigee](https://github.com/apigee)
+[api-spec-converter](https://github.com/lucybot/api-spec-converter) | A tool for converting from other API specification formats (e.g. I/O Docs and API Blueprint) to Swagger
 [blueoak-server](https://github.com/BlueOakJS/blueoak-server) | BlueOak Server maximizes the value of your Swagger API by using it to drive runtime behavior.
 [express-openapi](https://github.com/kogosoftwarellc/express-openapi) | An unopinionated openapi framework for express.
-[hapi-swaggered](https://github.com/z0mt3c/hapi-swaggered) | A hapi.js plugin to generate swagger v2.0 compliant specifications based on hapi routes and joi schemas.
-[fleek-router](https://github.com/fleekjs/fleek-router) | A simple router integrated of swagger with Koa.js
-[fleek-validator](https://github.com/fleekjs/fleek-validator) | A simple validator integrated with swagger on top of Koa.js
 [fleek-parser](https://github.com/fleekjs/fleek-parser) | A simple parser integrated with swagger on top of Koa.js
 [fleek-response](https://github.com/fleekjs/fleek-response) | A simple response library integrated with swagger on top of Koa.js
+[fleek-router](https://github.com/fleekjs/fleek-router) | A simple router integrated of swagger with Koa.js
+[fleek-validator](https://github.com/fleekjs/fleek-validator) | A simple validator integrated with swagger on top of Koa.js
 [fury-adapter-swagger](https://github.com/apiaryio/fury-adapter-swagger/) | Fury.js provides uniform interface to API description formats such as API Blueprint and Swagger. `fury-adapter-swagger` is an adapter for Swagger.
-[hippie-swagger](https://github.com/cachecontrol/hippie-swagger) | API testing tool with automatic swagger assertions
-[swaggerize-express](https://github.com/krakenjs/swaggerize-express) | Design-driven RESTful apis with swagger and express from [@PayPalDev](https://twitter.com/PayPalDev).
-[oas-nodegen](https://github.com/capitalone/oas-nodegen) | A library for generating completely customizable code from the Open API Specification (FKA Swagger) RESTful API documentation using the scripting power of Node.js
-[swaggerize-hapi](https://github.com/krakenjs/swaggerize-hapi) | Design-driven RESTful apis with swagger and hapi from [@PayPalDev](https://twitter.com/PayPalDev).
 [generator-swaggerize](https://github.com/krakenjs/generator-swaggerize) | Yeoman generator for krakenjs/swaggerize tools from [@PayPalDev](https://twitter.com/PayPalDev).
-[swagmock](https://github.com/subeeshcbabu/swagmock) | Mock data generator for swagger api. Generates mock request and response according to swagger api specification of your application. [Examples](https://github.com/subeeshcbabu/swagmock/blob/master/docs/EXAMPLES.md)
-[a127](http://a127.io) | a127 is toolkit for modeling & building rich, enterprise-class APIs in Node.js on your laptop. The focal point of a127 is the Swagger 2.0 specification for defining and describing an API model. From the Swagger model you can generate clients, servers and interactive documentation for your API. From [@apigee](https://github.com/apigee)
-[swagger-tools](https://github.com/apigee-127/swagger-tools) | Various Swagger tools for JavaScript including an API/CLI (conversion, validation, ...) and [Connect](https://github.com/senchalabs/connect) middleware for routing, validation, security and swagger-ui.
-[Swagger Parser](https://github.com/BigstickCarpet/swagger-parser#swagger-parser) | Parses, validates, and dereferences JSON/YAML Swagger specs in Node and browsers
-[Swagger Express Middleware](https://github.com/BigstickCarpet/swagger-express-middleware/#swagger-express-middleware) | Swagger middleware and mocks for Express.js
-[swagger-mongodb](https://github.com/kaizhu256/node-swagger-mongodb) | lightweight swagger-ui crud-api backed by mongodb
-[api-spec-converter](https://github.com/lucybot/api-spec-converter) | A tool for converting from other API specification formats (e.g. I/O Docs and API Blueprint) to Swagger
-[sails-swagger](https://github.com/tjwebb/sails-swagger) | A [Sails.js](http://sailsjs.org) plugin that generates a Swagger (v2.0) document from your application Models, Controllers, and Routes. Also see [swagger.balderdash.io](http://swagger.balderdash.io) for a Sails-themed Swagger UI.
 [got-swag](https://github.com/mobilcom-debitel/got-swag) | A CLI and lib to run automated tests on Swagger-powered APIs. Supports monkey testing and customized test suites.
+[hapi-swaggered](https://github.com/z0mt3c/hapi-swaggered) | A hapi.js plugin to generate swagger v2.0 compliant specifications based on hapi routes and joi schemas.
+[hippie-swagger](https://github.com/cachecontrol/hippie-swagger) | API testing tool with automatic swagger assertions
+[oas-nodegen](https://github.com/capitalone/oas-nodegen) | A library for generating completely customizable code from the Open API Specification (FKA Swagger) RESTful API documentation using the scripting power of Node.js
 [pokemock](https://github.com/mobilcom-debitel/pokemock) | A mock server generated from an arbitrary Swagger file. Exports a set of customizable Express middlewares.
+[sails-swagger](https://github.com/tjwebb/sails-swagger) | A [Sails.js](http://sailsjs.org) plugin that generates a Swagger (v2.0) document from your application Models, Controllers, and Routes. Also see [swagger.balderdash.io](http://swagger.balderdash.io) for a Sails-themed Swagger UI.
+[swagger-jsdoc](https://github.com/Surnet/swagger-jsdoc) | Takes JSDoc comments from any set of JavaScript files and generates a swagger specification file, that could be consumed by Swagger UI. Works also with CLI.
+[swagger-mongodb](https://github.com/kaizhu256/node-swagger-mongodb) | lightweight swagger-ui crud-api backed by mongodb
+[swagger-tools](https://github.com/apigee-127/swagger-tools) | Various Swagger tools for JavaScript including an API/CLI (conversion, validation, ...) and [Connect](https://github.com/senchalabs/connect) middleware for routing, validation, security and swagger-ui.
+[swaggerize-express](https://github.com/krakenjs/swaggerize-express) | Design-driven RESTful apis with swagger and express from [@PayPalDev](https://twitter.com/PayPalDev).
+[swaggerize-hapi](https://github.com/krakenjs/swaggerize-hapi) | Design-driven RESTful apis with swagger and hapi from [@PayPalDev](https://twitter.com/PayPalDev).
+[swagmock](https://github.com/subeeshcbabu/swagmock) | Mock data generator for swagger api. Generates mock request and response according to swagger api specification of your application. [Examples](https://github.com/subeeshcbabu/swagmock/blob/master/docs/EXAMPLES.md)
+[Swagger Express Middleware](https://github.com/BigstickCarpet/swagger-express-middleware/#swagger-express-middleware) | Swagger middleware and mocks for Express.js
+[Swagger Parser](https://github.com/BigstickCarpet/swagger-parser#swagger-parser) | Parses, validates, and dereferences JSON/YAML Swagger specs in Node and browsers
 
 #### Perl
 
@@ -310,7 +311,6 @@ Name | Description
 [swagger-node-client](https://github.com/signalfx/swagger-node-client) | Node client to communicate with Swagger servers. Includes detailed client-side validation against the API spec.
 [ratify](https://github.com/mac-/ratify) | A [Hapi](http://hapijs.com/) plugin that automatically creates Swagger documentation AND validates request/response parameters using the [JSON Schema](http://json-schema.org/) spec.
 [swagger-express](https://github.com/fliptoo/swagger-express) | A simple and clean solution to integrate swagger with express straight away from jsdoc or a yaml file.
-[swagger-jsdoc](https://github.com/Surnet/swagger-jsdoc) | Takes JSDoc comments from any set of JavaScript files and generates a swagger specification file, that could be consumed by Swagger UI. Works also with CLI.
 
 
 
