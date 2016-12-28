@@ -98,6 +98,12 @@ Name | Description
 ---|---
 [Jester - Jolie rEST routER ](https://github.com/jolie/jester) | The toolset allows for the deployment of existing Jolie services as REST microservices. It generates Swagger descriptors to be used in a SwaggerUI. Starting from an existing Swagger descriptor it generates the Jolie client stubs for performing all the available APIs.
 
+#### Lua
+
+Name | Description
+---|---
+[lua-Spore](https://fperrad.github.io/lua-Spore/swagger/) | A generic ReST client using Swagger 2.0 descriptions.
+
 #### TypeScript
 
 Name | Description
