@@ -141,6 +141,7 @@ Name | Description
 [oas-nodegen](https://github.com/capitalone/oas-nodegen) | A library for generating completely customizable code from the Open API Specification (FKA Swagger) RESTful API documentation using the scripting power of Node.js
 [pokemock](https://github.com/mobilcom-debitel/pokemock) | A mock server generated from an arbitrary Swagger file. Exports a set of customizable Express middlewares.
 [sails-swagger](https://github.com/tjwebb/sails-swagger) | A [Sails.js](http://sailsjs.org) plugin that generates a Swagger (v2.0) document from your application Models, Controllers, and Routes. Also see [swagger.balderdash.io](http://swagger.balderdash.io) for a Sails-themed Swagger UI.
+[serverless_swagger](https://github.com/Reckon-Limited/serverless_swagger) | A [Serverless](http://serverless.com) plugin that generates serverless configuration, api gateway events, and basic handler stub functions from a Swagger specification.
 [swagger-jsdoc](https://github.com/Surnet/swagger-jsdoc) | Takes JSDoc comments from any set of JavaScript files and generates a swagger specification file, that could be consumed by Swagger UI. Works also with CLI.
 [swagger-mongodb](https://github.com/kaizhu256/node-swagger-mongodb) | lightweight swagger-ui crud-api backed by mongodb
 [swagger-tools](https://github.com/apigee-127/swagger-tools) | Various Swagger tools for JavaScript including an API/CLI (conversion, validation, ...) and [Connect](https://github.com/senchalabs/connect) middleware for routing, validation, security and swagger-ui.
