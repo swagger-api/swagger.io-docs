@@ -115,6 +115,7 @@ Name | Description
 Name | Description
 ---|---
 [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle) |  Adds some Swagger to your WebApi.
+[Swashbuckle.AspNetCore](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) |  Swagger tools for documenting API's built on ASP.NET Core.
 [AutoRest](https://github.com/Azure/AutoRest) | The AutoRest tool generates client libraries for accessing RESTful web services from a Swagger specification.
 [SwaggerProvider](http://fsprojects.github.io/SwaggerProvider/) | F# Type Provider for Swagger
 [NSwag](http://nswag.org) | The toolchain generates Swagger specifications from Web API controllers and client code to access them via C#.
