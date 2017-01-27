@@ -240,10 +240,12 @@ Name | Description
 [swagger-confluence](https://cloud.slkdev.net/swagger-confluence) | A tool for parsing a Swagger Schema and publishing API documentation to an Atlassian Confluence wiki. Includes a Java library, a command line executor, and a Gradle plugin.
 [swagger-diff](https://github.com/civisanalytics/swagger-diff) | A command-line utility, RSpec matcher, and Ruby library for comparing two Swagger specifications.
 [swagger.ed](https://github.com/chefArchitect/apispots-browser-swaggered) | A Chrome extenstion that will change the way you look at APIs.
+[SwagDefGen](https://github.com/Roger13/SwagDefGen) | JSON request/response mocks to Swagger definitions converter.
 [vscode-apielements](https://marketplace.visualstudio.com/items?itemName=vncz.vscode-apielements) | A Visual Studio Code extension which will bring interactivity into your swagger documents!
 [ember-swagger-ui](https://github.com/rynam0/ember-swagger-ui) | An [ember-cli](http://www.ember-cli.com) addon for quickly and easily adding [swagger-ui](https://github.com/swagger-api/swagger-ui) to your [EmberJS](http://emberjs.com/) application.
 [commandcar](https://github.com/tikalk/commandcar) | cURL on steroids. Invoke any API from the commandline.
 [SwagGen](https://github.com/yonaskolb/SwagGen) | Swift command line tool for generating client side code from a Swagger spec.
+
 
 ### Tools for previous Swagger versions
 
