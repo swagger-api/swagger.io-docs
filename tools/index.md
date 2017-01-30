@@ -5,10 +5,10 @@ The major Core Projects include:
 
 Tool | Description 
 --- | ---
-[Swagger Core](swagger-core) | Java-related libraries for creating, consuming, and working with Swagger definitions
-[Swagger Codegen](swagger-codegen) | A code generation framework for building Client SDKs, servers, and documentation from Swagger Definitions
-[Swagger UI](swagger-ui) | An HTML5 based UI for exploring and interacting with a Swagger defined API
-[Swagger Editor](swagger-editor) | Browser based editor for authoring Swagger definitions using YAML 
+[Swagger Core](https://github.com/swagger-api/swagger-core) | Java-related libraries for creating, consuming, and working with Swagger definitions
+[Swagger Codegen](https://github.com/swagger-api/swagger-codegen) | A code generation framework for building Client SDKs, servers, and documentation from Swagger Definitions
+[Swagger UI](https://github.com/swagger-api/swagger-ui) | An HTML5 based UI for exploring and interacting with a Swagger defined API
+[Swagger Editor](https://github.com/swagger-api/swagger-editor) | Browser based editor for authoring Swagger definitions using YAML 
 
 Other tools created by the Swagger Team include:
 
