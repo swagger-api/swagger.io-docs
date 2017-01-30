@@ -38,7 +38,7 @@ File contents goes here.
 
 Swagger UI displays file parameters using a file input control, allowing the users to browse for a local file to upload.
 
-<insert image>
+![file upload image](https://raw.githubusercontent.com/swagger-api/swagger.io/wordpress/images/docs/swagger-spec-documentation-3.PNG)
 
 ## Upload a File + Other Data
 File parameters can be sent along with other form data:
