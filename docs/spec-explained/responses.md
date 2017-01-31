@@ -1,5 +1,6 @@
 ## Describing Responses
-An API specification needs to specify the `responses` for all API operations. Each operation must have at least one response defined, usually a successful response. A response is defined by its HTTP status code and the data returned in the response body and/or headers.
+
+An API specification needs to specify the `responses` for all API operations. Each operation must have at least one response defined, usually a successful response. A response is defined by its HTTP status code and the data returned in the response body and/or headers. 
 
 Here is a minimal example:
 
@@ -15,15 +16,16 @@ paths:
 ```
 
 ### Response Media Types
+
 An API can respond with various media types. JSON is the most common format for data exchange, but not the only one possible.
 
 To specify the response media types, use the `produces` keyword on the root level or operation level. The global list can be overridden on the operation level.
+
 ```
 produces:
   - application/json
 
 paths:
-
   # This operation returns JSON - as defined globally above
   /users:
     get:
@@ -31,7 +33,6 @@ paths:
       responses:
         200:
           description: OK
-
   # Here we override the "produces" array to specify other media types
   /logo:
     get:
@@ -45,12 +46,13 @@ paths:
           description: OK
 ```
 
-More info: MIME Types. <insert link anchor>
+_More info:_ [MIME Types](mime-types.md).
 
 ### HTTP Status Codes
+
 Under `responses`, each response definition starts with a status code, such as 200 or 404. An operation typically returns one successful status code and one or more error statuses.
 
-Each response status requires a description. For example, you can describe the conditions for error responses. [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/) can be used for rich text representation.
+Each response status requires a `description`. For example, you can describe the conditions for error responses. [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/) can be used for rich text representation.
 
 ```
       responses:
@@ -64,13 +66,15 @@ Each response status requires a description. For example, you can describe the c
           description: A user with the specified ID was not found.
 ```
 
-Note that an API specification does not necessarily need to cover _all possible_ HTTP response codes, since they may not be known in advance. However, it is expected to cover successful responses and any _known errors_. By “known errors” we mean, for example, a 404 Not Found response for an operation that returns a resource by ID, or a 400 Bad Request response in case of invalid operation parameters.
+Note that an API specification does not necessarily need to cover *all possible* HTTP response codes, since they may not be known in advance. However, it is expected to cover successful responses and any *known *errors. By "known errors" we mean, for example, a 404 Not Found response for an operation that returns a resource by ID, or a 400 Bad Request response in case of invalid operation parameters.
 
 ### Response Body
-The `schema` keyword is used to describe the response body. A schema can define:
-- an `object` or `array` – typically used with JSON and XML APIs,
-- a primitive such as a `number` or `string` – used for plain text responses,
-- a `file` (see below)<insert link anchor>.
+
+The `schema` keyword is used to describe the response body. A schema can define: 
+
+* an `object` or `array` -- typically used with JSON and XML APIs,
+* a primitive such as a number or string – used for plain text responses,
+* a `file` (see [below](#response-that-returns-a-file)).
 
 Schema can be defined inline in the operation:
 
@@ -87,9 +91,9 @@ Schema can be defined inline in the operation:
               username:
                 type: string
                 description: The user name.
-
 ```
-or defined at the root level and referenced via $ref. This is useful if multiple responses use the same schema.
+
+or defined at the root level and referenced via `$ref`. This is useful if multiple responses use the same schema.
 
 ```
       responses:
@@ -97,7 +101,6 @@ or defined at the root level and referenced via $ref. This is useful if multiple
           description: A User object
           schema:
             $ref: "#/definitions/User"
-
 definitions:
   User:
     type: object
@@ -111,7 +114,8 @@ definitions:
 ```
 
 ### Response That Returns a File
-An API operation can return a file, such as an image or PDF. In this case, define the response schema with `type: file` and specify the appropriate MIME types in the `produces` section.
+
+An API operation can return a file, such as an image or PDF. In this case, define the response `schema` with `type: file` and specify the appropriate MIME types in the `produces` section.
 
 ```
 paths:
@@ -128,11 +132,13 @@ paths:
 ```
 
 ### Empty Response Body
-Some responses have no body, such as:
-- 204 No Content
-- 201 Created (the URL of the created resource is returned in the Location header instead of the body)
 
-To indicate the response body is empty, do not specify a schema for the response. Swagger treats no schema as a response body with no content.
+Some responses have no body, such as:
+
+* 204 No Content
+* 201 Created (the URL of the created resource is returned in the Location header instead of the body)
+
+To indicate the response body is empty, do not specify a `schema` for the response. Swagger treats no schema as a response without a body.
 
 ```
       responses:
@@ -141,6 +147,7 @@ To indicate the response body is empty, do not specify a schema for the response
 ```
 
 ### Response Headers
+
 Responses from an API can include custom headers to provide additional information on the result of an API call. For example, a rate-limited API may provide the rate limit status via response headers as follows:
 
 ```
@@ -148,10 +155,12 @@ HTTP 1/1 200 OK
 X-RateLimit-Limit: 100
 X-RateLimit-Remaining: 99
 X-RateLimit-Reset: 2016-10-12T11:00:00Z
-```
+
 { ... }
+```
 
 You can define custom `headers` for each response as follows:
+
 ```
 paths:
   /ping:
@@ -176,6 +185,7 @@ paths:
 Note that currently there is no way in Swagger to define common response headers for different response codes or different API operations. You need to define the headers for each response individually.
 
 ### Default Response
+
 Sometimes an operation can return multiple errors with different HTTP status codes, but all of them have the same response structure:
 
 ```
@@ -188,13 +198,13 @@ Sometimes an operation can return multiple errors with different HTTP status cod
           description: Bad request
           schema:
             $ref: "#/definitions/Error"    # <-----
-       404:
+        404:
           description: Not found
           schema:
             $ref: "#/definitions/Error"    # <-----
 ```
 
-You can use the `default` response to describe these errors collectively instead of individually. “Default” means this response is used for all HTTP codes that are not covered individually for this operation.
+You can use the `default` response to describe these errors collectively instead of individually. "Default" means this response is used for all HTTP codes that are not covered individually for this operation. 
 
 ```
       responses:
@@ -202,7 +212,6 @@ You can use the `default` response to describe these errors collectively instead
           description: Success
           schema:
             $ref: '#/definitions/User'
-
         # Definition of all error statuses
         default:
           description: Unexpected error
@@ -211,6 +220,7 @@ You can use the `default` response to describe these errors collectively instead
 ```
 
 ### Reusing Responses
+
 If multiple operations return the same response (status code and data), you can define it in the global `responses` section and reference that definition via `$ref` at the operation level. This is useful for error responses with the same status codes and response body.
 
 ```
@@ -237,7 +247,6 @@ paths:
           $ref: "#/responses/Unauthorized"   # <-----
         404:
           $ref: "#/responses/NotFound"       # <-----
-
 # Descriptions of common responses
 responses:
   NotFound:
@@ -248,7 +257,6 @@ responses:
     description: Unauthorized
     schema:
       $ref: "#/definitions/Error"
-
 definitions:
   # Schema for error response body
   Error:
@@ -266,9 +274,11 @@ definitions:
 Note that responses defined at the root level are not automatically applied to all operations. These are just definitions that can be referenced and reused by multiple operations.
 
 ### Example Responses
-Swagger allows including response examples in the API specification, as explained in Providing Example Values<insert anchor link>. Some API mocking tools use these examples to generate mock responses.
+
+Swagger allows including response examples in the API specification, as explained in [Providing Example Values](providing-example-values.md). Some API mocking tools use these examples to generate mock responses.
 
 ### FAQ
+
 **Can I have different responses based on a request parameter? Such as:**
 
 ```
@@ -279,10 +289,11 @@ GET /something?foo=bar -> {200, schema_2}
 No, this is not supported.
 
 ### Reference
+
 Swagger specification on responses:
 
-https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md#responsesDefinitionsObject
+[https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md#responsesDefinitionsObject](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md#responsesDefinitionsObject)
 
-https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md#responsesObject
+[https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md#responsesObject](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md#responsesObject)
 
-https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md#responseObject
+[https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md#responseObject](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md#responseObject)

@@ -1,8 +1,10 @@
-## Describing Paths and Operations
-In Swagger terms, `paths` are the endpoints (resources) that your API exposes, such as _/users_ or _/reports/summary_, and `operations` are the HTTP methods used to manipulate these paths, such as `GET`, `POST` or `DELETE`.
+## Paths and Operations
+
+In Swagger terms, **paths** are the endpoints (resources) that your API exposes, such as `/users` or `/reports/summary`, and **operations** are the HTTP methods used to manipulate these paths, such as GET, POST or DELETE.
 
 ### Paths
-API paths and operations are defined in the global paths section of the API specification.
+
+API paths and operations are defined in the global `paths` section of the API specification. 
 
 ```
 paths:
@@ -14,18 +16,21 @@ paths:
     ...
 ```
 
-All paths are relative to the `basePath` (see [API Host and Base URL](https://docs.google.com/document/d/1FkTeTrSkynkQ95A0_tYNei44IuOrSwZnpGwayY5LOfg/edit#heading=h.rtbl4ehpweah)). The full request URL is constructed as _scheme://host/basePath/path_.
+All paths are relative to the `basePath` (see [API Host and Base URL](api-host-and-base-path.md)). The full request URL is constructed as `scheme://host/basePath/path`.
 
 ### Path Templating
-Swagger supports path templating, meaning you can use curly braces {} to mark parts of a URL as path parameters:
 
-`/users/{id}`
+Swagger supports path templating, meaning you can use curly braces `{}` to mark parts of a URL as **path parameters**:
 
-`/organizations/{orgId}/members/{memberId}`
+```
+/users/{id}
+/organizations/{orgId}/members/{memberId}
+```
 
-The API client needs to provide appropriate parameter values when making an API call, such as _/users/5_ or _/users/12_.
+The API client needs to provide appropriate parameter values when making an API call, such as `/users/5` or `/users/12`.
 
 ### Operations
+
 For each path, you define operations (HTTP methods) that can be used to access that path. Swagger 2.0 supports `get`, `post`, `put`, `patch`, `delete`, `head`, and `options`. A single path can support multiple operations, for example, `GET /users` to get a list of users and `POST /users` to add a new user, but multiple operations for the same HTTP method and path are not allowed.
 
 Minimal example:
@@ -64,7 +69,6 @@ paths:
       externalDocs:
         url: http://api.example.com/docs/user-operations/
         description: Learn more about User operations provided by this API.
-
 definitions:
   User:
     type: object
@@ -80,14 +84,18 @@ definitions:
 
 Operations support some optional elements for documentation purposes:
 
-- A short `summary` and a longer `description` of what the operation does. `description` can be [multi-line](http://stackoverflow.com/questions/3790454/in-yaml-how-do-i-break-a-string-over-multiple-lines) and supports [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/) for rich text representation.
-- `tags` are used to group operations in Swagger UI.
-- `externalDocs` allows referencing an external resource that contains additional documentation.
+* A short `summary` and a longer `description` of what the operation does. description can be [multi-line](http://stackoverflow.com/questions/3790454/in-yaml-how-do-i-break-a-string-over-multiple-lines) and supports [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/) for rich text representation.
+
+* `tags` are used to group operations in Swagger UI.
+
+* `externalDocs` allows referencing an external resource that contains additional documentation.
 
 ### Operation Parameters
-Swagger supports operation parameters passed via path, query string, headers and request body. For details, see [Describing Parameters](https://docs.google.com/document/d/1FkTeTrSkynkQ95A0_tYNei44IuOrSwZnpGwayY5LOfg/edit#heading=h.u6g7tmekgywo).
+
+Swagger supports operation parameters passed via path, query string, headers and request body. For details, see [Describing Parameters](parameters.md).
 
 ### operationId
+
 Each operation may specify a unique `operationId`. Some code generators use this value to name the corresponding methods in code.
 
 ```
@@ -108,15 +116,18 @@ Each operation may specify a unique `operationId`. Some code generators use this
 ```
 
 ### Query String in Paths
-Query string parameters must not be included in paths. They should be defined as [query parameters](https://docs.google.com/document/d/1FkTeTrSkynkQ95A0_tYNei44IuOrSwZnpGwayY5LOfg/edit#heading=h.ilchbvhgtbns) instead.
+
+Query string parameters **must not** be included in paths. They should be defined as [query parameters](parameters.md#query-parameters) instead.
 
 Incorrect:
+
 ```
 paths:
   /users?role={role}:
-    get:
 ```
+
 Correct:
+
 ```
 paths:
   /users:
@@ -132,24 +143,27 @@ paths:
 This also means that it is impossible to have multiple paths that differ only in query string, such as:
 
 ```
-GET /users?firstName={firstName}&lastName={lastName}
-GET /users?role={role}
+GET /users?firstName=value&lastName=value
+GET /users?role=value
 ```
 
-This is because Swagger considers a unique operation as a combination of a path and the HTTP method, and additional parameters do not make the operation unique. Instead, you should use unique paths such as:
+This is because Swagger considers a unique operation as a combination of a path and the HTTP method, and additional parameters do not make the operation unique. Instead, you should use unique paths such as: 
 
 ```
-GET /users/findByName?firstName={firstName}&lastName={lastName}
-GET /users/findByRole?role={role}
+GET /users/findByName?firstName=value&lastName=value
+GET /users/findByRole?role=value
 ```
 
 ### Marking as Deprecated
+
 You can mark specific operations as `deprecated` to indicate that they should be transitioned out of usage:
+
 ```
   /pet/findByTags:
     get:
       deprecated: true
 ```
-![deprecated tags](https://raw.githubusercontent.com/swagger-api/swagger.io/wordpress/images/docs/swagger-spec-documentation-2.PNG)
 
 Tools may handle deprecated operations in a specific way. For example, Swagger UI displays them with a different style:
+
+![Deprecated operation in Swagger UI](../../images/docs/deprecated-operation.png)
