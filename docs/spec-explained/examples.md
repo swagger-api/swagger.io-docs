@@ -6,7 +6,7 @@ An API specification can include examples for:
 
 * schemas (data models),
 
-* individual properties in schemas,
+* individual properties in schemas.
 
 Examples can be used by tools and libraries, for instance, Swagger UI auto-populates request bodies based on input schema examples, and some API mocking tools use examples to generate mock responses.
 

@@ -100,7 +100,7 @@ paths:
           description: OK
 ```
 
-_ More info:_ [Paths and Operations](paths-and-operations.md).
+_More info:_ [Paths and Operations](paths-and-operations.md).
 
 ### Parameters
 

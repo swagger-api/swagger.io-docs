@@ -66,7 +66,7 @@ Each response status requires a `description`. For example, you can describe the
           description: A user with the specified ID was not found.
 ```
 
-Note that an API specification does not necessarily need to cover *all possible* HTTP response codes, since they may not be known in advance. However, it is expected to cover successful responses and any *known *errors. By "known errors" we mean, for example, a 404 Not Found response for an operation that returns a resource by ID, or a 400 Bad Request response in case of invalid operation parameters.
+Note that an API specification does not necessarily need to cover *all possible* HTTP response codes, since they may not be known in advance. However, it is expected to cover successful responses and any *known* errors. By "known errors" we mean, for example, a 404 Not Found response for an operation that returns a resource by ID, or a 400 Bad Request response in case of invalid operation parameters.
 
 ### Response Body
 
