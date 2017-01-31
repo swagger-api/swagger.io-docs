@@ -1,5 +1,7 @@
 ## File Upload
+
 Swagger 2.0 supports file uploads sent with `Content-Type: multipart/form-data`. That is, your API server must consume `multipart/form-data` for this operation:
+
 ```
 consumes:
    - mulitpart/form-data
@@ -22,6 +24,7 @@ paths:
 ```
 
 This definition corresponds to the following HTTP request:
+
 ```
 POST /upload
 Host: example.com
@@ -33,15 +36,18 @@ Content-Disposition: form-data; name="upfile"; filename="example.txt"
 Content-Type: text/plain
 
 File contents goes here.
+
 ------WebKitFormBoundaryqzByvokjOTfF9UwD--
 ```
 
 Swagger UI displays file parameters using a file input control, allowing the users to browse for a local file to upload.
 
-![file upload image](https://raw.githubusercontent.com/swagger-api/swagger.io/wordpress/images/docs/swagger-spec-documentation-3.PNG)
+![File upload in Swagger UI](../../images/docs/swagger-ui-file-upload.png)
 
-## Upload a File + Other Data
+### Upload a File + Other Data
+
 File parameters can be sent along with other form data:
+
 ```
       parameters:
         - in: formData
@@ -69,14 +75,17 @@ Content-Disposition: form-data; name="upfile"; filename="example.txt"
 Content-Type: text/plain
 
 File contents goes here.
+
 ------WebKitFormBoundarysKk4Z8KcYfU3u6Cs
 Content-Disposition: form-data; name="note"
 
 Uploading a file named "example.txt"
+
 ------WebKitFormBoundaryqzByvokjOTfF9UwD--
 ```
 
 ### Multiple Upload
+
 You can have several named file parameters, each defined individually:
 
 ```
@@ -85,19 +94,17 @@ You can have several named file parameters, each defined individually:
           name: upfile1
           type: file
           required: true
-
         - in: formData
           name: upfile2
           type: file
           required: false
-
         - in: formData
           name: upfile3
           type: file
           required: false
 ```
 
-However, uploading an arbitrary number of files (an array of files) is not supported. There is an open feature request at https://github.com/OAI/OpenAPI-Specification/issues/254. For now you can use a binary string array as a workaround for uploading an arbitrary number of files:
+However, uploading an arbitrary number of files (an array of files) is not supported. There is an open feature request at [https://github.com/OAI/OpenAPI-Specification/issues/254](https://github.com/OAI/OpenAPI-Specification/issues/254). For now you can use a binary string array as a workaround for uploading an arbitrary number of files:
 
 ```
 type: array
@@ -109,21 +116,24 @@ items:
 Note that this will not produce the file upload interface in Swagger UI.
 
 ### FAQ
+
 **Can I upload files via PUT?**
 
 Swagger supports file upload requests with `Content-Type: multipart/form-data`, but does not care about the HTTP method. You can use POST, PUT or any other method, provided that the operation consumes `multipart/form-data`.
 
 Uploads where payload is just the raw file contents is not supported, because it is not `multipart/form-data`. That is, Swagger does not support something like:
 
-`curl --upload-file archive.zip http://example.com/upload`
+```
+curl --upload-file archive.zip http://example.com/upload
+```
 
 Note also that file upload in Swagger UI only works for POST requests, because HTML forms in browsers support GET and POST methods only.
 
 **Can I define the Content-Type for uploaded files?**
 
-This is currently not supported. You can say that an operation accepts a file, but you cannot say that this file is of a specific type or structure. There is an open feature request at https://github.com/OAI/OpenAPI-Specification/issues/222.
+This is currently not supported. You can say that an operation accepts a file, but you cannot say that this file is of a specific type or structure. There is an open feature request at [https://github.com/OAI/OpenAPI-Specification/issues/222](https://github.com/OAI/OpenAPI-Specification/issues/222).
 
-For now, vendor extensions <insert link anchor> can be used to extend this functionality, for example:
+For now, [vendor extensions](swagger-extensions.md) can be used to extend this functionality, for example:
 
 ```
 - in: formData
