@@ -150,6 +150,6 @@ You can mark specific operations as `deprecated` to indicate that they should be
     get:
       deprecated: true
 ```
-![deprecated tags](/Doc/swagger.io/images/docs/swagger-spec-documentation-2.png)
+![deprecated tags](https://raw.githubusercontent.com/swagger-api/swagger.io/wordpress/images/docs/swagger-spec-documentation-2.PNG)
 
 Tools may handle deprecated operations in a specific way. For example, Swagger UI displays them with a different style:

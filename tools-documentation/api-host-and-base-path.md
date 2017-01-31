@@ -12,6 +12,7 @@ All API paths are relative to this base URL, for example,
 actually means
 `<scheme>://<host>/<basePath>/users`
 
+![path image](https://raw.githubusercontent.com/swagger-api/swagger.io/wordpress/images/docs/swagger-spec-documentation-1.PNG)
 
 ### schemes
 Schemes are the transfer protocols used by the API. Swagger supports `http`, `https`, and [WebSocket](https://en.wikipedia.org/wiki/WebSocket) schemes -- `ws` and `wss`. As with any lists in YAML, schemes can be specified using the list syntax:
