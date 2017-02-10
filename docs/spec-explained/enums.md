@@ -1,6 +1,6 @@
 ## Enums
 
-You can use the `enum` keyword to specify the possible values of a request parameter or a model property.
+You can use the `enum` keyword to specify possible values of a request parameter or a model property.
 
 For example, the sort parameter in:
 
@@ -22,7 +22,7 @@ paths:
           enum: [asc, desc]
 ```
 
-In YAML you can also specify one enum value per line:
+In YAML, you can also specify one enum value per line:
 
 ```
           enum:
@@ -32,7 +32,7 @@ In YAML you can also specify one enum value per line:
 
 All values in an enum must adhere to the specified type.
 
-If you need to specify descriptions for enum items, you can do so in the `description` of the parameter or property:
+If you need to specify descriptions for enum items, you can do this in the `description` of the parameter or property:
 
 ```
           type: string
@@ -80,7 +80,7 @@ paths:
           description: OK
 ```
 
-If you tool’s YAML parser supports YAML merge keys (`<<`), you can use this trick to reference both the type and the enum values.
+If your tool’s YAML parser supports YAML merge keys (`<<`), you can use this trick to reference both the type and the enum values.
 
 ```
 definitions:

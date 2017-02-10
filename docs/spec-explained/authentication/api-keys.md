@@ -13,11 +13,11 @@ or as a query parameter:
 GET /something?api_key=abcdef12345
 ```
 
-API keys are supposed to be a secret that only the client and server know. But as with Basic authentication, API key-based authentication is not considered secure unless used together with other security mechanisms such as HTTPS/SSL.
+API keys are supposed to be a secret that only the client and server know. But, as well as Basic authentication, API key-based authentication is not considered secure unless used together with other security mechanisms such as HTTPS/SSL.
 
 To define API key-based security:
 
-* Add an entry with `type: apiKey` in the global `securityDefinitions section. The entry name can be arbitrary (such as *APIKeyHeader* in the example below) and is used to refer to this security definition from other parts of the spec.
+* Add an entry with `type: apiKey` in the global `securityDefinitions` section. The entry name can be arbitrary (such as *APIKeyHeader* in the example below) and is used to refer to this security definition from other parts of the spec.
 
 * Specify whether the API key will be passed `in: header` or `in: query`.
 
@@ -37,7 +37,7 @@ securityDefinitions:
      name: api_key
 ```
 
-Then use the `security` section on the root level or operation level to apply API keys to the whole API or specific operations.
+Then, use the `security` section on the root level or operation level to apply API keys to the whole API or specific operations.
 
 ```
 # Global security (applies to all operations):

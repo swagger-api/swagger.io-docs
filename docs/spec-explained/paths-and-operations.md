@@ -1,6 +1,6 @@
 ## Paths and Operations
 
-In Swagger terms, **paths** are the endpoints (resources) that your API exposes, such as `/users` or `/reports/summary`, and **operations** are the HTTP methods used to manipulate these paths, such as GET, POST or DELETE.
+In Swagger terms, **paths** are endpoints (resources) that your API exposes, such as `/users` or `/reports/summary`, and **operations** are the HTTP methods used to manipulate these paths, such as GET, POST or DELETE.
 
 ### Paths
 
@@ -16,7 +16,7 @@ paths:
     ...
 ```
 
-All paths are relative to the `basePath` (see [API Host and Base URL](api-host-and-base-path.md)). The full request URL is constructed as `scheme://host/basePath/path`.
+All paths are relative to `basePath` (see [API Host and Base URL](api-host-and-base-path.md)). The full request URL is constructed as `scheme://host/basePath/path`.
 
 ### Path Templating
 
@@ -84,7 +84,7 @@ definitions:
 
 Operations support some optional elements for documentation purposes:
 
-* A short `summary` and a longer `description` of what the operation does. description can be [multi-line](http://stackoverflow.com/questions/3790454/in-yaml-how-do-i-break-a-string-over-multiple-lines) and supports [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/) for rich text representation.
+* A short `summary` and a longer `description` of what the operation does. `description` can be [multi-line](http://stackoverflow.com/questions/3790454/in-yaml-how-do-i-break-a-string-over-multiple-lines) and supports [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/) for rich text representation.
 
 * `tags` are used to group operations in Swagger UI.
 

@@ -1,6 +1,6 @@
 ## API Host and Base URL
 
-REST APIs have a base URL to which the endpoint paths are appended. The base URL is defined by the `schemes`, `host` and `basePath` on the root level of the API specification.
+REST APIs have a base URL to which the endpoint paths are appended. The base URL is defined by `schemes`, `host` and `basePath` on the root level of the API specification.
 
 ```
 host: petstore.swagger.io
@@ -15,7 +15,7 @@ All API paths are relative to this base URL, for example, `/users` actually mean
 
 ### schemes
 
-`schemes` are the transfer protocols used by the API. Swagger supports `http`, `https`, and [WebSocket](https://en.wikipedia.org/wiki/WebSocket) schemes -- `ws` and `wss`. As with any lists in YAML, schemes can be specified using the list syntax:
+`schemes` are the transfer protocols used by the API. Swagger supports the `http`, `https`, and [WebSocket](https://en.wikipedia.org/wiki/WebSocket) schemes -- `ws` and `wss`. As with any lists in YAML, schemes can be specified using the list syntax:
 
 ```
 schemes:
@@ -51,7 +51,7 @@ http://api.example.com
 example.com/api/v1
 ```
 
-If `host` is not specified, it is assumed to be same host where the API documentation is being served.
+If `host` is not specified, it is assumed to be the same host where the API documentation is being served.
 
 ### basePath
 
@@ -73,7 +73,7 @@ v2
 
 ### Omitting host and scheme
 
-`host` and `scheme` can be omitted for a more dynamic association. In this case the host and scheme used to serve the API documentation will be used for API calls. For example, if Swagger UI-based documentation is hosted at *https://api.example.com/apidocs/index.html*, "try it out" API calls will be directed to *https://api.example.com*.
+`host` and `scheme` can be omitted for a more dynamic association. In this case, the host and scheme used to serve the API documentation will be used for API calls. For example, if Swagger UI-based documentation is hosted at *https://api.example.com/apidocs/index.html*, "try it out" API calls will be directed to *https://api.example.com*.
 
 ### FAQ
 
@@ -81,7 +81,7 @@ v2
 
 Swagger 2.0 supports only one `host` per API specification (or two if you count HTTP and HTTPS as different hosts).
 
-A possible way to target multiple hosts is to omit the `host` and `schema` from your specification and serve it from each host. In this case each copy of the specification will target the corresponding host.
+A possible way to target multiple hosts is to omit the `host` and `schema` from your specification and serve it from each host. In this case, each copy of the specification will target the corresponding host.
 
 Multiple hosts will be supported in version 3.0 of the specification.
 
@@ -92,7 +92,7 @@ https://{customer_id}.saas-app.com/api/v1
 https://api.saas-app.com/v1/{customer_id}/apis
 ```
 
-Not in Swagger 2.0, but this will be possible in 3.0.
+In Swagger 2.0, they don't, but this will be possible in 3.0.
 
 For a workaround for host templating, see the previous question.
 
@@ -103,9 +103,9 @@ http://example.com:8080
 https://example.com:8443
 ```
 
-Swagger 2.0 does not support this, but this will be possible in the next version 3.0.
+Swagger 2.0 does not support this, but this will be possible in the next version - 3.0.
 
-For now, you can omit the `host` and `scheme` and serve the specification from both hosts. This way each copy of the specification will target the host and port used to access that specification.
+For now, you can omit the `host` and `scheme` and serve the specification from both hosts. This way, each copy of the specification will target the host and port used to access that specification.
 
 ### Reference
 

@@ -35,7 +35,7 @@ Content-Length: 204
 Content-Disposition: form-data; name="upfile"; filename="example.txt"
 Content-Type: text/plain
 
-File contents goes here.
+File contents go here.
 
 ------WebKitFormBoundaryqzByvokjOTfF9UwD--
 ```
@@ -74,7 +74,7 @@ Content-Length: 332
 Content-Disposition: form-data; name="upfile"; filename="example.txt"
 Content-Type: text/plain
 
-File contents goes here.
+File contents go here.
 
 ------WebKitFormBoundarysKk4Z8KcYfU3u6Cs
 Content-Disposition: form-data; name="note"
@@ -104,7 +104,7 @@ You can have several named file parameters, each defined individually:
           required: false
 ```
 
-However, uploading an arbitrary number of files (an array of files) is not supported. There is an open feature request at [https://github.com/OAI/OpenAPI-Specification/issues/254](https://github.com/OAI/OpenAPI-Specification/issues/254). For now you can use a binary string array as a workaround for uploading an arbitrary number of files:
+However, uploading an arbitrary number of files (an array of files) is not supported. There is an open feature request at [https://github.com/OAI/OpenAPI-Specification/issues/254](https://github.com/OAI/OpenAPI-Specification/issues/254). For now, you can use a binary string array as a workaround for uploading an arbitrary number of files:
 
 ```
 type: array
@@ -121,13 +121,13 @@ Note that this will not produce the file upload interface in Swagger UI.
 
 Swagger supports file upload requests with `Content-Type: multipart/form-data`, but does not care about the HTTP method. You can use POST, PUT or any other method, provided that the operation consumes `multipart/form-data`.
 
-Uploads where payload is just the raw file contents is not supported, because it is not `multipart/form-data`. That is, Swagger does not support something like:
+Uploads where the payload is just the raw file contents are not supported, because they are not `multipart/form-data`. That is, Swagger does not support something like:
 
 ```
 curl --upload-file archive.zip http://example.com/upload
 ```
 
-Note also that file upload in Swagger UI only works for POST requests, because HTML forms in browsers support GET and POST methods only.
+Note also that file uploading in Swagger UI only works for POST requests, because HTML forms in browsers support GET and POST methods only.
 
 **Can I define the Content-Type for uploaded files?**
 

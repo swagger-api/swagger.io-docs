@@ -1,6 +1,6 @@
 ## Describing Parameters
 
-In Swagger, API operation parameters are defined under the `parameters` section in the operation definition. Each parameter has a `name`, value `type` (for primitive value parameters) or `schema` (for request body), and an optional `description`. Here is an example:
+In Swagger, API operation parameters are defined under the `parameters` section in the operation definition. Each parameter has `name`, value `type` (for primitive value parameters) or `schema` (for request body), and optional `description`. Here is an example:
 
 ```
 paths:
@@ -15,7 +15,7 @@ paths:
           description: Numeric ID of the user to get.
 ```
 
-Note that `parameters` is an array, so in YAML each parameter definition must be listed with a dash (`-`) in front of it.
+Note that `parameters` is an array, so, in YAML, each parameter definition must be listed with a dash (`-`) in front of it.
 
 ### Parameter Types
 
@@ -29,7 +29,7 @@ Swagger distinguishes between the following parameter types based on the paramet
 
 * body parameters that describe the body of POST, PUT and PATCH requests (see [Describing Request Body](request-body.md))
 
-* [form parameters](#form-parameters) – a variety of body parameters used to describe the payload of requests with `Content-Type` of `application/x-www-form-urlencoded` and `multipart/form-data` (the latter typically used for [file uploads](file-upload.md)) 
+* [form parameters](#form-parameters) – a variety of body parameters used to describe the payload of requests with `Content-Type` of `application/x-www-form-urlencoded` and `multipart/form-data` (the latter is typically used for [file uploads](file-upload.md)) 
 
 ### Query Parameters
 
@@ -60,7 +60,7 @@ Query parameters only support primitive types. You can have an `array`, but the 
 
 ### Path Parameters
 
-Path parameters are components of an URL path that can vary. They are typically used to point to a specific resource within a collection, such as a user identified by ID. An URL can have several path parameters, each denoted with curly braces `{ }`.
+Path parameters are components of a URL path that can vary. They are typically used to point to a specific resource within a collection, such as a user identified by ID. A URL can have several path parameters, each denoted with curly braces `{ }`.
 
 ```
 GET /users/{id}
@@ -69,7 +69,7 @@ GET /cars/{carId}/drivers/{driverId}
 
 Each path parameter must be substituted with an actual value when the client makes an API call.
 
-In Swagger, a path parameter is defined using `in: path` and other attributes as necessary. The parameter name must be the same as specified in the path. Also remember to add `required: true`, because path parameters are always required.
+In Swagger, a path parameter is defined using `in: path` and other attributes as necessary. The parameter name must be the same as specified in the path. Also, remember to add `required: true`, because path parameters are always required.
 
 Here is an example for `GET /users/{id}`:
 
@@ -79,7 +79,7 @@ paths:
     get:
       parameters:
         - in: path
-          name: id   # Note the name is same as in the path
+          name: id   # Note the name is the same as in the path
           required: true
           type: integer
           minimum: 1
@@ -121,7 +121,7 @@ In a similar way, you can define [custom response headers](#header-parameters).
 
 **Note:** Swagger specification has special keywords for some headers:
 
-| Header          | Swagger Keywords       | For more info, see...  |
+| Header          | Swagger Keywords       | For more information, see...  |
 | --------------- | ---------------------- | ---------------------- |
 | `Content-Type`  | `consumes`, `produces` | [MIME Types](mime-types.md) |
 | `Authorization` | `securityDefinitions`, `security` | [Authentication](authentication/index.md) |
@@ -129,7 +129,7 @@ In a similar way, you can define [custom response headers](#header-parameters).
 
 ### Form Parameters
 
-Form parameters are used to describe the payload of requests with the `Content-Type` of:
+Form parameters are used to describe the payload of requests with `Content-Type` of:
 
 * `application/x-www-form-urlencoded` (used to POST primitive values and arrays of primitive values).
 
@@ -202,7 +202,7 @@ By default, Swagger treats all request parameters as optional. You can add `requ
 
 You can use the `default` key to specify the default value for an optional parameter. The default value is the one that the server uses if the client does not supply the parameter value in the request. The value type must be the same as the parameter’s data type.
 
-A typical example are paging parameters such as offset and limit:
+A typical example is paging parameters such as offset and limit:
 
 ```
 GET /users
@@ -234,13 +234,13 @@ Assuming offset defaults to 0 and limit defaults to 20 and ranges from 0 to 100,
 
 There are two common mistakes when using the `default` keyword:
 
-* Using `default` with `required` parameters or properties, such as with a path parameters. This does not make sense -- if a value is required the client must always send it, and the default value is never used.
+* Using `default` with `required` parameters or properties, for example, with path parameters. This does not make sense -- if a value is required, the client must always send it, and the default value is never used.
 
 * Using `default` to specify a sample value. This is not intended use of default and can lead to unexpected behavior in some Swagger tools. Some elements of the specification support the `example` or `examples` keyword for this purpose. See [Providing Example Values](providing-example-values.md).
 
 ### Enum Parameters
 
-The `enum` keyword allows you to restrict a parameter value to a fixed set of values. The enum values must of of the same type as the parameter `type`.
+The `enum` keyword allows you to restrict a parameter value to a fixed set of values. The enum values must be of the same type as the parameter `type`.
 
 ```
         - in: query
@@ -277,7 +277,7 @@ A multi-value parameter must be defined with `type: array` and the appropriate `
             type: string
 ```
 
-The `collectionFormat` specifies the array format (single parameter with multiple parameter or multiple parameters with the same name) and the separator for array items.
+`collectionFormat` specifies the array format (a single parameter with multiple parameter or multiple parameters with the same name) and the separator for array items.
 
 
 | collectionFormat | Description             | Example  |
@@ -286,7 +286,7 @@ The `collectionFormat` specifies the array format (single parameter with multipl
 | `ssv`            | Space-separated values. | `foo bar baz` |
 | `tsv`            | Tab-separated values.   | `"foo\tbar\tbaz"` |
 | `pipes`          | Pipe-separated values.  | `foo|bar|baz` |
-| `multi`          | Multiple parameter instances rather than multiple values. This is only supported for `in: query` and `in: formData` parameters. | `foo=value&foo=another_value` |
+| `multi`          | Multiple parameter instances rather than multiple values. This is only supported for the `in: query` and `in: formData` parameters. | `foo=value&foo=another_value` |
 
 Additionally, you can:
 
@@ -329,9 +329,9 @@ You can define a constant parameter as a required parameter with only one possib
   enum: [value]
 ```
 
-The `enum` property specifies the possible values. In this example, only one value can be used, and this will be the only value available in the Swagger UI for the user to choose from.
+The `enum` property specifies possible values. In this example, only one value can be used, and this will be the only value available in the Swagger UI for the user to choose from.
 
-**Note:** A constant parameter is not the same as [default parameter value](#default-parameter-values). A constant parameter is always sent by the client, whereas the default value is something that the server uses if the parameter is not sent by the client.
+**Note:** A constant parameter is not the same as the [default parameter value](#default-parameter-values). A constant parameter is always sent by the client, whereas the default value is something that the server uses if the parameter is not sent by the client.
 
 ### Parameters Without a Value
 
@@ -358,7 +358,7 @@ Use `allowEmptyValue` to describe such parameters:
 
 #### Common Parameters for All Methods of a Path
 
-Parameters can be defined under the path itself, in which case the parameter exists in all operations described under this path. A typical example are GET/PUT/PATCH/DELETE operations that manipulate the same resource accessed via a path parameter.
+Parameters can be defined under a path itself, in this case, the parameters exist in all operations described under this path. A typical example is the GET/PUT/PATCH/DELETE operations that manipulate the same resource accessed via a path parameter.
 
 ```
 paths:
@@ -396,7 +396,7 @@ paths:
     # GET/users/{id}?metadata=true
     get:
       summary: Gets a user by ID.
-      # Note we only define the query parameter, because {id} is defined at path level.
+      # Note we only define the query parameter, because the {id} is defined at the path level.
       parameters:
         - in: query
           name: metadata
@@ -491,7 +491,7 @@ paths:
           description: OK
 ```
 
-Note that the global `parameters` are not parameters applied to all operations -- they are simply global definitions that can be re-used easily.
+Note that the global `parameters` are not parameters applied to all operations -- they are simply global definitions that can be easily re-used.
 
 ### Parameter Dependencies
 
@@ -518,7 +518,7 @@ paths:
           type: string
           description: >
              A relative date range for the report, such as `Today` or `LastWeek`.
-             For an exact range use `start_date` and `end_date` instead.
+             For an exact range, use `start_date` and `end_date` instead.
         - name: start_date
           in: query
           type: string
