@@ -14,7 +14,7 @@ Examples can be used by tools and libraries, for instance, Swagger UI auto-popul
 
 ### Schema Examples
 
-The `example` key is be used to provide a schema example. Examples can be given for individual properties, objects and the whole schema.
+The `example` key is used to provide a schema example. Examples can be given for individual properties, objects and the whole schema.
 
 #### Property Examples
 
@@ -45,7 +45,7 @@ title:
 
 #### Object Examples
 
-Properties of type object can have complex inline examples that include that object’s properties. The example should comply to the object schema.
+Properties of a type object can have complex inline examples that include that objectâ€™s properties. The example should comply with the object schema.
 
 ```
 definitions:
@@ -78,7 +78,7 @@ definitions:
 
 #### Array Examples
 
-Example for an array of primitives:
+An example for an array of primitives:
 
 ```
 definitions:
@@ -143,7 +143,7 @@ definition:
 
 ### Response Examples
 
-Swagger allows examples on the response level, each example corresponding to a specific MIME type returned by the operation. Such as one example for `application/json`, another one for `text/csv` and so on. Each MIME type must be one of the operation’s `produces` values -- either explicit or inherited from the global scope.
+Swagger allows examples on the response level, each example corresponding to a specific MIME type returned by the operation. Such as one example for `application/json`, another one for `text/csv` and so on. Each MIME type must be one of the operationâ€™s `produces` values -- either explicit or inherited from the global scope.
 
 ```
       produces:
@@ -163,7 +163,7 @@ All examples are **free-form**, meaning their interpretation is up to tools and 
 
 #### JSON and YAML Examples
 
-Since JSON and YAML are interchangeable (YAML is a superset of JSON), both can be specified either using JSON syntax:
+Since JSON and YAML are interchangeable (YAML is a superset of JSON), both can be specified either using the JSON syntax:
 
 ```
           examples:
@@ -174,7 +174,7 @@ Since JSON and YAML are interchangeable (YAML is a superset of JSON), both can b
               }
 ```
 
-or YAML syntax:
+or the YAML syntax:
 
 ```
           examples:
@@ -195,7 +195,7 @@ or YAML syntax:
 
 #### XML Examples
 
-There is no specific syntax for XML response examples. But since the response examples are free-form, you can use any format that you wish or that is supported by your tool.
+There is no specific syntax for XML response examples. But, since the response examples are free-form, you can use any format that you wish or that is supported by your tool.
 
 ```
           examples:

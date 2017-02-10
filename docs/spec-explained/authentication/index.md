@@ -18,7 +18,7 @@ Authentication is described by using the `securityDefinitions` and `security` ke
 
 The `securityDefinitions` section is used to define all security schemes (authentication types) supported by the API. It is a name->definition map that maps arbitrary names to the security scheme definitions.
 
-Here the API supports three security schemes named _BasicAuth_, _ApiKeyAuth_ and _OAuth2_, and these names will be used to refer to these security schemes from elsewhere:
+Here, the API supports three security schemes named _BasicAuth_, _ApiKeyAuth_ and _OAuth2_, and these names will be used to refer to these security schemes from elsewhere:
 
 ``` 
 securityDefinitions:
@@ -53,7 +53,7 @@ Other required properties depend on the security type. For details, check the [S
 
 After you have defined the security schemes in `securityDefinitions`, you can apply them to the whole API or individual operations by adding the `security` section on the root level or operation level, respectively.
 
-When used on the root level, `security` applies the specified security schemes globally to all API operations, unless overridden on the operation level. In the following example, the API calls can be authenticated using either an API key or OAuth 2. The names _ApiKeyAuth_ and _OAuth2_ refer to the security schemes previously defined in `securityDefinitions`.
+When used on the root level, `security` applies the specified security schemes globally to all API operations, unless overridden on the operation level. In the following example, the API calls can be authenticated using either an API key or OAuth 2. The _ApiKeyAuth_ and _OAuth2_ names refer to the security schemes previously defined in `securityDefinitions`.
 
 ``` 
 security:
@@ -121,9 +121,9 @@ security:
  # (A AND B) OR (C AND D)
 ```
 
-That is, `security` is an array of hashmaps, where each hashmap contain one or more named security schemes. Items in a hashmap are combined using logical AND, and array items are combined using logical OR. Security schemes combined via OR are alternatives -- any one can be used  in the given context. Security schemes combined via AND must be used simultaneously in the same request. 
+That is, `security` is an array of hashmaps, where each hashmap contains one or more named security schemes. Items in a hashmap are combined using logical AND, and array items are combined using logical OR. Security schemes combined via OR are alternatives -- any one can be used  in the given context. Security schemes combined via AND must be used simultaneously in the same request. 
 
-Here we can use either Basic authentication or an API key:
+Here, we can use either Basic authentication or an API key:
 
 ``` 
 security:
@@ -131,7 +131,7 @@ security:
   - apiKey: []
 ```
 
-Here the API requires a pair of API keys to be included in requests:
+Here, the API requires a pair of API keys to be included in requests:
 
 ``` 
 security:
@@ -139,7 +139,7 @@ security:
     apiKey2: []
 ```
 
-Here we can use either OAuth 2 or a pair of API keys:
+Here, we can use either OAuth 2 or a pair of API keys:
 
 ``` 
 security:
@@ -154,7 +154,7 @@ The [OAuth 2](oauth2.md) page has examples of assigning different scopes to diff
 
 #### What does [] mean in `securitySchemeName: []`?
 
-`[]` is YAML/JSON syntax for an empty array. The Swagger Specification requires that items in the `security` array specify a list of required scopes, as in:
+`[]` is a YAML/JSON syntax for an empty array. The Swagger Specification requires that items in the `security` array specify a list of required scopes, as in:
 
 ``` 
 security:

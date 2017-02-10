@@ -1,22 +1,22 @@
 ## Describing Request Body
 
-POST, PUT and PATCH requests can have the request body (payload), such as JSON or XML data. In Swagger terms, the request body is called a **body parameter**. There can be only one body parameter, although the operation may have other parameters (path, query, header).
+The POST, PUT and PATCH requests can have the request body (payload), such as JSON or XML data. In Swagger terms, the request body is called a **body parameter**. There can be only one body parameter, although the operation may have other parameters (path, query, header).
 
-**Note:** The payload of `application/x-www-form-urlencoded` and `multipart/form-data` requests is described by using [form parameters](parameters.md#form-parameters), not body parameters. 
+**Note:** The payload of the `application/x-www-form-urlencoded` and `multipart/form-data` requests is described by using [form parameters](parameters.md#form-parameters), not body parameters. 
 
 The body parameter is defined in the operation’s parameters section and includes the following:
 
 * `in: body`
 
-* A `schema` that describes the body data type and structure. The data type is usually an object, but can also be a primitive (such as a string or number) or an array.
+* `schema` that describes the body data type and structure. The data type is usually an object, but can also be a primitive (such as a string or number) or an array.
 
-* An optional `description`.
+* Optional `description`.
 
 * The payload name. It is required but ignored (it is used for documentation purposes only).
 
 ### Object Payload (JSON, etc.)
 
-Many APIs transmit data as an object, such as JSON. A `schema` for an object should specify `type: object` and properties for that object.
+Many APIs transmit data as an object, such as JSON. `schema` for an object should specify `type: object` and properties for that object.
 
 For example, the `POST /users` operation with this JSON body:
 
@@ -103,7 +103,7 @@ Host: api.example.com
 Content-Type: text/plain
 Content-Length: 42
 
-Time is an illusion. Lunchtime, doubly so.
+Time is an illusion. Lunchtime doubly so.
 ```
 
 Swagger definition:

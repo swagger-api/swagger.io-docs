@@ -26,7 +26,7 @@ paths:
 
 ![Grouping by tags in Swagger UI](../../images/docs/swagger-ui-tags.png)
 
-Optionally, you can specify the `description` and `externalDocs` for each tag by using the global `tags` section on the root level. The tag names here should match those used in operations.
+Optionally, you can specify `description` and `externalDocs` for each tag by using the global `tags` section on the root level. The tag names here should match those used in operations.
 
 ```
 tags:

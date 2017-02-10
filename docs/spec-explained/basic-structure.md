@@ -1,6 +1,6 @@
 ## Basic Structure
 
-Swagger can be written in [JSON](https://en.wikipedia.org/wiki/JSON) or [YAML](https://en.wikipedia.org/wiki/YAML). In this guide we only use YAML examples, but JSON works equally well.
+Swagger can be written in [JSON](https://en.wikipedia.org/wiki/JSON) or [YAML](https://en.wikipedia.org/wiki/YAML). In this guide, we only use YAML examples, but JSON works equally well.
 
 A sample Swagger specification written in YAML looks like:
 
@@ -30,13 +30,13 @@ paths:
 
 ### Metadata
 
-Every Swagger specification starts with the Swagger version, 2.0 being the latest version. Swagger version defines the overall structure of an API specification -- what you can document and how you document it.
+Every Swagger specification starts with the Swagger version, 2.0 being the latest version. A Swagger version defines the overall structure of an API specification -- what you can document and how you document it.
 
 ```
 swagger: "2.0"
 ```
 
-Then you need to specify the API `info` -- `title`, `description` (optional), `version` (API version, not file revision or Swagger version).
+Then, you need to specify the API `info` -- `title`, `description` (optional), `version` (API version, not file revision or Swagger version).
 
 ```
 info:
@@ -45,7 +45,7 @@ info:
   version: 1.0.0
 ```
 
-`version` can be a random string. You can use *major.minor.patch* (as in [semantic versioning](http://semver.org/)), or arbitrary format like *1.0-beta* or *2016.11.15*.
+`version` can be a random string. You can use *major.minor.patch* (as in [semantic versioning](http://semver.org/)), or an arbitrary format like *1.0-beta* or *2016.11.15*.
 
 `description` can be [multiline](http://stackoverflow.com/a/21699210) and supports [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/) for rich text representation.
 
@@ -127,7 +127,7 @@ _More info:_ [Describing Parameters](parameters.md).
 
 ### Responses
 
-For each operation, you can define possible status codes, such as 200 OK or 404 Not Found, and the `schema` of the response body. Schemas can be defined inline or referenced from an external definition via `$ref`. You can also provide example responses for different content types.
+For each operation, you can define possible status codes, such as 200 OK or 404 Not Found, and `schema` of the response body. Schemas can be defined inline or referenced from an external definition via `$ref`. You can also provide example responses for different content types.
 
 ```
 paths:

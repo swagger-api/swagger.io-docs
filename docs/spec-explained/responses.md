@@ -33,7 +33,7 @@ paths:
       responses:
         200:
           description: OK
-  # Here we override the "produces" array to specify other media types
+  # Here, we override the "produces" array to specify other media types
   /logo:
     get:
       summary: Gets the logo image.
@@ -72,9 +72,9 @@ Note that an API specification does not necessarily need to cover *all possible*
 
 The `schema` keyword is used to describe the response body. A schema can define: 
 
-* an `object` or `array` -- typically used with JSON and XML APIs,
+* `object` or `array` -- typically used with JSON and XML APIs,
 * a primitive such as a number or string – used for plain text responses,
-* a `file` (see [below](#response-that-returns-a-file)).
+* `file` (see [below](#response-that-returns-a-file)).
 
 Schema can be defined inline in the operation:
 
@@ -182,11 +182,11 @@ paths:
               description: The UTC date/time at which the current rate limit window resets.
 ```
 
-Note that currently there is no way in Swagger to define common response headers for different response codes or different API operations. You need to define the headers for each response individually.
+Note that, currently, there is no way in Swagger to define common response headers for different response codes or different API operations. You need to define the headers for each response individually.
 
 ### Default Response
 
-Sometimes an operation can return multiple errors with different HTTP status codes, but all of them have the same response structure:
+Sometimes, an operation can return multiple errors with different HTTP status codes, but all of them have the same response structure:
 
 ```
       responses:
@@ -204,7 +204,7 @@ Sometimes an operation can return multiple errors with different HTTP status cod
             $ref: "#/definitions/Error"    # <-----
 ```
 
-You can use the `default` response to describe these errors collectively instead of individually. "Default" means this response is used for all HTTP codes that are not covered individually for this operation. 
+You can use the `default` response to describe these errors collectively, not individually. "Default" means this response is used for all HTTP codes that are not covered individually for this operation. 
 
 ```
       responses:

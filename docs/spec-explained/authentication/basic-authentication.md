@@ -1,6 +1,6 @@
 ### Basic Authentication
 
-[Basic authentication](https://en.wikipedia.org/wiki/Basic_access_authentication) is a very simple authentication scheme that is built into the HTTP protocol. The client sends HTTP requests with the Authorization header that contains the word `Basi` followed by a space and a base64-encoded string `username:password`. For example, a header containing the credentials `demo` / `p@55w0rd` would be encoded as:
+[Basic authentication](https://en.wikipedia.org/wiki/Basic_access_authentication) is a very simple authentication scheme that is built into the HTTP protocol. The client sends HTTP requests with the Authorization header that contains the `Basic` word followed by a space and a base64-encoded `username:password` string. For example, a header containing the `demo` / `p@55w0rd` credentials would be encoded as:
 
 ```
 Authorization: Basic ZGVtbzpwQDU1dzByZA==
@@ -8,7 +8,7 @@ Authorization: Basic ZGVtbzpwQDU1dzByZA==
 
 **Note:** Because base64 is easily decoded, Basic authentication should only be used together with other security mechanisms such as HTTPS/SSL. 
 
-Basic authentication is easy to define. In the global `securityDefinitions` section, add an entry with `type: basic` and an arbitrary name (in this example - *basicAuth*). Then apply security to the whole API or specific operations by using the `security` section.
+Basic authentication is easy to define. In the global `securityDefinitions` section, add an entry with `type: basic` and an arbitrary name (in this example - *basicAuth*). Then, apply security to the whole API or specific operations by using the `security` section.
 
 ```
 securityDefinitions:
