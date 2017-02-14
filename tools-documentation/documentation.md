@@ -1,7 +1,7 @@
 
 ## Swagger Editor Documentation
 
-The Swagger Editor is an open source editor to design, define and document RESTful APIs in the Swagger Specifcation. The source code for the Swagger Editor can be found in GitHub.
+The Swagger Editor is an open source editor to design, define and document RESTful APIs in the Swagger Specification. The source code for the Swagger Editor can be found in GitHub.
 
 GitHub: https://github.com/swagger-api/swagger-editor
 
