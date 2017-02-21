@@ -179,7 +179,7 @@ Example:
 Else, you could use:
 
 
-`java -jar swagger-codegen-cli-2.2.1.jar help`
+`java -jar swagger-codegen-cli-2.2.1.jar help <command>`
 
 Example:
 
@@ -207,29 +207,6 @@ Example:
 `java -jar swagger-codegen-cli-2.2.1.jar config-help -l php`
 
 
-Once you have the various help section options, you can learn about a specific topic.
-
-
-If you have Homebrew installed:
-
-
-`swagger-codegen help <command>`
-
-Example:
-
-`swagger-codegen help generate`
-
-
-Else, you could use:
-
-
-`java -jar swagger-codegen-cli-2.2.1.jar help`   
-
-Example:
-
-`java -jar swagger-codegen-cli-2.2.1.jar help generate`
-
-
 ##### Generating Code
 To generate code from an existing swagger specification -
 
@@ -246,11 +223,11 @@ Example:
 
 Else, you could use:
 
-`java -jar swagger-codegen-cli-2.2.1.jar -i <path of your Swagger specification> -l <language>`
+`java -jar swagger-codegen-cli-2.2.1.jar generate -i <path of your Swagger specification> -l <language>`
 `
 Example:
 
-`swagger-codegen generate -i http://petstore.swagger.io/v2/swagger.json -l csharp`
+`java -jar swagger-codegen-cli-2.2.1.jar generate -i http://petstore.swagger.io/v2/swagger.json -l csharp`
 
 
 In the above code, we pass two arguments : `- i` and `-l`.
