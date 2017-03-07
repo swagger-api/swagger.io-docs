@@ -152,6 +152,7 @@ Name | Description
 [swagmock](https://github.com/subeeshcbabu/swagmock) | Mock data generator for swagger api. Generates mock request and response according to swagger api specification of your application. [Examples](https://github.com/subeeshcbabu/swagmock/blob/master/docs/EXAMPLES.md)
 [Swagger Express Middleware](https://github.com/BigstickCarpet/swagger-express-middleware/#swagger-express-middleware) | Swagger middleware and mocks for Express.js
 [Swagger Parser](https://github.com/BigstickCarpet/swagger-parser#swagger-parser) | Parses, validates, and dereferences JSON/YAML Swagger specs in Node and browsers
+[test2doc.js](https://github.com/stackia/test2doc.js) | Autogenerate Swagger specification from your tests/specs.
 
 #### Perl
 
