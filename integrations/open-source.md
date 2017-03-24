@@ -248,7 +248,7 @@ Name | Description
 [ember-swagger-ui](https://github.com/rynam0/ember-swagger-ui) | An [ember-cli](http://www.ember-cli.com) addon for quickly and easily adding [swagger-ui](https://github.com/swagger-api/swagger-ui) to your [EmberJS](http://emberjs.com/) application.
 [commandcar](https://github.com/tikalk/commandcar) | cURL on steroids. Invoke any API from the commandline.
 [SwagGen](https://github.com/yonaskolb/SwagGen) | Swift command line tool for generating client side code from a Swagger spec.
-
+[swagger-mock-validator](https://bitbucket.org/atlassian/swagger-mock-validator) | Language-agnostic command-line tool for validating a Swagger document against a mock file, such as a Pact file.
 
 ### Tools for previous Swagger versions
 
