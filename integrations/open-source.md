@@ -370,3 +370,4 @@ Name | Description
 [gform-admin](https://github.com/stemey/gform-admin) | An alternative UI client for Swagger.
 [swagger-cli-client](https://github.com/signalfx/swagger-cli-client) | Command-line interface generator to communicate with Swagger servers.
 [Swagger2Postman](https://github.com/josephpconley/swagger2postman) | Creates a [Postman](http://www.getpostman.com) collection from live Swagger documentation
+[ember-swagger-ui](https://github.com/rynam0/ember-swagger-ui) | An [ember-cli](http://www.ember-cli.com) addon for quickly and easily adding [swagger-ui](https://github.com/swagger-api/swagger-ui) to your [EmberJS](http://emberjs.com/) application.
