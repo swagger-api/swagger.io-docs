@@ -1,0 +1,78 @@
+[
+  {
+    "text": "Documenting Your API with Swagger",
+    "id": "index.md",
+    "children": [
+      {
+        "text": "What Is Swagger?",
+        "id": "what-is-swagger.md"
+      },
+      {
+        "text": "Basic Structure",
+        "id": "basic-structure.md"
+      },
+      {
+        "text": "API Host and Base Path",
+        "id": "api-host-and-base-path.md"
+      },
+      {
+        "text": "MIME Types",
+        "id": "mime-types.md"
+      },
+      {
+        "text": "Paths and Operations",
+        "id": "paths-and-operations.md"
+      },
+      {
+        "text": "Describing Parameters",
+        "id": "parameters.md"
+      },
+      {
+        "text": "Describing Request Body",
+        "id": "request-body.md"
+      },
+      {
+        "text": "File Upload",
+        "id": "file-upload.md"
+      },
+      {
+        "text": "Describing Responses",
+        "id": "responses.md"
+      },
+      {
+        "text": "Authentication",
+        "id": "authentication\/index.md",
+        "children": [
+          {
+            "text": "Basic Authentication",
+            "id": "authentication\/basic.md"
+          },
+          {
+            "text": "API Keys",
+            "id": "authentication\/api-keys.md"
+          },
+          {
+            "text": "OAuth 2",
+            "id": "authentication\/oauth2.md"
+          }
+        ]
+      },
+      {
+        "text": "Adding Examples",
+        "id": "examples.md"
+      },
+      {
+        "text": "Enums",
+        "id": "enums.md"
+      },
+      {
+        "text": "Grouping Operations With Tags",
+        "id": "tags.md"
+      },
+      {
+        "text": "Swagger Extensions",
+        "id": "swagger-extensions.md"
+      }
+    ]
+  }
+]
