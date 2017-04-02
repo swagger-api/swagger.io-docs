@@ -76,6 +76,7 @@ Name | Description
 [assertj-swagger](https://github.com/RobWin/assertj-swagger) | assertj-swagger is a library which compares a design-first Swagger YAML with an implementation-first Swagger JSON output (e.g. from springfox). assertj-swagger allows to validate that the implementation in compliance with the design specification.
 [binder-swagger-java](https://github.com/tminglei/binder-swagger-java) | binder-swagger-java was designed to help construct the swagger object, corresponding to swagger.json, and let it accessible from swagger ui or other http visitors.
 [dropwizard-swagger](https://github.com/smoketurner/dropwizard-swagger) | A dropwizard bundle that wraps Swagger-Core.
+[elide](http://elide.io/) | A framework for building [JSON-API](http://jsonapi.org/) web services with generated Swagger documentation.
 [jooby-swagger](http://jooby.org/doc/swagger) | Export [jooby apps](http://jooby.org) to Swagger Spec 2.0.
 [restlet-framework](http://restlet.com/technical-resources/restlet-framework/guide/2.3/extensions/swagger) | Restlet Framework extension that supports auto-generation of Swagger 2.0 from Restlet API and JAX-API applications
 [springfox](https://springfox.github.io/springfox) | Integrates with Spring MVC with support for Swagger 1.2 and Swagger 2.0 spec.
@@ -115,6 +116,7 @@ Name | Description
 Name | Description
 ---|---
 [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle) |  Adds some Swagger to your WebApi.
+[Swashbuckle.AspNetCore](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) |  Swagger tools for documenting API's built on ASP.NET Core.
 [AutoRest](https://github.com/Azure/AutoRest) | The AutoRest tool generates client libraries for accessing RESTful web services from a Swagger specification.
 [SwaggerProvider](http://fsprojects.github.io/SwaggerProvider/) | F# Type Provider for Swagger
 [NSwag](http://nswag.org) | The toolchain generates Swagger specifications from Web API controllers and client code to access them via C#.
@@ -141,6 +143,7 @@ Name | Description
 [oas-nodegen](https://github.com/capitalone/oas-nodegen) | A library for generating completely customizable code from the Open API Specification (FKA Swagger) RESTful API documentation using the scripting power of Node.js
 [pokemock](https://github.com/mobilcom-debitel/pokemock) | A mock server generated from an arbitrary Swagger file. Exports a set of customizable Express middlewares.
 [sails-swagger](https://github.com/tjwebb/sails-swagger) | A [Sails.js](http://sailsjs.org) plugin that generates a Swagger (v2.0) document from your application Models, Controllers, and Routes. Also see [swagger.balderdash.io](http://swagger.balderdash.io) for a Sails-themed Swagger UI.
+[serverless_swagger](https://github.com/Reckon-Limited/serverless_swagger) | A [Serverless](http://serverless.com) plugin that generates serverless configuration, api gateway events, and basic handler stub functions from a Swagger specification.
 [swagger-jsdoc](https://github.com/Surnet/swagger-jsdoc) | Takes JSDoc comments from any set of JavaScript files and generates a swagger specification file, that could be consumed by Swagger UI. Works also with CLI.
 [swagger-mongodb](https://github.com/kaizhu256/node-swagger-mongodb) | lightweight swagger-ui crud-api backed by mongodb
 [swagger-tools](https://github.com/apigee-127/swagger-tools) | Various Swagger tools for JavaScript including an API/CLI (conversion, validation, ...) and [Connect](https://github.com/senchalabs/connect) middleware for routing, validation, security and swagger-ui.
@@ -149,6 +152,7 @@ Name | Description
 [swagmock](https://github.com/subeeshcbabu/swagmock) | Mock data generator for swagger api. Generates mock request and response according to swagger api specification of your application. [Examples](https://github.com/subeeshcbabu/swagmock/blob/master/docs/EXAMPLES.md)
 [Swagger Express Middleware](https://github.com/BigstickCarpet/swagger-express-middleware/#swagger-express-middleware) | Swagger middleware and mocks for Express.js
 [Swagger Parser](https://github.com/BigstickCarpet/swagger-parser#swagger-parser) | Parses, validates, and dereferences JSON/YAML Swagger specs in Node and browsers
+[test2doc.js](https://github.com/stackia/test2doc.js) | Autogenerate Swagger specification from your tests/specs.
 
 #### Perl
 
@@ -205,6 +209,7 @@ Name | Description
 [swagger-blocks](https://github.com/fotinakis/swagger-blocks) | Define and serve live-updating Swagger JSON for Ruby apps.
 [swagger_engine](https://github.com/batdevis/swagger_engine) | include [Swagger-ui](https://github.com/swagger-api/swagger-ui) as mountable rails engine.
 [svelte](https://github.com/notonthehighstreet/svelte) | Dynamic Ruby client generator for Swagger 2.0 compliant APIs.
+[rspec-rails-swagger](https://github.com/drewish/rspec-rails-swagger) | Generate Swagger 2.0 docs for Rails apps using RSpec request specs. Test results can be captured as response examples.
 [rswag](https://github.com/domaindrivendev/rswag) | Swagger tooling for Rails API's. Generate beautiful API documentation, including a UI to explore and test operations, directly from your rspec integration tests.
 
 #### Scala
@@ -238,10 +243,13 @@ Name | Description
 [swagger-confluence](https://cloud.slkdev.net/swagger-confluence) | A tool for parsing a Swagger Schema and publishing API documentation to an Atlassian Confluence wiki. Includes a Java library, a command line executor, and a Gradle plugin.
 [swagger-diff](https://github.com/civisanalytics/swagger-diff) | A command-line utility, RSpec matcher, and Ruby library for comparing two Swagger specifications.
 [swagger.ed](https://github.com/chefArchitect/apispots-browser-swaggered) | A Chrome extenstion that will change the way you look at APIs.
+[SwagDefGen](https://github.com/Roger13/SwagDefGen) | JSON request/response mocks to Swagger definitions converter.
 [vscode-apielements](https://marketplace.visualstudio.com/items?itemName=vncz.vscode-apielements) | A Visual Studio Code extension which will bring interactivity into your swagger documents!
 [ember-swagger-ui](https://github.com/rynam0/ember-swagger-ui) | An [ember-cli](http://www.ember-cli.com) addon for quickly and easily adding [swagger-ui](https://github.com/swagger-api/swagger-ui) to your [EmberJS](http://emberjs.com/) application.
 [commandcar](https://github.com/tikalk/commandcar) | cURL on steroids. Invoke any API from the commandline.
 [SwagGen](https://github.com/yonaskolb/SwagGen) | Swift command line tool for generating client side code from a Swagger spec.
+[swagger-mock-validator](https://bitbucket.org/atlassian/swagger-mock-validator) | Language-agnostic command-line tool for validating a Swagger document against a mock file, such as a Pact file.
+[Spectacle](https://sourcey.com/spectacle) | A beautiful static HTML5 documentation generator for OpenAPI/Swagger 2.0. [Demo](https://cheesestore.github.io/) 
 
 ### Tools for previous Swagger versions
 
@@ -319,7 +327,6 @@ Name | Description
 [swagger-node-client](https://github.com/signalfx/swagger-node-client) | Node client to communicate with Swagger servers. Includes detailed client-side validation against the API spec.
 [ratify](https://github.com/mac-/ratify) | A [Hapi](http://hapijs.com/) plugin that automatically creates Swagger documentation AND validates request/response parameters using the [JSON Schema](http://json-schema.org/) spec.
 [swagger-express](https://github.com/fliptoo/swagger-express) | A simple and clean solution to integrate swagger with express straight away from jsdoc or a yaml file.
-[spectacle](https://github.com/sourcey/spectacle) | A beautiful static HTML5 documentation generator for OpenAPI/Swagger 2.0.
 
 #### PHP
 
