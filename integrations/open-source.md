@@ -249,6 +249,7 @@ Name | Description
 [commandcar](https://github.com/tikalk/commandcar) | cURL on steroids. Invoke any API from the commandline.
 [SwagGen](https://github.com/yonaskolb/SwagGen) | Swift command line tool for generating client side code from a Swagger spec.
 [swagger-mock-validator](https://bitbucket.org/atlassian/swagger-mock-validator) | Language-agnostic command-line tool for validating a Swagger document against a mock file, such as a Pact file.
+[Spectacle](https://sourcey.com/spectacle) | A beautiful static HTML5 documentation generator for OpenAPI/Swagger 2.0. [Demo](https://cheesestore.github.io/) 
 
 ### Tools for previous Swagger versions
 
@@ -326,8 +327,6 @@ Name | Description
 [swagger-node-client](https://github.com/signalfx/swagger-node-client) | Node client to communicate with Swagger servers. Includes detailed client-side validation against the API spec.
 [ratify](https://github.com/mac-/ratify) | A [Hapi](http://hapijs.com/) plugin that automatically creates Swagger documentation AND validates request/response parameters using the [JSON Schema](http://json-schema.org/) spec.
 [swagger-express](https://github.com/fliptoo/swagger-express) | A simple and clean solution to integrate swagger with express straight away from jsdoc or a yaml file.
-
-
 
 #### PHP
 
