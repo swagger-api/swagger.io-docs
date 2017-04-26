@@ -36,6 +36,13 @@ Name | Description
 [swagger1st](https://github.com/sarnowski/swagger1st) | A Clojure/Ring handler that does parsing, validation and routing based on swagger definitions.
 [Friboo](https://github.com/zalando/friboo) | Utility library for writing microservices in Clojure, with support for Swagger and OAuth.
 
+#### ColdFusion
+
+Name | Description
+---|---
+[swagger-sdk](https://www.forgebox.io/view/swagger-sdk) | This module allows for software development using the Swagger/OpenAPI specification and utilizes the v3.0 OpenAPI Specification
+[cbSwagger](https://www.forgebox.io/view/cbswagger) | This module automatically generates OpenAPI ( fka Swagger ) documentation from your configured ColdBox MVC application and module routes.
+
 #### D
 
 Name | Description
