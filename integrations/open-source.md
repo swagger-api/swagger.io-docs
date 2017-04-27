@@ -160,6 +160,7 @@ Name | Description
 [Swagger Express Middleware](https://github.com/BigstickCarpet/swagger-express-middleware/#swagger-express-middleware) | Swagger middleware and mocks for Express.js
 [Swagger Parser](https://github.com/BigstickCarpet/swagger-parser#swagger-parser) | Parses, validates, and dereferences JSON/YAML Swagger specs in Node and browsers
 [test2doc.js](https://github.com/stackia/test2doc.js) | Autogenerate Swagger specification from your tests/specs.
+[koa-joi-swagger](https://github.com/zaaack/koa-joi-swagger) | Using joi schema to validate and generate Swagger UI, for koa.
 
 #### Perl
 
