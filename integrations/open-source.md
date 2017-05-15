@@ -353,6 +353,7 @@ Name | Description
 [django-rest-swagger](https://github.com/marcgibbons/django-rest-swagger) | Swagger Documentation Generator for Django REST Framework
 [django-tastypie-swagger](https://github.com/concentricsky/django-tastypie-swagger) | An adapter to use Swagger with django-tastypie.
 [flask-restful-swagger](https://github.com/rantav/flask-restful-swagger) | A Swagger spec extractor for flask-restful.
+[tornado-swagger](https://github.com/SerenaFeng/tornado-swagger) | A Swagger-v1.2 specification extractor for Tornado Restful Framework.
 
 #### Ruby
 
