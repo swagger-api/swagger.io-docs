@@ -4,7 +4,7 @@ Swagger 2.0 supports file uploads sent with `Content-Type: multipart/form-data`.
 
 ```
 consumes:
-   - mulitpart/form-data
+   - multipart/form-data
 ```
 
 The operation payload is defined using `formData` parameters (not body parameters). The file parameter must have `type: file`:
