@@ -52,7 +52,7 @@ Please run the following to run the Editor in your local machine from Docker.
 
 ```
 docker pull swaggerapi/swagger-editor
-docker run -p 80:8080 swaggerapi/swagger-editor
+docker run -p 8080:8080 swaggerapi/swagger-editor
 ```
 
 ### Contribute
