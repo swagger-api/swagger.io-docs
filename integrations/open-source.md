@@ -295,6 +295,7 @@ Name | Description
 
 Name | Description
 ---|---
+[springfox](https://github.com/springfox/springfox-grails-integration) | SpringFox Grails integration library that produces swagger specification documentation for Grails 3.x. [Here is a demo application](https://github.com/springfox/springfox-grails-demo) showcasing the library integration.
 [restapidoc](https://github.com/siemens/restapidoc) | A simple RESTful API documentation plugin for the Grails web application framework.
 [swaggydoc](http://grails.org/plugin/swaggydoc) | Swagger Documentation for Grails Controllers. [[Source]](https://github.com/rahulsom/swaggydoc)
 
