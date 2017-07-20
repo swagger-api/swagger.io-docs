@@ -184,6 +184,7 @@ Name | Description
 [Jane OpenAPI](https://github.com/jolicode/jane-openapi) | An API client generator compatible with [PSR7](http://www.php-fig.org/psr/psr-7/) and [HTTPlug](http://httplug.io/)
 [gossi/swagger](https://github.com/gossi/swagger) | A php library to manipulate swagger specifications
 [calcinai/strut](https://github.com/calcinai/strut) | A complete OpenAPI manipulation library. Allows full creation/loading, modification and serialization of specifications.
+[byjg/swagger-test](https://github.com/byjg/php-swagger-test) | A set of tools for test your REST calls based on the swagger documentation using PHPUnit.
 
 #### Python
 
