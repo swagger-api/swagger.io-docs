@@ -162,6 +162,7 @@ Name | Description
 [Swagger Parser](https://github.com/BigstickCarpet/swagger-parser#swagger-parser) | Parses, validates, and dereferences JSON/YAML Swagger specs in Node and browsers
 [test2doc.js](https://github.com/stackia/test2doc.js) | Autogenerate Swagger specification from your tests/specs.
 [koa-joi-swagger](https://github.com/zaaack/koa-joi-swagger) | Using joi schema to validate and generate Swagger UI, for koa.
+[swagger-stats](https://github.com/slanatech/swagger-stats)|API Telemetry based on Swagger(OpenAPI) specification. Trace API calls and Monitor API performance, health and usage statistics in Node.js Microservices 
 
 #### Perl
 
