@@ -222,6 +222,8 @@ Name | Description
 ---|---
 [Apivore](https://github.com/westfieldlabs/apivore) | RSpec based tool to test your API against its Swagger 2.0 specification.
 [grape-swagger](https://github.com/ruby-grape/grape-swagger) | Add Swagger compliant documentation to your grape API.
+[MiniApivore](https://github.com/alekseyl/mini-apivore) | MiniTest based revision of Apivore, to test your API against its Swagger 2.0 specification.
+
 [swagger-blocks](https://github.com/fotinakis/swagger-blocks) | Define and serve live-updating Swagger JSON for Ruby apps.
 [swagger_engine](https://github.com/batdevis/swagger_engine) | include [Swagger-ui](https://github.com/swagger-api/swagger-ui) as mountable rails engine.
 [svelte](https://github.com/notonthehighstreet/svelte) | Dynamic Ruby client generator for Swagger 2.0 compliant APIs.
