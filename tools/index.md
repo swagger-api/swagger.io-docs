@@ -1,5 +1,5 @@
 ## Swagger Tools
-In addition to the [Community Driven Tools for Swagger](open-source-integrations), the core Swagger team drives a set of core tooling, all [open-source](https://github.com/swagger-api) and licensed under the [Apache License](http://www.apache.org/licenses/LICENSE-2.0.html). You can freely use these tools and contribute enhancements directly in the GitHub issues for each project.
+In addition to the [Community Driven Tools for Swagger](/open-source-integrations), the core Swagger team drives a set of core tooling, all [open-source](https://github.com/swagger-api) and licensed under the [Apache License](http://www.apache.org/licenses/LICENSE-2.0.html). You can freely use these tools and contribute enhancements directly in the GitHub issues for each project.
 
 The major Core Projects include:
 
