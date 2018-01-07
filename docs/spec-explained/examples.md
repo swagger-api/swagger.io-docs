@@ -153,7 +153,7 @@ Swagger allows examples on the response level, each example corresponding to a s
         200:
           description: OK
           examples:
-            application/json: { "id:" 38, "title": "T-shirt" }
+            application/json: { "id": 38, "title": "T-shirt" }
             text/csv: >
               id,title
               38,T-shirt
