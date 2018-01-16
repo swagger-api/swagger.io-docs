@@ -270,6 +270,7 @@ Name | Description
 [swagger-mock-validator](https://bitbucket.org/atlassian/swagger-mock-validator) | Language-agnostic command-line tool for validating a Swagger document against a mock file, such as a Pact file.
 [Spectacle](https://sourcey.com/spectacle) | A beautiful static HTML5 documentation generator for OpenAPI/Swagger 2.0. [Demo](https://cheesestore.github.io/)
 [Swagger-ui-themes](https://github.com/ostranme/swagger-ui-themes) | A collection of css themes to spice up your Swagger docs.
+[APIFuzzer](https://github.com/KissPeter/APIFuzzer) | Fuzz test your application using your Swagger definition without coding
 
 ### Tools for previous Swagger versions
 
