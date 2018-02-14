@@ -155,6 +155,7 @@ Name | Description
 [hapi-swaggered](https://github.com/z0mt3c/hapi-swaggered) | A hapi.js plugin to generate swagger v2.0 compliant specifications based on hapi routes and joi schemas.
 [hippie-swagger](https://github.com/cachecontrol/hippie-swagger) | API testing tool with automatic swagger assertions
 [oas-nodegen](https://github.com/capitalone/oas-nodegen) | A library for generating completely customizable code from the Open API Specification (FKA Swagger) RESTful API documentation using the scripting power of Node.js
+[openapi-mock](https://github.com/penx/openapi-mock) | A CLI to start a mock server based upon a Swagger/OpenAPI JSON or YAML spec file
 [pokemock](https://github.com/mobilcom-debitel/pokemock) | A mock server generated from an arbitrary Swagger file. Exports a set of customizable Express middlewares.
 [sails-swagger](https://github.com/tjwebb/sails-swagger) | A [Sails.js](http://sailsjs.org) plugin that generates a Swagger (v2.0) document from your application Models, Controllers, and Routes. Also see [swagger.balderdash.io](http://swagger.balderdash.io) for a Sails-themed Swagger UI.
 [serverless_swagger](https://github.com/Reckon-Limited/serverless_swagger) | A [Serverless](http://serverless.com) plugin that generates serverless configuration, api gateway events, and basic handler stub functions from a Swagger specification.
