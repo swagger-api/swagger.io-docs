@@ -49,6 +49,13 @@ Name | Description
 ---|---
 [swaggerize](https://github.com/gedaiu/swaggarize) | Specification parsing and structures, request validation and handler bindings.
 
+#### Delphi
+
+Name | Description
+---|---
+[SwagDoc](https://github.com/marcelojaloto/SwagDoc) | SwagDoc is a Delphi library to generate swagger.json file for Swagger Spec version 2.0. Create the public documentation REST API using Swagger 2.0 for Delphi Language.
+
+
 #### Erlang
 
 Name | Description
