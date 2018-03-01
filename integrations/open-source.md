@@ -53,7 +53,7 @@ Name | Description
 
 Name | Description
 ---|---
-[SwagDoc](https://github.com/marcelojaloto/SwagDoc) | SwagDoc is a Delphi library to generate swagger.json file for Swagger Spec version 2.0. Create the public documentation REST API using Swagger 2.0 for Delphi Language.
+[SwagDoc](https://github.com/marcelojaloto/SwagDoc) | SwagDoc is a Delphi library to generate swagger.json file for Swagger Spec version 2.0. Create a public documentation REST API using Swagger 2.0 for Delphi Language.
 
 
 #### Erlang
