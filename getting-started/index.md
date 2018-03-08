@@ -25,7 +25,7 @@ The good news is that Swagger tools can help you do this with ease.
 
 * Use [Swagger Core](https://github.com/swagger-api/swagger-core) open source project to create the OAS from your existing Java APIs. Swagger Core supports frameworks like JAX-RS or node.js. 
 
-⋅⋅* Have a look at [this example](https://github.com/swagger-api/swagger-core/wiki/Swagger-Core-JAX-RS-Project-Setup-1.5.X) to see how Swagger Core can help your JAX-RS implemented API   
+  * Have a look at [this example](https://github.com/swagger-api/swagger-core/wiki/Swagger-Core-JAX-RS-Project-Setup-1.5.X) to see how Swagger Core can help your JAX-RS implemented API   
 
 * [Swagger Inspector](inspector.swagger.io) allows you to easily and quickly auto-generate an OAS definition from any API endpoint right from your browser
 
