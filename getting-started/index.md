@@ -1,6 +1,6 @@
 ## What is Swagger?
 
-If you've ever wored with APIs, chances are, you've heard of Swagger. Swagger is the most widely used tooling ecosystem for developing APIs with the OpenAPI Specification (OAS). Swagger consists of both open source as well as professional tools, catering to almost every need and use case. 
+If you've ever worked with APIs, chances are, you've heard of Swagger. Swagger is the most widely used tooling ecosystem for developing APIs with the OpenAPI Specification (OAS). Swagger consists of both open source as well as professional tools, catering to almost every need and use case. 
 Swagger is spearheaded by SmartBear Software.
 
 ### A Brief History Lesson
@@ -13,7 +13,7 @@ If you're an API provider and want to use Swagger tools build your APIs and the 
 
 #### Starting from scratch?
 
-* Use the [Swagger Editor](http://editor.swagger.io/)to create your OAS definition and then use [Swagger Codegen](https://swagger.io/swagger-codegen/) to generate server implementation.
+* Use the [Swagger Editor](http://editor.swagger.io/) to create your OAS definition and then use [Swagger Codegen](https://swagger.io/swagger-codegen/) to generate server implementation.
 * Use the [Swagger UI](https://swagger.io/swagger-ui/) to visualize and document your OAS definition
 * Design, document and develop APIs as a team using [SwaggerHub](https://swaggerhub.com)
 
