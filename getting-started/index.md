@@ -36,17 +36,21 @@ In either case - be sure to check out the long list of [open source projects](ht
 ## Other Resources
 
 [Difference Between OpenAPI and Swagger](https://swagger.io/blog/difference-between-swagger-and-openapi/) 
+
 [How to design APIs using OpenAPI 3.0](https://www.youtube.com/watch?v=6kwmW_p_Tig&feature=youtu.be) 
+
 [Documenting Your Existing APIs: API Documentation Made Easy with OpenAPI & Swagger](https://swagger.io/blog/how-to-generate-openapi-swagger/)
+
 [Definition Driven API Development: How OAS & Swagger Help Teams Streamline Their API Development](https://swagger.io/blog/api-development-with-openapi-and-swagger/) 
+
 [Swagger Inspector: A Developer Tool To Test APIs and Generate Your OpenAPI](https://swagger.io/blog/announcing-swagger-inspector/)
 
 ## Support
 
 The following methods are available to obtain support for Swagger:
 
-* The Swagger Google Group - This would normally be your first stop to get support for Swagger. Here you can find previously asked questions or ask new ones. When asking a question, please provide as much information as you can regarding the environment you use (development language, library, versions).
-* IRC! you can find us on freenode in the channel #Swagger. You can talk with us directly there.
+* [The Swagger Google Group](https://groups.google.com/forum/#!forum/swagger-swaggersocket) - This would normally be your first stop to get support for Swagger. Here you can find previously asked questions or ask new ones. When asking a question, please provide as much information as you can regarding the environment you use (development language, library, versions).
+* IRC! you can find us on [freenode](http://webchat.freenode.net/?channels=swagger) in the channel #Swagger. You can talk with us directly there.
 * You can also [tweet us](https://twitter.com/SwaggerApi) any questions you have @SwaggerAPI
 
 [View Source on GitHub](https://github.com/swagger-api/swagger.io/blob/wordpress//getting-started/index.md)
