@@ -605,9 +605,8 @@ This will start the Swagger UI on your local port 8080, specifically at http://l
 CORS is a technique to prevent websites from doing bad things with your personal data. Most browsers + javascript toolkits not only support CORS but enforce it, which has implications for your API server which supports Swagger.
 You can read about CORS here: http://www.w3.org/TR/cors.
 There are two cases where no action is needed for CORS support:
-** Swagger UI is hosted on the same server as the application itself (same host and port).
-
-** The application is located behind a proxy that enables the required CORS headers. This may already be covered within your organization.
+* Swagger UI is hosted on the same server as the application itself (same host and port).
+* The application is located behind a proxy that enables the required CORS headers. This may already be covered within your organization.
 
 Otherwise, CORS support needs to be enabled for:
 * Your Swagger docs. For Swagger 2.0 it's the **swagger.json** and any externally `$refed` docs, and for prior version, it's the **Resource Listing** and **API Declaration** files.
