@@ -320,7 +320,7 @@ To start the CI tests, you can run `mvn verify -Psamples` (assuming you've all t
 
 ## Swagger UI Documentation
 
-The Swagger UI is an open source project to visually render documentation for a Swagger defined API directly from the API's Swagger specifcation. The source code for the Swagger UI can be found in GitHub.
+The Swagger UI is an open source project to visually render documentation for a Swagger defined API directly from the API's Swagger specification. The source code for the Swagger UI can be found in GitHub.
 
 GitHub: https://github.com/swagger-api/swagger-ui
 
@@ -363,7 +363,7 @@ Step 2: Open the **dist** folder
 
 Step 3: Run the **dist/index.html** file on a browser **or** place the **dist** folder inside your server.
 
-Step 4: The Swagger UI will now be live in the browser, with the default rendering of the Swagger Petstore. The JSON specifcation of the Swagger Petstore can be found here - http://petstore.swagger.io/v2/swagger.json  
+Step 4: The Swagger UI will now be live in the browser, with the default rendering of the Swagger Petstore. The JSON specification of the Swagger Petstore can be found here - http://petstore.swagger.io/v2/swagger.json
 
 
 **Note: Please remember that to load a specification and execute the UI’s try out requests, you would need to have enabled CORS (read below)**
