@@ -1,4 +1,4 @@
-##Support
+## Support
 
 Tap into these groups to get support for Swagger:
 
