@@ -280,6 +280,7 @@ Name | Description
 [Spectacle](https://sourcey.com/spectacle) | A beautiful static HTML5 documentation generator for OpenAPI/Swagger 2.0. [Demo](https://cheesestore.github.io/)
 [Swagger-ui-themes](https://github.com/ostranme/swagger-ui-themes) | A collection of css themes to spice up your Swagger docs.
 [APIFuzzer](https://github.com/KissPeter/APIFuzzer) | Fuzz test your application using your Swagger definition without coding
+[swagger-to-flowtype](https://github.com/yayoc/swagger-to-flowtype) | A CLI tool for generating type definitions of [Flow](https://flow.org/) from a given Swagger file.
 
 ### Tools for previous Swagger versions
 
