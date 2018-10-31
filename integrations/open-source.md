@@ -43,6 +43,12 @@ Name | Description
 [swagger-sdk](https://www.forgebox.io/view/swagger-sdk) | This module allows for software development using the Swagger/OpenAPI specification and utilizes the v3.0 OpenAPI Specification
 [cbSwagger](https://www.forgebox.io/view/cbswagger) | This module automatically generates OpenAPI ( fka Swagger ) documentation from your configured ColdBox MVC application and module routes.
 
+#### C++
+
+Name | Description
+---|---
+[oatpp-swagger](https://github.com/oatpp/oatpp-swagger) | Swagger-UI integration for [oat++](https://oatpp.io/) applications. Utilizes OpenAPI 3.0.0 Specification.
+
 #### D
 
 Name | Description
