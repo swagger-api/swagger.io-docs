@@ -10,7 +10,7 @@
 * [File Upload](file-upload.md)
 * [Describing Responses](responses.md)
 * [Authentication](authentication/index.md)
-  * [Basic Authentication](authentication/basic.md)
+  * [Basic Authentication](authentication/basic-authentication.md)
   * [API Keys](authentication/api-keys.md)
   * [OAuth 2](authentication/oauth2.md)
 * [Adding Examples](examples.md)
