@@ -1,5 +1,5 @@
-# <img src="https://github.com/swagger-api/swagger.io/blob/wordpress/swagger-logo.png"  width="60" height="60"> Swagger API 
+# <img src="https://raw.githubusercontent.com/swagger-api/swagger.io/wordpress/images/assets/SW-logo-clr.png" height="60">  
 
-For general support questions, please refer to the [google group](https://groups.google.com/forum/#!forum/swagger-swaggersocket).
+For general support questions, please refer to the [Community Forums](https://community.smartbear.com/t5/Swagger-Open-Source-Tools/bd-p/SwaggerOSTools).
 
 This repository covers some of the pages at https://swagger.io - contributions are welcome.
