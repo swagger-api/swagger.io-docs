@@ -230,6 +230,7 @@ Name | Description
 [bottle-swagger](https://github.com/ampedandwired/bottle-swagger) | Swagger integration for the Bottle web framework
 [prance](https://github.com/jfinkhaeuser/prance) | Swagger parser that resolves JSON references.
 [spec-synthase](https://github.com/MicroarrayTecnologia/spec-synthase) | Spec-Synthase is a tool to help deal with big swagger 2.0 files, by building the swagger specification file from small yaml files.
+[FastAPI](https://github.com/tiangolo/fastapi) | High performance, easy to learn, fast to code, ready for production. Powered by Starlette and Pydantic. Based on OpenAPI 3. Includes Swagger UI as a frontend. All using Python 3.6+ types to declare request parameters, bodies, etc. With automatic data serialization, conversion, validation and documentation.
 
 #### Ruby
 
