@@ -1,3 +1,8 @@
-This repository is for issues related to the swagger.io website (http://swagger.io).
+<!--
+NOTE: This repository is for issues with the https://swagger.io website content.
 
-For general support issues around the Swagger/OpenAPI specification or the tooling provided by the Swagger ecosystem, please post your question in the google group at https://groups.google.com/forum/#!forum/swagger-swaggersocket.
+If you have a question or issue with the OpenAPI Specification or Swagger tools, please ask your question at the community forum:
+
+https://community.smartbear.com/t5/Swagger-Open-Source-Tools/bd-p/SwaggerOSTools
+
+-->
