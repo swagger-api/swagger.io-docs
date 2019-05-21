@@ -212,6 +212,7 @@ Name | Description
 ---|---
 [falsy](https://github.com/pingf/falsy) | with FAL.S.Y, you can use falcon, swagger-ui, yml together, which makes writing api easy!
 [pyramid-swagger](https://github.com/striglia/pyramid_swagger) | Convenient tools for using Swagger to define and validate your interfaces in a Pyramid webapp.
+[pyramid-openapi3](https://github.com/pylons/pyramid_openapi3) | Validate Pyramid views and responses against an OpenAPI 3.0 document.
 [flask-restplus](https://github.com/noirbizarre/flask-restplus) | Helpers, syntaxic sugar and Swagger documentation for Flask-Restful
 [pyswagger](https://github.com/AntXlab/pyswagger) | A type-safe, dynamic, spec-compliant Swagger client.
 [flex](https://github.com/pipermerriam/flex) | Swagger 2.0 schema validation, and tooling for validating arbitrary request/response objects.
