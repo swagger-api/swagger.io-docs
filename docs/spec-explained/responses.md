@@ -228,7 +228,7 @@ paths:
   /users:
     get:
       summary: Gets a list of users.
-      response:
+      responses:
         200:
           description: OK
           schema:
@@ -238,7 +238,7 @@ paths:
   /users/{id}:
     get:
       summary: Gets a user by ID.
-      response:
+      responses:
         200:
           description: OK
           schema:
