@@ -149,6 +149,7 @@ Name | Description
 [QSwag](https://github.com/swimlane/qswag) | Fast & Light Swagger generator for .NET Core
 [SwaggerWcf](https://github.com/abelsilva/swaggerwcf) | Generates Swagger (2.0) for WCF services and also provides swagger-ui
 [Nancy.Swagger](https://github.com/yahehe/Nancy.Swagger) | Generates Swagger for Nancy services on .Net Framework/Core/Standard
+[Unchase OpenAPI (Swagger) Connected Service](https://github.com/unchase/Unchase.OpenAPI.Connectedservice) | Visual Studio 2017/2019 extension to generate C# (TypeScript) HttpClient (or C# Controllers) code for OpenAPI (formerly Swagger API) web service with [NSwag](http://nswag.org)
 
 #### Node.js
 
