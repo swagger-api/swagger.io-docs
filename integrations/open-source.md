@@ -74,6 +74,11 @@ Name | Description
 ---|---
 [PhoenixSwagger](https://github.com/xerions/phoenix_swagger) | `PhoenixSwagger` is the library that provides Swagger integration to the [Phoenix](http://www.phoenixframework.org/) web framework. It generates Swagger specification for Phoenix controllers and validates the requests.
 
+#### Elm
+Name | Description
+---|---
+[swagger-to](https://github.com/Parquery/swagger-to) | `swagger-to` generates Elm client code from a Swagger spec.
+
 #### Gitlab
 
 Name | Description
@@ -87,6 +92,7 @@ Name | Description
 [go-swagger](https://github.com/casualjim/go-swagger) | A toolkit to support your API development with Swagger.
 [goa](https://github.com/raphael/goa) | goa is a framework for building RESTful microservices in Go with first class Swagger support.
 [grpc-gateway](https://github.com/gengo/grpc-gateway) | generate a REST gateway and swagger definition from a [gRPC](http://grpc.io) protobuf definition
+[swagger-to](https://github.com/Parquery/swagger-to) | `swagger-to` generates Go server code from a Swagger spec.
 
 #### Haskell
 
@@ -136,6 +142,7 @@ Name | Description
 Name | Description
 ---|---
 [NSwag](http://nswag.org) | The toolset generates TypeScript client classes and DTO interfaces to call web service operations (supports JQuery, AngularJS, Angular 2 and more).
+[swagger-to](https://github.com/Parquery/swagger-to) | `swagger-to` generates Angular 2+ client code from a Swagger spec.
 
 #### .NET
 
@@ -233,6 +240,8 @@ Name | Description
 [prance](https://github.com/jfinkhaeuser/prance) | Swagger parser that resolves JSON references.
 [spec-synthase](https://github.com/MicroarrayTecnologia/spec-synthase) | Spec-Synthase is a tool to help deal with big swagger 2.0 files, by building the swagger specification file from small yaml files.
 [FastAPI](https://github.com/tiangolo/fastapi) | High performance, easy to learn, fast to code, ready for production. Powered by Starlette and Pydantic. Based on OpenAPI 3. Includes Swagger UI as a frontend. All using Python 3.6+ types to declare request parameters, bodies, etc. With automatic data serialization, conversion, validation and documentation.
+[swagger-to](https://github.com/Parquery/swagger-to) | `swagger-to` generates Python client code with type annotations (based on `requests`) from a Swagger spec.
+
 
 #### Ruby
 
@@ -291,6 +300,7 @@ Name | Description
 [Swagger-ui-themes](https://github.com/ostranme/swagger-ui-themes) | A collection of css themes to spice up your Swagger docs.
 [APIFuzzer](https://github.com/KissPeter/APIFuzzer) | Fuzz test your application using your Swagger definition without coding
 [swagger-to-flowtype](https://github.com/yayoc/swagger-to-flowtype) | A CLI tool for generating type definitions of [Flow](https://flow.org/) from a given Swagger file.
+[swagger_style](https://github.com/Parquery/swagger-to#style-check) | `swagger_style`, a part of `swagger-to` set of tools, checks the style (naming conventions, descriptions _etc._) of a Swagger spec.
 
 ### Tools for previous Swagger versions
 
