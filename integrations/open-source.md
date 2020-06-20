@@ -118,6 +118,9 @@ Name | Description
 [swagger-maven-plugin](http://kongchen.github.io/swagger-maven-plugin/) | Support Swagger Spec 2.0, integrate with JAX-RS & Spring MVC project, and easily generate `swagger.json` & a static document during build phase.
 [swagger-codegen-gradle-plugin](https://github.com/thebignet/swagger-codegen-gradle-plugin) | A Gradle Plugin which wraps swagger-codegen.
 [swagger-request-validator](https://bitbucket.org/atlassian/swagger-request-validator) | A standalone library for validating request/response interactions against a Swagger / OpenAPI spec. Framework agnostic, with adapters for WireMock, Rest Assured and Pact.
+[Swagger Brake CLI](https://github.com/redskap/swagger-brake) | A library with a CLI interface that checks 2 API specifications for breaking changes.
+[Swagger Brake Maven Plugin](https://github.com/redskap/swagger-brake-maven-plugin) | A Maven plugin for Swagger Brake.
+[Swagger Brake Gradle Plugin](https://github.com/redskap/swagger-brake-gradle) | A Gradle plugin for Swagger Brake.
 
 #### JavaScript
 
