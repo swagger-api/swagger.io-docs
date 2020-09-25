@@ -251,7 +251,7 @@ Name | Description
 Name | Description
 ---|---
 [plumber](https://github.com/rstudio/plumber) | Create an API powered by the R language whose default OpenAPI documentation is served by `swagger`.
-[swagger](https://github.com/rstudio/swagger) | Dynamically Generate Documentation from a 'Swagger' Compliant R API
+[swagger](https://github.com/rstudio/swagger) | Dynamically Generate Documentation from a 'Swagger' Compliant R API.
 
 #### Ruby
 
