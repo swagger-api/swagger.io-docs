@@ -33,7 +33,7 @@ paths:
             type: file
 ```
 
-MIME types listed in `consumes` and `produces` should be compliant with [RFC 6838](http://tools.ietf.org/html/rfc6838). For example, you can use standard MIME types such as:
+MIME types listed in `consumes` and `produces` should be compliant with [RFC 6838](https://datatracker.ietf.org/doc/html/rfc6838). For example, you can use standard MIME types such as:
 
 ``` 
 application/json
