@@ -76,6 +76,8 @@ The `schema` keyword is used to describe the response body. A schema can define:
 * a primitive such as a number or string – used for plain text responses,
 * `file` (see [below](#response-that-returns-a-file)).
 
+Optionally, `schema` can define a `title` with a descriptive name for the response type. `title` allows code generators to specify a meaningful result type name instead of generic names like result1.
+
 Schema can be defined inline in the operation:
 
 ```
@@ -83,6 +85,7 @@ Schema can be defined inline in the operation:
         200:
           description: A User object
           schema:
+            title: GetUserResponse
             type: object
             properties:
               id:
