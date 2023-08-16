@@ -117,6 +117,22 @@ paths:
           required: true
 ```
 
+Or, you would get all headers within a map as follows:
+
+```
+paths:
+  /ping:
+    get:
+      summary: Checks if the server is alive.
+      parameters:
+        - in: header
+          name: headers
+          schema:
+            type: object
+            additionalProperties:
+              type: string
+```
+
 In a similar way, you can define [custom response headers](#header-parameters).
 
 **Note:** Swagger specification has special keywords for some headers:
