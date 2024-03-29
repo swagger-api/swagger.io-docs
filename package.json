@@ -10,10 +10,15 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/check": "^0.5.9",
     "@astrojs/starlight": "^0.21.2",
     "astro": "^4.3.5",
+    "marked": "^12.0.1",
+    "node-fetch": "^3.3.2",
     "sharp": "^0.32.5",
-    "@astrojs/check": "^0.5.9",
     "typescript": "^5.4.2"
+  },
+  "devDependencies": {
+    "@types/marked": "^6.0.0"
   }
 }
