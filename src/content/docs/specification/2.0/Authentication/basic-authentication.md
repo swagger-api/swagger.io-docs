@@ -1,5 +1,7 @@
 ---
-title: API Server and Base Path
+title: Basic Authentication
+sidebar:
+  order: 3
 ---
 
 OAS **2** This page applies to OpenAPI Specification ver. 2 (fka Swagger).  

@@ -1,5 +1,7 @@
 ---
-title: API Server and Base Path
+title: API Host and Base Path
+sidebar:
+  order: 3
 ---
 
 code { font-size: 14px !important; }
