@@ -4,7 +4,9 @@ sidebar:
   order: 16
 ---
 
+:::note
 OAS **3** This guide is for OpenAPI 3.0.
+:::
 
 ## Using $ref
 
@@ -91,17 +93,10 @@ According to [RFC3986](https://tools.ietf.org/html/rfc3986), the `$ref` string v
 
 `/` and `~` are special characters in JSON Pointers, and need to be escaped when used literally (for example, in path names).
 
-Character
-
-Escape With
-
-~
-
-~0
-
-/
-
-~1
+| Character | Escape With |
+| --------- | ----------- |
+| `~`       | `~0`        |
+| `/`       | `~1`        |
 
 For example, to refer to the path `/blogs/{blog_id}/new~posts`, you would use:
 

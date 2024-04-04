@@ -4,7 +4,7 @@ sidebar:
   order: 12
 ---
 
-OAS **2** This page applies to OpenAPI Specification ver. 2 (fka Swagger). To learn about the latest version, visit [OpenAPI 3 pages](/docs/specification/grouping-operations-with-tags).
+OAS **2** This page applies to OpenAPI Specification ver. 2 (fka Swagger). To learn about the latest version, visit [OpenAPI 3 pages](/specification/grouping-operations-with-tags).
 
 ## Grouping Operations With Tags
 

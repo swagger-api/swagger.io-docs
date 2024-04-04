@@ -4,7 +4,9 @@ sidebar:
   order: 14
 ---
 
+:::note
 OAS **3** This guide is for OpenAPI 3.0.
+:::
 
 ## Callbacks
 
@@ -169,58 +171,15 @@ As you can see, we use the `{$request.body#/callbackUrl}` expression in our exam
 
 You can use the following expressions to refer to its data:
 
-Expression
-
-Example
-
-Description
-
-`{$url}`
-
-`/subscribe`
-
-The parent operation URL.
-
-`{$method}`
-
-`POST`
-
-The method of the callback request.
-
-`{$request.path.eventType}`
-
-`myEvent`
-
-The event name.
-
-`{$request.query._param-name_}`
-
-`query-param-value`  
-(the _p1_ query parameter)
-
-The value of the specified query parameter.
-
-`{$request.header._header-name_}`
-
-`application/json`  
-(the Content-Type header)
-
-The specified header of the “subscription” request.
-
-`{$request.body#/_field-name_}`
-
-`callbackUrl`
-
-A field in the request body.  
-If the field is an array, use the syntax like `{$request.body#/_arrayField_/_2_}`.
-
-`{$response.header._header-name_}`
-
-`http://my.example.com?id=123`  
-(the Location header)
-
-The value of the specified response header  
-(the response to the “subscription” request).
+| Expression                       | Example                                              | Description                                                                                                 |
+| -------------------------------- | ---------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `{$url}`                         | `/subscribe`                                         | The parent operation URL.                                                                                   |
+| `{$method}`                      | `POST`                                               | The method of the callback request.                                                                         |
+| `{$request.path.eventType}`      | `myEvent`                                            | The event name.                                                                                             |
+| `{$request.query.param-name}`    | `query-param-value` (the `p1` query parameter)       | The value of the specified query parameter.                                                                 |
+| `{$request.header.header-name}`  | `application/json` (the Content-Type header)         | The specified header of the “subscription” request.                                                         |
+| `{$request.body#/field-name}`    | `callbackUrl`                                        | A field in the request body. If the field is an array, use the syntax like `{$request.body#/arrayField/2}`. |
+| `{$response.header.header-name}` | `http://my.example.com?id=123` (the Location header) | The value of the specified response header (the response to the “subscription” request).                    |
 
 You can combine a runtime expression with static data in callback definitions. For instance, you can define the callback URL in the following way:
 

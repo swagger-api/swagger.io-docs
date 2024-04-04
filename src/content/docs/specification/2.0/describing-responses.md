@@ -4,7 +4,7 @@ sidebar:
   order: 9
 ---
 
-OAS **2** This page applies to OpenAPI Specification ver. 2 (fka Swagger). To learn about the latest version, visit [OpenAPI 3 pages](/docs/specification/describing-responses).
+OAS **2** This page applies to OpenAPI Specification ver. 2 (fka Swagger). To learn about the latest version, visit [OpenAPI 3 pages](/specification/describing-responses).
 
 ## Describing Responses
 
@@ -50,7 +50,7 @@ paths:
           description: OK
 ```
 
-_More info:_ [MIME Types](/docs/specification/2-0/mime-types/).
+_More info:_ [MIME Types](/specification/20/mime-types/).
 
 ### HTTP Status Codes
 

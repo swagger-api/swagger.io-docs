@@ -1,0 +1,271 @@
+<p class="version-note"><span class="label oas3">OAS <b>3</b></span> This guide is for OpenAPI 3.0.</p>
+
+<h2>Using $ref</h2>
+When you document an API, it is common to have some features which you use across several of API resources. In that
+case, you can create a snippet for such elements in order to use them multiple times when you need it. With OpenAPI 3.0,
+you can reference a definition hosted on any location. It can be the same server, or another one &ndash; for example,
+GitHub, SwaggerHub, and so on. <!--
+<h3>What You Can Reuse</h3>
+< ! - -HK: This list is incomplete. Commenting for now - - >
+<ul>
+ 	<li>Parameters</li>
+ 	<li>Models (<em>or Schema Objects in general</em>)</li>
+ 	<li>Responses</li>
+ 	<li>Operations (<em>Operations can only be remote references</em>)</li>
+ 	<li>Request bodies</li>
+ 	<li>Links</li>
+ 	<li>Callbacks</li>
+</ul>
+--> To reference a definition, use the <code>$ref</code> keyword:
+
+<pre>
+<code>$ref: <i>&#39;reference to definition&#39;</i></code></pre>
+For example, suppose you have the following schema object, which you want to use inside your response:
+
+<table>
+    <thead>
+        <tr>
+            <th>JSON Example</th>
+            <th>YAML Example</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <pre>
+<code>&quot;components&quot;: {
+  &quot;schemas&quot;: {
+    &quot;user&quot;: {
+      &quot;properties&quot;: {
+        &quot;id&quot;: {
+          &quot;type&quot;: &quot;integer&quot;
+        },
+        &quot;name&quot;: {
+          &quot;type&quot;: &quot;string&quot;
+        }
+      }
+    }
+  }
+}
+</code></pre>
+            </td>
+            <td>
+                <pre>
+<code>components:
+  schemas:
+    User:
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+</code></pre>
+            </td>
+        </tr>
+    </tbody>
+</table>
+To refer that object, you need to add <code>$ref</code> with the corresponding path to your response:
+
+<table>
+    <thead>
+        <tr>
+            <th>JSON Example</th>
+            <th>YAML Example</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <pre>
+<code>&quot;responses&quot;: {
+  &quot;200&quot;: {
+    &quot;description&quot;: &quot;The response&quot;,
+    &quot;schema&quot;: {
+      &quot;$ref&quot;: &quot;#/components/schemas/user&quot; 
+    }
+  }
+}
+</code></pre>
+            </td>
+            <td>
+                <pre>
+<code>responses:
+  &#39;200&#39;:
+    description: The response
+    schema: 
+      $ref: &#39;#/components/schemas/User&#39;
+</code></pre>
+            </td>
+        </tr>
+    </tbody>
+</table>
+The value of <code>$ref</code> uses the <a href="https://tools.ietf.org/html/draft-pbryan-zyp-json-ref-03">JSON
+    Reference</a> notation, and the portion starting with <code>#</code> uses the <a
+    href="https://tools.ietf.org/html/rfc6901">JSON Pointer</a> notation. This notation lets you specify the target file
+or a specific part of a file you want to reference. In the previous example, <code>#/components/schemas/User</code>
+means the resolving starts from the root of the current document, and then finds the values of <code>components</code>,
+<code>schemas</code>, and <code>User</code> one after another.
+
+<h3 id="syntax">$ref Syntax</h3>
+According to <a href="https://tools.ietf.org/html/rfc3986">RFC3986</a>, the <code>$ref</code> string value (<b>JSON
+    Reference</b>) should contain a URI, which identifies the location of the JSON value you are referencing to. If the
+string value does not conform URI syntax rules, it causes an error during the resolving. Any members other than
+<code>$ref</code> in a JSON Reference object are ignored. Check this list for example values of a JSON reference in
+specific cases:
+
+<ul>
+    <li><b>Local Reference</b> &ndash; <code>$ref: &#39;#/definitions/myElement&#39;</code> <code>#</code> means go to
+        the root of the current document and then find elements <code>definitions</code> and <code>myElement</code> one
+        after one.</li>
+    <li><b>Remote Reference</b> &ndash; <code>$ref: &#39;document.json&#39;</code> Uses the whole document located on
+        the same server and in the same location.
+        <ul>
+            <li><b>The element of the document located in the&nbsp;same folder</b> &ndash;
+                <code>$ref: &#39;document.json#/myElement&#39;</code></li>
+            <li><b>The element of the document located in the parent folder</b> &ndash;
+                <code>$ref: &#39;../document.json#/myElement&#39;</code></li>
+            <li><b>The element of the document located in another folder</b> &ndash;
+                <code>$ref: &#39;../another-folder/document.json#/myElement&#39;</code></li>
+        </ul>
+    </li>
+    <li><b>URL Reference</b> &ndash; <code>$ref: &#39;http://path/to/your/resource&#39;</code> Uses the whole document
+        located on the different server.
+        <ul>
+            <li><b>The specific element of the document stored on the different server</b> &ndash;
+                <code>$ref: &#39;http://path/to/your/resource.json#/myElement&#39;</code></li>
+            <li><b>The document on the different server, which uses the same protocol</b> (for example, HTTP or HTTPS)
+                &ndash; <code>$ref: &#39;//anotherserver.com/files/example.json&#39;</code></li>
+        </ul>
+    </li>
+</ul>
+<b>Note</b>: When using local references such as <code>#/components/schemas/User</code> in YAML, enclose the value in
+quotes: <code>&#39;#/components/schemas/User&#39;</code>. Otherwise it will be treated as a comment.
+
+<h3 id="escape">Escape Characters</h3>
+<code>/</code> and <code>~</code> are special characters in JSON Pointers, and need to be escaped when used literally
+(for example, in path names).
+<!--Since sometimes you need to use these &ndash; for example, when referring an element in <code>paths</code> &ndash; replace them with the escape characters.-->
+
+<table>
+    <thead>
+        <tr>
+            <th>Character</th>
+            <th>Escape With</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>~</td>
+            <td>~0</td>
+        </tr>
+        <tr>
+            <td>/</td>
+            <td>~1</td>
+        </tr>
+    </tbody>
+</table>
+For example, to refer to the path <code>/blogs/{blog_id}/new~posts</code>, you would use:
+
+<pre>
+<code>$ref: &#39;#/paths/~1blogs~1{blog_id}~1new~0posts&#39;</code></pre>
+
+<h3 id="considerations">Considerations</h3>
+
+<h4 id="allowed-places">Places Where $ref Can Be Used</h4>
+A common misconception is that <code>$ref</code> is allowed anywhere in an OpenAPI specification file. Actually
+<code>$ref</code> is only allowed in places where the <a
+    href="https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md">OpenAPI 3.0 Specification</a>
+explicitly states that the value may be a <i>reference</i>. For example, <code>$ref</code> cannot be used in the
+<code>info</code> section and directly under <code>paths</code>:
+
+<pre>
+<code>openapi: 3.0.0
+
+# Incorrect!
+info:
+  $ref: info.yaml
+paths:
+  $ref: paths.yaml</code></pre>
+However, you can <code>$ref</code> individual paths, like so:
+
+<pre>
+<code>paths:
+  /users:
+    $ref: &#39;../resources/users.yaml&#39;
+  /users/{userId}:
+    $ref: &#39;../resources/users-by-id.yaml&#39;</code></pre>
+
+<h4 id="sibling">$ref and Sibling Elements</h4>
+Any sibling elements of a <code>$ref</code> are ignored. This is because <code>$ref</code> works by replacing itself and
+everything on its level with the definition it is pointing at. Consider this example:
+
+<pre>
+<code>components:
+  schemas:
+    Date:
+      type: string
+      format: date
+
+    DateWithExample:
+      $ref: &#39;#/components/schemas/Date&#39;
+      description: Date schema extended with a `default` value... Or not?
+      default: 2000-01-01</code></pre>
+In the second schema, the <code>description</code> and <code>default</code> properties are ignored, so this schema ends
+up exactly the same as the referenced <code>Date</code> schema. <!-- Helen: This is incorrect.
+ 	<li>
+The <code>$ref</code> element cannot have any sibling elements. That is, the following snippet is not valid:
+<pre>
+<code>
+Persons:
+  type: array
+  items: 
+   - $ref: "#/components/schemas/Personnel"
+   - $ref: "#/components/schemas/Owners"
+</code>
+</pre>
+Still, you can use <code>$ref</code> as a part of the complex schemas. For instance, in the following code <code>$ref</code> is used to point out the common properties of described objects, and it is combined with object-specific properties.
+<pre>
+<code>
+components:
+  schemas:
+    Pet:
+      type: object
+      required:
+      - pet_type
+      properties:
+        pet_type:
+          type: string
+
+    Dog: 
+      allOf: # Combines the main `Pet` schema with `Dog`-specific properties 
+      - $ref: '#/components/schemas/Pet' # Points out the schema describing common properties
+      - type: object
+        # all other properties specific to a `Dog`
+        properties:
+          bark:
+            type: boolean
+          breed:
+            type: string
+            enum: [Dingo, Husky, Retriever, Shepherd]
+
+    Cat:
+      allOf: # Combines the main `Pet` schema with `Cat`-specific properties 
+      - $ref: '#/components/schemas/Pet' # Points out the schema describing common properties
+      - type: object
+        # all other properties specific to a `Cat`
+        properties:
+          hunts:
+            type: boolean
+          age:
+            type: integer
+</code>
+</pre>
+-->
+
+<p>&nbsp;&nbsp;</p>
+
+<p><i>Did not find what you were looking for? <a
+            href="https://community.smartbear.com/t5/Swagger-Open-Source-Tools/bd-p/SwaggerOSTools" target="_blank">Ask
+            the community</a><br />
+        Found a mistake? <a href="https://github.com/swagger-api/swagger.io/issues" target="_blank">Let us know</a></i>
+</p>

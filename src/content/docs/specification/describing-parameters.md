@@ -4,7 +4,9 @@ sidebar:
   order: 6
 ---
 
-OAS **3** This page is about OpenAPI 3.0. If you use OpenAPI 2.0, see our [OpenAPI 2.0 guide](/docs/specification/2-0/describing-parameters/).
+:::note
+OAS **3** This page is about OpenAPI 3.0. If you use OpenAPI 2.0, see our [OpenAPI 2.0 guide](/specification/20/describing-parameters/).
+:::
 
 ## Describing Parameters
 
@@ -67,7 +69,7 @@ Path parameters containing arrays and objects can be serialized in different way
 - label expansion – dot-prefixed, such as `/color.R=100.G=200.B=150`
 - simple-style – comma-delimited, such as `/users/12,34,56`
 
-The serialization method is specified by the `style` and `explode` keywords. To learn more, see [Parameter Serialization](/docs/specification/serialization/).
+The serialization method is specified by the `style` and `explode` keywords. To learn more, see [Parameter Serialization](/specification/serialization/).
 
 ### Query Parameters
 
@@ -94,7 +96,7 @@ Use `in: query` to denote query parameters:
               description: The numbers of items to return
 ```
 
-**Note:** To describe API keys passed as query parameters, use `securitySchemes` and `security` instead. See [API Keys](/docs/specification/authentication/api-keys/).
+**Note:** To describe API keys passed as query parameters, use `securitySchemes` and `security` instead. See [API Keys](/specification/authentication/api-keys/).
 
 Query parameters can be primitive values, arrays and objects. OpenAPI 3.0 provides several ways to serialize objects and arrays in the query string.
 
@@ -109,7 +111,7 @@ Objects can be serialized as:
 - `form` – `/points?color=R,100,G,200,B,150` or `/points?R=100&G=200&B=150`, depending on the `explode` keyword
 - `deepObject` – `/points?color[R]=100&color[G]=200&color[B]=150`
 
-The serialization method is specified by the `style` and `explode` keywords. To learn more, see [Parameter Serialization](/docs/specification/serialization/).
+The serialization method is specified by the `style` and `explode` keywords. To learn more, see [Parameter Serialization](/specification/serialization/).
 
 #### Reserved Characters in Query Parameters
 
@@ -163,7 +165,7 @@ paths:
           required: true
 ```
 
-In a similar way, you can define [custom response headers](/docs/specification/describing-responses/#response-headers). Header parameter can be primitives, arrays and objects. Arrays and objects are serialized using the `simple` style. For more information, see [Parameter Serialization](/docs/specification/serialization/).
+In a similar way, you can define [custom response headers](/specification/describing-responses/#response-headers). Header parameter can be primitives, arrays and objects. Arrays and objects are serialized using the `simple` style. For more information, see [Parameter Serialization](/specification/serialization/).
 
 **Note:** Header parameters named `Accept`, `Content-Type` and `Authorization` are not allowed. To describe these headers, use the corresponding OpenAPI keywords:
 
@@ -179,22 +181,22 @@ Request content type: `requestBody.content.<media-type>`
 
 Response content type: `responses.<code>.content.<media-type>`
 
-[Describing Request Body](/docs/specification/describing-request-body/),  
-[Describing Responses](/docs/specification/describing-responses/),  
-[Media Types](/docs/specification/mime-types)
+[Describing Request Body](/specification/describing-request-body/),  
+[Describing Responses](/specification/describing-responses/),  
+[Media Types](/specification/mime-types)
 
 `Accept`
 
 `responses.<code>.content.<media-type>`
 
-[Describing Responses](/docs/specification/describing-responses/),  
-[Media Types](/docs/specification/mime-types)
+[Describing Responses](/specification/describing-responses/),  
+[Media Types](/specification/mime-types)
 
 `Authorization`
 
 `securitySchemes`, `security`
 
-[Authentication](/docs/specification/authentication/)
+[Authentication](/specification/authentication/)
 
 ### Cookie Parameters
 
@@ -222,9 +224,9 @@ Use `in: cookie` to define cookie parameters:
                 type: string
 ```
 
-Cookie parameters can be primitive values, arrays and objects. Arrays and objects are serialized using the `form` style. For more information, see [Parameter Serialization](/docs/specification/serialization/).
+Cookie parameters can be primitive values, arrays and objects. Arrays and objects are serialized using the `form` style. For more information, see [Parameter Serialization](/specification/serialization/).
 
-**Note:** To define cookie authentication, use [API keys](/docs/specification/authentication/api-keys/) instead.
+**Note:** To define cookie authentication, use [API keys](/specification/authentication/api-keys/) instead.
 
 ### Required and Optional Parameters
 
@@ -322,7 +324,7 @@ parameters:
 There are two common mistakes when using the `default` keyword:
 
 - Using `default` with `required` parameters or properties, for example, with path parameters. This does not make sense – if a value is required, the client must always send it, and the default value is never used.
-- Using `default` to specify a sample value. This is not intended use of `default` and can lead to unexpected behavior in some Swagger tools. Use the `example` or `examples` keyword for this purpose instead. See [Adding Examples](/docs/specification/adding-examples/).
+- Using `default` to specify a sample value. This is not intended use of `default` and can lead to unexpected behavior in some Swagger tools. Use the `example` or `examples` keyword for this purpose instead. See [Adding Examples](/specification/adding-examples/).
 
 ### Enum Parameters
 
@@ -340,7 +342,7 @@ parameters:
         - sold
 ```
 
-More info: [Defining an Enum](/docs/specification/enums).
+More info: [Defining an Enum](/specification/enums).
 
 ### Constant Parameters
 
@@ -428,7 +430,7 @@ parameters:
         value: [1, 5, 7] # ?ids=1,5,7
 ```
 
-For details, see [Adding Examples](/docs/specification/adding-examples/).
+For details, see [Adding Examples](/specification/adding-examples/).
 
 ### Deprecated Parameters
 

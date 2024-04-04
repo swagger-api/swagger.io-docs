@@ -32,7 +32,7 @@ requestBody:
             format: binary
 ```
 
-You start with the `requestBody/content` keyword. Then, you specify the media type of request data. File uploads typically use the `_multipart/form-data_` media type, and mixed-data requests usually use `_multipart/mixed_`. Below the media type, put the `schema` keyword to indicate that you start describing the request payload. You describe individual parts of the request as properties of the `schema` object. As you can see, a multipart request can include various data: strings, objects in JSON format, and binary data. You can also specify one or several files for uploading. (To learn more, see [File Upload](/docs/specification/describing-request-body/file-upload/).) The example above corresponds to the following request:
+You start with the `requestBody/content` keyword. Then, you specify the media type of request data. File uploads typically use the `_multipart/form-data_` media type, and mixed-data requests usually use `_multipart/mixed_`. Below the media type, put the `schema` keyword to indicate that you start describing the request payload. You describe individual parts of the request as properties of the `schema` object. As you can see, a multipart request can include various data: strings, objects in JSON format, and binary data. You can also specify one or several files for uploading. (To learn more, see [File Upload](/specification/describing-request-body/file-upload/).) The example above corresponds to the following request:
 
 ```yaml
     POST /upload HTTP/1.1
@@ -107,7 +107,7 @@ To set a specific `Content-Type` for a request part, use the `encoding/_{propert
 
 ### Specifying Custom Headers
 
-Parts of multipart requests usually do not use any headers, except for `Content`. In case you need to include custom headers, use the `encoding/_{property-name}_/headers` field to describe these headers (see below). For complete information on describing headers, see [Describing Parameters](/docs/specification/describing-parameters/). Below is an example of a custom header defined for a part of a multipart request:
+Parts of multipart requests usually do not use any headers, except for `Content`. In case you need to include custom headers, use the `encoding/_{property-name}_/headers` field to describe these headers (see below). For complete information on describing headers, see [Describing Parameters](/specification/describing-parameters/). Below is an example of a custom header defined for a part of a multipart request:
 
 ```yaml
 requestBody:

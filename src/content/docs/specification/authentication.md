@@ -4,20 +4,22 @@ sidebar:
   order: 12
 ---
 
-OAS **3** This guide is for OpenAPI 3.0. If you use OpenAPI 2.0, see our [OpenAPI 2.0 guide](/docs/specification/2-0/authentication/).
+:::note
+OAS **3** This guide is for OpenAPI 3.0. If you use OpenAPI 2.0, see our [OpenAPI 2.0 guide](/specification/20/authentication/).
+:::
 
 ## Authentication and Authorization
 
 OpenAPI uses the term **security scheme** for authentication and authorization schemes. OpenAPI 3.0 lets you describe APIs protected using the following security schemes:
 
 - HTTP authentication schemes (they use the `Authorization` header):
-  - [Basic](/docs/specification/authentication/basic-authentication/)
-  - [Bearer](/docs/specification/authentication/bearer-authentication/)
+  - [Basic](/specification/authentication/basic-authentication/)
+  - [Bearer](/specification/authentication/bearer-authentication/)
   - other HTTP schemes as defined by [RFC 7235](https://tools.ietf.org/html/rfc7235) and [HTTP Authentication Scheme Registry](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml)
-- [API keys](/docs/specification/authentication/api-keys/) in headers, query string or cookies
-  - [Cookie authentication](/docs/specification/authentication/cookie-authentication/)
-- [OAuth 2](/docs/specification/authentication/oauth2/)
-- [OpenID Connect Discovery](/docs/specification/authentication/openid-connect-discovery/)
+- [API keys](/specification/authentication/api-keys/) in headers, query string or cookies
+  - [Cookie authentication](/specification/authentication/cookie-authentication/)
+- [OAuth 2](/specification/authentication/oauth2/)
+- [OpenID Connect Discovery](/specification/authentication/openid-connect-discovery/)
 
 Follow the links above for the guides on specific security types, or continue reading to learn how to describe security in general.
 
@@ -41,10 +43,10 @@ Security is described using the `securitySchemes` and `security` keywords. You u
 
 All security schemes used by the API must be defined in the global `components/securitySchemes` section. This section contains a list of named security schemes, where each scheme can be of `type`:
 
-- `http` – for [Basic](/docs/specification/authentication/basic-authentication/), [Bearer](/docs/specification/authentication/bearer-authentication/) and other HTTP authentications schemes
-- `apiKey` – for [API keys](/docs/specification/authentication/api-keys/) and [cookie authentication](/docs/specification/authentication/cookie-authentication/)
-- `oauth2` – for [OAuth 2](/docs/specification/authentication/oauth2/)
-- `openIdConnect` – for [OpenID Connect Discovery](/docs/specification/authentication/openid-connect-discovery/)
+- `http` – for [Basic](/specification/authentication/basic-authentication/), [Bearer](/specification/authentication/bearer-authentication/) and other HTTP authentications schemes
+- `apiKey` – for [API keys](/specification/authentication/api-keys/) and [cookie authentication](/specification/authentication/cookie-authentication/)
+- `oauth2` – for [OAuth 2](/specification/authentication/oauth2/)
+- `openIdConnect` – for [OpenID Connect Discovery](/specification/authentication/openid-connect-discovery/)
 
 Other required properties for security schemes depend on the `type`. The following example shows how various security schemes are defined. The _BasicAuth_, _BearerAuth_ names and others are arbitrary names that will be used to refer to these definitions from other places in the spec.
 

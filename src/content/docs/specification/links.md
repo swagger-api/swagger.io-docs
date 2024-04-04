@@ -4,7 +4,9 @@ sidebar:
   order: 13
 ---
 
+:::note
 OAS **3** This guide is for OpenAPI 3.0.
+:::
 
 ## Links
 
@@ -174,11 +176,11 @@ The rest of this page goes into more detail about these keywords.
 
 ### operationId
 
-If the target operation has [`operationId`](/docs/specification/paths-and-operations/#operationid) specified, the link can point to this ID – as in the image above. This approach can be used for local links only, because the `operationId` values are resolved in the scope of the current API specification.
+If the target operation has [`operationId`](/specification/paths-and-operations/#operationid) specified, the link can point to this ID – as in the image above. This approach can be used for local links only, because the `operationId` values are resolved in the scope of the current API specification.
 
 ### operationRef
 
-`operationRef` can be used when `operationId` is not available. `operationRef` is a reference to the target operation using the JSON Reference syntax – same as used by the [`$ref`](/docs/specification/using-ref/) keyword. References can be local (within the current API specification):
+`operationRef` can be used when `operationId` is not available. `operationRef` is a reference to the target operation using the JSON Reference syntax – same as used by the [`$ref`](/specification/using-ref/) keyword. References can be local (within the current API specification):
 
 ```yaml
 operationRef: "#/paths/~1users~1{userId}/get"
@@ -223,7 +225,7 @@ links:
     requestBody: "$response.body#/id"
 ```
 
-The syntax is `_parameter_name: value_` or _`requestBody: value`_. The parameter names and request body are those of the target operation. There is no need to list all the parameters, just those required to follow the link. Similarly, `requestBody` is only used if the target operation has a [body](/docs/specification/describing-request-body/) and the link purpose is to define the body contents. If two or more parameters have the same name, prefix the names with the parameter location – _path_, _query_, *header* or _cookie_, like so:
+The syntax is `_parameter_name: value_` or _`requestBody: value`_. The parameter names and request body are those of the target operation. There is no need to list all the parameters, just those required to follow the link. Similarly, `requestBody` is only used if the target operation has a [body](/specification/describing-request-body/) and the link purpose is to define the body contents. If two or more parameters have the same name, prefix the names with the parameter location – _path_, _query_, *header* or _cookie_, like so:
 
 ```yaml
 parameters:
@@ -269,7 +271,7 @@ You would typically use constant values if you need to pass a specific combinati
 
 ### Runtime Expression Syntax
 
-OpenAPI runtime expressions are syntax for extracting various values from an operation’s request and response. Links use runtime expressions to specify the parameter values to be passed to the linked operation. The expressions are called “runtime” because the values are extracted from the actual request and response of the API call and not, say, the [example values](/docs/specification/adding-examples/) provided in the API specification. The following table describes the runtime expression syntax. All expressions refer to the _current operation_ where the `links` are defined.
+OpenAPI runtime expressions are syntax for extracting various values from an operation’s request and response. Links use runtime expressions to specify the parameter values to be passed to the linked operation. The expressions are called “runtime” because the values are extracted from the actual request and response of the API call and not, say, the [example values](/specification/adding-examples/) provided in the API specification. The following table describes the runtime expression syntax. All expressions refer to the _current operation_ where the `links` are defined.
 
 Expression
 
@@ -355,61 +357,22 @@ Consider the following request and response:
 
 Below are some examples of runtime expressions and the values they evaluate to:
 
-Expression
-
-Result
-
-Comments
-
-`$url`
-
-http://api.example.com/users?limit=2&total=true
-
-`$method`
-
-GET
-
-`$request.query.total`
-
-true
-
-`total` must be defined as a query parameter.
-
-`$statusCode`
-
-200
-
-`$response.header.x-total-count`
-
-37
-
-Assuming `X-Total-Count` is defined as a response header. Header names are case-insensitive.
-
-`$response.body#/next_offset`
-
-2
-
-`$response.body#/users/0`
-
-`{"id": 1, "name": "Alice"}`
-
-JSON Pointer (the `#/…` part) uses 0-based indexes to access array elements. There is no wildcard syntax though, so `$response.body#/users/*****/id` is not valid.
-
-`$response.body#/users/1`
-
-`{"id": 2, "name": "Bob"}`
-
-`$response.body#/users/1/name`
-
-Bob
-
-`ID_{$response.body#/users/1/id}`
-
-ID_2
+| Expression                        | Result                                          | Comments                                                                                                                                                         |
+| --------------------------------- | ----------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$url`                            | http://api.example.com/users?limit=2&total=true |                                                                                                                                                                  |
+| `$method`                         | GET                                             |                                                                                                                                                                  |
+| `$request.query.total`            | true                                            | `total` must be defined as a query parameter.                                                                                                                    |
+| `$statusCode`                     | 200                                             |                                                                                                                                                                  |
+| `$response.header.x-total-count`  | 37                                              | Assuming `X-Total-Count` is defined as a response header. Header names are case-insensitive.                                                                     |
+| `$response.body#/next_offset`     | 2                                               |                                                                                                                                                                  |
+| `$response.body#/users/0`         | `{"id": 1, "name": "Alice"}`                    | JSON Pointer (the `#/...` part) uses 0-based indexes to access array elements. There is no wildcard syntax though, so `$response.body#/users/*/id` is not valid. |
+| `$response.body#/users/1`         | `{"id": 2, "name": "Bob"}`                      |                                                                                                                                                                  |
+| `$response.body#/users/1/name`    | Bob                                             |                                                                                                                                                                  |
+| `ID_{$response.body#/users/1/id}` | ID_2                                            |                                                                                                                                                                  |
 
 ### server
 
-By default, the target operation is called against its default [servers](/docs/specification/api-host-and-base-path/) – either global `servers`, or operation-specific `servers`. However, the server can be overridden by the link using the `server` keyword. `server` has the same fields as global servers, but it is a single server and not an array.
+By default, the target operation is called against its default [servers](/specification/api-host-and-base-path/) – either global `servers`, or operation-specific `servers`. However, the server can be overridden by the link using the `server` keyword. `server` has the same fields as global servers, but it is a single server and not an array.
 
 ```yaml
     servers:
@@ -428,7 +391,7 @@ By default, the target operation is called against its default [servers](/docs/s
 
 ### Reusing Links
 
-Links can be defined inline (as in the previous examples), or placed in the global `components/links` section and referenced from an operation’s `links` section via [`$ref`](/docs/specification/using-ref/). This can be useful if multiple operations link to another operation in the same way – referencing helps reduce code duplication. In the following example, both the “create user” and “update user” operations return the user ID in the response body, and this ID is used in the “get user” operation. The source operations reuse the same link definition from `components/links`.
+Links can be defined inline (as in the previous examples), or placed in the global `components/links` section and referenced from an operation’s `links` section via [`$ref`](/specification/using-ref/). This can be useful if multiple operations link to another operation in the same way – referencing helps reduce code duplication. In the following example, both the “create user” and “update user” operations return the user ID in the response body, and this ID is used in the “get user” operation. The source operations reuse the same link definition from `components/links`.
 
 ```yaml
     paths:

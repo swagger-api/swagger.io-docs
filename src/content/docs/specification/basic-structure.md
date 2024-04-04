@@ -4,11 +4,9 @@ sidebar:
   order: 2
 ---
 
-import { Aside } from "@astrojs/starlight/components";
-
-<Aside>A default aside without a custom title.</Aside>{" "}
-
-OAS **3** This page is about OpenAPI 3.0. If you use OpenAPI 2.0, visit [OpenAPI 2.0 pages](/docs/specification/2-0/basic-structure/).
+:::note
+OAS **3** This page is about OpenAPI 3.0. If you use OpenAPI 2.0, visit [OpenAPI 2.0 pages](/specification/20/basic-structure/).
+:::
 
 ## Basic Structure
 
@@ -74,7 +72,7 @@ The `servers` section specifies the API server and base URL. You can define one 
       - url: http://staging-api.example.com
         description: Optional server description, e.g. Internal staging server for testing
 
-All API paths are relative to the server URL. In the example above, `/users` means `http://api.example.com/v1/users` or `http://staging-api.example.com/users`, depending on the server used. For more information, see [API Server and Base Path](/docs/specification/api-host-and-base-path/).
+All API paths are relative to the server URL. In the example above, `/users` means `http://api.example.com/v1/users` or `http://staging-api.example.com/users`, depending on the server used. For more information, see [API Server and Base Path](/specification/api-host-and-base-path/).
 
 ### Paths
 

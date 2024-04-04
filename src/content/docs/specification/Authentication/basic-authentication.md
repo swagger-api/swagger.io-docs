@@ -4,7 +4,9 @@ sidebar:
   order: 1
 ---
 
-OAS **3** This guide is for OpenAPI 3.0. If you use OpenAPI 2.0, see our [OpenAPI 2.0 guide](/docs/specification/2-0/authentication/basic-authentication/).
+:::note
+OAS **3** This guide is for OpenAPI 3.0. If you use OpenAPI 2.0, see our [OpenAPI 2.0 guide](/specification/20/authentication/basic-authentication/).
+:::
 
 ## Basic Authentication
 
@@ -44,7 +46,7 @@ paths:
         - basicAuth: []
 ```
 
-Basic authentication can also be combined with other authentication methods as explained in [Using Multiple Authentication Types](/docs/specification/authentication/#multiple).
+Basic authentication can also be combined with other authentication methods as explained in [Using Multiple Authentication Types](/specification/authentication/#multiple).
 
 ### 401 Response
 
@@ -76,7 +78,7 @@ You can also define the 401 “Unauthorized” response returned for requests wi
                 type: string
 ```
 
-To learn more about the `responses` syntax, see [Describing Responses](/docs/specification/describing-responses/).
+To learn more about the `responses` syntax, see [Describing Responses](/specification/describing-responses/).
 
 _Did not find what you were looking for? [Ask the community](https://community.smartbear.com/t5/Swagger-Open-Source-Tools/bd-p/SwaggerOSTools)  
 Found a mistake? [Let us know](https://github.com/swagger-api/swagger.io/issues)_

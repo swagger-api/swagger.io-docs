@@ -4,7 +4,9 @@ sidebar:
   order: 5
 ---
 
-OAS **3** This page is about OpenAPI 3.0. If you use OpenAPI 2.0, see the [OpenAPI 2.0 guide](/docs/specification/2-0/paths-and-operations/).
+:::note
+OAS **3** This page is about OpenAPI 3.0. If you use OpenAPI 2.0, see the [OpenAPI 2.0 guide](/specification/20/paths-and-operations/).
+:::
 
 ## Paths and Operations
 
@@ -24,7 +26,7 @@ API paths and operations are defined in the global `paths` section of the API sp
         ...
 ```
 
-All paths are relative to the [API server URL](/docs/specification/api-host-and-base-path/). The full request URL is constructed as `<server-url>/path`. Global `servers` can also be overridden on the path level or operation level (more on that [below](#overriding-servers)). Paths may have an optional short `summary` and a longer `description` for documentation purposes. This information is supposed to be relevant to all operations in this path. `description` can be [multi-line](http://stackoverflow.com/questions/3790454/in-yaml-how-do-i-break-a-string-over-multiple-lines) and supports [Markdown](http://commonmark.org/help/) (CommonMark) for rich text representation.
+All paths are relative to the [API server URL](/specification/api-host-and-base-path/). The full request URL is constructed as `<server-url>/path`. Global `servers` can also be overridden on the path level or operation level (more on that [below](#overriding-servers)). Paths may have an optional short `summary` and a longer `description` for documentation purposes. This information is supposed to be relevant to all operations in this path. `description` can be [multi-line](http://stackoverflow.com/questions/3790454/in-yaml-how-do-i-break-a-string-over-multiple-lines) and supports [Markdown](http://commonmark.org/help/) (CommonMark) for rich text representation.
 
 ```yaml
     paths:
@@ -44,7 +46,7 @@ All paths are relative to the [API server URL](/docs/specification/api-host-and-
 
 ### Path Templating
 
-You can use curly braces `{}` to mark parts of an URL as [path parameters](/docs/specification/describing-parameters/#path-parameters):
+You can use curly braces `{}` to mark parts of an URL as [path parameters](/specification/describing-parameters/#path-parameters):
 
 ```yaml
 /users/{id}
@@ -118,16 +120,16 @@ Here is a more detailed example with parameters and response schema:
 Operations also support some optional elements for documentation purposes:
 
 - A short `summary` and a longer `description` of what an operation does. `description` can be [multi-line](http://stackoverflow.com/questions/3790454/in-yaml-how-do-i-break-a-string-over-multiple-lines) and supports [Markdown](http://commonmark.org/help/) (CommonMark) for rich text representation.
-- `tags` – used to group operations logically by resources or any other qualifier. See [Grouping Operations With Tags](/docs/specification/grouping-operations-with-tags/).
+- `tags` – used to group operations logically by resources or any other qualifier. See [Grouping Operations With Tags](/specification/grouping-operations-with-tags/).
 - `externalDocs` – used to reference an external resource that contains additional documentation.
 
 ### Operation Parameters
 
-OpenAPI 3.0 supports operation parameters passed via path, query string, headers, and cookies. You can also define the request body for operations that transmit data to the server, such as POST, PUT and PATCH. For details, see [Describing Parameters](/docs/specification/describing-parameters/) and [Describing Request Body](/docs/specification/describing-request-body/).
+OpenAPI 3.0 supports operation parameters passed via path, query string, headers, and cookies. You can also define the request body for operations that transmit data to the server, such as POST, PUT and PATCH. For details, see [Describing Parameters](/specification/describing-parameters/) and [Describing Request Body](/specification/describing-request-body/).
 
 ### Query String in Paths
 
-Query string parameters **must not** be included in paths. They should be defined as [query parameters](/docs/specification/describing-parameters/#query-parameters) instead.
+Query string parameters **must not** be included in paths. They should be defined as [query parameters](/specification/describing-parameters/#query-parameters) instead.
 
 Incorrect:
 

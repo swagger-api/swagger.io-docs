@@ -4,7 +4,7 @@ sidebar:
   order: 2
 ---
 
-OAS **2** This page applies to OpenAPI Specification ver. 2 (fka Swagger). To learn about the latest version, visit [OpenAPI 3 pages](/docs/specification/basic-structure).
+OAS **2** This page applies to OpenAPI Specification ver. 2 (fka Swagger). To learn about the latest version, visit [OpenAPI 3 pages](/specification/basic-structure).
 
 ## Basic Structure
 
@@ -56,7 +56,7 @@ The base URL for all API calls is defined using `schemes`, `host` and `basePath`
     schemes:
       - https
 
-All API paths are relative to the base URL. For example, _/users_ actually means _https://api.example.com/v1/users_. _More info:_ [API Host and Base URL](/docs/specification/2-0/api-host-and-base-path/).
+All API paths are relative to the base URL. For example, _/users_ actually means _https://api.example.com/v1/users_. _More info:_ [API Host and Base URL](/specification/20/api-host-and-base-path/).
 
 ### Consumes, Produces
 
@@ -69,7 +69,7 @@ The `consumes` and `produces` sections define the MIME types supported by the AP
       - application/json
       - application/xml
 
-_More info:_ [MIME Types](/docs/specification/2-0/mime-types/).
+_More info:_ [MIME Types](/specification/20/mime-types/).
 
 ### Paths
 
@@ -86,7 +86,7 @@ The `paths` section defines individual endpoints (paths) in your API, and the HT
             200:
               description: OK
 
-_More info:_ [Paths and Operations](/docs/specification/2-0/paths-and-operations/).
+_More info:_ [Paths and Operations](/specification/20/paths-and-operations/).
 
 ### Parameters
 
@@ -107,7 +107,7 @@ Operations can have parameters that can be passed via URL path (`/users/{userId}
             200:
               description: OK
 
-_More info:_ [Describing Parameters](/docs/specification/2-0/describing-parameters/).
+_More info:_ [Describing Parameters](/specification/20/describing-parameters/).
 
 ### Responses
 
@@ -143,7 +143,7 @@ For each operation, you can define possible status codes, such as 200 OK or 404 
             default:
               description: Unexpected error
 
-_More info:_ [Describing Responses](/docs/specification/2-0/describing-responses/).
+_More info:_ [Describing Responses](/specification/20/describing-responses/).
 
 ### Input and Output Models
 
@@ -209,11 +209,11 @@ The `securityDefinitions` and `security` keywords are used to describe the authe
 
 Supported authentication methods are:
 
-- [Basic authentication](/docs/specification/2-0/authentication/basic-authentication/)
-- [API key](/docs/specification/2-0/authentication/api-keys/) (as a header or query parameter)
+- [Basic authentication](/specification/20/authentication/basic-authentication/)
+- [API key](/specification/20/authentication/api-keys/) (as a header or query parameter)
 - OAuth 2 common flows (implicit, password, application and access code)
 
-_More info:_ [Authentication](/docs/specification/2-0/authentication/).
+_More info:_ [Authentication](/specification/20/authentication/).
 
 _Did not find what you were looking for? [Ask the community](https://community.smartbear.com/t5/Swagger-Open-Source-Tools/bd-p/SwaggerOSTools)  
 Found a mistake? [Let us know](https://github.com/swagger-api/swagger.io/issues)_

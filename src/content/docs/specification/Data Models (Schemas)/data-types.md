@@ -21,7 +21,7 @@ These types exist in most programming languages, though they may go by different
 
 Note that there is no `null` type; instead, the [`nullable`](#null) attribute is used as a modifier of the base type.
 
-Additional `type`\-specific keywords can be used to refine the data type, for example, limit the string length or specify an [`enum`](/docs/specification/data-models/enums/) of possible values.
+Additional `type`\-specific keywords can be used to refine the data type, for example, limit the string length or specify an [`enum`](/specification/data-models/enums/) of possible values.
 
 ### Mixed Types
 
@@ -34,7 +34,7 @@ type:
   - integer
 ```
 
-Mixed types can be described using [`oneOf`](/docs/specification/data-models/oneof-anyof-allof-not/) and [`anyOf`](/docs/specification/data-models/oneof-anyof-allof-not/), which specify a list of alternate types:
+Mixed types can be described using [`oneOf`](/specification/data-models/oneof-anyof-allof-not/) and [`anyOf`](/specification/data-models/oneof-anyof-allof-not/), which specify a list of alternate types:
 
 ```yaml
 # Correct
@@ -444,7 +444,7 @@ components:
               type: string
 ```
 
-You may want to split nested objects into multiple schemas and use [`$ref`](/docs/specification/using-ref/) to reference the nested schemas:
+You may want to split nested objects into multiple schemas and use [`$ref`](/specification/using-ref/) to reference the nested schemas:
 
 ```yaml
 components:
@@ -519,7 +519,7 @@ type: string
 format: byte # base64-encoded file contents
 ```
 
-depending on the desired file transfer method. For more information, see [File Upload](/docs/specification/describing-request-body/file-upload/), [Multipart Requests](/docs/specification/describing-request-body/multipart-requests/) and [Response That Returns a File](/docs/specification/describing-responses/#response-that-returns-a-file).
+depending on the desired file transfer method. For more information, see [File Upload](/specification/describing-request-body/file-upload/), [Multipart Requests](/specification/describing-request-body/multipart-requests/) and [Response That Returns a File](/specification/describing-responses/#response-that-returns-a-file).
 
 ### Any Type
 

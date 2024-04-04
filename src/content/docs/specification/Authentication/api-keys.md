@@ -4,7 +4,9 @@ sidebar:
   order: 2
 ---
 
-OAS **3** This guide is for OpenAPI 3.0. If you use OpenAPI 2.0, see our [OpenAPI 2.0 guide](/docs/specification/2-0/authentication/api-keys/).
+:::note
+OAS **3** This guide is for OpenAPI 3.0. If you use OpenAPI 2.0, see our [OpenAPI 2.0 guide](/specification/20/authentication/api-keys/).
+:::
 
 ## API Keys
 
@@ -21,14 +23,14 @@ or as a request header:
     X-API-Key: abcdef12345
 ```
 
-or as a [cookie](https://swagger.io/docs/specification/authentication/cookie-authentication/):
+or as a [cookie](https://swagger.io/specification/authentication/cookie-authentication/):
 
 ```yaml
     GET /something HTTP/1.1
     Cookie: X-API-KEY=abcdef12345
 ```
 
-API keys are supposed to be a secret that only the client and server know. Like [Basic authentication](/docs/specification/authentication/basic-authentication/), API key-based authentication is only considered secure if used together with other security mechanisms such as HTTPS/SSL.
+API keys are supposed to be a secret that only the client and server know. Like [Basic authentication](/specification/authentication/basic-authentication/), API key-based authentication is only considered secure if used together with other security mechanisms such as HTTPS/SSL.
 
 ### Describing API Keys
 
@@ -65,7 +67,7 @@ paths:
           description: OK (successfully authenticated)
 ```
 
-Note that it is possible to support multiple authorization types in an API. See [Using Multiple Authentication Types](/docs/specification/authentication/#multiple).
+Note that it is possible to support multiple authorization types in an API. See [Using Multiple Authentication Types](/specification/authentication/#multiple).
 
 ### Multiple API Keys
 
@@ -96,7 +98,7 @@ security:
   - appId: []
 ```
 
-which means either key can be used (as in logical OR). For more examples, see [Using Multiple Authentication Types](/docs/specification/authentication/#multiple).
+which means either key can be used (as in logical OR). For more examples, see [Using Multiple Authentication Types](/specification/authentication/#multiple).
 
 ### 401 Response
 
@@ -128,7 +130,7 @@ You can define the 401 “Unauthorized” response returned for requests with mi
                 type: string
 ```
 
-To learn more about describing responses, see [Describing Responses](/docs/specification/describing-responses/).
+To learn more about describing responses, see [Describing Responses](/specification/describing-responses/).
 
 _Did not find what you were looking for? [Ask the community](https://community.smartbear.com/t5/Swagger-Open-Source-Tools/bd-p/SwaggerOSTools)  
 Found a mistake? [Let us know](https://github.com/swagger-api/swagger.io/issues)_

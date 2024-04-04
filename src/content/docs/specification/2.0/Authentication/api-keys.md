@@ -4,7 +4,7 @@ sidebar:
   order: 2
 ---
 
-OAS **2** This page applies to OpenAPI Specification ver. 2 (fka Swagger). To learn about the latest version, visit [OpenAPI 3 pages](/docs/specification/authentication/api-keys/).
+OAS **2** This page applies to OpenAPI Specification ver. 2 (fka Swagger). To learn about the latest version, visit [OpenAPI 3 pages](/specification/authentication/api-keys/).
 
 ### API Keys
 
@@ -56,7 +56,7 @@ Then, use the `security` section on the root level or operation level to apply A
             200:
               description: OK (successfully authenticated)
 
-Note that it is possible to support multiple authorization types in an API. See [Using Multiple Authentication Types](/docs/specification/2-0/authentication/#multiple).
+Note that it is possible to support multiple authorization types in an API. See [Using Multiple Authentication Types](/specification/20/authentication/#multiple).
 
 ### Pair of API Keys
 
@@ -81,7 +81,7 @@ Note the difference from:
       - apiKey: []
       - appId: []
 
-which means either key can be used (as in logical OR). For more examples, see [Using Multiple Authentication Types](/docs/specification/2-0/authentication/#multiple).
+which means either key can be used (as in logical OR). For more examples, see [Using Multiple Authentication Types](/specification/20/authentication/#multiple).
 
 ### 401 Response
 

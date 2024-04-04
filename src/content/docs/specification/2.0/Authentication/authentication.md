@@ -4,14 +4,14 @@ sidebar:
   order: 1
 ---
 
-OAS **2** This page applies to OpenAPI Specification ver. 2 (fka Swagger). To learn about the latest version, visit [OpenAPI 3 pages](/docs/specification/authentication).
+OAS **2** This page applies to OpenAPI Specification ver. 2 (fka Swagger). To learn about the latest version, visit [OpenAPI 3 pages](/specification/authentication).
 
 ## Authentication
 
 Swagger 2.0 lets you define the following authentication types for an API:
 
-- [Basic authentication](/docs/specification/2-0/authentication/basic-authentication/)
-- [API key](/docs/specification/2-0/authentication/api-keys/) (as a header or a query string parameter)
+- [Basic authentication](/specification/20/authentication/basic-authentication/)
+- [API key](/specification/20/authentication/api-keys/) (as a header or a query string parameter)
 - OAuth 2 common flows (authorization code, implicit, resource owner password credentials, client credentials)
 
 Follow the links above for examples specific to these authentication types, or continue reading to learn how to describe authentication in general.
@@ -43,7 +43,7 @@ Each security scheme can be of `type`:
 - `apiKey` for an API key
 - `oauth2` for OAuth 2
 
-Other required properties depend on the security type. For details, check the [Swagger Specification](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md#securitySchemeObject) or our examples for [Basic auth](/docs/specification/2-0/authentication/basic-authentication/) and [API keys](/docs/specification/2-0/authentication/api-keys/).
+Other required properties depend on the security type. For details, check the [Swagger Specification](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md#securitySchemeObject) or our examples for [Basic auth](/specification/20/authentication/basic-authentication/) and [API keys](/specification/20/authentication/api-keys/).
 
 After you have defined the security schemes in `securityDefinitions`, you can apply them to the whole API or individual operations by adding the `security` section on the root level or operation level, respectively. When used on the root level, `security` applies the specified security schemes globally to all API operations, unless overridden on the operation level.
 

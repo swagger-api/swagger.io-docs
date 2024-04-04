@@ -4,7 +4,9 @@ sidebar:
   order: 17
 ---
 
+:::note
 OAS **3** This guide is OpenAPI 3.0.
+:::
 
 ## API General Info
 

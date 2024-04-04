@@ -4,7 +4,9 @@ sidebar:
   order: 2
 ---
 
-OAS **3** This guide is for OpenAPI 3.0. If you use OpenAPI 2.0, see our [OpenAPI 2.0 guide](/docs/specification/2-0/file-upload/).
+:::note
+OAS **3** This guide is for OpenAPI 3.0. If you use OpenAPI 2.0, see our [OpenAPI 2.0 guide](/specification/20/file-upload/).
+:::
 
 ## File Upload
 
