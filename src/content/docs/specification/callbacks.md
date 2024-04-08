@@ -8,8 +8,6 @@ sidebar:
 OAS **3** This guide is for OpenAPI 3.0.
 :::
 
-## Callbacks
-
 In OpenAPI 3 specs, you can define **callbacks** – asynchronous, out-of-band requests that your service will send to some other service in response to certain events. This helps you improve the workflow your API offers to clients. A typical example of a callback is subscription functionality – users subscribe to certain events of your service and receive a notification when this or that event occurs. For example, an e-shop can send a notification to the manager on each purchase. These notifications will be “out-of-band”, that is, they will go through a connection other than the connection through which a visitor works, and they will be asynchronous, as they will be out of the regular request-response flow. In OpenAPI 3, you can define the format of the “subscription” operation as well as the format of callback messages and expected responses to these messages. This description will simplify communication between different servers and will help you standardize the use of webhooks in your API.
 
 ### Callback Example

@@ -8,8 +8,6 @@ sidebar:
 OAS **3** This page is about OpenAPI 3.0. If you use OpenAPI 2.0, see the [OpenAPI 2.0 guide](/specification/20/paths-and-operations/).
 :::
 
-## Paths and Operations
-
 In OpenAPI terms, **paths** are endpoints (resources), such as `/users` or `/reports/summary/`, that your API exposes, and **operations** are the HTTP methods used to manipulate these paths, such as GET, POST or DELETE.
 
 ### Paths

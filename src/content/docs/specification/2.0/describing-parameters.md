@@ -4,9 +4,9 @@ sidebar:
   order: 6
 ---
 
+:::note
 OAS **2** This page applies to OpenAPI Specification ver. 2 (fka Swagger). To learn about the latest version, visit [OpenAPI 3 pages](/specification/describing-parameters).
-
-## Describing Parameters
+:::
 
 In Swagger, API operation parameters are defined under the `parameters` section in the operation definition. Each parameter has `name`, value `type` (for primitive value parameters) or `schema` (for request body), and optional `description`. Here is an example:
 

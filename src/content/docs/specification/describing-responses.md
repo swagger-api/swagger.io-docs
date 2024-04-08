@@ -8,8 +8,6 @@ sidebar:
 OAS **3** This guide is for OpenAPI 3.0. If you use OpenAPI 2.0, see our [OpenAPI 2.0 guide](/specification/20/describing-responses/).
 :::
 
-## Describing Responses
-
 An API specification needs to specify the `responses` for all API operations. Each operation must have at least one response defined, usually a successful response. A response is defined by its HTTP status code and the data returned in the response body and/or headers. Here is a minimal example:
 
 ```yaml

@@ -8,8 +8,6 @@ sidebar:
 OAS **3** This guide is for OpenAPI 3.0.
 :::
 
-## Components Section
-
 Often, multiple API operations have some common parameters or return the same response structure. To avoid code duplication, you can place the common definitions in the global `components` section and reference them using [`$ref`](/specification/using-ref/). In the example below, duplicate definitions of a User object are replaced with a single component and references to that component. Before:
 
 ```yaml

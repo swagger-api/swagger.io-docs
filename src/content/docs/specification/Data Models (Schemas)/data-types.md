@@ -4,9 +4,9 @@ sidebar:
   order: 2
 ---
 
+:::note
 OAS **3** This guide is for OpenAPI 3.0.
-
-## Data Types
+:::
 
 The data type of a schema is defined by the `type` keyword, for example, `type: string`. OpenAPI defines the following basic types:
 

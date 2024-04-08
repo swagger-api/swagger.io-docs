@@ -4,9 +4,9 @@ sidebar:
   order: 7
 ---
 
+:::note
 OAS **3** This guide is for OpenAPI 3.0.
-
-## Representing XML
+:::
 
 In your API specification, you can describe data in both XML and JSON formats as they are easily interchangeable. For example, the following declaration —
 

@@ -4,8 +4,6 @@ sidebar:
   order: 1
 ---
 
-### What Is OpenAPI?
-
 **OpenAPI Specification** (formerly Swagger Specification) is an API description format for REST APIs. An OpenAPI file allows you to describe your entire API, including:
 
 - Available endpoints (`/users`) and operations on each endpoint (`GET /users`, `POST /users`)

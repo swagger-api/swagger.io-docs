@@ -4,11 +4,9 @@ sidebar:
   order: 3
 ---
 
-code { font-size: 14px !important; }
-
+:::note
 OAS **2** This page applies to OpenAPI Specification ver. 2 (fka Swagger). To learn about the latest version, visit [OpenAPI 3 pages](/specification/api-host-and-base-path/).
-
-## API Host and Base URL
+:::
 
 REST APIs have a base URL to which the endpoint paths are appended. The base URL is defined by `schemes`, `host` and `basePath` on the root level of the API specification.
 

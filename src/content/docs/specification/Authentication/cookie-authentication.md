@@ -4,9 +4,9 @@ sidebar:
   order: 6
 ---
 
+:::note
 OAS **3** This guide is for OpenAPI 3.0.
-
-## Cookie Authentication
+:::
 
 Cookie authentication uses [HTTP cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies) to authenticate client requests and maintain session information. It works as follows:
 

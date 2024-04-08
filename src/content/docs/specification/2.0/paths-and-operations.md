@@ -4,9 +4,9 @@ sidebar:
   order: 5
 ---
 
+:::note
 OAS **2** This page applies to OpenAPI Specification ver. 2 (fka Swagger). To learn about the latest version, visit [OpenAPI 3 pages](/specification/paths-and-operations/).
-
-## Paths and Operations
+:::
 
 In Swagger terms, **paths** are endpoints (resources) that your API exposes, such as `/users` or `/reports/summary`, and **operations** are the HTTP methods used to manipulate these paths, such as GET, POST or DELETE.
 

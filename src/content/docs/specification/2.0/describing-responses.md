@@ -4,9 +4,9 @@ sidebar:
   order: 9
 ---
 
+:::note
 OAS **2** This page applies to OpenAPI Specification ver. 2 (fka Swagger). To learn about the latest version, visit [OpenAPI 3 pages](/specification/describing-responses).
-
-## Describing Responses
+:::
 
 An API specification needs to specify the `responses` for all API operations. Each operation must have at least one response defined, usually a successful response. A response is defined by its HTTP status code and the data returned in the response body and/or headers. Here is a minimal example:
 

@@ -4,11 +4,10 @@ sidebar:
   order: 10
 ---
 
+:::note
 OAS **2** This page applies to OpenAPI Specification ver. 2 (fka Swagger).  
 To learn about the latest version, visit [OpenAPI 3 pages](/specification/adding-examples).
-
-## Adding Examples
-
+:::
 An API specification can include examples for:
 
 - response MIME types,

@@ -8,8 +8,6 @@ sidebar:
 OAS **3** This guide is for OpenAPI 3.0.
 :::
 
-## Using $ref
-
 When you document an API, it is common to have some features which you use across several of API resources. In that case, you can create a snippet for such elements in order to use them multiple times when you need it. With OpenAPI 3.0, you can reference a definition hosted on any location. It can be the same server, or another one – for example, GitHub, SwaggerHub, and so on. To reference a definition, use the `$ref` keyword:
 
 ```yaml

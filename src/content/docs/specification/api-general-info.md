@@ -8,8 +8,6 @@ sidebar:
 OAS **3** This guide is OpenAPI 3.0.
 :::
 
-## API General Info
-
 It is considered to be a good practice to include general information about your API into the specification: version number, license notes, contact data, links to documentation, and more. We particularly recommend doing this for publicly available APIs; as this will can increase user confidence in the services, your company provides. To specify the API metadata, you use properties of the top-level `info` object:
 
 ```yaml

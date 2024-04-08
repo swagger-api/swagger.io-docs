@@ -8,8 +8,6 @@ sidebar:
 OAS **3** This guide is for OpenAPI 3.0. If you use OpenAPI 2.0, see our [OpenAPI 2.0 guide](/specification/20/enums/).
 :::
 
-## Enums
-
 You can use the `enum` keyword to specify possible values of a request parameter or a model property. For example, the sort parameter in `GET /items?sort=[asc|desc]` can be described as:
 
 ```yaml

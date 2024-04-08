@@ -4,18 +4,22 @@ sidebar:
   order: 2
 ---
 
+:::note
 OAS **2** This page applies to OpenAPI Specification ver. 2 (fka Swagger). To learn about the latest version, visit [OpenAPI 3 pages](/specification/authentication/api-keys/).
-
-### API Keys
+:::
 
 Some APIs use API keys for authorization. An API key is a special token that the client needs to provide when making API calls. The key is usually sent as a request header:
 
-    GET /something HTTP/1.1
-    X-API-Key: abcdef12345
+```yaml
+  GET /something HTTP/1.1
+  X-API-Key: abcdef12345
+```
 
 or as a query parameter:
 
-    GET /something?api_key=abcdef12345
+```yaml
+GET /something?api_key=abcdef12345
+```
 
 API keys are supposed to be a secret that only the client and server know. But, as well as Basic authentication, API key-based authentication is not considered secure unless used together with other security mechanisms such as HTTPS/SSL.
 
@@ -87,6 +91,7 @@ which means either key can be used (as in logical OR). For more examples, see [U
 
 You can also define the 401 "Unauthorized" response returned for requests with missing or invalid API key. This response includes the `WWW-Authenticate` header, which you may want to mention. As with other common responses, the 401 response can be defined in the global `responses` section and referenced from multiple operations.
 
+```yaml
     paths:
       /something:
         get:
@@ -107,6 +112,7 @@ You can also define the 401 "Unauthorized" response returned for requests with m
         headers:
           WWW_Authenticate:
             type: string
+```
 
 _Did not find what you were looking for? [Ask the community](https://community.smartbear.com/t5/Swagger-Open-Source-Tools/bd-p/SwaggerOSTools)  
 Found a mistake? [Let us know](https://github.com/swagger-api/swagger.io/issues)_

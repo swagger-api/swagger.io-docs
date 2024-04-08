@@ -8,8 +8,6 @@ sidebar:
 OAS **3** This page is about OpenAPI 3.0. If you use OpenAPI 2.0, see our [OpenAPI 2.0 guide](/specification/20/describing-parameters/).
 :::
 
-## Describing Parameters
-
 In OpenAPI 3.0, parameters are defined in the `parameters` section of an operation or path. To describe a parameter, you specify its `name`, location (`in`), data type (defined by either `schema` or `content`) and other attributes, such as `description` or `required`. Here is an example:
 
 ```yaml

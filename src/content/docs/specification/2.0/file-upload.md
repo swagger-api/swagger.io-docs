@@ -4,9 +4,9 @@ sidebar:
   order: 8
 ---
 
+:::note
 OAS **2** This page applies to OpenAPI Specification ver. 2 (fka Swagger). To learn about the latest version, visit [OpenAPI 3 pages](/specification/describing-request-body/file-upload/).
-
-## File Upload
+:::
 
 Swagger 2.0 supports file uploads sent with `Content-Type: multipart/form-data`. That is, your API server must consume `multipart/form-data` for this operation:
 

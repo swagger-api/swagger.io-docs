@@ -4,9 +4,9 @@ sidebar:
   order: 8
 ---
 
+:::note
 OAS **3** This guide is for OpenAPI 3.0.
-
-## Supported JSON Schema Keywords
+:::
 
 OpenAPI 3.0 uses an extended subset of [JSON Schema Specification](http://json-schema.org) Wright Draft 00 (aka Draft 5) to describe the data formats. “Extended subset” means that some keywords are supported and some are not, some keywords have slightly different usage than in JSON Schema, and additional keywords are introduced.
 

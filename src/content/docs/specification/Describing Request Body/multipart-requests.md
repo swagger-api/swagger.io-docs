@@ -4,9 +4,9 @@ sidebar:
   order: 3
 ---
 
+:::note
 OAS **3** This guide is for OpenAPI 3.0.
-
-## Multipart Requests
+:::
 
 Multipart requests combine one or more sets of data into a single body, separated by boundaries. You typically use these requests for file uploads and for transferring data of several types in a single request (for example, a file along with a JSON object). In OpenAPI 3, you describe a multipart request in the following way:
 

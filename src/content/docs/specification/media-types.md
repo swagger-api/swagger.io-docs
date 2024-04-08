@@ -8,8 +8,6 @@ sidebar:
 OAS **3** This page is about OpenAPI 3.0. If you use OpenAPI 2.0, see the [OpenAPI 2.0 guide](/specification/20/mime-types/).
 :::
 
-## Media Types
-
 **Media type** is a format of a request or response body data. Web service operations can accept and return data in different formats, the most common being JSON, XML and images. You specify the media type in request and response definitions. Here is an example of a response definition:
 
 ```yaml

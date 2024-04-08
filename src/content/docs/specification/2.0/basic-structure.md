@@ -4,9 +4,9 @@ sidebar:
   order: 2
 ---
 
+:::note
 OAS **2** This page applies to OpenAPI Specification ver. 2 (fka Swagger). To learn about the latest version, visit [OpenAPI 3 pages](/specification/basic-structure).
-
-## Basic Structure
+:::
 
 Swagger definitions can be written in [JSON](https://en.wikipedia.org/wiki/JSON) or [YAML](https://en.wikipedia.org/wiki/YAML). In this guide, we only use YAML examples, but JSON works equally well. A sample Swagger specification written in YAML looks like:
 

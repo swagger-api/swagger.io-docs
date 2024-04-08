@@ -8,8 +8,6 @@ sidebar:
 OAS **3** This guide is for OpenAPI 3.0.
 :::
 
-## Links
-
 Links are one of the new features of OpenAPI 3.0. Using links, you can describe how various values returned by one operation can be used as input for other operations. This way, links provide a known relationship and traversal mechanism between the operations. The concept of links is somewhat similar to [hypermedia](https://smartbear.com/learn/api-design/what-is-hypermedia/), but OpenAPI links do not require the link information present in the actual responses.
 
 ### When to Use Links?

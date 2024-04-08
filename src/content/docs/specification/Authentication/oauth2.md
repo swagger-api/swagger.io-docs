@@ -4,9 +4,9 @@ sidebar:
   order: 4
 ---
 
+:::note
 OAS **3** This guide is for OpenAPI 3.0.
-
-## OAuth 2.0
+:::
 
 [OAuth 2.0](https://oauth.net/2/) is an authorization protocol that gives an API client limited access to user data on a web server. GitHub, Google, and Facebook APIs notably use it. OAuth relies on authentication scenarios called _flows_, which allow the resource owner (user) to share the protected content from the resource server without sharing their credentials. For that purpose, an OAuth 2.0 server issues access tokens that the client applications can use to access protected resources on behalf of the resource owner. For more information about OAuth 2.0, see [oauth.net](https://oauth.net/2) and [RFC 6749](https://tools.ietf.org/html/rfc6749).
 

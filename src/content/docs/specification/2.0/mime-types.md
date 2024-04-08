@@ -4,9 +4,9 @@ sidebar:
   order: 4
 ---
 
+:::note
 OAS **2** This page applies to OpenAPI Specification ver. 2 (fka Swagger). To learn about the latest version, visit [OpenAPI 3 pages](/specification/media-types).
-
-## MIME Types
+:::
 
 An API can accept and return data in different formats, the most common being JSON and XML. You can use the `consumes` and `produces` keywords to specify the MIME types understood by your API. The value of `consumes` and `produces` is an array of MIME types. Global MIME types can be defined on the root level of an API specification and are inherited by all API operations. Here the API uses JSON and XML:
 

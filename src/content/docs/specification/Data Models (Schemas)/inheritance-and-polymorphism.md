@@ -4,9 +4,9 @@ sidebar:
   order: 6
 ---
 
+:::note
 OAS **3** This guide is for OpenAPI 3.0.
-
-## Inheritance and Polymorphism
+:::
 
 ### Model Composition
 

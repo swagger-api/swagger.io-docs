@@ -8,8 +8,6 @@ sidebar:
 OAS **3** This page is about OpenAPI 3.0. If you use OpenAPI 2.0, see the [OpenAPI 2.0 guide](/specification/20/api-host-and-base-path/).
 :::
 
-## API Server and Base URL
-
 All API endpoints are relative to the base URL. For example, assuming the base URL of `https://api.example.com/v1`, the `/users` endpoint refers to `https://api.example.com/v1/users`.
 
 ```yaml

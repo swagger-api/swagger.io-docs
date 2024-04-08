@@ -8,8 +8,6 @@ sidebar:
 OAS **3** This guide is for OpenAPI 3.0. If you use OpenAPI 2.0, see our [OpenAPI 2.0 guide](/specification/20/authentication/api-keys/).
 :::
 
-## API Keys
-
 Some APIs use API keys for authorization. An API key is a token that a client provides when making API calls. The key can be sent in the query string:
 
 ```yaml

@@ -4,9 +4,9 @@ sidebar:
   order: 5
 ---
 
+:::note
 OAS **3** This guide is for OpenAPI 3.0.
-
-## oneOf, anyOf, allOf, not
+:::
 
 OpenAPI 3.0 provides several keywords which you can use to combine schemas. You can use these keywords to create a complex schema, or validate a value against multiple criteria.
 

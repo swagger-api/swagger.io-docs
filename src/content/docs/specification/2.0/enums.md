@@ -4,9 +4,9 @@ sidebar:
   order: 11
 ---
 
+:::note
 OAS **2** This page applies to OpenAPI Specification ver. 2 (fka Swagger). To learn about the latest version, visit [OpenAPI 3 pages](/specification/data-models/enums/).
-
-## Enums
+:::
 
 You can use the `enum` keyword to specify possible values of a request parameter or a model property. For example, the sort parameter in:
 

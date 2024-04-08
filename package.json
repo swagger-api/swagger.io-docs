@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.5.9",
+    "@astrojs/markdown-remark": "^5.0.0",
     "@astrojs/starlight": "^0.21.2",
     "astro": "^4.3.5",
     "marked": "^12.0.1",

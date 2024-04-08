@@ -8,8 +8,6 @@ sidebar:
 OAS **3** This guide is for OpenAPI 3.0.
 :::
 
-## Parameter Serialization
-
 Serialization means translating data structures or object state into a format that can be transmitted and reconstructed later. OpenAPI 3.0 supports arrays and objects in [operation parameters](/specification/describing-parameters/) (path, query, header, and cookie) and lets you specify how these parameters should be serialized. The serialization method is defined by the `style` and `explode` keywords:
 
 - `style` defines how multiple values are delimited. Possible styles depend on the parameter location – [path](#path), [query](#query), [header](#header) or [cookie](#cookie).

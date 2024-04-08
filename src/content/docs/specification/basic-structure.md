@@ -8,8 +8,6 @@ sidebar:
 OAS **3** This page is about OpenAPI 3.0. If you use OpenAPI 2.0, visit [OpenAPI 2.0 pages](/specification/20/basic-structure/).
 :::
 
-## Basic Structure
-
 You can write OpenAPI definitions in [YAML](https://en.wikipedia.org/wiki/YAML) or [JSON](https://en.wikipedia.org/wiki/JSON). In this guide, we use only YAML examples but JSON works equally well. A sample OpenAPI 3.0 definition written in YAML looks like:
 
 ```yaml

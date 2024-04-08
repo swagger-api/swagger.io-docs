@@ -4,9 +4,9 @@ sidebar:
   order: 4
 ---
 
+:::note
 OAS **3** This guide is for OpenAPI 3.0.
-
-### Dictionaries, HashMaps and Associative Arrays
+:::
 
 A dictionary (also known as a map, hashmap or associative array) is a set of key/value pairs. OpenAPI lets you define dictionaries where the **keys are strings**. To define a dictionary, use `type: object` and use the `additionalProperties` keyword to specify the type of values in key/value pairs. For example, a string-to-string dictionary like this:
 
