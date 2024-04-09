@@ -113,13 +113,13 @@ responses:
 or defined in the global `components.schemas` section and referenced via `$ref`. This is useful if multiple media types use the same schema.
 
 ```yaml
-          responses:
-            '200':
-              description: A User object
-              content:
-                application/json:
-                  schema:
-                    $ref: '#/components/schemas/User'
+responses:
+  "200":
+    description: A User object
+    content:
+      application/json:
+        schema:
+          $ref: "#/components/schemas/User"
     components:
       schemas:
         User:
@@ -207,12 +207,12 @@ responses:
 Responses from an API can include custom headers to provide additional information on the result of an API call. For example, a rate-limited API may provide the rate limit status via response headers as follows:
 
 ```yaml
-    HTTP 1/1 200 OK
-    X-RateLimit-Limit: 100
-    X-RateLimit-Remaining: 99
-    X-RateLimit-Reset: 2016-10-12T11:00:00Z
+HTTP 1/1 200 OK
+X-RateLimit-Limit: 100
+X-RateLimit-Remaining: 99
+X-RateLimit-Reset: 2016-10-12T11:00:00Z
 
-    { ... }
+{ ... }
 ```
 
 You can define custom `headers` for each response as follows:

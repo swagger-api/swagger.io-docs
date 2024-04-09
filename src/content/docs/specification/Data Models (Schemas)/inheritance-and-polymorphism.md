@@ -45,22 +45,22 @@ In the example above, the `ExtendedErrorModel` schema includes its own propertie
 In your API, you can have request and responses that can be described by several alternative schemas. In OpenAPI 3.0, to describe such a model, you can use the `oneOf` or `anyOf` keywords:
 
 ```yaml
-    components:
-      responses:
-        sampleObjectResponse:
-          content:
-            application/json:
-              schema:
-                oneOf:
-                  - $ref: '#/components/schemas/simpleObject'
-                  - $ref: '#/components/schemas/complexObject'
+components:
+  responses:
+    sampleObjectResponse:
+      content:
+        application/json:
+          schema:
+            oneOf:
+              - $ref: '#/components/schemas/simpleObject'
+              - $ref: '#/components/schemas/complexObject'
+  …
+components:
+  schemas:
+    simpleObject:
       …
-    components:
-      schemas:
-        simpleObject:
-          …
-        complexObject:
-          …
+    complexObject:
+      …
 ```
 
 In this example, the response payload can contain either `simpleObject`, or `complexObject`.
@@ -70,57 +70,57 @@ In this example, the response payload can contain either `simpleObject`, or `com
 To help API consumers detect the object type, you can add the `discriminator/propertyName` keyword to model definitions. This keyword points to the property that specifies the data type name:
 
 ```yaml
-    components:
-      responses:
-        sampleObjectResponse:
-          content:
-            application/json:
-              schema:
-                oneOf:
-                  - $ref: '#/components/schemas/simpleObject'
-                  - $ref: '#/components/schemas/complexObject'
-                discriminator:
-                  propertyName: objectType
+components:
+  responses:
+    sampleObjectResponse:
+      content:
+        application/json:
+          schema:
+            oneOf:
+              - $ref: '#/components/schemas/simpleObject'
+              - $ref: '#/components/schemas/complexObject'
+            discriminator:
+              propertyName: objectType
+  …
+  schemas:
+    simpleObject:
+      type: object
+      required:
+        - objectType
+      properties:
+        objectType:
+          type: string
       …
-      schemas:
-        simpleObject:
-          type: object
-          required:
-            - objectType
-          properties:
-            objectType:
-              type: string
-          …
-        complexObject:
-          type: object
-          required:
-            - objectType
-          properties:
-            objectType:
-              type: string
-          …
+    complexObject:
+      type: object
+      required:
+        - objectType
+      properties:
+        objectType:
+          type: string
+      …
 ```
 
 In our example, the discriminator points to the `objectType` property that contains the data type name. The discriminator is used with `anyOf` or `oneOf` keywords only. It is important that all the models mentioned below `anyOf` or `oneOf` contain the property that the discriminator specifies. This means, for example, that in our code above, both `simpleObject` and `complexObject` must have the `objectType` property. This property is required in these schemas:
 
 ```yaml
-    schemas:
-        simpleObject:
-          type: object
-          required:
-            - objectType
-          properties:
-            objectType:
-              type: string
-          …
-        complexObject:
-          type: object
-          required:
-            - objectType
-          properties:
-            objectType:
-              type: string
-          …
+schemas:
+    simpleObject:
+      type: object
+      required:
+        - objectType
+      properties:
+        objectType:
+          type: string
+      …
+    complexObject:
+      type: object
+      required:
+        - objectType
+      properties:
+        objectType:
+          type: string
+      …
 ```
 
 The `discriminator` keyword can be used by various API consumers. One possible example are code generation tools: they can use discriminator to generate program statements that typecast request data to appropriate object type based on the discriminator property value.
@@ -130,40 +130,40 @@ The `discriminator` keyword can be used by various API consumers. One possible e
 It is implied, that the property to which discriminator refers, contains the name of the target schema. In the example above, the `objectType` property should contain either `_simpleObject_`, or `_complexObject_` string. If the property values do not match the schema names, you can map the values to the names. To do this, use the `discriminator/mapping` keyword:
 
 ```yaml
-    components:
-      responses:
-        sampleObjectResponse:
-          content:
-            application/json:
-              schema:
-                oneOf:
-                  - $ref: '#/components/schemas/Object1'
-                  - $ref: '#/components/schemas/Object2'
-                  - $ref: 'sysObject.json#/sysObject'
-                discriminator:
-                  propertyName: objectType
-                  mapping:
-                    obj1: '#/components/schemas/Object1'
-    		obj2: '#/components/schemas/Object2'
-                    system: 'sysObject.json#/sysObject'
+components:
+  responses:
+    sampleObjectResponse:
+      content:
+        application/json:
+          schema:
+            oneOf:
+              - $ref: '#/components/schemas/Object1'
+              - $ref: '#/components/schemas/Object2'
+              - $ref: 'sysObject.json#/sysObject'
+            discriminator:
+              propertyName: objectType
+              mapping:
+                obj1: '#/components/schemas/Object1'
+    obj2: '#/components/schemas/Object2'
+                system: 'sysObject.json#/sysObject'
+  …
+  schemas:
+    Object1:
+      type: object
+      required:
+        - objectType
+      properties:
+        objectType:
+          type: string
       …
-      schemas:
-        Object1:
-          type: object
-          required:
-            - objectType
-          properties:
-            objectType:
-              type: string
-          …
-        Object2:
-          type: object
-          required:
-            - objectType
-          properties:
-            objectType:
-              type: string
-          …
+    Object2:
+      type: object
+      required:
+        - objectType
+      properties:
+        objectType:
+          type: string
+      …
 ```
 
 In this example, the `_obj1_` value is mapped to the `Object1` model that is defined in the same spec, `_obj2_` – to `Object2`, and the value `_system_` matches the `sysObject` model that is located in an external file. All these objects must have the `objectType` property with the value `_"obj1"_`, `_"obj2"_` or `_"system"_`, respectively.

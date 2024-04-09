@@ -15,13 +15,13 @@ In OpenAPI 3 specs, you can define **callbacks** – asynchronous, out-of-band r
 Let’s create a callback definition – a simple webhook notification. Suppose, your API provides a `POST /subscribe` operation that expects a callback URL in the request body:
 
 ```yaml
-    POST /subscribe
-    Host: my.example.com
-    Content-Type: application/json
+POST /subscribe
+Host: my.example.com
+Content-Type: application/json
 
-    {
-      "callbackUrl": "https://myserver.com/send/callback/here"
-    }
+{
+  "callbackUrl": "https://myserver.com/send/callback/here"
+}
 ```
 
 The API acknowledges the subscription —
@@ -33,13 +33,13 @@ HTTP/1.1 201 Created
 — and later sends notifications on certain events:
 
 ```yaml
-    POST /send/callback/here
-    Host: myserver.com
-    Content-Type: application/json
+POST /send/callback/here
+Host: myserver.com
+Content-Type: application/json
 
-    {
-      "message": "Something happened"
-    }
+{
+  "message": "Something happened"
+}
 ```
 
 Let’s now define the `/subscribe` operation:
@@ -107,12 +107,12 @@ Let’s walk through this definition line by line:
 - `callbacks` are defined inside the related operation - `post`, `put`, and so on (not under the path itself). In this example, under the `post` method of the `/subscribe` path:
 
 ```yaml
-      paths:
-        /subscribe:
-          post:
-            …
-            callbacks:
-              …
+paths:
+  /subscribe:
+    post:
+      …
+      callbacks:
+        …
 ```
 
 This does not mean that the API will send callbacks only when this operation is working. Your API will send callback requests when the business logic of your service requires. The hierarchy of keywords simply lets you use parameters of the `/subscribe` operation to configure the callback requests (see [below](#runtime-expressions)).
@@ -154,17 +154,17 @@ Please note that when you define a callback, you define a specification of your 
 As you can see, we use the `{$request.body#/callbackUrl}` expression in our example. It is a [runtime expression](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#runtimeExpression) that sets which data of the `POST /subscribe` request will be used in callbacks. _Runtime_ means that unlike API endpoints, this URL is not known beforehand and is evaluated at run time based on the data supplied by API clients. This value varies from one client to another. For example, the `POST /subscribe` request can look as follows:
 
 ```yaml
-    POST /subscribe?p1=query-param-value HTTP/1.1
-    Host: my.example.com
-    Content-Type: application/json
-    Content-Length: 187
+POST /subscribe?p1=query-param-value HTTP/1.1
+Host: my.example.com
+Content-Type: application/json
+Content-Length: 187
 
-    {
-      "callbackUrl" : "http://my.client.com/callback"
-    }
+{
+  "callbackUrl" : "http://my.client.com/callback"
+}
 
-    201 Created
-    Location: http://my.example.com?id=123
+201 Created
+Location: http://my.example.com?id=123
 ```
 
 You can use the following expressions to refer to its data:
@@ -182,15 +182,15 @@ You can use the following expressions to refer to its data:
 You can combine a runtime expression with static data in callback definitions. For instance, you can define the callback URL in the following way:
 
 ```yaml
-    {$request.body#callbackUrl}/data:
-    – or –
-    {$request.body#/callbackUrl}/{$request.query.eventType}:
+{$request.body#callbackUrl}/data:
+– or –
+{$request.body#/callbackUrl}/{$request.query.eventType}:
 ```
 
 You can use expressions to specify query parameters:
 
 ```yaml
-    {$request.body#/callbackUrl}/data?p1={$request.query.eventType}
+{$request.body#/callbackUrl}/data?p1={$request.query.eventType}
 ```
 
 If the string includes both runtime expressions and static text, you should enclose the runtime expressions in curly braces. If the whole string is a runtime expression, you can skip the curly braces.
@@ -247,59 +247,59 @@ As we have said above, you can use one “subscription” operation to define mu
 The way you implement the unsubscription mechanism is up to you. For example, the receiving server can return specific code in response to the callback message to indicate that it is no longer interested in callbacks. In this case, clients can unsubscribe only in response to a callback request. To allow clients to unsubscribe at any time, your API can provide a special “unsubscribe” operation. This is a rather common approach. In this case, your service can generate an ID or token for each subscriber and return this ID or token in a response to the “subscription” request. To unsubscribe, a client can pass this ID to the “unsubscribe” operation to specify the subscriber to be removed. The following example demonstrates how you can define this behavior in your spec:
 
 ```yaml
-    paths:
-      /subscribe:
-        description: Add a subscriber
-        post:
-          parameters:
-            - name: callbackUrl
-              in: query
-              required: true
-              schema:
+paths:
+/subscribe:
+  description: Add a subscriber
+  post:
+    parameters:
+      - name: callbackUrl
+        in: query
+        required: true
+        schema:
+          type: string
+          format: uri
+      - name: event
+        in: query
+        required: true
+        schema:
+          type: string
+    responses:
+      '201':
+        description: Added
+        content:
+          application/json:
+            type: object
+            properties:
+              subscriberId:
                 type: string
-                format: uri
-            - name: event
-              in: query
-              required: true
-              schema:
-                type: string
-          responses:
-            '201':
-              description: Added
+                example: AAA-123-BBB-456
+    links:  # Link the returned id with the unsubscribe operation
+      unsubscribeOp:
+        operationId: unsubscribeOperation
+            parameters:
+              Id: $response.body#/subscriberId
+    callbacks:
+      myEvent:
+        '{$request.query.callbackUrl}?event={$request.query.event}':
+          post:
+            requestBody:
               content:
                 application/json:
-                  type: object
-                  properties:
-                    subscriberId:
-                      type: string
-                      example: AAA-123-BBB-456
-          links:  # Link the returned id with the unsubscribe operation
-            unsubscribeOp:
-              operationId: unsubscribeOperation
-                  parameters:
-                    Id: $response.body#/subscriberId
-          callbacks:
-            myEvent:
-              '{$request.query.callbackUrl}?event={$request.query.event}':
-                post:
-                  requestBody:
-                    content:
-                      application/json:
-                        example:
-                          message: Some event
-                  responses:
-                    '200':
-                      description: OK
+                  example:
+                    message: Some event
+            responses:
+              '200':
+                description: OK
 
-      /unsubscribe:
-        post:
-          operationId: unsubscribeOperation
-          parameters:
-            - name: Id
-              in: query
-              required: true
-              schema:
-                type: string
+/unsubscribe:
+  post:
+    operationId: unsubscribeOperation
+    parameters:
+      - name: Id
+        in: query
+        required: true
+        schema:
+          type: string
 ```
 
 _Did not find what you were looking for? [Ask the community](https://community.smartbear.com/t5/Swagger-Open-Source-Tools/bd-p/SwaggerOSTools)  

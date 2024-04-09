@@ -98,21 +98,21 @@ responses:
 or defined at the root level and referenced via `$ref`. This is useful if multiple responses use the same schema.
 
 ```yaml
-          responses:
-            200:
-              description: A User object
-              schema:
-                $ref: '#/definitions/User'
-    definitions:
-      User:
-        type: object
-        properties:
-          id:
-            type: integer
-            description: The user ID.
-          username:
-            type: string
-            description: The user name.
+      responses:
+        200:
+          description: A User object
+          schema:
+            $ref: '#/definitions/User'
+definitions:
+  User:
+    type: object
+    properties:
+      id:
+        type: integer
+        description: The user ID.
+      username:
+        type: string
+        description: The user name.
 ```
 
 ### Response That Returns a File
@@ -148,12 +148,12 @@ responses:
 Responses from an API can include custom headers to provide additional information on the result of an API call. For example, a rate-limited API may provide the rate limit status via response headers as follows:
 
 ```yaml
-    HTTP 1/1 200 OK
-    X-RateLimit-Limit: 100
-    X-RateLimit-Remaining: 99
-    X-RateLimit-Reset: 2016-10-12T11:00:00Z
+HTTP 1/1 200 OK
+X-RateLimit-Limit: 100
+X-RateLimit-Remaining: 99
+X-RateLimit-Reset: 2016-10-12T11:00:00Z
 
-    { ... }
+{ ... }
 ```
 
 You can define custom `headers` for each response as follows:

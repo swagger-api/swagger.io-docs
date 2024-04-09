@@ -20,8 +20,8 @@ path
 In OpenAPI 3.0, you use the `servers` array to specify one or more base URLs for your API. `servers` replaces the `host`, `basePath` and `schemes` keywords used in OpenAPI 2.0. Each server has an `url` and an optional Markdown-formatted `description`.
 
 ```yaml
-    servers:
-      - url: https://api.example.com/v1    # The "url: " prefix is required
+servers:
+  - url: https://api.example.com/v1    # The "url: " prefix is required
 ```
 
 You can also have multiple servers, for example, production and sandbox:
@@ -74,17 +74,17 @@ servers:
 Any part of the server URL – scheme, host name or its parts, port, subpath – can be parameterized using variables. Variables are indicated by {curly braces} in the server url, like so:
 
 ```yaml
-    servers:
-      - url: https://{customerId}.saas-app.com:{port}/v2
-        variables:
-          customerId:
-            default: demo
-            description: Customer ID assigned by the service provider
-          port:
-            enum:
-              - '443'
-              - '8443'
-            default: '443'
+servers:
+  - url: https://{customerId}.saas-app.com:{port}/v2
+    variables:
+      customerId:
+        default: demo
+        description: Customer ID assigned by the service provider
+      port:
+        enum:
+          - '443'
+          - '8443'
+        default: '443'
 ```
 
 Unlike [path parameters](/specification/describing-parameters/#path), server variables do not use a `schema`. Instead, they are assumed to be strings. Variables can have arbitrary values, or may be restricted to an `enum`. In any case, a `default` value is required, which will be used if the client does not supply a value. Variable `description` is optional, but useful to have and supports Markdown ([CommonMark](http://commonmark.org/help/)) for rich text formatting. Common use cases for server templating:
@@ -99,22 +99,22 @@ Unlike [path parameters](/specification/describing-parameters/#path), server var
 ##### HTTPS and HTTP
 
 ```yaml
-    servers:
-      - url: http://api.example.com
-      - url: https://api.example.com
+servers:
+  - url: http://api.example.com
+  - url: https://api.example.com
 ```
 
 Or using templating:
 
 ```yaml
-    servers:
-      - url: '{protocol}://api.example.com'
-        variables:
-          protocol:
-            enum:
-              - http
-              - https
-            default: https
+servers:
+  - url: '{protocol}://api.example.com'
+    variables:
+      protocol:
+        enum:
+          - http
+          - https
+        default: https
 ```
 
 **Note:** These two examples are semantically different. The second example explicitly sets the HTTPS server as `default`, whereas the first example does not have a default server.
@@ -122,41 +122,42 @@ Or using templating:
 ##### Production, Development and Staging
 
 ```yaml
-    servers:
-      - url: https://{environment}.example.com/v2
-        variables:
-          environment:
-            default: api    # Production server
-            enum:
-              - api         # Production server
-              - api.dev     # Development server
-              - api.staging # Staging server
+servers:
+  - url: https://{environment}.example.com/v2
+    variables:
+      environment:
+        default: api    # Production server
+        enum:
+          - api         # Production server
+          - api.dev     # Development server
+          - api.staging # Staging server
 ```
 
 ##### SaaS and On-Premise
 
-````yaml
-    servers:
-      - url: '{server}/v1'
-        variables:
-          server:
-            default: https://api.example.com  # SaaS server
-    ```
+```yaml
+servers:
+  - url: "{server}/v1"
+    variables:
+      server:
+        default: https://api.example.com # SaaS server
+```
 
 ##### Regional Endpoints for Different Geographical Areas
+
 ```yaml
-    servers:
-      - url: https://{region}.api.cognitive.microsoft.com
-        variables:
-          region:
-            default: westus
-            enum:
-              - westus
-              - eastus2
-              - westcentralus
-              - westeurope
-              - southeastasia
-````
+servers:
+  - url: https://{region}.api.cognitive.microsoft.com
+    variables:
+      region:
+        default: westus
+        enum:
+          - westus
+          - eastus2
+          - westcentralus
+          - westeurope
+          - southeastasia
+```
 
 ### Overriding Servers
 
@@ -166,22 +167,22 @@ The global `servers` array can be overridden on the path level or operation leve
 - Deprecated but still functional endpoints.
 
 ```yaml
-  servers:
-    - url: https://api.example.com/v1
+servers:
+  - url: https://api.example.com/v1
 
-  paths:
-    /files:
-      description: File upload and download operations
-      servers:
-        - url: https://files.example.com
-          description: Override base path for all operations with the /files path
-      ...
+paths:
+  /files:
+    description: File upload and download operations
+    servers:
+      - url: https://files.example.com
+        description: Override base path for all operations with the /files path
+    ...
 
-  /ping:
-      get:
-        servers:
-          - url: https://echo.example.com
-            description: Override base path for the GET /ping operation
+/ping:
+    get:
+      servers:
+        - url: https://echo.example.com
+          description: Override base path for the GET /ping operation
 ```
 
 ### Relative URLs
@@ -189,30 +190,30 @@ The global `servers` array can be overridden on the path level or operation leve
 The URLs in the `servers` array can be relative, such as `/v2`. In this case, the URL is resolved against the server that hosts the given OpenAPI definition. This is useful in on-premises installations hosted on your customer’s own servers. For example, if the definition hosted at `http://localhost:3001/openapi.yaml` specifies `url: /v2`, the `url` is resolved to `http://localhost:3001/v2`. Relative URL resolution rules follow [RFC 3986](https://tools.ietf.org/html/rfc3986). Moreover, almost all other URLs in an API definition, including OAuth 2 flow endpoints, `termsOfService`, external documentation URL and others, can be specified relative to the server URL.
 
 ```yaml
-    servers:
-      - url: https://api.example.com
-      - url: https://sandbox-api.example.com
+servers:
+  - url: https://api.example.com
+  - url: https://sandbox-api.example.com
 
-    # Relative URL to Terms of Service
-    info:
-      version: 0.0.0
-      title: test
-      termsOfService: /terms-of-use
+# Relative URL to Terms of Service
+info:
+  version: 0.0.0
+  title: test
+  termsOfService: /terms-of-use
 
-    # Relative URL to external documentation
-    externalDocs:
-      url: /docs
-      description: Find more info here
+# Relative URL to external documentation
+externalDocs:
+  url: /docs
+  description: Find more info here
 
-    # Relative URLs to OAuth2 authorization and token URLs
-    components:
-      securitySchemes:
-        oauth2:
-          type: oauth2
-          flows:
-            authorizationCode:
-              authorizationUrl: /oauth/dialog
-              tokenUrl: /oauth/token
+# Relative URLs to OAuth2 authorization and token URLs
+components:
+  securitySchemes:
+    oauth2:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: /oauth/dialog
+          tokenUrl: /oauth/token
 ```
 
 Note that if using multiple servers, the resources specified by relative URLs are expected to exist on all servers.

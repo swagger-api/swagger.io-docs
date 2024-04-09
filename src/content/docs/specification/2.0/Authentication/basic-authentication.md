@@ -43,26 +43,26 @@ paths:
 You can also define the 401 "Unauthorized" response returned for requests with missing or incorrect credentials. This response includes the `WWW-Authenticate` header, which you may want to mention. As with other common responses, the 401 response can be defined in the global `responses` section and referenced from multiple operations.
 
 ```yaml
-    paths:
-      /something:
-        get:
-          ...
-          responses:
-            ...
-            401:
-               $ref: '#/responses/UnauthorizedError'
-        post:
-          ...
-          responses:
-            ...
-            401:
-              $ref: '#/responses/UnauthorizedError'
-    responses:
-      UnauthorizedError:
-        description: Authentication information is missing or invalid
-        headers:
-          WWW_Authenticate:
-            type: string
+paths:
+  /something:
+    get:
+      ...
+      responses:
+        ...
+        401:
+            $ref: '#/responses/UnauthorizedError'
+    post:
+      ...
+      responses:
+        ...
+        401:
+          $ref: '#/responses/UnauthorizedError'
+responses:
+  UnauthorizedError:
+    description: Authentication information is missing or invalid
+    headers:
+      WWW_Authenticate:
+        type: string
 ```
 
 _Did not find what you were looking for? [Ask the community](https://community.smartbear.com/t5/Swagger-Open-Source-Tools/bd-p/SwaggerOSTools)  

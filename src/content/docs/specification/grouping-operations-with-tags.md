@@ -11,25 +11,25 @@ OAS **3** This guide is for OpenAPI 3.0. If you use OpenAPI 2.0, see our [OpenA
 You can assign a list of `tags` to each API operation. Tagged operations may be handled differently by tools and libraries. For example, Swagger UI uses `tags` to group the displayed operations.
 
 ```yaml
-    paths:
-      /pet/findByStatus:
-        get:
-          summary: Finds pets by Status
-          tags:
-            - pets
-          ...
-      /pet:
-        post:
-          summary: Adds a new pet to the store
-          tags:
-            - pets
-          ...
-      /store/inventory:
-        get:
-          summary: Returns pet inventories
-          tags:
-            - store
-          ...
+paths:
+  /pet/findByStatus:
+    get:
+      summary: Finds pets by Status
+      tags:
+        - pets
+      ...
+  /pet:
+    post:
+      summary: Adds a new pet to the store
+      tags:
+        - pets
+      ...
+  /store/inventory:
+    get:
+      summary: Returns pet inventories
+      tags:
+        - store
+      ...
 ```
 
 ![OpenAPI tags in Swagger UI](</swagger/media/Images/swagger-ui-tags-(1).png> "OpenAPI tags in Swagger UI")

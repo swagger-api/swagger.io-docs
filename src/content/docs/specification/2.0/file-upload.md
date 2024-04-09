@@ -34,17 +34,17 @@ paths:
 This definition corresponds to the following HTTP request:
 
 ```yaml
-    POST /upload
-    Host: example.com
-    Content-Type: multipart/form-data; boundary=abcde12345
-    Content-Length: 204
+POST /upload
+Host: example.com
+Content-Type: multipart/form-data; boundary=abcde12345
+Content-Length: 204
 
-    --abcde12345
-    Content-Disposition: form-data; name="upfile"; filename="example.txt"
-    Content-Type: text/plain
+--abcde12345
+Content-Disposition: form-data; name="upfile"; filename="example.txt"
+Content-Type: text/plain
 
-    File contents go here.
-    --abcde12345--
+File contents go here.
+--abcde12345--
 ```
 
 Swagger UI displays file parameters using a file input control, allowing the users to browse for a local file to upload. ![](/swagger/media/Images/swagger-ui-file-upload.png)
@@ -70,21 +70,21 @@ parameters:
 The corresponding HTTP request payload will include multiple parts:
 
 ```yaml
-    POST /upload
-    Host: example.com
-    Content-Type: multipart/form-data; boundary=abcde12345
-    Content-Length: 332
+POST /upload
+Host: example.com
+Content-Type: multipart/form-data; boundary=abcde12345
+Content-Length: 332
 
-    --abcde12345
-    Content-Disposition: form-data; name="upfile"; filename="example.txt"
-    Content-Type: text/plain
+--abcde12345
+Content-Disposition: form-data; name="upfile"; filename="example.txt"
+Content-Type: text/plain
 
-    File contents go here.
-    --abcde12345
-    Content-Disposition: form-data; name="note"
+File contents go here.
+--abcde12345
+Content-Disposition: form-data; name="note"
 
-    Uploading a file named "example.txt"
-    --abcde12345--
+Uploading a file named "example.txt"
+--abcde12345--
 ```
 
 ### Multiple Upload

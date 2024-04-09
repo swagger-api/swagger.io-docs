@@ -146,26 +146,26 @@ security:
 Different operations typically require different scopes, such as read vs write vs admin. In this case, you should apply scoped `security` to specific operations instead of doing it globally.
 
 ```yaml
-    # Instead of this:
-    # security:
-    #   - OAuth2:
-    #       - read
-    #       - write
+# Instead of this:
+# security:
+#   - OAuth2:
+#       - read
+#       - write
 
-    # Do this:
-    paths:
-      /users:
-        get:
-          summary: Get a list of users
-          security:
-            - OAuth2: [read]     # <------
-          ...
+# Do this:
+paths:
+  /users:
+    get:
+      summary: Get a list of users
+      security:
+        - OAuth2: [read]     # <------
+      ...
 
-        post:
-          summary: Add a user
-          security:
-            - OAuth2: [write]    # <------
-          ...
+    post:
+      summary: Add a user
+      security:
+        - OAuth2: [write]    # <------
+      ...
 ```
 
 ### Using Multiple Authentication Types

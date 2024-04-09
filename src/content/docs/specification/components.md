@@ -123,14 +123,14 @@ components:
 Each subsection contains one or more named components (definitions):
 
 ```yaml
-    components:
-      schemas:
-        User:
-          type: object
-          ...
-        Pet:
-          type: object
-          ...
+components:
+  schemas:
+    User:
+      type: object
+      ...
+    Pet:
+      type: object
+      ...
 ```
 
 The component names can consist of the following characters only:

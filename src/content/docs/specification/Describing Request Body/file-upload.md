@@ -22,12 +22,12 @@ requestBody:
 This definition corresponds to an HTTP request that looks as follows:
 
 ```yaml
-    POST /upload
-    Host: example.com
-    Content-Length: 808
-    Content-Type: image/png
+POST /upload
+Host: example.com
+Content-Length: 808
+Content-Type: image/png
 
-    [file content goes there]
+[file content goes there]
 ```
 
 ### Upload via Multipart Requests
@@ -53,25 +53,25 @@ requestBody:
 The corresponding HTTP request payload will include multiple parts:
 
 ```yaml
-    POST /upload
-    Host: example.com
-    Content-Length: 2740
-    Content-Type: multipart/form-data; boundary=abcde12345
+POST /upload
+Host: example.com
+Content-Length: 2740
+Content-Type: multipart/form-data; boundary=abcde12345
 
-    --abcde12345
-    Content-Disposition: form-data; name="orderId"
+--abcde12345
+Content-Disposition: form-data; name="orderId"
 
-    1195
-    --abcde12345
-    Content-Disposition: form-data; name="userId"
+1195
+--abcde12345
+Content-Disposition: form-data; name="userId"
 
-    545
-    --abcde12345
-    Content-Disposition: form-data; name="fileName"; filename="attachment.txt"
-    Content-Type: text/plain
+545
+--abcde12345
+Content-Disposition: form-data; name="fileName"; filename="attachment.txt"
+Content-Type: text/plain
 
-    [file content goes there]
-    --abcde12345--
+[file content goes there]
+--abcde12345--
 ```
 
 ### Multiple File Upload
@@ -95,27 +95,27 @@ requestBody:
 The corresponding HTTP request will look as follows:
 
 ```yaml
-    POST /upload
-    Host: example.com
-    Content-Length: 2740
-    Content-Type: multipart/form-data; boundary=abcde12345
+POST /upload
+Host: example.com
+Content-Length: 2740
+Content-Type: multipart/form-data; boundary=abcde12345
 
-    --abcde12345
-    Content-Disposition: form-data; name="fileName"; filename="file1.txt"
-    Content-Type: text/plain
+--abcde12345
+Content-Disposition: form-data; name="fileName"; filename="file1.txt"
+Content-Type: text/plain
 
-    [file content goes there]
-    --abcde12345
-    Content-Disposition: form-data; name="fileName"; filename="file2.png"
-    Content-Type: image/png
+[file content goes there]
+--abcde12345
+Content-Disposition: form-data; name="fileName"; filename="file2.png"
+Content-Type: image/png
 
-    [file content goes there]
-    ------WebKitFormBoundaryWfPNVh4wuWBlyEyQ
-    Content-Disposition: form-data; name="fileName"; filename="file3.jpg"
-    Content-Type: image/jpeg
+[file content goes there]
+------WebKitFormBoundaryWfPNVh4wuWBlyEyQ
+Content-Disposition: form-data; name="fileName"; filename="file3.jpg"
+Content-Type: image/jpeg
 
-    [file content goes there]
-    --abcde12345--
+[file content goes there]
+--abcde12345--
 ```
 
 ### References

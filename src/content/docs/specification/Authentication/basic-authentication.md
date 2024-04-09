@@ -21,17 +21,16 @@ Authorization: Basic ZGVtbzpwQDU1dzByZA==
 Using OpenAPI 3.0, you can describe Basic authentication as follows:
 
 ```yaml
-    openapi: 3.0.0
-    ...
+openapi: 3.0.0
+---
+components:
+  securitySchemes:
+    basicAuth: # <-- arbitrary name for the security scheme
+      type: http
+      scheme: basic
 
-    components:
-      securitySchemes:
-        basicAuth:     # <-- arbitrary name for the security scheme
-          type: http
-          scheme: basic
-
-    security:
-      - basicAuth: []  # <-- use the same name here
+security:
+  - basicAuth: [] # <-- use the same name here
 ```
 
 The first section, `securitySchemes`, defines a security scheme named _basicAuth_ (an arbitrary name). This scheme must have `type: http` and `scheme: basic`. The `security` section then applies Basic authentication to the entire API. The square brackets `[]` denote the security scopes used; the list is empty because Basic authentication does not use scopes. `security` can be set globally (as in the example above) or on the operation level. The latter is useful if only a subset of operations require Basic authentication:
@@ -51,29 +50,29 @@ Basic authentication can also be combined with other authentication methods as e
 You can also define the 401 “Unauthorized” response returned for requests with missing or incorrect credentials. This response includes the `WWW-Authenticate` header, which you may want to mention. As with other common responses, the 401 response can be defined in the global `components/responses` section and referenced elsewhere via `$ref`.
 
 ```yaml
-    paths:
-      /something:
-        get:
-          ...
-          responses:
-            ...
-            '401':
-               $ref: '#/components/responses/UnauthorizedError'
-        post:
-          ...
-          responses:
-            ...
-            '401':
-              $ref: '#/components/responses/UnauthorizedError'
-    ...
-    components:
+paths:
+  /something:
+    get:
+      ...
       responses:
-        UnauthorizedError:
-          description: Authentication information is missing or invalid
-          headers:
-            WWW_Authenticate:
-              schema:
-                type: string
+        ...
+        '401':
+            $ref: '#/components/responses/UnauthorizedError'
+    post:
+      ...
+      responses:
+        ...
+        '401':
+          $ref: '#/components/responses/UnauthorizedError'
+...
+components:
+  responses:
+    UnauthorizedError:
+      description: Authentication information is missing or invalid
+      headers:
+        WWW_Authenticate:
+          schema:
+            type: string
 ```
 
 To learn more about the `responses` syntax, see [Describing Responses](/specification/describing-responses/).

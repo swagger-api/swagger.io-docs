@@ -81,17 +81,17 @@ GET /notes?offset=100&limit=50
 Use `in: query` to denote query parameters:
 
 ```yaml
-         parameters:
-            - in: query
-              name: offset
-              schema:
-                type: integer
-              description: The number of items to skip before starting to collect the result set
-            - in: query
-              name: limit
-              schema:
-                type: integer
-              description: The numbers of items to return
+     parameters:
+        - in: query
+          name: offset
+          schema:
+            type: integer
+          description: The number of items to skip before starting to collect the result set
+        - in: query
+          name: limit
+          schema:
+            type: integer
+          description: The numbers of items to return
 ```
 
 **Note:** To describe API keys passed as query parameters, use `securitySchemes` and `security` instead. See [API Keys](/specification/authentication/api-keys/).
@@ -201,25 +201,25 @@ Response content type: `responses.<code>.content.<media-type>`
 Operations can also pass parameters in the `Cookie` header, as `Cookie: name=value`. Multiple cookie parameters are sent in the same header, separated by a semicolon and space.
 
 ```yaml
-    GET /api/users
-    Host: example.com
-    Cookie: debug=0; csrftoken=BUSe35dohU3O1MZvDCUOJ
+GET /api/users
+Host: example.com
+Cookie: debug=0; csrftoken=BUSe35dohU3O1MZvDCUOJ
 ```
 
 Use `in: cookie` to define cookie parameters:
 
 ```yaml
-          parameters:
-            - in: cookie
-              name: debug
-              schema:
-                type: integer
-                enum: [0, 1]
-                default: 0
-            - in: cookie
-              name: csrftoken
-              schema:
-                type: string
+      parameters:
+        - in: cookie
+          name: debug
+          schema:
+            type: integer
+            enum: [0, 1]
+            default: 0
+        - in: cookie
+          name: csrftoken
+          schema:
+            type: string
 ```
 
 Cookie parameters can be primitive values, arrays and objects. Arrays and objects are serialized using the `form` style. For more information, see [Parameter Serialization](/specification/serialization/).
@@ -452,24 +452,24 @@ Use `deprecated: true` to mark a parameter as deprecated.
 Parameters shared by all operations of a path can be defined on the path level instead of the operation level. Path-level parameters are inherited by all operations of that path. A typical use case are the GET/PUT/PATCH/DELETE operations that manipulate a resource accessed via a path parameter.
 
 ```yaml
-    paths:
-      /user/{id}:
-        parameters:
-          - in: path
-            name: id
-            schema:
-              type: integer
-            required: true
-            description: The user ID
-        get:
-          summary: Gets a user by ID
-          ...
-        patch:
-          summary: Updates an existing user with the specified ID
-          ...
-        delete:
-          summary: Deletes the user with the specified ID
-          ...
+paths:
+  /user/{id}:
+    parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+        description: The user ID
+    get:
+      summary: Gets a user by ID
+      ...
+    patch:
+      summary: Updates an existing user with the specified ID
+      ...
+    delete:
+      summary: Deletes the user with the specified ID
+      ...
 ```
 
 Any extra parameters defined at the operation level are used together with path-level parameters:

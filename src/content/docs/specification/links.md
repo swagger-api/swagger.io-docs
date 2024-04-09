@@ -15,44 +15,44 @@ Links are one of the new features of OpenAPI 3.0. Using links, you can describe 
 Consider the “create user” operation:
 
 ```yaml
-    POST /users HTTP/1.1
-    Host: example.com
-    Content-Type: application/json
+POST /users HTTP/1.1
+Host: example.com
+Content-Type: application/json
 
-    {
-      "name": "Alex",
-      "age": 27
-    }
+{
+  "name": "Alex",
+  "age": 27
+}
 
 which returns the ID of the created user:
 
-    HTTP/1.1 201 Created
-    Content-Type: application/json
+HTTP/1.1 201 Created
+Content-Type: application/json
 
-    {
-      "id": 305
-    }
+{
+  "id": 305
+}
 ```
 
 This user ID can then be used to read, update or delete the user: `GET /users/305`, `PATCH /users/305` and `DELETE /users/305`. Using links, you can specify that the `id` value returned by “create user” can be used as a parameter to “get user”, “update user” and “delete user”. Another example is pagination via cursors, where the response includes a cursor to retrieve the next data set:
 
 ```yaml
-    GET /items?limit=100
+GET /items?limit=100
 
-     ⇩
+  ⇩
 
-    {
-      "metadata": {
-        "previous": null,
-        "next": "Q1MjAwNz",
-        "count": 10
-      },
-      ...
-    }
+{
+  "metadata": {
+    "previous": null,
+    "next": "Q1MjAwNz",
+    "count": 10
+  },
+  ...
+}
 
-     ⇩
+  ⇩
 
-    GET /items?cursor=Q1MjAwNz&limit=100
+GET /items?cursor=Q1MjAwNz&limit=100
 ```
 
 However, linking relationships are not necessarily within the same resource, or even the same API specification.
@@ -187,20 +187,20 @@ operationRef: "#/paths/~1users~1{userId}/get"
 or external:
 
 ```yaml
-    operationRef: 'https://anotherapi.com/openapi.yaml#/paths/~1users~1{userId}/get'
-    operationRef: './operations/getUser.yaml'
+operationRef: 'https://anotherapi.com/openapi.yaml#/paths/~1users~1{userId}/get'
+operationRef: './operations/getUser.yaml'
 ```
 
 Here, the string `#/paths/~1users~1{userId}/get` actually means `#/paths//users/{userId}/get`, but the inner slashes / in the path name need to be escaped as `~1` because they are special characters.
 
 ```yaml
-    #/paths/~1users~1{userId}/get
-       │       │               │
-       │       │               │
-    paths:     │               │
-      /users/{userId}:         │
-        get:  ─────────────────┘
-          ...
+#/paths/~1users~1{userId}/get
+    │       │               │
+    │       │               │
+paths:     │               │
+  /users/{userId}:         │
+    get:  ─────────────────┘
+      ...
 ```
 
 This syntax can be difficult to read, so we recommend using it for external links only. In case of local links, it is easier to assign `operationId` to all operations and link to these IDs instead.
@@ -240,31 +240,31 @@ The values for parameters and `requestBody` can be defined in the following way
 You would typically use constant values if you need to pass a specific combination of evaluated and hard-coded parameters for the target operation.
 
 ```yaml
-    paths:
-      /date_ranges:
-        get:
-          summary: Get relative date ranges for the report.
-          responses:
-            '200':
-              description: OK
-              content:
-                application/json:
-                  example: [Today, Yesterday, LastWeek, ThisMonth]
-              links:
-                ReportRelDate:
-                  operationId: getReport
-                  # Call "getReport" with the `rdate` parameter and with empty `start_date` and `end_date`
-                  parameters:
-                    rdate: '$response.body#/1'
-                    start_date: ''
-                    end_date: ''
+paths:
+  /date_ranges:
+    get:
+      summary: Get relative date ranges for the report.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              example: [Today, Yesterday, LastWeek, ThisMonth]
+          links:
+            ReportRelDate:
+              operationId: getReport
+              # Call "getReport" with the `rdate` parameter and with empty `start_date` and `end_date`
+              parameters:
+                rdate: '$response.body#/1'
+                start_date: ''
+                end_date: ''
 
-      # GET /report?rdate=...
-      # GET /report?start_date=...&end_date=...
-      /report:
-        get:
-          operationId: getReport
-          ...
+  # GET /report?rdate=...
+  # GET /report?start_date=...&end_date=...
+  /report:
+    get:
+      operationId: getReport
+      ...
 ```
 
 ### Runtime Expression Syntax
@@ -333,24 +333,24 @@ Notes:
 Consider the following request and response:
 
 ```yaml
-    GET /users?limit=2&total=true
-    Host: api.example.com
-    Accept: application/json
+GET /users?limit=2&total=true
+Host: api.example.com
+Accept: application/json
 ```
 
 ```yaml
-    HTTP/1.1 200 OK
-    Content-Type: application/json
-    X-Total-Count: 37
+HTTP/1.1 200 OK
+Content-Type: application/json
+X-Total-Count: 37
 
-    {
-      "prev_offset": 0,
-      "next_offset": 2,
-      "users": [
-        {"id": 1, "name": "Alice"},
-        {"id": 2, "name": "Bob"}
-      ]
-    }
+{
+  "prev_offset": 0,
+  "next_offset": 2,
+  "users": [
+    {"id": 1, "name": "Alice"},
+    {"id": 2, "name": "Bob"}
+  ]
+}
 ```
 
 Below are some examples of runtime expressions and the values they evaluate to:
@@ -373,18 +373,16 @@ Below are some examples of runtime expressions and the values they evaluate to:
 By default, the target operation is called against its default [servers](/specification/api-host-and-base-path/) – either global `servers`, or operation-specific `servers`. However, the server can be overridden by the link using the `server` keyword. `server` has the same fields as global servers, but it is a single server and not an array.
 
 ```yaml
-    servers:
-      - url: https://api.example.com
-
-    ...
-
-              links:
-                GetUserByUserId:
-                  operationId: getUser
-                  parameters:
-                    userId: '$response.body#/id'
-                  server:
-                    url: https://new-api.example.com/v2
+servers:
+  - url: https://api.example.com
+---
+links:
+  GetUserByUserId:
+    operationId: getUser
+    parameters:
+      userId: "$response.body#/id"
+    server:
+      url: https://new-api.example.com/v2
 ```
 
 ### Reusing Links
@@ -392,58 +390,58 @@ By default, the target operation is called against its default [servers](/specif
 Links can be defined inline (as in the previous examples), or placed in the global `components/links` section and referenced from an operation’s `links` section via [`$ref`](/specification/using-ref/). This can be useful if multiple operations link to another operation in the same way – referencing helps reduce code duplication. In the following example, both the “create user” and “update user” operations return the user ID in the response body, and this ID is used in the “get user” operation. The source operations reuse the same link definition from `components/links`.
 
 ```yaml
-    paths:
-      /users:
-        post:
-          summary: Create a user
-          operationId: createUser
-          ...
-          responses:
-            '201':
-              description: Created
-              content:
-                application/json:
-                  schema:
-                    type: object
-                    properties:
-                      id:
-                        type: integer
-                        format: int64
-                        description: ID of the created user.
-              links:
-                GetUserByUserId:
-                  $ref: '#/components/links/GetUserByUserId'    # <-------
+paths:
+  /users:
+    post:
+      summary: Create a user
+      operationId: createUser
+      ...
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                    description: ID of the created user.
+          links:
+            GetUserByUserId:
+              $ref: '#/components/links/GetUserByUserId'    # <-------
 
-      /user/{userId}:
-        patch:
-          summary: Update user
-          operationId: updateUser
-          ...
-          responses:
-            '200':
-              description: The updated user object
-              content:
-                application/json:
-                  schema:
-                    $ref: '#/components/schemas/User'
-              links:
-                GetUserByUserId:
-                  $ref: '#/components/links/GetUserByUserId'    # <-------
+  /user/{userId}:
+    patch:
+      summary: Update user
+      operationId: updateUser
+      ...
+      responses:
+        '200':
+          description: The updated user object
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+          links:
+            GetUserByUserId:
+              $ref: '#/components/links/GetUserByUserId'    # <-------
 
-        get:
-          summary: Get a user by ID
-          operationId: getUser
-          ...
+    get:
+      summary: Get a user by ID
+      operationId: getUser
+      ...
 
-    components:
-      links:
-        GetUserByUserId:   # <----- The $ref's above point here
-          description: >
-            The `id` value returned in the response can be used as
-            the `userId` parameter in `GET /users/{userId}`.
-          operationId: getUser
-          parameters:
-            userId: '$response.body#/id'
+components:
+  links:
+    GetUserByUserId:   # <----- The $ref's above point here
+      description: >
+        The `id` value returned in the response can be used as
+        the `userId` parameter in `GET /users/{userId}`.
+      operationId: getUser
+      parameters:
+        userId: '$response.body#/id'
 ```
 
 ### References

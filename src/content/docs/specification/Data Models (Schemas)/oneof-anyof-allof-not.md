@@ -132,36 +132,36 @@ components:
 As you can see, this example validates the request body content to make sure it includes all the information needed to update a pet item with the PUT operation. It requires user to specify which type of the item should be updated, and validates against the specified schema according to their choice. Note the inline or referenced schema must be a _schema object_, not a standard JSON schema. For that example, all of the following request bodies are **valid**:
 
 ```yaml
-    {
-      "pet_type": "Cat",
-      "age": 3
-    }
+{
+  "pet_type": "Cat",
+  "age": 3
+}
 
-    {
-      "pet_type": "Dog",
-      "bark": true
-    }
+{
+  "pet_type": "Dog",
+  "bark": true
+}
 
-    {
-      "pet_type": "Dog",
-      "bark": false,
-      "breed": "Dingo"
-    }
+{
+  "pet_type": "Dog",
+  "bark": false,
+  "breed": "Dingo"
+}
 ```
 
 The following request bodies are **not valid**:
 
 ```yaml
-    {
-      "age": 3        # Does not include the pet_type property
-    }
+{
+  "age": 3        # Does not include the pet_type property
+}
 
 
 
-    {
-      "pet_type": "Cat",
-      "bark": true    # The `Cat` schema does not have the `bark` property
-    }
+{
+  "pet_type": "Cat",
+  "bark": true    # The `Cat` schema does not have the `bark` property
+}
 ```
 
 ### anyOf
@@ -210,20 +210,20 @@ components:
 Note the inline or referenced schema must be a _schema object_, not a standard JSON schema. With this example, the following JSON request bodies are **valid**:
 
 ```yaml
-    {
-      "age": 1
-    }
+{
+  "age": 1
+}
 
-    {
-      "pet_type": "Cat",
-      "hunts": true
-    }
+{
+  "pet_type": "Cat",
+  "hunts": true
+}
 
-    {
-      "nickname": "Fido",
-      "pet_type": "Dog",
-      "age": 4
-    }
+{
+  "nickname": "Fido",
+  "pet_type": "Dog",
+  "age": 4
+}
 ```
 
 The following example is **not valid**, because it does not contain any of the required properties for both of the schemas:

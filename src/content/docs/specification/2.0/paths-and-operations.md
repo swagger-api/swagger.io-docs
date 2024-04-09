@@ -107,20 +107,20 @@ Swagger supports operation parameters passed via path, query string, headers and
 Each operation may specify a unique `operationId`. Some code generators use this value to name the corresponding methods in code.
 
 ```yaml
-      /users:
-         get:
-           operationId: getUsers
-           summary: Gets all users.
-           ...
-         post:
-           operationId: addUser
-           summary: Adds a new user.
-           ...
-       /user/{id}:
-         get:
-           operationId: getUserById
-           summary: Gets a user by user ID.
-           ...
+/users:
+    get:
+      operationId: getUsers
+      summary: Gets all users.
+      ...
+    post:
+      operationId: addUser
+      summary: Adds a new user.
+      ...
+  /user/{id}:
+    get:
+      operationId: getUserById
+      summary: Gets a user by user ID.
+      ...
 ```
 
 ### Query String in Paths

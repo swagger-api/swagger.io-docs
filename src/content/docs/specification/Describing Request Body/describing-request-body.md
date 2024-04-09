@@ -145,29 +145,29 @@ See [Adding Examples](/specification/adding-examples/) for more information.
 You can put the request body definitions in the global `components.requestBodies` section and `$ref` them elsewhere. This is handy if multiple operations have the same request body – this way you can reuse the same definition easily.
 
 ```yaml
-    paths:
-      /pets:
-        post:
-          summary: Add a new pet
-          requestBody:
-            $ref: '#/components/requestBodies/PetBody'
+paths:
+  /pets:
+    post:
+      summary: Add a new pet
+      requestBody:
+        $ref: '#/components/requestBodies/PetBody'
 
-      /pets/{petId}
-        put:
-          summary: Update a pet
-          parameters: [ ... ]
-          requestBody:
-            $ref: '#/components/requestBodies/PetBody'
+  /pets/{petId}
+    put:
+      summary: Update a pet
+      parameters: [ ... ]
+      requestBody:
+        $ref: '#/components/requestBodies/PetBody'
 
-    components:
-      requestBodies:
-        PetBody:
-          description: A JSON object containing pet information
-          required: true
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Pet'
+components:
+  requestBodies:
+    PetBody:
+      description: A JSON object containing pet information
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Pet'
 ```
 
 ### Form Data
@@ -190,12 +190,12 @@ To illustrate form data, consider an HTML POST form:
 This form POSTs data to the form’s endpoint:
 
 ```yaml
-    POST /survey HTTP/1.1
-    Host: example.com
-    Content-Type: application/x-www-form-urlencoded
-    Content-Length: 28
+POST /survey HTTP/1.1
+Host: example.com
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 28
 
-    name=Amy+Smith&fav_number=42
+name=Amy+Smith&fav_number=42
 ```
 
 In OpenAPI 3.0, form data is modelled using a `type: object` schema where the object properties represent the form fields:

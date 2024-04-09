@@ -15,31 +15,31 @@ In OpenAPI terms, **paths** are endpoints (resources), such as `/users` or `/rep
 API paths and operations are defined in the global `paths` section of the API specification.
 
 ```yaml
-    paths:
-      /ping:
-        ...
-      /users:
-        ...
-      /users/{id}:
-        ...
+paths:
+  /ping:
+    ...
+  /users:
+    ...
+  /users/{id}:
+    ...
 ```
 
 All paths are relative to the [API server URL](/specification/api-host-and-base-path/). The full request URL is constructed as `<server-url>/path`. Global `servers` can also be overridden on the path level or operation level (more on that [below](#overriding-servers)). Paths may have an optional short `summary` and a longer `description` for documentation purposes. This information is supposed to be relevant to all operations in this path. `description` can be [multi-line](http://stackoverflow.com/questions/3790454/in-yaml-how-do-i-break-a-string-over-multiple-lines) and supports [Markdown](http://commonmark.org/help/) (CommonMark) for rich text representation.
 
 ```yaml
-    paths:
-      /users/{id}:
-        summary: Represents a user
-        description: >
-          This resource represents an individual user in the system.
-          Each user is identified by a numeric `id`.
+paths:
+  /users/{id}:
+    summary: Represents a user
+    description: >
+      This resource represents an individual user in the system.
+      Each user is identified by a numeric `id`.
 
-        get:
-          ...
-        patch:
-          ...
-        delete:
-          ...
+    get:
+      ...
+    patch:
+      ...
+    delete:
+      ...
 ```
 
 ### Path Templating
@@ -70,49 +70,49 @@ paths:
 Here is a more detailed example with parameters and response schema:
 
 ```yaml
-    paths:
-      /users/{id}:
-        get:
-          tags:
-            - Users
-          summary: Gets a user by ID.
-          description: >
-            A detailed description of the operation.
-            Use markdown for rich text representation,
-            such as **bold**, *italic*, and [links](https://swagger.io).
-          operationId: getUserById
-          parameters:
-            - name: id
-              in: path
-              description: User ID
-              required: true
-              schema:
-                type: integer
-                format: int64
-          responses:
-            '200':
-              description: Successful operation
-              content:
-                application/json:
-                  schema:
-                    $ref: '#/components/schemas/User'
-          externalDocs:
-            description: Learn more about user operations provided by this API.
-            url: http://api.example.com/docs/user-operations/
+paths:
+  /users/{id}:
+    get:
+      tags:
+        - Users
+      summary: Gets a user by ID.
+      description: >
+        A detailed description of the operation.
+        Use markdown for rich text representation,
+        such as **bold**, *italic*, and [links](https://swagger.io).
+      operationId: getUserById
+      parameters:
+        - name: id
+          in: path
+          description: User ID
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+      externalDocs:
+        description: Learn more about user operations provided by this API.
+        url: http://api.example.com/docs/user-operations/
 
-    components:
-      schemas:
-        User:
-          type: object
-          properties:
-            id:
-              type: integer
-              format: int64
-            name:
-              type: string
-          required:
-            - id
-            - name
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+      required:
+        - id
+        - name
 ```
 
 Operations also support some optional elements for documentation purposes:
@@ -170,20 +170,20 @@ GET /users/findByRole?role=value
 `operationId` is an optional unique string used to identify an operation. If provided, these IDs must be unique among all operations described in your API.
 
 ```yaml
-    /users:
-      get:
-        operationId: getUsers
-        summary: Gets all users
-        ...
-      post:
-        operationId: addUser
-        summary: Adds a new user
-        ...
-    /user/{id}:
-      get:
-        operationId: getUserById
-        summary: Gets a user by user ID
-        ...
+/users:
+  get:
+    operationId: getUsers
+    summary: Gets all users
+    ...
+  post:
+    operationId: addUser
+    summary: Adds a new user
+    ...
+/user/{id}:
+  get:
+    operationId: getUserById
+    summary: Gets a user by user ID
+    ...
 ```
 
 Some common use cases for operationId are:
@@ -216,19 +216,19 @@ The global `servers` array can be overridden on the path level or operation leve
     - url: https://api.example.com/v1
 
 ```yaml
-  paths:
-    /files:
-      description: File upload and download operations
-      servers:
-        - url: https://files.example.com
-          description: Override base path for all operations with the /files path
-      ...
+paths:
+  /files:
+    description: File upload and download operations
+    servers:
+      - url: https://files.example.com
+        description: Override base path for all operations with the /files path
+    ...
 
-  /ping:
-      get:
-        servers:
-          - url: https://echo.example.com
-            description: Override base path for the GET /ping operation
+/ping:
+    get:
+      servers:
+        - url: https://echo.example.com
+          description: Override base path for the GET /ping operation
 ```
 
 _Did not find what you were looking for? [Ask the community](https://community.smartbear.com/t5/Swagger-Open-Source-Tools/bd-p/SwaggerOSTools)

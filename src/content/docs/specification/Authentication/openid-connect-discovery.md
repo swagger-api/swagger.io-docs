@@ -33,42 +33,41 @@ This URL returns a JSON listing of the OpenID/OAuth endpoints, supported scopes 
 OpenAPI 3.0 lets you describe OpenID Connect Discovery as follows:
 
 ```yaml
-    openapi: 3.0.0
-    ...
+openapi: 3.0.0
+---
+# 1) Define the security scheme type and attributes
+components:
+  securitySchemes:
+    openId: # <--- Arbitrary name for the security scheme. Used to refer to it from elsewhere.
+      type: openIdConnect
+      openIdConnectUrl: https://example.com/.well-known/openid-configuration
+
+# 2) Apply security globally to all operations
+security:
+  - openId: # <--- Use the same name as specified in securitySchemes
+      - pets_read
+      - pets_write
+      - admin
 ```
-
-    # 1) Define the security scheme type and attributes
-    components:
-      securitySchemes:
-        openId:   # <--- Arbitrary name for the security scheme. Used to refer to it from elsewhere.
-          type: openIdConnect
-          openIdConnectUrl: https://example.com/.well-known/openid-configuration
-
-    # 2) Apply security globally to all operations
-    security:
-      - openId:   # <--- Use the same name as specified in securitySchemes
-          - pets_read
-          - pets_write
-          - admin
 
 The first section, `components/securitySchemes`, defines the security scheme type (`openIdConnect`) and the URL of the discovery endpoint (`openIdConnectUrl`). Unlike OAuth 2.0, you do not need to list the available scopes in `securitySchemes` – the clients are supposed to read them from the discovery endpoint instead. The `security` section then applies the chosen security scheme to your API. The actual scopes required for API calls need to be listed here. These may be a subset of the scopes returned by the discovery endpoint. If different API operations require different scopes, you can apply `security` on the operation level instead of globally. This way you can list the relevant scopes for each operation:
 
 ```yaml
-    paths:
-      /pets/{petId}:
-        get:
-          summary: Get a pet by ID
-          security:
-            - openId:
-              - pets_read
-          ...
+paths:
+  /pets/{petId}:
+    get:
+      summary: Get a pet by ID
+      security:
+        - openId:
+          - pets_read
+      ...
 
-        delete:
-          summary: Delete a pet by ID
-          security:
-            - openId:
-              - pets_write
-          ...
+    delete:
+      summary: Delete a pet by ID
+      security:
+        - openId:
+          - pets_write
+      ...
 ```
 
 ### Relative Discovery URL

@@ -24,35 +24,35 @@ The _flows_ (also called _grant types_) are scenarios an API client performs to 
 To describe an API protected using OAuth 2.0, first, add a security scheme with `type: oauth2` to the global `components/securitySchemes` section. Then add the `security` key to apply security globally or to individual operations:
 
 ```yaml
-    # Step 1 - define the security scheme
-    components:
-      securitySchemes:
-        oAuthSample:    # <---- arbitrary name
-          type: oauth2
-          description: This API uses OAuth 2 with the implicit grant flow. [More info](https://api.example.com/docs/auth)
-          flows:
-            implicit:   # <---- OAuth flow(authorizationCode, implicit, password or clientCredentials)
-              authorizationUrl: https://api.example.com/oauth2/authorize
-              scopes:
-                read_pets: read your pets
-                write_pets: modify pets in your account
+# Step 1 - define the security scheme
+components:
+  securitySchemes:
+    oAuthSample:    # <---- arbitrary name
+      type: oauth2
+      description: This API uses OAuth 2 with the implicit grant flow. [More info](https://api.example.com/docs/auth)
+      flows:
+        implicit:   # <---- OAuth flow(authorizationCode, implicit, password or clientCredentials)
+          authorizationUrl: https://api.example.com/oauth2/authorize
+          scopes:
+            read_pets: read your pets
+            write_pets: modify pets in your account
 
-    # Step 2 - apply security globally...
-    security:
-      - oAuthSample:
-        - write_pets
-        - read_pets
+# Step 2 - apply security globally...
+security:
+  - oAuthSample:
+    - write_pets
+    - read_pets
 
-    # ... or to individual operations
-    paths:
-      /pets:
-        patch:
-          summary: Add a new pet
-          security:
-            - oAuthSample:
-              - write_pets
-              - read_pets
-          ...
+# ... or to individual operations
+paths:
+  /pets:
+    patch:
+      summary: Add a new pet
+      security:
+        - oAuthSample:
+          - write_pets
+          - read_pets
+      ...
 ```
 
 The `flows` keyword specifies one or more named flows supported by this OAuth 2.0 scheme. The flow names are:
@@ -148,13 +148,13 @@ components:
 2.  List the scopes required by each operation in the `security` section of that operation:
 
 ```yaml
-        paths:
-          /pets/{petId}:
-            patch:
-              summary: Updates a pet in the store
-              security:
-                - oAuthSample: [write_pets]
-              ...
+paths:
+  /pets/{petId}:
+    patch:
+      summary: Updates a pet in the store
+      security:
+        - oAuthSample: [write_pets]
+      ...
 ```
 
     If all API operations require the same scopes, you can add `security` on the root level of the API definition instead:

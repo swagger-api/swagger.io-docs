@@ -35,29 +35,29 @@ requestBody:
 You start with the `requestBody/content` keyword. Then, you specify the media type of request data. File uploads typically use the `_multipart/form-data_` media type, and mixed-data requests usually use `_multipart/mixed_`. Below the media type, put the `schema` keyword to indicate that you start describing the request payload. You describe individual parts of the request as properties of the `schema` object. As you can see, a multipart request can include various data: strings, objects in JSON format, and binary data. You can also specify one or several files for uploading. (To learn more, see [File Upload](/specification/describing-request-body/file-upload/).) The example above corresponds to the following request:
 
 ```yaml
-    POST /upload HTTP/1.1
-    Content-Length: 428
-    Content-Type: multipart/form-data; boundary=abcde12345
+POST /upload HTTP/1.1
+Content-Length: 428
+Content-Type: multipart/form-data; boundary=abcde12345
 
-    --abcde12345
-    Content-Disposition: form-data; name="id"
-    Content-Type: text/plain
+--abcde12345
+Content-Disposition: form-data; name="id"
+Content-Type: text/plain
 
-    123e4567-e89b-12d3-a456-426655440000
-    --abcde12345
-    Content-Disposition: form-data; name="address"
-    Content-Type: application/json
+123e4567-e89b-12d3-a456-426655440000
+--abcde12345
+Content-Disposition: form-data; name="address"
+Content-Type: application/json
 
-    {
-      "street": "3, Garden St",
-      "city": "Hillsbery, UT"
-    }
-    --abcde12345
-    Content-Disposition: form-data; name="profileImage "; filename="image1.png"
-    Content-Type: application/octet-stream
+{
+  "street": "3, Garden St",
+  "city": "Hillsbery, UT"
+}
+--abcde12345
+Content-Disposition: form-data; name="profileImage "; filename="image1.png"
+Content-Type: application/octet-stream
 
-    {…file content…}
-    --abcde12345--
+{…file content…}
+--abcde12345--
 ```
 
 ### Specifying Content-Type
@@ -135,22 +135,22 @@ requestBody:
 This declaration matches the following request:
 
 ```yaml
-    POST /upload HTTP/1.1
-    Content-Length: 428
-    Content-Type: multipart/form-data; boundary=abcde12345
+POST /upload HTTP/1.1
+Content-Length: 428
+Content-Type: multipart/form-data; boundary=abcde12345
 
-    --abcde12345
-    Content-Disposition: form-data; name="id"
-    Content-Type: text/plain
+--abcde12345
+Content-Disposition: form-data; name="id"
+Content-Type: text/plain
 
-    123e4567-e89b-12d3-a456-426655440000
-    --abcde12345
-    Content-Disposition: form-data; name="profileImage"; filename="image1.png"
-    Content-Type: image/png
-    X-Custom-Header: x-header
+123e4567-e89b-12d3-a456-426655440000
+--abcde12345
+Content-Disposition: form-data; name="profileImage"; filename="image1.png"
+Content-Type: image/png
+X-Custom-Header: x-header
 
-    {…file content…}
-    --abcde12345--
+{…file content…}
+--abcde12345--
 ```
 
 _Did not find what you were looking for? [Ask the community](https://community.smartbear.com/t5/Swagger-Open-Source-Tools/bd-p/SwaggerOSTools)  

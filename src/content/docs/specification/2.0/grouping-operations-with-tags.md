@@ -11,25 +11,25 @@ OAS **2** This page applies to OpenAPI Specification ver. 2 (fka Swagger). To le
 You can assign a list of `tags` to each API operation. Tagged operations may be handled differently by tools and libraries. For example, Swagger UI uses `tags` to group the displayed operations.
 
 ```yaml
-    paths:
-      /pet/findByStatus:
-        get:
-          summary: Finds pets by Status
-          tags:
-            - pets
-          ...
-      /pet:
-        post:
-          summary: Adds a new pet to the store
-          tags:
-            - pets
-          ...
-      /store/inventory:
-        get:
-          summary: Returns pet inventories
-          tags:
-            - store
-          ...
+paths:
+  /pet/findByStatus:
+    get:
+      summary: Finds pets by Status
+      tags:
+        - pets
+      ...
+  /pet:
+    post:
+      summary: Adds a new pet to the store
+      tags:
+        - pets
+      ...
+  /store/inventory:
+    get:
+      summary: Returns pet inventories
+      tags:
+        - store
+      ...
 ```
 
 ![Tags in Swagger UI](https://swagger.io/wp-content/uploads/2017/02/swagger-ui-tags.png) Optionally, you can specify `description` and `externalDocs` for each tag by using the global `tags` section on the root level. The tag names here should match those used in operations.

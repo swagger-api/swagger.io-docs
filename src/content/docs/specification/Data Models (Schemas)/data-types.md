@@ -217,17 +217,17 @@ Note that the regular expression is enclosed in the `^…$` tokens, where `^` me
 OpenAPI 3.0 does not have an explicit `null` type as in JSON Schema, but you can use `nullable: true` to specify that the value may be `null`. Note that `null` is different from an empty string "".
 
 ```yaml
-    # Correct
-    type: integer
-    nullable: true
+# Correct
+type: integer
+nullable: true
 
-    # Incorrect
-    type: null
+# Incorrect
+type: null
 
-    # Incorrect as well
-    type:
-      - integer
-      - null
+# Incorrect as well
+type:
+  - integer
+  - null
 ```
 
 The example above may be mapped to the nullable types `int?` in C# and `java.lang.Integer` in Java. In objects, a nullable property is not the same as an optional property, but some tools may choose to map an optional property to the `null` value.
@@ -310,16 +310,16 @@ items: {}
 Here, `{}` is the “any-type” schema (see [below](#any)). Note that the following syntax for `items` is not valid:
 
 ```yaml
-    # Incorrect
-    items:
-      - type: string
-      - type: integer
+# Incorrect
+items:
+  - type: string
+  - type: integer
 
-    # Incorrect as well
-    items:
-      type:
-        - string
-        - integer
+# Incorrect as well
+items:
+  type:
+    - string
+    - integer
 ```
 
 #### Array Length

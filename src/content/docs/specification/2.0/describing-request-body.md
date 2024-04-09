@@ -93,12 +93,12 @@ definitions:
 Want to POST/PUT just a single value? No problem, you can define the body schema type as a primitive, such as a string or number. Raw request:
 
 ```yaml
-    POST /status HTTP/1.1
-    Host: api.example.com
-    Content-Type: text/plain
-    Content-Length: 42
+POST /status HTTP/1.1
+Host: api.example.com
+Content-Type: text/plain
+Content-Length: 42
 
-    Time is an illusion. Lunchtime doubly so.
+Time is an illusion. Lunchtime doubly so.
 ```
 
 Swagger definition:
