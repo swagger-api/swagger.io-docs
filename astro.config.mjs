@@ -1,6 +1,8 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 
+import tailwind from "@astrojs/tailwind";
+
 // https://astro.build/config
 export default defineConfig({
   integrations: [
@@ -9,6 +11,10 @@ export default defineConfig({
       social: {
         github: "https://github.com/withastro/starlight",
       },
+      customCss: [
+        // Path to Tailwind base styles:
+        "./src/tailwind.css",
+      ],
       sidebar: [
         {
           label: "SwaggerHub",
@@ -16,12 +22,16 @@ export default defineConfig({
         },
         {
           label: "Open Source Tools",
-          autogenerate: { directory: "open-source-tools" },
+          autogenerate: {
+            directory: "open-source-tools",
+          },
           collapsed: true,
         },
         {
           label: "OpenAPI Guide",
-          autogenerate: { directory: "specification" },
+          autogenerate: {
+            directory: "specification",
+          },
           collapsed: true,
         },
       ],
@@ -29,6 +39,10 @@ export default defineConfig({
       // 	// Override the default `SocialIcons` component.
       // 	Header: './src/components/header.astro',
       // },
+    }),
+    tailwind({
+      // Disable the default base styles:
+      applyBaseStyles: false,
     }),
   ],
 });
