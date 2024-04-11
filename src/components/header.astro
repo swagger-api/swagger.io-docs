@@ -16,7 +16,7 @@ import '@fontsource/monda';
         --sl-nav-pad-y: 0rem;
         display: flex;
         align-items: center;
-        background-color: var(--astro-code-color-background);
+        background-color: var(--sl-color-black);
     }
 
     header a {
@@ -56,10 +56,10 @@ import '@fontsource/monda';
         padding: 16px 34px 24px;
         margin: 0.125rem 0 0;
         font-size: 1rem;
-        color: #212529;
+        color: var(--sl-color-gray-1);
         text-align: left;
         list-style: none;
-        background-color: #fff;
+        background-color: var(--sl-color-black);;
         background-clip: padding-box;
         border: 1px solid rgba(0, 0, 0, 0.15);
         border-radius: 0.25rem;
@@ -72,7 +72,7 @@ import '@fontsource/monda';
     .nav-main .dropdown-menu .tabbed-resource-cards .item-header,
     .tabbed-resource-cards .nav-main .dropdown-menu .item-checked,
     .tabbed-resource-cards .nav-main .dropdown-menu .item-header {
-        color: #173647;
+        color: var(--sl-color-gray-1);
         cursor: pointer;
         display: block;
         font-size: 14px;
@@ -123,173 +123,6 @@ import '@fontsource/monda';
         transition: margin 0.3s ease-in-out;
     }
 
-    @media (min-width: 1230px) {
-        .nav-main .dropdown-menu {
-            box-shadow: 0 0 10px -5px rgba(23, 54, 71, 0.5);
-            padding: 20px;
-        }
-    }
-
-    .nav-main .dropdown-menu a {
-        display: block;
-    }
-
-    .nav-main .dropdown-menu p {
-        margin: 0;
-    }
-
-    @media (min-width: 1230px) {
-        .nav-main .dropdown-menu:before {
-            content: '';
-            background-color: #fff;
-            border-left: 1px solid #ddd;
-            border-top: 1px solid #ddd;
-            display: block;
-            height: 18px;
-            left: 40px;
-            position: absolute;
-            top: -10px;
-            -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-            width: 18px;
-            z-index: -1;
-        }
-    }
-
-    .nav-main .dropdown-menu.menu-double {
-        background: linear-gradient(to right, #fff 50%, #eff0f0 50%);
-    }
-
-    @media (min-width: 1230px) {
-        .nav-main .dropdown-menu.menu-double {
-            width: 700px;
-        }
-    }
-
-    .nav-main .dropdown-menu.menu-double svg {
-        position: absolute;
-    }
-
-    .nav-main .dropdown-menu-bottom-cta {
-        font-size: 0.825rem;
-        text-align: center;
-        background-color: #38b832;
-        border-bottom-right-radius: 5px;
-        border-bottom-left-radius: 5px;
-        position: absolute;
-        width: 700px;
-        left: 0;
-        bottom: -20px;
-    }
-
-    .nav-main .dropdown-menu-bottom-cta a {
-        color: #fff;
-    }
-
-    .nav-main .dropdown-menu .header-tools {
-        font-weight: 700;
-        margin-bottom: 6px;
-    }
-
-    .nav-main .dropdown-menu .item-main {
-        color: #173647;
-        font-size: 18px;
-        font-weight: 600;
-    }
-
-    .nav-main .dropdown-menu .item-icon {
-        height: 30px;
-        width: auto;
-    }
-
-    .nav-main .dropdown-menu .content {
-        color: #3b505b;
-        font-size: 12px;
-        padding: 5px 0 20px;
-    }
-
-    .nav-main .nav-tabs {
-        -ms-overflow-style: none;
-        border: none;
-        display: flex;
-        height: auto !important;
-        position: static !important;
-    }
-
-    .nav-main .nav-tabs::-webkit-scrollbar {
-        width: 0;
-        background: 0 0;
-        display: none;
-    }
-
-    .nav-main .nav-tabs::-webkit-scrollbar-thumb {
-        background: 0 0;
-        display: none;
-    }
-
-    .nav-main .nav-tabs a {
-        height: 100%;
-        padding-bottom: 1px;
-    }
-
-    @media (min-width: 1230px) {
-        .nav-main .nav-tabs a {
-            pointer-events: none;
-        }
-    }
-
-    @media (min-width: 1230px) {
-        .nav-main .nav-tabs li {
-            padding: 0 30px 0 15px;
-        }
-
-        .nav-main .nav-tabs li + li {
-            padding-left: 288px;
-        }
-    }
-
-    @media (min-width: 1230px) {
-        .nav-main .tab-content {
-            display: flex;
-        }
-    }
-
-    @media (min-width: 1230px) {
-        .nav-main .tab-pane {
-            display: block !important;
-        }
-    }
-
-    .nav-main nav {
-        align-items: center;
-        display: flex;
-        height: 65px;
-        justify-content: space-between;
-        width: 100%;
-    }
-
-    .nav-main a:active,
-    .nav-main a:focus,
-    .nav-main a:hover {
-        text-decoration: none;
-    }
-
-    .nav-main a:active .link-underline,
-    .nav-main a:focus .link-underline,
-    .nav-main a:hover .link-underline {
-        text-decoration: underline;
-    }
-
-    .nav-main .btn-nav {
-        margin-left: 20px;
-    }
-
-    @media (min-width: 1230px) {
-        .nav-main .btn-nav {
-            margin-top: 5px;
-        }
-    }
-
     .nav-main .navbar-brand {
         display: inline-block;
         margin-right: 2rem;
@@ -320,20 +153,188 @@ import '@fontsource/monda';
         left: 0 !important;
     }
 
-    @media (min-width: 1230px) {
-        .nav-main .nav-item-search .nav-link {
-            padding: 10px 0 0 0;
+    .nav-main .dropdown-menu a {
+        display: block;
+    }
+
+    .nav-main .dropdown-menu p {
+        margin: 0;
+    }
+
+    .nav-main .dropdown-menu.menu-double {
+        background: linear-gradient(to right, var(--sl-color-black) 50%, var(--sl-color-gray-7) 50%);
+    }
+
+    .nav-main .dropdown-menu.menu-double svg {
+        position: absolute;
+    }
+
+    .nav-main .dropdown-menu-bottom-cta {
+        font-size: 0.825rem;
+        text-align: center;
+        background-color: #38b832;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        position: absolute;
+        width: 700px;
+        left: 0;
+        bottom: -20px;
+        & a {
+            color: #fff;
         }
+    }
+
+    .nav-main .dropdown-menu .header-tools {
+        font-weight: 700;
+        margin-bottom: 6px;
+    }
+
+    .nav-main .dropdown-menu .item-main {
+        color: var(--sl-color-gray-1);
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .nav-main .dropdown-menu .item-icon {
+        height: 30px;
+        width: auto;
+    }
+
+    .nav-main .dropdown-menu .content {
+        color: var(--sl-color-gray-2);
+        font-size: 12px;
+        padding: 5px 0 20px;
+    }
+
+    .nav-main .nav-tabs {
+        -ms-overflow-style: none;
+        border: none;
+        display: flex;
+        height: auto !important;
+        position: static !important;
+    }
+
+    .nav-main .nav-tabs::-webkit-scrollbar {
+        width: 0;
+        background: 0 0;
+        display: none;
+    }
+
+    .nav-main .nav-tabs::-webkit-scrollbar-thumb {
+        background: 0 0;
+        display: none;
+    }
+
+    .nav-main .nav-tabs a {
+        height: 100%;
+        padding-bottom: 1px;
+    }
+
+    .nav-main nav {
+        align-items: center;
+        display: flex;
+        height: 65px;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .nav-main a:active,
+    .nav-main a:focus,
+    .nav-main a:hover {
+        text-decoration: none;
+    }
+
+    .nav-main a:active .link-underline,
+    .nav-main a:focus .link-underline,
+    .nav-main a:hover .link-underline {
+        text-decoration: underline;
+    }
+
+    .nav-main .btn-nav {
+        margin-left: 20px;
     }
 
     .nav-main .nav-link {
         background-color: transparent;
-        color: var(--sl-color-text);
+        color: var(--sl-color-gray-1);
         white-space: nowrap;
     }
 
     .nav-main-toggle {
         display: none;
+    }
+
+    .nav-spacer {
+        height: 65px;
+        background-color: transparent;
+        width: 100%;
+    }
+
+    .has-secondary .nav-spacer {
+        height: 130px;
+    }
+
+    /* Starlight hamburger */
+    starlight-menu-button button {
+        --sl-menu-button-size: 2.8125rem;
+        svg {
+            --sl-icon-size: 2em !important;
+        }
+    }
+
+    @media (min-width: 1230px) {
+        .nav-main .dropdown-menu {
+            box-shadow: 0 0 10px -5px #17364780;
+            padding: 20px;
+        }
+
+        .nav-main .dropdown-menu:before {
+            content: '';
+            background-color: var(--sl-color-black);;
+            border-left: 1px solid #ddd;
+            border-top: 1px solid #ddd;
+            display: block;
+            height: 18px;
+            left: 40px;
+            position: absolute;
+            top: -10px;
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+            width: 18px;
+            z-index: -1;
+        }
+
+        .nav-main .dropdown-menu.menu-double {
+            width: 700px;
+        }
+
+        .nav-main .nav-tabs a {
+            pointer-events: none;
+        }
+
+        .nav-main .nav-tabs li {
+            padding: 0 30px 0 15px;
+        }
+
+        .nav-main .nav-tabs li + li {
+            padding-left: 288px;
+        }
+
+        .nav-main .tab-content {
+            display: flex;
+        }
+
+        .nav-main .tab-pane {
+            display: block !important;
+        }
+
+        .nav-main .btn-nav {
+            margin-top: 5px;
+        }
+
+        .nav-main .nav-item-search .nav-link {
+            padding: 10px 0 0 0;
+        }
     }
 
     @media (max-width: 1229px) {
@@ -612,16 +613,6 @@ import '@fontsource/monda';
             position: fixed;
             left: 10px;
         }
-    }
-
-    .nav-spacer {
-        height: 65px;
-        background-color: transparent;
-        width: 100%;
-    }
-
-    .has-secondary .nav-spacer {
-        height: 130px;
     }
 </style>
 <div class='nav-main mx-auto flex'>
@@ -1295,7 +1286,7 @@ import '@fontsource/monda';
                     </div>
                 </div>
             </li>
-            <li class='border border-primary border-solid rounded 2xl:ml-5 order-2'>
+            <li class='border border-primary-dark border-solid rounded md:ml-5 order-2'>
                 <ThemeSelect {...Astro.props} />
             </li>
             <li class='flex items-center ml-auto order-1'>

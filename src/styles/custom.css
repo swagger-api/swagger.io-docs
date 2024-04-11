@@ -3,6 +3,38 @@
     --sl-font: 'Open Sans Variable', sans-serif;
 }
 
+/* Dark mode colors. */
+:root {
+	--sl-color-accent-low: hsl(115, 60%, 11%);
+	--sl-color-accent: hsl(117, 57%, 30%);
+	--sl-color-accent-high: hsl(113, 32%, 75%);
+	--sl-color-white: hsl(0, 0%, 100%);
+	--sl-color-gray-1: hsl(126, 26%, 93%);
+	--sl-color-gray-2: hsl(130, 10%, 75%);
+	--sl-color-gray-3: hsl(128, 9%, 53%);
+	--sl-color-gray-4: hsl(129, 12%, 33%);
+	--sl-color-gray-5: hsl(129, 18%, 21%);
+	--sl-color-gray-6: hsl(132, 28%, 14%);
+    --sl-color-gray-7: hsl(133, 25%, 11%);
+	--sl-color-black: hsl(132, 22%, 9%);
+}
+
+/* Light mode colors. */
+:root[data-theme='light'] {
+	--sl-color-accent-low: hsl(112, 33%, 82%);
+	--sl-color-accent: hsl(117, 57%, 46%);
+	--sl-color-accent-high: hsl(116, 85%, 13%);
+	--sl-color-white: hsl(133, 20%, 9%);
+	--sl-color-gray-1: hsl(133, 28%, 14%);
+	--sl-color-gray-2: hsl(129, 18%, 21%);
+	--sl-color-gray-3: hsl(129, 12%, 33%);
+	--sl-color-gray-4: hsl(128, 9%, 53%);
+	--sl-color-gray-5: hsl(130, 10%, 75%);
+	--sl-color-gray-6: hsl(126, 26%, 93%);
+	--sl-color-gray-7: hsl(132, 26%, 96%);
+	--sl-color-black: hsl(0, 0%, 100%);
+}
+
 /* Change focus style */
 :focus-visible {
     outline: 2px solid hsl(127, 55.19%, 35.88%);
