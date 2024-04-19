@@ -17,23 +17,20 @@ import '@fontsource/monda';
         display: flex;
         align-items: center;
         background-color: var(--sl-color-black);
-    }
-
-    header a {
-        text-decoration: none;
-        color: inherit;
+        & a {
+            text-decoration: none;
+            color: inherit;
+        }
     }
 
     starlight-theme-select label {
         height: 100%;
-    }
-
-    starlight-theme-select label .label-icon {
-        left: 0.625rem;
-    }
-
-    starlight-theme-select label .caret {
-        right: 0.625rem;
+        & .label-icon {
+            left: 0.625rem;
+        }
+        & .caret {
+            right: 0.625rem;
+        }
     }
 
     .icon.label-icon + select {
@@ -46,27 +43,28 @@ import '@fontsource/monda';
         position: relative;
     }
     .dropdown-menu {
-        position: absolute;
-        top: 160%;
-        left: 0;
-        z-index: 1000;
-        display: none;
-        float: left;
-        min-width: 10rem;
-        padding: 16px 34px 24px;
-        margin: 0.125rem 0 0;
-        font-size: 1rem;
-        color: var(--sl-color-gray-1);
-        text-align: left;
-        list-style: none;
-        background-color: var(--sl-color-black);;
         background-clip: padding-box;
+        background-color: var(--sl-color-black);;
         border: 1px solid rgba(0, 0, 0, 0.15);
         border-radius: 0.25rem;
+        color: var(--sl-color-gray-1);
+        display: none;
+        font-size: 1rem;
+        float: left;
+        left: 0;
+        list-style: none;
+        margin: 0.125rem 0 0;
+        min-width: 10rem;
+        padding: 20px;
+        position: absolute;
+        text-align: left;
+        top: 160%;
+        z-index: 1000;
+        &.show {
+            display: block;
+        }
     }
-    .dropdown-menu.show {
-        display: block;
-    }
+
     .nav-main .dropdown-menu .item,
     .nav-main .dropdown-menu .tabbed-resource-cards .item-checked,
     .nav-main .dropdown-menu .tabbed-resource-cards .item-header,
@@ -282,7 +280,7 @@ import '@fontsource/monda';
         }
     }
 
-    @media (min-width: 1230px) {
+    @media (min-width: 1280px) {
         .nav-main .dropdown-menu {
             box-shadow: 0 0 10px -5px #17364780;
             padding: 20px;
@@ -337,7 +335,7 @@ import '@fontsource/monda';
         }
     }
 
-    @media (max-width: 1229px) {
+    @media (max-width: 1279px) {
         body > :not([id*='wistia-']) {
             left: 0;
             position: relative;
@@ -353,10 +351,6 @@ import '@fontsource/monda';
             left: 300px;
             position: relative;
             transition: left 0.3s ease-in-out;
-        }
-        .nav-main .tab-content {
-            margin-bottom: 15px;
-            margin-top: 15px;
         }
 
         .nav-main .dropdown-menu .item,
@@ -374,17 +368,15 @@ import '@fontsource/monda';
             top: 15px;
         }
         .nav-main .nav .show .dropdown-mega {
-            background-color: #fff !important;
+            background-color: var(--sl-color-black);
             box-shadow: 0 0 10px -8px #000 inset;
             margin: 0;
-            padding: 16px 0;
+            padding: 20px;
         }
         .nav-main .nav-tabs {
-            background-color: #fff !important;
-            padding-top: 10px;
+            background-color: var(--sl-color-black);
             width: 100%;
             margin: auto;
-            padding-inline: 15px;
         }
 
         .nav-main .nav-tabs li {
@@ -411,6 +403,13 @@ import '@fontsource/monda';
 
         .nav-main .nav-tabs svg {
             height: 27px;
+        }
+
+        .nav-main .tab-pane {
+            display: none;
+            &.active {
+                display: block;
+            }
         }
         .nav-main .dropdown-menu {
             box-shadow: 0 0 10px -5px rgba(23, 54, 71, 0.5);
@@ -441,7 +440,7 @@ import '@fontsource/monda';
             color: #fff !important;
         }
         .nav-main .nav:not(.nav-tabs) {
-            background-color: #f2f2f2;
+            background-color: var(--sl-color-black);
             border-right: 1px solid #ddd;
             display: block;
             height: 100%;
@@ -497,6 +496,11 @@ import '@fontsource/monda';
             width: 40%;
         }
 
+        .nav-search {
+            width: 15%;
+            float: left;
+        }
+
         .nav-main .nav-item-search {
             border-right: 1px solid #ddd;
             float: left;
@@ -511,7 +515,7 @@ import '@fontsource/monda';
         }
 
         .nav-main .nav-link:hover {
-            background-color: #fcfcfc;
+            background-color: var(--sl-color-gray-6);
         }
         .nav-spacer {
             height: 60px;
@@ -532,7 +536,7 @@ import '@fontsource/monda';
         }
 
         .nav-main-toggle .hamburger {
-            background-color: #173647;
+            background-color: var(--sl-color-gray-1);
             height: 2px;
             left: 15px;
             position: absolute;
@@ -548,7 +552,7 @@ import '@fontsource/monda';
         .nav-main-toggle .hamburger::after,
         .nav-main-toggle .hamburger::before {
             content: '';
-            background-color: #173647;
+            background-color: var(--sl-color-gray-1);
             display: block;
             height: 2px;
             left: 0;
@@ -1066,7 +1070,7 @@ import '@fontsource/monda';
                             <div class='tab-content'>
                                 <div
                                     role='tabpanel'
-                                    class='tab-pane active pl-4 grow basis-0'
+                                    class='tab-pane active xl:pl-4 grow basis-0'
                                     id='proDocumentation'
                                 >
                                     <a
@@ -1141,7 +1145,7 @@ import '@fontsource/monda';
                                 </div>
                                 <div
                                     role='tabpanel'
-                                    class='tab-pane pl-10 grow basis-0'
+                                    class='tab-pane xl:pl-10 grow basis-0'
                                     id='openSource'
                                 >
                                     <a
@@ -1286,13 +1290,13 @@ import '@fontsource/monda';
                     </div>
                 </div>
             </li>
-            <li class='border border-primary-dark border-solid rounded md:ml-5 order-2'>
+            <li class='border border-primary-dark border-solid rounded xl:ml-5 order-2'>
                 <ThemeSelect {...Astro.props} />
             </li>
-            <li class='flex items-center ml-auto order-1'>
+            <li class='nav-search flex items-center ml-auto order-1'>
                 <a
                     class='nav-link header-search-ico sb-search-ico text-center'
-                    href='#'><i class='fal fa-search'>&nbsp;</i></a
+                    href='#'><i class='fal fa-search'></i></a
                 >
             </li>
             <li class='nav-item nav-item-login ml-5 order-3'>
@@ -1355,8 +1359,7 @@ import '@fontsource/monda';
     })(window, document);
 
     // Check if small screen
-    let mobileScreen = window.matchMedia('(max-width: 1029px)');
-    let isMobile = mobileScreen.matches;
+    let mobileScreen = window.matchMedia('(max-width: 1279px)');
 
     // Show/Hide hamburger icon
     mobileScreen.addEventListener('change', showHideHamburgerIcon);
@@ -1384,7 +1387,6 @@ import '@fontsource/monda';
         if (navSecondaryToggle) {
             navSecondaryToggle.addEventListener('click', function (e) {
                 this.closest('.nav-secondary').classList.toggle('active');
-                console.log('triggered');
             });
         }
     });
@@ -1397,7 +1399,7 @@ import '@fontsource/monda';
                 .closest('.dropdown')
                 .querySelector('.dropdown-menu')
                 .classList;
-            if (currentDropdown.contains('show')) {
+            if (currentDropdown.contains('show') && mobileScreen.matches === false) {
                 currentDropdown.remove('show')
             } else {
                 closeDropdown();
@@ -1408,23 +1410,47 @@ import '@fontsource/monda';
 
     // Close Dropdown When Clicked/Escaped Outside Of The Element
     document.addEventListener('click', event => {
-        if (isMobile === false && 
-            event.target.closest('.dropdown')) {
-            return;
+        if (mobileScreen.matches === false && event.target.closest('.dropdown') === null) {
+                closeDropdown();
         }
-        closeDropdown();
     });
     document.addEventListener('keydown', (event) => {
-        if (isMobile === false && event.key === 'Escape') {
+        if (mobileScreen.matches === false && event.key === 'Escape') {
             closeDropdown();
         }
     });
+
     function closeDropdown () {
         let dropdowns = document.querySelectorAll('.dropdown-menu');
         dropdowns.forEach((dropdown) => {
             dropdown.classList.remove('show');
         });
     };
+
+    // Tools nav panes
+    const navTabs = document.querySelectorAll('.nav-tabs a');
+    const navPanes = document.querySelectorAll('.tab-pane');
+
+    function toggleTabs() {
+        navTabs.forEach((tab) => {
+            tab.addEventListener('click', function (e) {
+                e.preventDefault();
+                navTabs.forEach((tab) => {
+                    tab.classList.remove('active');
+                });
+                navPanes.forEach((pane) => {
+                    pane.classList.remove('active');
+                });
+                this.classList.add('active');
+                document
+                    .querySelector(this.getAttribute('href'))
+                    .classList.add('active');
+            });
+        });
+    }
+    toggleTabs();
+
+    // Commented code
 
     // document.addEventListener('DOMContentLoaded', function () {
     //     let dropdowns = document.querySelectorAll('.dropdown');
@@ -1462,7 +1488,7 @@ import '@fontsource/monda';
     // );
     // dropdownMegaCategories.forEach((dropdownMegaCategory) => {
     //     dropdownMegaCategory.addEventListener('mouseover', function (e) {
-    //         if (isMobile == false) {
+    //         if (mobileScreen.matches == false) {
     //             this.classList.add('active');
     //             let targetLocation = this.getAttribute('data-target-category');
     //             let dropdownMegaContent = document.querySelector(
