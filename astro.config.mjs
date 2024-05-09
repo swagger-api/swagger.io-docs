@@ -27,7 +27,10 @@ export default defineConfig({
       }
     }],
     components: {
-      Header: './src/components/Header.astro'
+      Header: './src/components/Header.astro',
+      MobileMenuToggle: './src/components/MobileMenuToggle.astro',
+      PageFrame: './src/components/PageFrame.astro',
+      MobileTableOfContents: './src/components/MobileTableOfContents.astro'
     }
   }), tailwind({
     // Disable the default base styles:

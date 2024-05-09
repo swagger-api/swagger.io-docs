@@ -23,21 +23,27 @@ import '@fontsource/monda';
         }
     }
 
-    starlight-theme-select label {
-        height: 100%;
-        & .label-icon {
-            left: 0.625rem;
-        }
-        & .caret {
-            right: 0.625rem;
+    starlight-theme-select {
+        label {
+            height: 100%;
+            & .label-icon {
+                left: 0.625rem;
+            }
+            & .caret {
+                right: 0.625rem;
+            }
         }
     }
 
     .icon.label-icon + select {
         height: 100%;
+        width: 100%;
         padding-block: 0.5rem;
         padding-inline: calc(var(--sl-label-icon-size) + 0.75rem)
             calc(var(--sl-caret-size) + 0.25rem);
+        @media (min-width: 80rem) {
+            width: var(--sl-select-width);
+        }
     }
     .dropdown {
         position: relative;
@@ -339,7 +345,8 @@ import '@fontsource/monda';
         body > :not([id*='wistia-']) {
             left: 0;
             position: relative;
-            transition: left 0.3s ease-in-out;
+            top: -30px;
+            /* transition: left 0.3s ease-in-out; */
         }
 
         body.nav-toggle {
@@ -350,7 +357,7 @@ import '@fontsource/monda';
         body.nav-toggle > * {
             left: 300px;
             position: relative;
-            transition: left 0.3s ease-in-out;
+            /* transition: left 0.3s ease-in-out; */
         }
 
         .nav-main .dropdown-menu .item,
@@ -450,7 +457,7 @@ import '@fontsource/monda';
             padding-top: 0;
             position: fixed;
             top: 0;
-            transition: left 0.3s ease-in-out;
+            /* transition: left 0.3s ease-in-out; */
             width: 300px;
             z-index: 999;
         }
@@ -1431,6 +1438,8 @@ import '@fontsource/monda';
     const navTabs = document.querySelectorAll('.nav-tabs a');
     const navPanes = document.querySelectorAll('.tab-pane');
 
+    toggleTabs();
+    
     function toggleTabs() {
         navTabs.forEach((tab) => {
             tab.addEventListener('click', function (e) {
@@ -1448,285 +1457,4 @@ import '@fontsource/monda';
             });
         });
     }
-    toggleTabs();
-
-    // Commented code
-
-    // document.addEventListener('DOMContentLoaded', function () {
-    //     let dropdowns = document.querySelectorAll('.dropdown');
-    //     dropdowns.forEach((dropdown) => {
-    //         dropdown.addEventListener('hide.bs.dropdown', function (e) {
-    //             var target = e.target;
-    //             if (
-    //                 target.classList.contains('keepopen') ||
-    //                 target.closest('.keepopen')
-    //             ) {
-    //                 e.preventDefault();
-    //             }
-    //         });
-    //     });
-    // });
-
-    // document.addEventListener('DOMContentLoaded', function () {
-    //     let navMain = document.querySelector('.nav-main');
-    //     if (navMain) {
-    //         navMain.addEventListener('mouseleave', function (e) {
-    //             if (e.target.matches('.keepopen .dropdown-menu')) {
-    //                 e.target.closest('.dropdown').classList.remove('keepopen');
-    //             }
-    //         });
-    //         navMain.addEventListener('mouseenter', function (e) {
-    //             if (e.target.matches('.dropdown .dropdown-menu')) {
-    //                 e.target.closest('.dropdown').classList.add('keepopen');
-    //             }
-    //         });
-    //     }
-    // });
-
-    // let dropdownMegaCategories = document.querySelectorAll(
-    //     '.dropdown-mega-category'
-    // );
-    // dropdownMegaCategories.forEach((dropdownMegaCategory) => {
-    //     dropdownMegaCategory.addEventListener('mouseover', function (e) {
-    //         if (mobileScreen.matches == false) {
-    //             this.classList.add('active');
-    //             let targetLocation = this.getAttribute('data-target-category');
-    //             let dropdownMegaContent = document.querySelector(
-    //                 `.dropdown-mega-content[data-target-location="${targetLocation}"]`
-    //             );
-    //             if (dropdownMegaContent) {
-    //                 dropdownMegaContent.classList.add('active');
-    //             }
-    //         }
-    //     });
-    // });
-
-    // //Scroll Direction
-    // document.addEventListener('DOMContentLoaded', function () {
-    //     if (
-    //         document.querySelector('.scroll-js') ||
-    //         document.querySelector('.nav-secondary') ||
-    //         document.querySelector('.o-compare')
-    //     ) {
-    //         var ls = 0;
-    //         window.addEventListener('scroll', function (event) {
-    //             var st = this.pageYOffset;
-    //             if (st > ls) {
-    //                 document.querySelector('header').classList.add('scrollUp');
-    //                 document.querySelector('body').classList.add('scrollUp');
-    //                 document
-    //                     .querySelector('header')
-    //                     .classList.remove('scrollDown');
-    //                 document
-    //                     .querySelector('body')
-    //                     .classList.remove('scrollDown');
-    //                 document
-    //                     .querySelector('body')
-    //                     .classList.remove('scrollTop');
-    //             } else {
-    //                 document
-    //                     .querySelector('header')
-    //                     .classList.add('scrollDown');
-    //                 document.querySelector('body').classList.add('scrollDown');
-    //                 document
-    //                     .querySelector('header')
-    //                     .classList.remove('scrollUp');
-    //                 document.querySelector('body').classList.remove('scrollUp');
-    //                 document
-    //                     .querySelector('body')
-    //                     .classList.remove('scrollTop');
-    //             }
-
-    //             if (window.pageYOffset <= 0) {
-    //                 document
-    //                     .querySelector('header')
-    //                     .classList.remove('scrollUp');
-    //                 document.querySelector('body').classList.remove('scrollUp');
-    //                 document
-    //                     .querySelector('header')
-    //                     .classList.remove('scrollDown');
-    //                 document
-    //                     .querySelector('body')
-    //                     .classList.remove('scrollDown');
-    //                 document.querySelector('body').classList.add('scrollTop');
-    //             }
-    //             ls = st;
-    //         });
-    //     }
-    // });
-
-    // // Secondary Nav
-    // document.addEventListener('DOMContentLoaded', function () {
-    //     if (document.querySelector('.has-secondary')) {
-    //         if (window.location.href.indexOf('/hp-comparison/') > -1) {
-    //             document.querySelector('header').classList.add('scrolldown');
-    //         } else {
-    //             var ls = 0;
-    //             window.addEventListener('scroll', function (event) {
-    //                 var st = this.pageYOffset;
-    //                 if (st > ls) {
-    //                     document
-    //                         .querySelector('header')
-    //                         .classList.add('scrollUp');
-    //                     document
-    //                         .querySelector('header')
-    //                         .classList.remove('scrollDown');
-    //                 } else {
-    //                     document
-    //                         .querySelector('header')
-    //                         .classList.add('scrollDown');
-    //                     document
-    //                         .querySelector('header')
-    //                         .classList.remove('scrollUp');
-    //                 }
-
-    //                 if (window.pageYOffset <= 0) {
-    //                     document
-    //                         .querySelector('header')
-    //                         .classList.remove('scrollUp');
-    //                     document
-    //                         .querySelector('header')
-    //                         .classList.remove('scrollDown');
-    //                 }
-    //                 ls = st;
-    //             });
-    //         }
-    //     }
-    // });
-
-    // var dropdownMegaItems = document.querySelectorAll('.dropdown-mega-item');
-    // dropdownMegaItems.forEach(function (dropdownMegaItem) {
-    //     dropdownMegaItem.addEventListener('mouseover', function (e) {
-    //         this.querySelector('.prod-icon').classList.remove('empty');
-    //     });
-    //     dropdownMegaItem.addEventListener('mouseout', function (e) {
-    //         this.querySelector('.prod-icon').classList.add('empty');
-    //     });
-    // });
-
-    // document.addEventListener('DOMContentLoaded', function () {
-    //     var dropdownItems = document.querySelectorAll(
-    //         'div.dropdown-item.dropdown-sub-dropdown'
-    //     );
-    //     if (dropdownItems.length > 0) {
-    //         dropdownItems.forEach(function (dropdownItem) {
-    //             var anchor = dropdownItem.querySelector('a');
-    //             var div = document.createElement('div');
-    //             div.className = 'toggle-opts';
-    //             div.innerHTML =
-    //                 "<button onclick='toggleLinkOpts(this);return false;' class='toggle-dots'><i class='fa fa-ellipsis-v'></i></button><div class='toggle-dropdown'><a href='" +
-    //                 anchor.getAttribute('href') +
-    //                 "' target='_blank'>Open in new tab</a></div>";
-    //             dropdownItem.appendChild(div);
-    //         });
-
-    //         dropdownItems.forEach(function (dropdownItem) {
-    //             dropdownItem.addEventListener('mouseleave', function (e) {
-    //                 var activeItems = dropdownItem.querySelectorAll(
-    //                     '.toggle-opts.active'
-    //                 );
-    //                 activeItems.forEach(function (activeItem) {
-    //                     activeItem.classList.remove('active');
-    //                 });
-    //             });
-    //         });
-
-    //         var dropdowns = document.querySelectorAll('.dropdown');
-    //         dropdowns.forEach(function (dropdown) {
-    //             dropdown.addEventListener('show.bs.dropdown', function () {
-    //                 document
-    //                     .querySelector('.nav-overlay')
-    //                     .classList.add('active');
-    //                 document
-    //                     .querySelector('.app-switch svg')
-    //                     .classList.add('active');
-    //             });
-
-    //             dropdown.addEventListener('hidden.bs.dropdown', function () {
-    //                 document
-    //                     .querySelector('.nav-overlay')
-    //                     .classList.remove('active');
-    //                 document
-    //                     .querySelector('.app-switch svg')
-    //                     .classList.remove('active');
-    //             });
-    //         });
-
-    //         document
-    //             .querySelector('.app-switch-toggle')
-    //             .addEventListener('click', function (e) {
-    //                 document
-    //                     .querySelector('.nav.app-switch .dropdown')
-    //                     .classList.toggle('show');
-    //                 document
-    //                     .querySelector('.nav.app-switch .dropdown-menu')
-    //                     .classList.toggle('show');
-    //                 document
-    //                     .querySelector('.nav-overlay')
-    //                     .classList.toggle('active');
-    //                 this.classList.toggle('active');
-    //                 e.preventDefault();
-    //             });
-
-    //         document
-    //             .querySelector('.nav-overlay')
-    //             .addEventListener('click', function (e) {
-    //                 document
-    //                     .querySelector('.nav.app-switch .dropdown')
-    //                     .classList.remove('show');
-    //                 document
-    //                     .querySelector('.nav.app-switch .dropdown-menu')
-    //                     .classList.remove('show');
-    //                 document
-    //                     .querySelector('.nav-overlay')
-    //                     .classList.remove('active');
-    //                 document
-    //                     .querySelector('.app-switch-toggle')
-    //                     .classList.remove('active');
-    //                 document
-    //                     .querySelector('.app-switch svg')
-    //                     .classList.remove('active');
-    //                 this.classList.remove('active');
-    //             });
-
-    //         /* Tabbing Behaviour */
-    //         document
-    //             .querySelector('.app-switch .dropdown-menu')
-    //             .addEventListener('focusin', function (e) {
-    //                 document
-    //                     .querySelector('.nav.app-switch .dropdown')
-    //                     .classList.add('show');
-    //                 document
-    //                     .querySelector('.nav.app-switch .dropdown-menu')
-    //                     .classList.add('show');
-    //                 document
-    //                     .querySelector('.nav-overlay')
-    //                     .classList.add('active');
-    //                 document
-    //                     .querySelector('.app-switch svg')
-    //                     .classList.add('active');
-    //                 this.classList.toggle('active');
-    //                 e.preventDefault();
-    //             });
-
-    //         document
-    //             .querySelector('.app-switch .dropdown-menu')
-    //             .addEventListener('focusout', function (e) {
-    //                 document
-    //                     .querySelector('.nav.app-switch .dropdown')
-    //                     .classList.remove('show');
-    //                 document
-    //                     .querySelector('.nav.app-switch .dropdown-menu')
-    //                     .classList.remove('show');
-    //                 document
-    //                     .querySelector('.nav-overlay')
-    //                     .classList.remove('active');
-    //                 document
-    //                     .querySelector('.app-switch svg')
-    //                     .classList.remove('active');
-    //                 this.classList.toggle('active');
-    //                 e.preventDefault();
-    //             });
-    //     }
-    // });
 </script>

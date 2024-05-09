@@ -1,0 +1,113 @@
+---
+import Icon from '../../node_modules/@astrojs/starlight/user-components/Icon.astro';
+import type { Props } from '@astrojs/starlight/props';
+
+const { labels } = Astro.props;
+---
+
+<starlight-menu-button>
+    <span class="menu-text"><Icon name="document"/> Documentation</span>
+	<button
+		aria-expanded="false"
+		aria-label={labels['menuButton.accessibleLabel']}
+		aria-controls="starlight__sidebar"
+		class="sl-flex md:sl-hidden"
+	>
+		<Icon name="down-caret" />
+	</button>
+</starlight-menu-button>
+
+<script>
+	class StarlightMenuButton extends HTMLElement {
+		btn = this.querySelector('button')!;
+
+		constructor() {
+			super();
+			// Toggle `aria-expanded` state when a user clicks the button.
+			this.btn.addEventListener('click', () => this.toggleExpanded());
+
+			// Close the menu when a user presses the escape key.
+			const parentNav = this.closest('nav');
+			if (parentNav) {
+				parentNav.addEventListener('keyup', (e) => this.closeOnEscape(e));
+			}
+		}
+
+		setExpanded(expanded: boolean) {
+			this.setAttribute('aria-expanded', String(expanded));
+			document.body.toggleAttribute('data-mobile-menu-expanded', expanded);
+		}
+
+		toggleExpanded() {
+			this.setExpanded(this.getAttribute('aria-expanded') !== 'true');
+		}
+
+		closeOnEscape(e: KeyboardEvent) {
+			if (e.code === 'Escape') {
+				this.setExpanded(false);
+				this.btn.focus();
+			}
+		}
+	}
+
+	customElements.define('starlight-menu-button', StarlightMenuButton);
+</script>
+
+<style>
+    starlight-menu-button {
+        position: fixed;
+        top: var(--sl-nav-height);
+        z-index: 9;
+        width: 100%;
+        background-color: var(--sl-color-gray-6);
+        height: var(--sl-mobile-docs-height);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 15px;
+        padding-right: 8px;
+        isolation: isolate;
+        @media (min-width: 50rem) {
+            display: none;
+        }
+    }
+    .menu-text {
+        font-size: 1.75rem;
+        font-weight: 700;
+    }
+	button {
+		border: 0;
+		width: var(--sl-menu-button-size);
+		height: var(--sl-menu-button-size);
+		padding: 0.5rem;
+		background-color: var(--sl-color-gray-6);
+		color: var(--sl-color-white);
+		cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+	}
+
+	[aria-expanded='true'] button {
+        transform: rotate(180deg);
+	}
+
+	:global([data-theme='light']) button {
+		background-color: var(--sl-color-gray-6);
+		color: var(--sl-color-white);
+	}
+
+	:global([data-theme='light']) [aria-expanded='true'] button {
+		/* background-color: var(--sl-color-gray-5); */
+	}
+</style>
+
+<style is:global>
+	[data-mobile-menu-expanded] {
+		overflow: hidden;
+	}
+
+	@media (min-width: 50rem) {
+		[data-mobile-menu-expanded] {
+			overflow: auto;
+		}
+	}
+</style>
