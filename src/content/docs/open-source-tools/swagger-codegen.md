@@ -1,10 +1,9 @@
 ---
 title: Swagger Codegen Documentation
 sidebar:
+  label: Swagger Codegen
   order: 3
 ---
-
-## Swagger Codegen Documentation
 
 The Swagger Codegen is an open source code-generator to build server stubs and client SDKs directly from a Swagger defined RESTful API. The source code for the Swagger Codegen can be found in GitHub.
 

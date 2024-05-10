@@ -1,10 +1,9 @@
 ---
 title: Swagger Editor Documentation
 sidebar:
+  label: Swagger Editor
   order: 1
 ---
-
-## Swagger Editor Documentation
 
 This page is about the current Swagger Editor. If you're looking for Swagger Editor Next (beta) docs, visit [Swagger
 Editor Next (beta)](/docs/open-source-tools/swagger-editor-next).

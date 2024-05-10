@@ -1,34 +1,147 @@
 {
   "swagger-imports": {
     "pages": {
-      "installation": {
+      "page1": {
+        "title": "SwaggerEditor",
+        "src": "https://raw.githubusercontent.com/swagger-api/swagger-editor/next/README.md",
+        "folder": "../../src/content/docs/open-source-tools/",
+        "pageOptions": {
+          "title": "SwaggerEditor",
+          "label": "Swagger Editor Next",
+          "order": 2
+        }
+      },
+      "page2": {
+        "title": "Creating a custom layout",
+        "src": "https://raw.githubusercontent.com/swagger-api/swagger-ui/master/docs/customization/custom-layout.md",
+        "folder": "../../src/content/docs/open-source-tools/Swagger UI/Customization/",
+        "pageOptions": {
+          "title": "Creating a custom layout",
+          "label": "Custom layout",
+          "order": 3
+        }
+      },
+      "page3": {
+        "title": "Plugin system overview",
+        "src": "https://raw.githubusercontent.com/swagger-api/swagger-ui/master/docs/customization/overview.md",
+        "folder": "../../src/content/docs/open-source-tools/Swagger UI/Customization/",
+        "pageOptions": {
+          "title": "Plugin system overview",
+          "label": "Overview",
+          "order": 1
+        }
+      },
+      "page4": {
+        "title": "Plug points",
+        "src": "https://raw.githubusercontent.com/swagger-api/swagger-ui/master/docs/customization/plug-points.md",
+        "folder": "../../src/content/docs/open-source-tools/Swagger UI/Customization/",
+        "pageOptions": {
+          "title": "Plug points",
+          "label": "Plug points",
+          "order": 3
+        }
+      },
+      "page5": {
+        "title": "Plugins",
+        "src": "https://raw.githubusercontent.com/swagger-api/swagger-ui/master/docs/customization/plugin-api.md",
+        "folder": "../../src/content/docs/open-source-tools/Swagger UI/Customization/",
+        "pageOptions": {
+          "title": "Plugins",
+          "label": "Plugin API",
+          "order": 2
+        }
+      },
+      "page6": {
+        "title": "Helpful scripts",
+        "src": "https://raw.githubusercontent.com/swagger-api/swagger-ui/master/docs/development/scripts.md",
+        "folder": "../../src/content/docs/open-source-tools/Swagger UI/development/",
+        "pageOptions": {
+          "title": "Helpful scripts",
+          "label": "Scripts",
+          "order": 2
+        }
+      },
+      "page7": {
+        "title": "Setting up a dev environment",
+        "src": "https://raw.githubusercontent.com/swagger-api/swagger-ui/master/docs/development/setting-up.md",
+        "folder": "../../src/content/docs/open-source-tools/Swagger UI/development/",
+        "pageOptions": {
+          "title": "Setting up a dev environment",
+          "label": "Setting up",
+          "order": 1
+        }
+      },
+      "page8": {
         "title": "Installation",
         "src": "https://raw.githubusercontent.com/swagger-api/swagger-ui/master/docs/usage/installation.md",
-        "folder": "./src/content/docs/open-source-tools/Swagger UI/usage/",
+        "folder": "../../src/content/docs/open-source-tools/Swagger UI/usage/",
         "pageOptions": {
-          "title": "Installation Hello World",
-          "description": "Learn how to install Swagger UI.",
-          "sidebar_label": "Installation"
+          "title": "Installation",
+          "label": "Installation",
+          "order": 1
         }
       },
-      "configuration": {
+      "page9": {
         "title": "Configuration",
         "src": "https://raw.githubusercontent.com/swagger-api/swagger-ui/master/docs/usage/configuration.md",
-        "folder": "./src/content/docs/open-source-tools/Swagger UI/usage/",
+        "folder": "../../src/content/docs/open-source-tools/Swagger UI/usage/",
         "pageOptions": {
           "title": "Configuration",
-          "description": "Understand the configuration options available in Swagger UI."
+          "label": "Configuration",
+          "order": 2
         }
       },
-      "configuration2": {
-        "title": "Advanced Configuration",
-        "src": "https://raw.githubusercontent.com/swagger-api/swagger-ui/master/docs/usage/configuration.md",
-        "folder": "./src/content/docs/open-source-tools/Swagger UI/usage/nested/",
+      "page10": {
+        "title": "CORS",
+        "src": "https://raw.githubusercontent.com/swagger-api/swagger-ui/master/docs/usage/cors.md",
+        "folder": "../../src/content/docs/open-source-tools/Swagger UI/usage/",
         "pageOptions": {
-          "title": "Advanced Configuration",
-          "description": "Explore advanced configuration settings for Swagger UI."
+          "title": "CORS",
+          "label": "CORS",
+          "order": 3
+        }
+      },
+      "page11": {
+        "title": "OAuth 2.0 configuration",
+        "src": "https://raw.githubusercontent.com/swagger-api/swagger-ui/master/docs/usage/oauth2.md",
+        "folder": "../../src/content/docs/open-source-tools/Swagger UI/usage/",
+        "pageOptions": {
+          "title": "OAuth 2.0 configuration",
+          "label": "OAuth 2.0",
+          "order": 4
+        }
+      },
+      "page12": {
+        "title": "Deep Linking",
+        "src": "https://raw.githubusercontent.com/swagger-api/swagger-ui/master/docs/usage/deep-linking.md",
+        "folder": "../../src/content/docs/open-source-tools/Swagger UI/usage/",
+        "pageOptions": {
+          "title": "Deep Linking",
+          "label": "Deep Linking",
+          "order": 5
+        }
+      },
+      "page13": {
+        "title": "Limitations",
+        "src": "https://raw.githubusercontent.com/swagger-api/swagger-ui/master/docs/usage/limitations.md",
+        "folder": "../../src/content/docs/open-source-tools/Swagger UI/usage/",
+        "pageOptions": {
+          "title": "Limitations",
+          "label": "Limitations",
+          "order": 6
+        }
+      },
+      "page14": {
+        "title": "Detecting your Swagger UI version",
+        "src": "https://raw.githubusercontent.com/swagger-api/swagger-ui/master/docs/usage/version-detection.md",
+        "folder": "../../src/content/docs/open-source-tools/Swagger UI/usage/",
+        "pageOptions": {
+          "title": "Detecting your Swagger UI version",
+          "label": "Version detection",
+          "order": 7
         }
       }
+      
     }
   }
 }
