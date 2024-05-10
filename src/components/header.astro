@@ -10,17 +10,21 @@ import '@fontsource/monda';
         display: none !important;
     }
     .header {
-        --sl-color-bg-nav: #fff;
         --sl-nav-height: 4.0625rem;
         --sl-nav-pad-x: 0.9375rem;
         --sl-nav-pad-y: 0rem;
         display: flex;
         align-items: center;
         background-color: var(--sl-color-black);
+        transition: left var(--transition);
         & a {
             text-decoration: none;
             color: inherit;
         }
+    }
+
+    .nav-toggle .header {
+        left: var(--swagger-left);
     }
 
     starlight-theme-select {
@@ -114,7 +118,7 @@ import '@fontsource/monda';
         display: flex;
         height: 65px;
         margin-top: 0;
-        transition: all 0.3s ease-in-out;
+        transition: all var(--transition);
         width: 100%;
         z-index: 999;
     }
@@ -124,12 +128,15 @@ import '@fontsource/monda';
         float: none;
         margin: 0;
         top: 75px !important;
-        transition: margin 0.3s ease-in-out;
+        transition: margin var(--transition);
     }
 
     .nav-main .navbar-brand {
         display: inline-block;
         margin-right: 2rem;
+        position: relative;
+        left: 0px;
+        transition: left var(--transition);
     }
 
     .nav-main .navbar-brand img {
@@ -346,7 +353,7 @@ import '@fontsource/monda';
             left: 0;
             position: relative;
             top: -30px;
-            /* transition: left 0.3s ease-in-out; */
+            transition: left var(--transition);
         }
 
         body.nav-toggle {
@@ -355,9 +362,9 @@ import '@fontsource/monda';
         }
 
         body.nav-toggle > * {
-            left: 300px;
+            left: var(--swagger-left);
             position: relative;
-            /* transition: left 0.3s ease-in-out; */
+            transition: left var(--transition);
         }
 
         .nav-main .dropdown-menu .item,
@@ -451,14 +458,14 @@ import '@fontsource/monda';
             border-right: 1px solid #ddd;
             display: block;
             height: 100%;
-            left: -300px;
+            left: calc(-1 * var(--swagger-left));
             margin-top: 0 !important;
             overflow-x: scroll;
             padding-top: 0;
             position: fixed;
             top: 0;
-            /* transition: left 0.3s ease-in-out; */
-            width: 300px;
+            transition: left var(--transition);
+            width: var(--swagger-left);
             z-index: 999;
         }
 
@@ -538,7 +545,7 @@ import '@fontsource/monda';
             padding-top: 23px;
             position: fixed;
             right: 0;
-            transition: left 0.3s ease-in-out;
+            transition: left var(--transition);
             width: 60px;
         }
 
@@ -548,7 +555,7 @@ import '@fontsource/monda';
             left: 15px;
             position: absolute;
             top: 29px;
-            transition: background-color 0.3s ease-in-out;
+            transition: background-color var(--transition);
             width: 30px;
         }
 
@@ -569,21 +576,21 @@ import '@fontsource/monda';
             -webkit-transform-origin: center left;
             transform-origin: center left;
             transition:
-                width 0.3s ease-in-out,
-                left 0.3s ease-in-out,
-                top 0.3s ease-in-out,
-                -webkit-transform 0.3s ease-in-out;
+                width var(--transition),
+                left var(--transition),
+                top var(--transition),
+                -webkit-transform var(--transition);
             transition:
-                transform 0.3s ease-in-out,
-                width 0.3s ease-in-out,
-                left 0.3s ease-in-out,
-                top 0.3s ease-in-out;
+                transform var(--transition),
+                width var(--transition),
+                left var(--transition),
+                top var(--transition);
             transition:
-                transform 0.3s ease-in-out,
-                width 0.3s ease-in-out,
-                left 0.3s ease-in-out,
-                top 0.3s ease-in-out,
-                -webkit-transform 0.3s ease-in-out;
+                transform var(--transition),
+                width var(--transition),
+                left var(--transition),
+                top var(--transition),
+                -webkit-transform var(--transition);
             width: 30px;
         }
 
@@ -1316,7 +1323,7 @@ import '@fontsource/monda';
             <li class='nav-item nav-item-free-trial ml-5 order-3'>
                 <a
                     class='block bg-primary text-white border border-primary hover:bg-primary-dark hover:border-primary-dark rounded py-2 px-5 transition-all duration-300 ease-in-out'
-                    href='#'>Try Free</a
+                    href='https://swagger.io/tools/swaggerhub/why-swaggerhub'>Try Free</a
                 >
             </li>
         </ul>

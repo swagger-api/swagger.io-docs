@@ -4,6 +4,7 @@
 	--sl-nav-height: 4rem;
 	--sl-mobile-docs-height: 60px;
 	--swagger-left: 300px;
+	--transition: 0.3s ease-in-out;
 }
 
 /* Dark mode colors. */
@@ -46,10 +47,17 @@
 
 /* Override starlight theme's left position */
 /* PageFrame Component */
-.nav-toggle .main-frame {
-	padding-inline-start: 0px;
+.sidebar-pane {
+	transition: left 0.3s ease-in-out;
 }
-/* TwoColumnContent Component */
-.nav-toggle .main-frame .sl-container {
-	margin-inline-start: 0px;
+.nav-toggle .sidebar-pane {
+	left: var(--swagger-left);
+}
+#starlight__mobile-toc {
+	position: relative;
+	left: 0px;
+	transition: left var(--transition);
+}
+.nav-toggle #starlight__mobile-toc {
+	left: var(--swagger-left);
 }
