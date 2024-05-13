@@ -52,7 +52,7 @@ const { hasSidebar, labels } = Astro.props;
 		inset-block: var(--sl-nav-height) 0;
 		inset-inline-start: 0;
 		width: 100%;
-		background-color: var(--sl-color-gray-6);
+		background-color: var(--color-white);
 		overflow-y: auto;
         top: calc(var(--sl-nav-height) + var(--sl-mobile-toc-height));
         @media (min-width: 50rem) {
@@ -94,7 +94,7 @@ const { hasSidebar, labels } = Astro.props;
 		.sidebar-pane {
 			--sl-sidebar-visibility: visible;
 			width: var(--sl-sidebar-width);
-			background-color: var(--sl-color-bg-sidebar);
+			background-color: var(--side-pane-bg);
 			border-inline-end: 1px solid var(--sl-color-hairline-shade);
 		}
 	}

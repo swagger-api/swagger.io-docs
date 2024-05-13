@@ -41,7 +41,8 @@ export default defineConfig({
         MobileMenuToggle: './src/components/MobileMenuToggle.astro',
         PageFrame: './src/components/PageFrame.astro',
         MobileTableOfContents: './src/components/MobileTableOfContents.astro',
-        Sidebar: './src/components/Sidebar.astro'
+        Sidebar: './src/components/Sidebar.astro',
+        Pagination: './src/components/Pagination.astro',
       },
 		}),
     tailwind({

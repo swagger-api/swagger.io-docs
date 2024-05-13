@@ -6,8 +6,8 @@ export default {
 	plugins: [starlightPlugin()],
 	theme: {
 		colors: {
-			'primary': 'hsl(117, 57%, 46%)',
-			'primary-dark': 'hsl(127, 55.19%, 35.88%)',
+			'primary': '#097eb2',
+			'primary-dark': '#00537c',
 			'white': 'hsl(0, 0%, 100%)',
 			'black': 'hsl(0, 0%, 0%)',
 		},

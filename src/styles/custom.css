@@ -5,6 +5,11 @@
 	--sl-mobile-docs-height: 60px;
 	--swagger-left: 300px;
 	--transition: 0.3s ease-in-out;
+	--sb-color-accent-2: #097eb2;
+	--sb-color-accent-4: #173647;
+	--sb-color-neutral-2: #F8FAFB;
+	--sb-color-neutral-14: #212529;
+	--color-white: #ffffff;
 }
 
 /* Dark mode colors. */
@@ -20,23 +25,39 @@
 	--sl-color-gray-5: hsl(129, 18%, 21%);
 	--sl-color-gray-6: hsl(132, 28%, 14%);
     --sl-color-gray-7: hsl(133, 25%, 11%);
-	--sl-color-black: hsl(132, 22%, 9%);
+	--sl-color-black: var(--sb-color-neutral-14);
+
+	/* Katie's Colors */
+	--sl-color-text-accent: var(--sb-color-accent-2);
+	--sl-color-text-invert: var(--color-white);
+	--side-pane-bg: #2b3239;
+	--header-bg: #2b3239;
 }
 
 /* Light mode colors. */
 :root[data-theme='light'] {
 	--sl-color-accent-low: hsl(112, 33%, 82%);
-	--sl-color-accent: hsl(117, 57%, 46%);
+	--sl-color-accent: #d8dde4;
 	--sl-color-accent-high: hsl(116, 85%, 13%);
 	--sl-color-white: hsl(133, 20%, 9%);
 	--sl-color-gray-1: hsl(133, 28%, 14%);
-	--sl-color-gray-2: hsl(129, 18%, 21%);
+	--sl-color-gray-2: var(--sb-color-neutral-14);
 	--sl-color-gray-3: hsl(129, 12%, 33%);
 	--sl-color-gray-4: hsl(128, 9%, 53%);
 	--sl-color-gray-5: hsl(130, 10%, 75%);
-	--sl-color-gray-6: hsl(126, 26%, 93%);
-	--sl-color-gray-7: hsl(132, 26%, 96%);
+	--sl-color-gray-6: #f0f3f5;
+	--sl-color-gray-7: hsl(132, 26%, 96%);;
 	--sl-color-black: hsl(0, 0%, 100%);
+
+	/* Katie's Colors */
+	--sl-color-text-accent: var(--sb-color-accent-2);
+	--sl-color-text-invert: var(--color-white);
+	--sl-color-white: var(--sb-color-accent-4);
+	--side-pane-bg: var(--color-white);
+	--header-bg: var(--sb-color-neutral-2);
+
+	--sl-shadow-md: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+
 }
 
 /* Change focus style */
