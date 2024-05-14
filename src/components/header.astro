@@ -692,9 +692,9 @@ import '@fontsource/monda';
                     >Sign In</a
                 >
             </li>
-            <li class='nav-item nav-item-free-trial ml-5 order-3 border-b xl:border border-primary hover:bg-primary-dark hover:border-primary-dark xl:rounded'>
+            <li class='nav-item nav-item-free-trial ml-5 order-3 border-b xl:border border-primary hover:text-white xl:bg-primary xl:!text-white hover:bg-primary-dark hover:border-primary-dark xl:rounded'>
                 <a
-                    class='block hover:text-white xl:bg-primary xl:!text-white py-2 px-5 transition-all duration-300 ease-in-out text-center'
+                    class='block py-2 px-5 transition-all duration-300 ease-in-out text-center'
                     href='https://swagger.io/tools/swaggerhub/why-swaggerhub'>Try Free</a
                 >
             </li>
@@ -706,9 +706,6 @@ import '@fontsource/monda';
 </div>
 
 <style is:inline>
-    .nav-item-search a::after {
-        display: none !important;
-    }
     .header {
         --sl-nav-height: 4.0625rem;
         --sl-nav-pad-x: 0.9375rem;
@@ -717,14 +714,23 @@ import '@fontsource/monda';
         align-items: center;
         background-color: var(--header-bg);
         transition: left var(--transition);
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 999;
         & a {
             text-decoration: none;
             color: inherit;
         }
+        .nav-item-search a::after {
+            display: none !important;
+        }
     }
 
-    .nav-toggle .header {
-        left: var(--swagger-left);
+    .nav-toggle {
+        .header {
+            left: var(--swagger-left);
+        }
     }
 
     starlight-theme-select {
@@ -796,24 +802,6 @@ import '@fontsource/monda';
         font-family: 'Monda', sans-serif;
     }
 
-    header {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 999;
-    }
-
-    .has-secondary .scrollUp .nav-main,
-    .has-secondary .scrollUp .nav-secondary,
-    .has-secondary .scrollUp .nav-spacer,
-    .has-secondary .scrollUp + .section_wrapper .section_nav_wrapper {
-        margin-top: -65px;
-    }
-
-    .has-secondary .nav-main .nav-item-free-trial {
-        display: none;
-    }
-
     .nav-main {
         display: flex;
         height: 65px;
@@ -867,24 +855,23 @@ import '@fontsource/monda';
             p {
                 margin: 0;
             }
-        }
-    }
-
-    .nav-main .dropdown-menu-bottom-cta {
-        font-size: 0.825rem;
-        text-align: center;
-        background-color: var(--sb-color-accent-2);
-        border-bottom-right-radius: 5px;
-        border-bottom-left-radius: 5px;
-        position: absolute;
-        width: 700px;
-        left: -1px;
-        bottom: -20px;
-        border: 1px solid;
-        border-top-style: none;
-        border-color: #ddd;
-        & a {
-            color: #fff;
+            .dropdown-menu-bottom-cta {
+                font-size: 0.825rem;
+                text-align: center;
+                background-color: var(--sb-color-accent-2);
+                border-bottom-right-radius: 5px;
+                border-bottom-left-radius: 5px;
+                position: absolute;
+                width: 700px;
+                left: -1px;
+                bottom: -20px;
+                border: 1px solid;
+                border-top-style: none;
+                border-color: #ddd;
+                & a {
+                    color: #fff;
+                }
+            }
         }
     }
 
@@ -910,42 +897,39 @@ import '@fontsource/monda';
         padding: 5px 0 20px;
     }
 
-    .nav-main .nav-tabs {
-        -ms-overflow-style: none;
-        border: none;
-        display: flex;
-        height: auto !important;
-        position: static !important;
-    }
-
-    .nav-main .nav-tabs::-webkit-scrollbar {
-        width: 0;
-        background: 0 0;
-        display: none;
-    }
-
-    .nav-main .nav-tabs::-webkit-scrollbar-thumb {
-        background: 0 0;
-        display: none;
-    }
-
-    .nav-main .nav-tabs a {
-        height: 100%;
-        padding-bottom: 1px;
-    }
-
-    .nav-main nav {
-        align-items: center;
-        display: flex;
-        height: 65px;
-        justify-content: space-between;
-        width: 100%;
-    }
-
-    .nav-main a:active,
-    .nav-main a:focus,
-    .nav-main a:hover {
-        text-decoration: none;
+    .nav-main {
+        nav {
+            align-items: center;
+            display: flex;
+            height: 65px;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .nav-tabs {
+            -ms-overflow-style: none;
+            border: none;
+            display: flex;
+            height: auto !important;
+            position: static !important;
+            &::-webkit-scrollbar {
+                width: 0;
+                background: 0 0;
+                display: none;
+            }
+            &::-webkit-scrollbar-thumb {
+                background: 0 0;
+                display: none;
+            }
+            a {
+                height: 100%;
+                padding-bottom: 1px;
+                &:active,
+                &:focus,
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
     }
 
     .nav-main a:active .link-underline,
@@ -1133,12 +1117,12 @@ import '@fontsource/monda';
             padding: 0;
             position: static !important;
             width: auto;
-        }
-        .nav-main .dropdown-menu-bottom-cta {
-            position: static;
-            width: 100%;
-            margin: 0;
-            border-radius: 0;
+            .dropdown-menu-bottom-cta {
+                position: static;
+                width: 100%;
+                margin: 0;
+                border-radius: 0;
+            }
         }
         .nav-main .btn-nav {
             color: #173647;
@@ -1244,73 +1228,68 @@ import '@fontsource/monda';
             right: 0;
             transition: left var(--transition);
             width: 60px;
-        }
 
-        .nav-main-toggle .hamburger {
-            background-color: var(--sl-color-gray-1);
-            height: 2px;
-            left: 15px;
-            position: absolute;
-            top: 29px;
-            transition: background-color var(--transition);
-            width: 30px;
+            .hamburger {
+                background-color: var(--sl-color-gray-1);
+                height: 2px;
+                left: 15px;
+                position: absolute;
+                top: 29px;
+                transition: background-color var(--transition);
+                width: 30px;
+                &::after,
+                &::before {
+                    content: '';
+                    background-color: var(--sl-color-gray-1);
+                    display: block;
+                    height: 2px;
+                    left: 0;
+                    position: absolute;
+                    -webkit-transform: rotate(0);
+                    transform: rotate(0);
+                    -webkit-transform-origin: center left;
+                    transform-origin: center left;
+                    transition:
+                        width var(--transition),
+                        left var(--transition),
+                        top var(--transition),
+                        -webkit-transform var(--transition);
+                    transition:
+                        transform var(--transition),
+                        width var(--transition),
+                        left var(--transition),
+                        top var(--transition);
+                    transition:
+                        transform var(--transition),
+                        width var(--transition),
+                        left var(--transition),
+                        top var(--transition),
+                        -webkit-transform var(--transition);
+                    width: 30px;
+                }
+                &::after {
+                    top: 8px;
+                }
+                &::before {
+                    top: -8px;
+                }
+            }
         }
-
+        
         .nav-toggle .nav-main-toggle .hamburger {
             background-color: transparent;
-        }
-
-        .nav-main-toggle .hamburger::after,
-        .nav-main-toggle .hamburger::before {
-            content: '';
-            background-color: var(--sl-color-gray-1);
-            display: block;
-            height: 2px;
-            left: 0;
-            position: absolute;
-            -webkit-transform: rotate(0);
-            transform: rotate(0);
-            -webkit-transform-origin: center left;
-            transform-origin: center left;
-            transition:
-                width var(--transition),
-                left var(--transition),
-                top var(--transition),
-                -webkit-transform var(--transition);
-            transition:
-                transform var(--transition),
-                width var(--transition),
-                left var(--transition),
-                top var(--transition);
-            transition:
-                transform var(--transition),
-                width var(--transition),
-                left var(--transition),
-                top var(--transition),
-                -webkit-transform var(--transition);
-            width: 30px;
-        }
-
-        .nav-main-toggle .hamburger::after {
-            top: 8px;
-        }
-
-        .nav-toggle .nav-main-toggle .hamburger::after {
-            left: 5px;
-            top: 11px;
-            -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-        }
-
-        .nav-main-toggle .hamburger::before {
-            top: -8px;
-        }
-
-        .nav-toggle .nav-main-toggle .hamburger::before {
-            left: 5px;
-            top: -10px;
-            -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
+            &::after {
+                left: 5px;
+                top: 11px;
+                -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+            }
+            &::before {
+                left: 5px;
+                top: -10px;
+                -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+            }
         }
     }
 
@@ -1419,7 +1398,7 @@ import '@fontsource/monda';
                 .closest('.dropdown')
                 .querySelector('.dropdown-menu')
                 .classList;
-            if (currentDropdown.contains('show') && mobileScreen.matches === false) {
+            if (currentDropdown.contains('show')) {
                 currentDropdown.remove('show')
             } else {
                 closeDropdown();
@@ -1457,6 +1436,7 @@ import '@fontsource/monda';
         navTabs.forEach((tab) => {
             tab.addEventListener('click', function (e) {
                 e.preventDefault();
+                e.stopPropagation();
                 navTabs.forEach((tab) => {
                     tab.classList.remove('active');
                 });
