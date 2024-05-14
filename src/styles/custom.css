@@ -56,7 +56,7 @@
 	--side-pane-bg: var(--color-white);
 	--header-bg: var(--sb-color-neutral-2);
 
-	--sl-shadow-md: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+	--sl-shadow-md: 0 10px 20px -12px rgb(0 0 0 / 0.25);
 
 }
 

@@ -821,63 +821,53 @@ import '@fontsource/monda';
         transition: all var(--transition);
         width: 100%;
         z-index: 999;
-    }
 
-    .nav-main .dropdown-menu {
-        border: 1px solid #ddd;
-        float: none;
-        margin: 0;
-        top: 75px !important;
-        transition: margin var(--transition);
-    }
+        .nav {
+            flex-grow: 1;
+            -ms-overflow-style: none;
+            &::-webkit-scrollbar {
+                width: 0;
+                background: 0 0;
+                display: none;
+            }
+            &::-webkit-scrollbar-thumb {
+                background: 0 0;
+                display: none;
+            }
+        }
 
-    .nav-main .navbar-brand {
-        display: inline-block;
-        margin-right: 2rem;
-        position: relative;
-        left: 0px;
-        transition: left var(--transition);
-    }
+        .navbar-brand {
+            display: inline-block;
+            margin-right: 2rem;
+            position: relative;
+            left: 0px;
+            transition: left var(--transition);
+            
+            img {
+                height: 50px;
+                max-width: auto;
+            }
+        }
 
-    .nav-main .navbar-brand img {
-        height: 50px;
-        max-width: auto;
-    }
-
-    .nav-main .nav {
-        flex-grow: 1;
-        -ms-overflow-style: none;
-    }
-
-    .nav-main .nav::-webkit-scrollbar {
-        width: 0;
-        background: 0 0;
-        display: none;
-    }
-
-    .nav-main .nav::-webkit-scrollbar-thumb {
-        background: 0 0;
-        display: none;
-    }
-
-    .nav-toggle .nav-main .nav {
-        left: 0 !important;
-    }
-
-    .nav-main .dropdown-menu a {
-        display: block;
-    }
-
-    .nav-main .dropdown-menu p {
-        margin: 0;
-    }
-
-    .nav-main .dropdown-menu.menu-double {
-        background: linear-gradient(to right, var(--sl-color-black) 50%, var(--sl-color-gray-7) 50%);
-    }
-
-    .nav-main .dropdown-menu.menu-double svg {
-        position: absolute;
+        .dropdown-menu {
+            border: 1px solid #ddd;
+            float: none;
+            margin: 0;
+            top: 75px !important;
+            transition: margin var(--transition);
+            &.menu-double {
+                background: linear-gradient(to right, var(--sl-color-black) 50%, var(--sl-color-gray-7) 50%);
+                svg {
+                    position: absolute;
+                }
+            }
+            a {
+                display: block;
+            }
+            p {
+                margin: 0;
+            }
+        }
     }
 
     .nav-main .dropdown-menu-bottom-cta {
@@ -972,6 +962,10 @@ import '@fontsource/monda';
         background-color: transparent;
         color: var(--sl-color-gray-1);
         white-space: nowrap;
+    }
+
+    .nav-toggle .nav-main .nav {
+        left: 0 !important;
     }
 
     .nav-main-toggle {
@@ -1321,18 +1315,25 @@ import '@fontsource/monda';
     }
 
     @media (max-width: 649px) {
-        .nav-main .nav {
-            left: -650px !important;
-            width: 100% !important;
-        }
-
-        .nav-main .nav:not(.nav-tabs) {
-            margin-top: 65px !important;
-            padding-top: 0;
-        }
-        .nav-main .navbar-brand {
-            position: fixed;
-            left: 10px;
+        .nav-main {
+            .nav {
+                left: -650px !important;
+                width: 100% !important;
+                &:not(.nav-tabs) {
+                    margin-top: 65px !important;
+                    padding-top: 0;
+                }
+            }
+            .navbar-brand {
+                position: fixed;
+                left: 10px;
+                background: var(--header-bg);
+                width: 300px;
+                height: 65px;
+                display: flex;
+                margin-left: -10px;
+                padding-left: 10px;
+            }
         }
     }
 </style>
