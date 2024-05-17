@@ -59,7 +59,6 @@ const { labels } = Astro.props;
         top: var(--sl-nav-height);
         z-index: 9;
         width: 100%;
-        background-color: var(--sl-color-gray-6);
         height: var(--sl-mobile-docs-height);
         display: flex;
         justify-content: space-between;
@@ -74,14 +73,13 @@ const { labels } = Astro.props;
     .menu-text {
         font-size: 1.75rem;
         font-weight: 700;
-		color: var(--sb-color-accent-4);
     }
 	button {
 		border: 0;
 		width: var(--sl-menu-button-size);
 		height: var(--sl-menu-button-size);
 		padding: 0.5rem;
-		background-color: var(--sl-color-gray-6);
+		background-color: var(--sl-color-white);
 		color: var(--sl-color-white);
 		cursor: pointer;
         transition: transform 0.3s ease-in-out;
@@ -92,12 +90,12 @@ const { labels } = Astro.props;
 	}
 
 	:global([data-theme='light']) button {
-		background-color: var(--sl-color-gray-6);
+		background-color: var(--sl-color-black);
 		color: var(--sl-color-white);
 	}
 
 	:global([data-theme='light']) [aria-expanded='true'] button {
-		/* background-color: var(--sl-color-gray-5); */
+		background-color: var(--sl-color-gray-5);
 	}
 </style>
 

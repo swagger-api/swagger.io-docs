@@ -38,10 +38,7 @@ export default defineConfig({
       ],
 			components: {
         Header: './src/components/Header.astro',
-        MobileMenuToggle: './src/components/MobileMenuToggle.astro',
-        PageFrame: './src/components/PageFrame.astro',
-        MobileTableOfContents: './src/components/MobileTableOfContents.astro',
-        Pagination: './src/components/Pagination.astro',
+        MobileMenuToggle: './src/components/MobileMenuToggle.astro'
       },
 		}),
     tailwind({

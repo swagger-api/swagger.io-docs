@@ -712,7 +712,7 @@ import '@fontsource/monda';
         --sl-nav-pad-y: 0rem;
         display: flex;
         align-items: center;
-        background-color: var(--header-bg);
+        background-color: var(--sl-color-header-bg);
         transition: left var(--transition);
         position: fixed;
         top: 0;
@@ -729,7 +729,7 @@ import '@fontsource/monda';
 
     .nav-toggle {
         .header {
-            left: var(--swagger-left);
+            left: var(--sb-mobile-menu-width);
         }
     }
 
@@ -1043,7 +1043,7 @@ import '@fontsource/monda';
         }
 
         body.nav-toggle > * {
-            left: var(--swagger-left);
+            left: var(--sb-mobile-menu-width);
             position: relative;
             transition: left var(--transition);
         }
@@ -1139,14 +1139,14 @@ import '@fontsource/monda';
             border-right: 1px solid #ddd;
             display: block;
             height: 100%;
-            left: calc(-1 * var(--swagger-left));
+            left: calc(-1 * var(--sb-mobile-menu-width));
             margin-top: 0 !important;
             overflow-x: scroll;
             padding-top: 0;
             position: fixed;
             top: 0;
             transition: left var(--transition);
-            width: var(--swagger-left);
+            width: var(--sb-mobile-menu-width);
             z-index: 999;
         }
 
@@ -1306,7 +1306,7 @@ import '@fontsource/monda';
             .navbar-brand {
                 position: fixed;
                 left: 10px;
-                background: var(--header-bg);
+                background: var(--sl-color-header-bg);
                 width: 300px;
                 height: 65px;
                 display: flex;
@@ -1362,39 +1362,35 @@ import '@fontsource/monda';
 
     // Show/Hide hamburger icon
     mobileScreen.addEventListener('change', showHideHamburgerIcon);
+    mobileScreen.addEventListener('change', () => {
+        (!mobileScreen.matches && document.documentElement.classList.contains('nav-toggle')) 
+        && document.querySelector('.nav-main-toggle')?.click();
+    });
+
     function showHideHamburgerIcon() {
-        let hamburgerElementDisplay = document.querySelector('.nav-main-toggle').style.display;
-        if (mobileScreen.matches) {
-            hamburgerElementDisplay = 'block';
-        } else {
-            hamburgerElementDisplay = 'none';
-        }
+        const hamburgerElementDisplay = document.querySelector('.nav-main-toggle').style.display;
+        mobileScreen.matches ? hamburgerElementDisplay = 'block' : hamburgerElementDisplay = 'none';
     }
 
     // Hamburger menu
-    document.addEventListener('DOMContentLoaded', function () {
-        document
-            .querySelector('.nav-main-toggle')
-            .addEventListener('click', function (e) {
-                document.body.classList.toggle('nav-toggle');
-                document.documentElement.classList.toggle('nav-toggle');
-            });
+    document.querySelector('.nav-main-toggle')
+        .addEventListener('click', function (e) {
+            document.body.classList.toggle('nav-toggle');
+            document.documentElement.classList.toggle('nav-toggle');
+        });
 
-        var navSecondaryToggle = document.querySelector(
-            '.nav-secondary-toggle'
-        );
-        if (navSecondaryToggle) {
-            navSecondaryToggle.addEventListener('click', function (e) {
-                this.closest('.nav-secondary').classList.toggle('active');
-            });
-        }
-    });
-
+    const navSecondaryToggle = document.querySelector('.nav-secondary-toggle');
+    if (navSecondaryToggle) {
+        navSecondaryToggle.addEventListener('click', function (e) {
+            this.closest('.nav-secondary').classList.toggle('active');
+        });
+    }
+    
     // Open clicked dropdown and close other dropdowns
-    let dropdowns = document.querySelectorAll('.dropdown');
+    const dropdowns = document.querySelectorAll('.dropdown');
     dropdowns.forEach((dropdown) => {
         dropdown.addEventListener('click', event => {
-            let currentDropdown = event.target
+            const currentDropdown = event.target
                 .closest('.dropdown')
                 .querySelector('.dropdown-menu')
                 .classList;
@@ -1409,18 +1405,14 @@ import '@fontsource/monda';
 
     // Close Dropdown When Clicked/Escaped Outside Of The Element
     document.addEventListener('click', event => {
-        if (mobileScreen.matches === false && event.target.closest('.dropdown') === null) {
-                closeDropdown();
-        }
+        (mobileScreen.matches === false && event.target.closest('.dropdown') === null) && closeDropdown();
     });
     document.addEventListener('keydown', (event) => {
-        if (mobileScreen.matches === false && event.key === 'Escape') {
-            closeDropdown();
-        }
+        (mobileScreen.matches === false && event.key === 'Escape') && closeDropdown();
     });
 
     function closeDropdown () {
-        let dropdowns = document.querySelectorAll('.dropdown-menu');
+        const dropdowns = document.querySelectorAll('.dropdown-menu');
         dropdowns.forEach((dropdown) => {
             dropdown.classList.remove('show');
         });
