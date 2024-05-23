@@ -1194,6 +1194,9 @@ import '@fontsource/monda';
         .nav-search {
             width: 15%;
             float: left;
+            &:hover {
+                background: var(--sl-color-gray-6);
+            }
         }
 
         .nav-main .nav-item-search {
@@ -1368,7 +1371,7 @@ import '@fontsource/monda';
     });
 
     function showHideHamburgerIcon() {
-        const hamburgerElementDisplay = document.querySelector('.nav-main-toggle').style.display;
+        let hamburgerElementDisplay = document.querySelector('.nav-main-toggle').style.display;
         mobileScreen.matches ? hamburgerElementDisplay = 'block' : hamburgerElementDisplay = 'none';
     }
 

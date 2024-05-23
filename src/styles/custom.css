@@ -40,6 +40,7 @@
 			background-color: var(--sl-color-side-pane-bg);
 		}
 	}
+
 	/* Pagination colors */
 	.pagination-links a {
 		border: none;
@@ -51,10 +52,29 @@
 			}
 		}
 	}
+
 	/* Mobile TOC colors */
 	mobile-starlight-toc nav {
 		background-color: var(--sl-color-gray-7);
 	}
+
+	/* Banners */
+	.starlight-aside .starlight-aside__title {
+		color: var(--sl-color-white);
+	}
+	.starlight-aside--note,
+	.starlight-aside--tip,
+	.starlight-aside--caution,
+	.starlight-aside--danger {
+		background-color: #1a1d20; 
+	}
+	.starlight-aside--note {
+		border-color: #097eb2;
+	}
+	.starlight-aside--tip {
+		border-color: #5bd621;
+	}
+
 	/* Mobile documentation menu */
 	starlight-menu-button {
 		background-color: var(--sl-color-gray-6);
@@ -104,6 +124,19 @@
 	mobile-starlight-toc nav {
 		background-color: var(--sb-color-neutral-2);
 	}
+
+	/* Banners */
+	.starlight-aside .starlight-aside__title {
+		color: var(--sb-color-neutral-14);
+	}
+	.starlight-aside--note {
+		border-color: #5bd621;
+		background-color: #effbe9; 
+	}
+	.starlight-aside--tip {
+		border-color: #097eb2;
+		background-color: #e6f2f7; 
+	}
 }
 
 /* Change focus style */
@@ -115,19 +148,6 @@
 /* Sidebar pane */
 .sidebar-pane {
 	transition: left var(--transition);
-}
-
-/* Banners */
-.starlight-aside .starlight-aside__title {
-	color: var(--sb-color-neutral-14);
-}
-.starlight-aside--note {
-	border-color: #5bd621;
-	background-color: #effbe9; 
-}
-.starlight-aside--tip {
-	border-color: #097eb2;
-	background-color: #e6f2f7; 
 }
 
 /* Override starlight theme's left position */
