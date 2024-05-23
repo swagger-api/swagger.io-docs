@@ -108,7 +108,7 @@
 
 /* Change focus style */
 :focus-visible {
-    outline: 2px solid hsl(127, 55.19%, 35.88%);
+    outline: 2px solid #5bd621;
     border-radius: 0.25rem;
 }
 
@@ -134,6 +134,8 @@
 .nav-toggle .sidebar-pane {
 	left: var(--sb-mobile-menu-width);
 }
+
+/* Table of contents */
 mobile-starlight-toc nav {
 	top: calc(var(--sl-nav-height) + var(--sl-mobile-docs-height) - 1px);
 }
@@ -151,13 +153,13 @@ mobile-starlight-toc nav {
 	left: var(--sb-mobile-menu-width);
 }
 
+/* Top position of sidebar pane and main content*/
 .sidebar-pane {
 	top: calc(var(--sl-nav-height) + var(--sl-mobile-toc-height));
 	@media (min-width: 50rem) {
 		top: calc(var(--sl-nav-height));
 	}
 }
-
 .main-frame {
 	padding-top: calc(var(--sl-nav-height) + var(--sl-mobile-toc-height) + var(--sl-mobile-docs-height));
 	@media (min-width: 50rem) {
