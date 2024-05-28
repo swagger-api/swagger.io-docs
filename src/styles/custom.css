@@ -2,6 +2,7 @@
     --sl-font: 'Open Sans Variable', sans-serif;
 	--sl-mobile-docs-height: 60px;
 	--sl-nav-height: 4rem;
+	--sb-color-accent-1: #20B1FD;
 	--sb-color-accent-2: #097eb2;
 	--sb-color-accent-4: #173647;
 	--sb-color-neutral-1: #ffffff;
@@ -23,11 +24,12 @@
 	--sl-color-gray-4: #4a5e4d;
 	--sl-color-gray-5: #2c3f2f;
 	--sl-color-gray-6: #1a2e1e;
-    --sl-color-gray-7: #152318;
+    --sl-color-gray-7: #1a1d20;
 	--sl-color-text-accent: var(--sb-color-accent-2);
 	--sl-color-white: #ffffff;
 	--sl-color-side-pane-bg: #2b3239;
 	--sl-color-header-bg: #2b3239;
+	--sb-nav-cta: var(--sb-color-accent-2);
 
 	/* Documentation sidebar colors */
 	.sidebar-content a {
@@ -39,6 +41,16 @@
 		@media (min-width: 50rem) {
 			background-color: var(--sl-color-side-pane-bg);
 		}
+	}
+
+	/* Code background color */
+	.expressive-code .frame {
+		--code-background: #1a1d20;
+	}
+
+	/* Link color */
+	.sl-markdown-content a:not(:where(.not-content *)) {
+		color: var(--sb-color-accent-1);
 	}
 
 	/* Pagination colors */
@@ -55,7 +67,7 @@
 
 	/* Mobile TOC colors */
 	mobile-starlight-toc nav {
-		background-color: var(--sl-color-gray-7);
+		background-color: #212529;
 	}
 
 	/* Banners */
@@ -77,12 +89,12 @@
 
 	/* Mobile documentation menu */
 	starlight-menu-button {
-		background-color: var(--sl-color-gray-6);
+		background-color: #1a1d20;
 		.menu-text {
 			color: var(--sl-color-white);
 		}
 		button {
-			background-color: var(--sl-color-gray-6) !important;
+			background-color: #1a1d20 !important;
 		}
 	}
 }
@@ -98,12 +110,13 @@
 	--sl-color-gray-4: hsl(128, 9%, 53%);
 	--sl-color-gray-5: hsl(130, 10%, 75%);
 	--sl-color-gray-6: #f0f3f5;
-	--sl-color-gray-7: #f2f7f3;;
+	--sl-color-gray-7: #f2f7f3;
 	--sl-color-black: #ffffff;
 	--sl-color-text-accent: var(--sb-color-accent-2);
 	--sl-color-white: var(--sb-color-accent-4);
 	--sl-color-side-pane-bg: var(--sb-color-neutral-1);
 	--sl-color-header-bg: var(--sb-color-neutral-2);
+	--sb-nav-cta: var(--sb-color-accent-2);
 
 	--sl-shadow-md: 0 10px 20px -12px rgb(0 0 0 / 0.25);
 
@@ -111,6 +124,11 @@
 	.sidebar-content a {
 		--sl-color-text-accent: #effbe9;
 		--sl-color-text-invert: var(--sl-color-gray-2);
+		&[aria-current=page] {
+			border-left: 2px solid green;
+			border-top-left-radius: 0px;
+			border-bottom-left-radius: 0px;
+		}
 	}
 	.sidebar-pane {
 		background-color: var(--sb-color-neutral-1);
@@ -118,6 +136,16 @@
         @media (min-width: 50rem) {
             top: calc(var(--sl-nav-height));
         }
+	}
+
+	/* Code background color */
+	.expressive-code .frame {
+		--code-background: #f2f7f3;
+	}
+
+	/* Link color */
+	.sl-markdown-content a:not(:where(.not-content *)) {
+		color: var(--sb-color-accent-2);
 	}
 
 	/* Mobile TOC colors */
@@ -136,6 +164,17 @@
 	.starlight-aside--tip {
 		border-color: #097eb2;
 		background-color: #e6f2f7; 
+	}
+
+	/* Mobile documentation menu */
+	starlight-menu-button {
+		background-color: var(--sl-color-gray-6);
+		.menu-text {
+			color: var(--sl-color-white);
+		}
+		button {
+			background-color: var(--sl-color-gray-6) !important;
+		}
 	}
 }
 
