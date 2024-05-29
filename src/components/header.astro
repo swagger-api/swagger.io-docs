@@ -427,7 +427,7 @@ import '@fontsource/monda';
                                 class='nav nav-tabs list-none p-0'
                                 role='tablist'
                             >
-                                <li role='tools'>
+                                <li>
                                     <a
                                         href='#proDocumentation'
                                         aria-controls='proDocumentation'
@@ -441,7 +441,7 @@ import '@fontsource/monda';
                                         >
                                     </a>
                                 </li>
-                                <li role='tools'>
+                                <li>
                                     <a
                                         href='#openSource'
                                         aria-controls='openSource'
@@ -1445,7 +1445,7 @@ import '@fontsource/monda';
     }
 </style>
 
-<script>
+<script client:only>
     // Search icon
     (function (w, d) {
         function initSearch() {
@@ -1496,20 +1496,21 @@ import '@fontsource/monda';
     });
 
     function showHideHamburgerIcon() {
-        let hamburgerElementDisplay = document.querySelector('.nav-main-toggle').style.display;
-        mobileScreen.matches ? hamburgerElementDisplay = 'block' : hamburgerElementDisplay = 'none';
+        mobileScreen.matches ? 
+            document.querySelector('.nav-main-toggle')?.style.display = 'block' : 
+            document.querySelector('.nav-main-toggle')?.style.display = 'none';
     }
 
     // Hamburger menu
     document.querySelector('.nav-main-toggle')
-        .addEventListener('click', function (e) {
+        .addEventListener('click', function () {
             document.body.classList.toggle('nav-toggle');
             document.documentElement.classList.toggle('nav-toggle');
         });
 
     const navSecondaryToggle = document.querySelector('.nav-secondary-toggle');
     if (navSecondaryToggle) {
-        navSecondaryToggle.addEventListener('click', function (e) {
+        navSecondaryToggle.addEventListener('click', function () {
             this.closest('.nav-secondary').classList.toggle('active');
         });
     }
