@@ -4,10 +4,13 @@
 	--sl-nav-height: 4rem;
 	--sb-color-accent-1: #20B1FD;
 	--sb-color-accent-2: #097eb2;
+	--sb-color-accent-3: #00537C;
 	--sb-color-accent-4: #173647;
 	--sb-color-neutral-1: #ffffff;
 	--sb-color-neutral-2: #F8FAFB;
 	--sb-color-neutral-14: #212529;
+	--sb-color-swagger-1: #85EA2D;
+	--sb-color-swagger-2: #5bd621;
 	--sb-mobile-menu-width: 300px;
 	--transition: 0.3s ease-in-out;
 }
@@ -26,84 +29,17 @@
 	--sl-color-gray-6: #1a2e1e;
     --sl-color-gray-7: #1a1d20;
 	--sl-color-text-accent: var(--sb-color-accent-2);
-	--sl-color-white: #ffffff;
+	--sl-color-white: var(--sb-color-neutral-1);
 	--sl-color-side-pane-bg: #2b3239;
 	--sl-color-header-bg: #2b3239;
 	--sb-nav-cta: var(--sb-color-accent-2);
-
-	/* Documentation sidebar colors */
-	.sidebar-content a {
-		--sl-color-text-accent: #5bd621;
-		--sl-color-text-invert: var(--sb-color-neutral-14);
-	}
-	.sidebar-pane {
-		background-color: #2b3239;
-		@media (min-width: 50rem) {
-			background-color: var(--sl-color-side-pane-bg);
-		}
-	}
-
-	/* Code background color */
-	.expressive-code .frame {
-		--code-background: #1a1d20;
-	}
-
-	/* Link color */
-	.sl-markdown-content a:not(:where(.not-content *)) {
-		color: var(--sb-color-accent-1);
-	}
-
-	/* Pagination colors */
-	.pagination-links a {
-		border: none;
-		&:hover {
-			background-color: var(--sb-color-accent-2);
-			color: var(--sb-color-neutral-1);
-			.link-title {
-				color: var(--sb-color-neutral-1);
-			}
-		}
-	}
-
-	/* Mobile TOC colors */
-	mobile-starlight-toc nav {
-		background-color: #212529;
-	}
-
-	/* Banners */
-	.starlight-aside .starlight-aside__title {
-		color: var(--sl-color-white);
-	}
-	.starlight-aside--note,
-	.starlight-aside--tip,
-	.starlight-aside--caution,
-	.starlight-aside--danger {
-		background-color: #1a1d20; 
-	}
-	.starlight-aside--note {
-		border-color: #097eb2;
-	}
-	.starlight-aside--tip {
-		border-color: #5bd621;
-	}
-
-	/* Mobile documentation menu */
-	starlight-menu-button {
-		background-color: #1a1d20;
-		.menu-text {
-			color: var(--sl-color-white);
-		}
-		button {
-			background-color: #1a1d20 !important;
-		}
-	}
 }
 
-/* Light mode colors. */
+/* Light Mode */
 :root[data-theme='light'] {
-	--sl-color-accent-low: #c6e0c2;
 	--sl-color-accent: #d8dde4;
 	--sl-color-accent-high: hsl(116, 85%, 13%);
+	--sl-color-accent-low: #c6e0c2;
 	--sl-color-gray-1: hsl(133, 28%, 14%);
 	--sl-color-gray-2: var(--sb-color-neutral-14);
 	--sl-color-gray-3: hsl(129, 12%, 33%);
@@ -115,7 +51,7 @@
 	--sl-color-text-accent: var(--sb-color-accent-2);
 	--sl-color-white: var(--sb-color-accent-4);
 	--sl-color-side-pane-bg: var(--sb-color-neutral-1);
-	--sl-color-header-bg: var(--sb-color-neutral-2);
+	--sl-color-header-bg: var(--sb-color-neutral-1);
 	--sb-nav-cta: var(--sb-color-accent-2);
 
 	--sl-shadow-md: 0 10px 20px -12px rgb(0 0 0 / 0.25);
@@ -158,7 +94,7 @@
 		color: var(--sb-color-neutral-14);
 	}
 	.starlight-aside--note {
-		border-color: #5bd621;
+		border-color: var(--sb-color-swagger-2);
 		background-color: #effbe9; 
 	}
 	.starlight-aside--tip {
@@ -178,10 +114,74 @@
 	}
 }
 
+/* Dark Mode */
+:root[data-theme=dark]{
+	/* Code background color */
+	.expressive-code .frame {
+		--code-background: #1a1d20;
+	}
+
+	/* Link colors for dark mode */
+	.sl-markdown-content a:not(:where(.not-content *)),
+	.right-sidebar-panel a[aria-current=true] {
+		color: var(--sb-color-accent-1);
+	}
+
+	/* Documentation sidebar colors */
+	.sidebar-content a {
+		--sl-color-text-accent: var(--sb-color-swagger-2);
+		--sl-color-text-invert: var(--sb-color-neutral-14);
+	}
+	.sidebar-pane {
+		background-color: #2b3239;
+		@media (min-width: 50rem) {
+			background-color: var(--sl-color-side-pane-bg);
+		}
+	}
+
+	/* Mobile TOC background */
+	mobile-starlight-toc nav {
+		background-color: #212529;
+	}
+
+	/* Banners */
+	.starlight-aside .starlight-aside__title {
+		color: var(--sl-color-white);
+	}
+	.starlight-aside--note,
+	.starlight-aside--tip,
+	.starlight-aside--caution,
+	.starlight-aside--danger {
+		background-color: #1a1d20; 
+	}
+	.starlight-aside--note {
+		border-color: #097eb2;
+	}
+	.starlight-aside--tip {
+		border-color: var(--sb-color-swagger-2);
+	}
+
+	/* Mobile documentation menu */
+	starlight-menu-button {
+		background-color: #1a1d20;
+		.menu-text {
+			color: var(--sl-color-white);
+		}
+		button {
+			background-color: #1a1d20 !important;
+		}
+	}
+}
+
+/* Make skip link visible */
+.page {
+	isolation: isolate;
+}
+
 /* Change focus style */
 :focus-visible {
-    outline: 2px solid #5bd621;
-    border-radius: 0.25rem;
+	outline: 2px solid var(--sb-color-swagger-2);
+	border-radius: 0.25rem;
 }
 
 /* Sidebar pane */
@@ -208,6 +208,8 @@ mobile-starlight-toc nav {
 	left: 0px;
 	transition: left var(--transition);
 }
+
+/* Move TOC menu to left once Swagger nav menu opens */
 .nav-toggle #starlight__mobile-toc {
 	left: var(--sb-mobile-menu-width);
 }
@@ -223,5 +225,17 @@ mobile-starlight-toc nav {
 	padding-top: calc(var(--sl-nav-height) + var(--sl-mobile-toc-height) + var(--sl-mobile-docs-height));
 	@media (min-width: 50rem) {
 		padding-top: calc(var(--sl-nav-height) + var(--sl-mobile-toc-height));
+	}
+}
+
+/* Pagination colors */
+.pagination-links a {
+	border: none;
+	&:hover {
+		background-color: var(--sb-color-accent-2);
+		color: var(--sb-color-neutral-1);
+		.link-title {
+			color: var(--sb-color-neutral-1);
+		}
 	}
 }
