@@ -33,7 +33,7 @@ export default defineConfig({
       MobileTableOfContents: './src/components/MobileTableOfContents.astro'
     }
   }), tailwind({
-    // Disable the default base styles:
+    // Disable the default base style
     applyBaseStyles: false
   })]
 });
