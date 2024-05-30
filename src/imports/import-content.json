@@ -1,0 +1,34 @@
+{
+  "swagger-imports": {
+    "pages": {
+      "installation": {
+        "title": "Installation",
+        "src": "https://raw.githubusercontent.com/swagger-api/swagger-ui/master/docs/usage/installation.md",
+        "folder": "./src/content/docs/open-source-tools/Swagger UI/usage/",
+        "pageOptions": {
+          "title": "Installation Hello World",
+          "description": "Learn how to install Swagger UI.",
+          "sidebar_label": "Installation"
+        }
+      },
+      "configuration": {
+        "title": "Configuration",
+        "src": "https://raw.githubusercontent.com/swagger-api/swagger-ui/master/docs/usage/configuration.md",
+        "folder": "./src/content/docs/open-source-tools/Swagger UI/usage/",
+        "pageOptions": {
+          "title": "Configuration",
+          "description": "Understand the configuration options available in Swagger UI."
+        }
+      },
+      "configuration2": {
+        "title": "Advanced Configuration",
+        "src": "https://raw.githubusercontent.com/swagger-api/swagger-ui/master/docs/usage/configuration.md",
+        "folder": "./src/content/docs/open-source-tools/Swagger UI/usage/nested/",
+        "pageOptions": {
+          "title": "Advanced Configuration",
+          "description": "Explore advanced configuration settings for Swagger UI."
+        }
+      }
+    }
+  }
+}
