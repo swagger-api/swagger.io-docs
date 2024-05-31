@@ -21,8 +21,12 @@ import '@fontsource/monda';
                 width='150px'
             >
                 <style>
-                    .text-color {
-                        fill: var(--sl-color-text);
+
+                    [data-theme=dark] .text-color {
+                        fill: var(--sb-color-neutral-1);
+                    }
+                    [data-theme=light] .text-color {
+                        fill: var(--sb-color-neutral-14);
                     }
                     .st0 {
                         fill: #ffffff;
@@ -274,7 +278,7 @@ import '@fontsource/monda';
                     role='button'
                     aria-haspopup='true'
                     aria-expanded='false'
-                    >Why Swagger?<i class='pl-2 pt-1 fa-solid fa-chevron-down'
+                    >Learn<i class='fal fa-chevron-down'
                     ></i></a
                 >
                 <div class='dropdown-menu menu-single'>
@@ -417,7 +421,7 @@ import '@fontsource/monda';
                     role='button'
                     aria-haspopup='true'
                     aria-expanded='false'
-                    >Tools<i class='pl-2 pt-1 fa-solid fa-chevron-down'></i></a
+                    >Tools<i class='fal fa-chevron-down'></i></a
                 >
                 <div class='dropdown-menu menu-double'>
                     <div class='dropdown-mega row'>
@@ -596,7 +600,7 @@ import '@fontsource/monda';
                     role='button'
                     aria-haspopup='true'
                     aria-expanded='false'
-                    >Resources<i class='pl-2 pt-1 fa-solid fa-chevron-down'
+                    >Resources<i class='fal fa-chevron-down'
                     ></i></a
                 >
                 <div class='dropdown-menu menu-single'>
@@ -980,6 +984,11 @@ import '@fontsource/monda';
         display: none;
     }
 
+    .nav-link.dropdown-toggle i {
+        padding-top: 0.4em;
+        padding-left: 0.5em;
+    }
+
     .nav-item-login {
         order: 3;
         border: 1px solid var(--sb-color-accent-3);
@@ -1325,6 +1334,16 @@ import '@fontsource/monda';
             border-right: 0;
         }
 
+        starlight-theme-select {
+            & label {
+                & .caret {
+                height: 1.6em;
+                right: 0.4em;
+                width: 1.5em;
+            }
+            }
+        }
+
         .nav-main .nav-item-search {
             float: left;
             width: 15%;
@@ -1340,6 +1359,11 @@ import '@fontsource/monda';
         .nav-main .nav-link:hover {
             background-color: var(--sl-color-gray-6);
         }
+
+        .nav-link.dropdown-toggle {
+            justify-content: space-between;
+        }
+
         .nav-spacer {
             height: 60px;
         }
