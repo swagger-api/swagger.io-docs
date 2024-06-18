@@ -8,8 +8,8 @@ export default {
 		colors: {
 			'primary': '#097eb2',
 			'primary-dark': '#00537c',
-			'swagger': 'hsl(101, 73%, 48%)',
-			'swagger-dark': 'hsl(101, 73%, 38%)',
+			'swagger': '#5bd621',
+			'swagger-dark': '#38b832',
 			'white': 'hsl(0, 0%, 100%)',
 			'black': 'hsl(0, 0%, 0%)',
 		},

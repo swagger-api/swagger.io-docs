@@ -460,10 +460,10 @@ import '@fontsource/monda';
                                 </li>
                             </ul>
                             <!-- Tab panes -->
-                            <div class='tab-content'>
+                            <div class='tab-content mt-4 xl:mt-0'>
                                 <div
                                     role='tabpanel'
-                                    class='tab-pane active xl:pl-4 grow basis-0'
+                                    class='tab-pane active xl:pl-4 lg:pr-12 grow basis-0'
                                     id='proDocumentation'
                                 >
                                     <a
@@ -479,7 +479,7 @@ import '@fontsource/monda';
                                         >
                                     </a>
                                     <ul
-                                        class='p-0 mt--2 mb-4 list-none'
+                                        class='p-0 -mt-2 mb-6 list-none'
                                         role='list'
                                     >
                                         <li class='mb-2'>
@@ -488,7 +488,7 @@ import '@fontsource/monda';
                                                 aria-label='Developer Portal - Improve API discoverability'
                                             >
                                                 <i
-                                                    class='text-primary fas fa-level-up-alt fa-rotate-90 ml-1 text-sm'
+                                                    class='text-swagger-dark fas fa-level-up-alt fa-rotate-90 ml-1 text-xs'
                                                     aria-hidden='true'></i>
                                                 <span
                                                     class='text-dark font-semibold ml-2 link-underline text-sm'
@@ -509,7 +509,7 @@ import '@fontsource/monda';
                                                 aria-label='Exploration - Evaluate the functionality of any API instantly'
                                             >
                                                 <i
-                                                    class='text-primary fas fa-level-up-alt fa-rotate-90 ml-1 text-xs'
+                                                    class='text-swagger-dark fas fa-level-up-alt fa-rotate-90 ml-1 text-xs'
                                                     aria-hidden='true'></i>
                                                 <span
                                                     class='text-dark font-semibold ml-2 link-underline text-sm'
@@ -538,44 +538,47 @@ import '@fontsource/monda';
                                 </div>
                                 <div
                                     role='tabpanel'
-                                    class='tab-pane xl:pl-10 grow basis-0'
+                                    class='tab-pane xl:pl-10 lg:pr-12 grow basis-0'
                                     id='openSource'
                                 >
-                                    <a
-                                        href='https://swagger.io/tools/swagger-codegen/'
-                                        class='item-main-wrapper'
-                                        ><span class='item-main link-underline'
-                                            >Swagger Codegen</span
-                                        >
-                                        <p class='content'>
-                                            Generate server stubs and client
-                                            SDKs from OpenAPI Specification
-                                            definitions
-                                        </p>
+                                    <a 
+                                        href="https://swagger.io/tools/open-source/" 
+                                        class="item-main-wrapper">
+                                            <span class="item-main link-underline">Swagger Open Source</span>
+                                            <p class="content"> Ideal for individuals and small teams to design, build,
+                                                and document APIs.</p>
                                     </a>
-                                    <a
-                                        href='https://swagger.io/tools/swagger-editor/'
-                                        class='item-main-wrapper'
-                                        ><span class='item-main link-underline'
-                                            >Swagger Editor</span
-                                        >
-                                        <p class='content'>
-                                            API editor for designing APIs with
-                                            the OpenAPI and AsyncAPI
-                                            specifications.
-                                        </p>
-                                    </a>
-                                    <a
-                                        href='https://swagger.io/tools/swagger-ui/'
-                                        class='item-main-wrapper'
-                                        ><span class='item-main link-underline'
-                                            >Swagger UI</span
-                                        >
-                                        <p class='content'>
-                                            Visualize OpenAPI Specification
-                                            definitions in an interactive UI.
-                                        </p>
-                                    </a>
+                                    <ul class="p-0 -mt-2 list-none" role="list">
+                                        <li class="mb-2">
+                                            <a href="https://swagger.io/tools/swagger-codegen/" aria-label="Swagger Codegen - Generate server stubs and client SDKs">
+                                                <i class="text-swagger-dark fas fa-level-up-alt fa-rotate-90 text-xs ml-1" aria-hidden="true"></i>
+                                                <span class="text-dark text-sm font-semibold ml-2 link-underline">Swagger
+                                                    Codegen</span>
+                                                <span class="block txt-clr-neutral-12 text-xs ml-6">Generate server
+                                                    stubs and client SDKs from OpenAPI Specification
+                                                    definitions.</span>
+                                            </a>
+                                        </li>
+                                        <li class="mb-2">
+                                            <a href="https://swagger.io/tools/swagger-editor/" aria-label="Swagger Editor - API editor for designing APIs">
+                                                <i class="text-swagger-dark fas fa-level-up-alt fa-rotate-90 text-xs ml-1" aria-hidden="true"></i>
+                                                <span class="text-dark text-sm font-semibold ml-2 link-underline">Swagger
+                                                    Editor</span>
+                                                <span class="block txt-clr-neutral-12 text-xs ml-6">API editor for
+                                                    designing APIs with the OpenAPI and AsyncAPI
+                                                    specifications.</span>
+                                            </a>
+                                        </li>
+                                        <li class="mb-1 pb-3">
+                                            <a href="https://swagger.io/tools/swagger-ui/" aria-label="Swagger UI - Visualize OpenAPI Specification">
+                                                <i class="text-swagger-dark fas fa-level-up-alt fa-rotate-90 text-xs ml-1" aria-hidden="true"></i>
+                                                <span class="text-dark text-sm font-semibold ml-2 link-underline">Swagger
+                                                    UI</span>
+                                                <span class="block txt-clr-neutral-12 text-xs ml-6">Visualize OpenAPI
+                                                    Specification definitions in an interactive UI.</span>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
