@@ -11,17 +11,15 @@
 	--sb-color-neutral-14: #212529;
 	--sb-color-swagger-1: #85EA2D;
 	--sb-color-swagger-2: #5bd621;
-	--sb-color-swagger-3: #38b832;
 	--sb-mobile-menu-width: 300px;
 	--transition: 0.3s ease-in-out;
 }
 
 /* Dark mode colors. */
-:root {
+:root[data-theme='dark']{
 	--sl-color-accent: #257821;
 	--sl-color-accent-high: #b0d4ab;
 	--sl-color-accent-low: #0e2d0b;
-	--sl-color-black: var(--sb-color-neutral-14);
 	--sl-color-gray-1: #e9f2e9;
 	--sl-color-gray-2: #b9c6bb;
 	--sl-color-gray-3: #7c927f;
@@ -29,29 +27,29 @@
 	--sl-color-gray-5: #2c3f2f;
 	--sl-color-gray-6: #1a2e1e;
     --sl-color-gray-7: #1a1d20;
+	--sl-color-black: var(--sb-color-neutral-14);
 	--sl-color-text-accent: var(--sb-color-accent-2);
 	--sl-color-white: var(--sb-color-neutral-1);
-	--sl-color-side-pane-bg: #2b3239;
 	--sl-color-header-bg: #2b3239;
+	--sl-color-code-bg: #1a1d20;
 	--sb-nav-cta: var(--sb-color-accent-2);
 }
 
 /* Light Mode */
 :root[data-theme='light'] {
 	--sl-color-accent: #d8dde4;
-	--sl-color-accent-high: hsl(116, 85%, 13%);
+	--sl-color-accent-high: #093d05;
 	--sl-color-accent-low: #c6e0c2;
-	--sl-color-gray-1: hsl(133, 28%, 14%);
+	--sl-color-gray-1: #1a2e1e;
 	--sl-color-gray-2: var(--sb-color-neutral-14);
-	--sl-color-gray-3: hsl(129, 12%, 33%);
-	--sl-color-gray-4: hsl(128, 9%, 53%);
-	--sl-color-gray-5: hsl(130, 10%, 75%);
+	--sl-color-gray-3: #4a5e4d;
+	--sl-color-gray-4: #7c927f;
+	--sl-color-gray-5: #b9c6bb;
 	--sl-color-gray-6: #f0f3f5;
 	--sl-color-gray-7: #f2f7f3;
 	--sl-color-black: #ffffff;
 	--sl-color-text-accent: var(--sb-color-accent-2);
 	--sl-color-white: var(--sb-color-accent-4);
-	--sl-color-side-pane-bg: var(--sb-color-neutral-1);
 	--sl-color-header-bg: var(--sb-color-neutral-1);
 	--sb-nav-cta: var(--sb-color-accent-2);
 
@@ -62,7 +60,7 @@
 		--sl-color-text-accent: #effbe9;
 		--sl-color-text-invert: var(--sl-color-gray-2);
 		&[aria-current=page] {
-			border-left: 2px solid green;
+			border-left: 2px solid var(--sb-color-swagger-2);
 			border-top-left-radius: 0px;
 			border-bottom-left-radius: 0px;
 		}
@@ -99,7 +97,7 @@
 		background-color: #effbe9; 
 	}
 	.starlight-aside--tip {
-		border-color: #097eb2;
+		border-color: var(--sb-color-accent-2);
 		background-color: #e6f2f7; 
 	}
 
@@ -119,7 +117,7 @@
 :root[data-theme=dark]{
 	/* Code background color */
 	.expressive-code .frame {
-		--code-background: #1a1d20;
+		--code-background: var(--sl-color-code-bg);
 	}
 
 	/* Link colors for dark mode */
@@ -130,14 +128,16 @@
 
 	/* Documentation sidebar colors */
 	.sidebar-content a {
-		--sl-color-text-accent: var(--sb-color-swagger-2);
-		--sl-color-text-invert: var(--sb-color-neutral-14);
+		--sl-color-text-accent: var(--sl-color-code-bg);
+		--sl-color-text-invert: var(--sb-color-neutral-1);
+		&[aria-current=page] {
+			border-left: 2px solid var(--sb-color-swagger-2);
+			border-top-left-radius: 0px;
+			border-bottom-left-radius: 0px;
+		}
 	}
 	.sidebar-pane {
-		background-color: #2b3239;
-		@media (min-width: 50rem) {
-			background-color: var(--sl-color-side-pane-bg);
-		}
+		background-color: var(--sl-color-header-bg);
 	}
 
 	/* Mobile TOC background */
@@ -153,10 +153,10 @@
 	.starlight-aside--tip,
 	.starlight-aside--caution,
 	.starlight-aside--danger {
-		background-color: #1a1d20; 
+		background-color: var(--sl-color-code-bg); 
 	}
 	.starlight-aside--note {
-		border-color: #097eb2;
+		border-color: var(--sb-color-accent-2);
 	}
 	.starlight-aside--tip {
 		border-color: var(--sb-color-swagger-2);
@@ -164,12 +164,12 @@
 
 	/* Mobile documentation menu */
 	starlight-menu-button {
-		background-color: #1a1d20;
+		background-color: var(--sl-color-code-bg);
 		.menu-text {
 			color: var(--sl-color-white);
 		}
 		button {
-			background-color: #1a1d20 !important;
+			background-color: var(--sl-color-code-bg) !important;
 		}
 	}
 }
@@ -181,7 +181,7 @@
 
 /* Change focus style */
 :focus-visible {
-	outline: 2px solid var(--sb-color-swagger-2);
+	outline: 1px solid var(--sb-color-accent-2);
 	border-radius: 0.25rem;
 }
 

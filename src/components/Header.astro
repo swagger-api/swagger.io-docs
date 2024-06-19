@@ -691,7 +691,7 @@ import '@fontsource/monda';
             </li>
             <li class='nav-item nav-item-search xl:border-b-0'>
                 <a
-                    class='header-search-ico sb-search-ico text-center p-[14px] xl:p-0'
+                    class='header-search-ico sb-search-ico text-center p-[14px] xl:px-4 xl:py-2'
                     href='#'><i class='fal fa-search'></i></a
                 >
             </li>
@@ -994,21 +994,22 @@ import '@fontsource/monda';
 
     .nav-item-login {
         order: 3;
-        border: 1px solid var(--sb-color-accent-3);
+        border: 1px solid var(--sb-color-accent-2);
         border-radius: 0.25rem;
         color: var(--sl-color-white);
         margin-left: 1.25rem;
         &:hover {
             color: var(--sl-color-black);
             background: var(--sb-color-accent-3);
+            border-color: var(--sb-color-accent-3);
         }
     }
     
     [data-theme=dark] .nav-item-login {
-        border: 1px solid var(--sb-color-swagger-2);
+        border: 1px solid var(--sb-color-accent-2);
         &:hover {
-            background: var(--sb-color-swagger-2);
-            color: var(--sl-color-black);
+            background: var(--sb-color-accent-2);
+            color: var(--sb-color-neutral-1);
         }
     }
 
@@ -1025,10 +1026,11 @@ import '@fontsource/monda';
     }
 
     [data-theme=dark] .nav-item-free-trial {
-        background: var(--sb-color-swagger-1);
+        background: var(--sb-color-accent-1);
         color: var(--sb-color-neutral-14);
         &:hover {
-            background: var(--sb-color-swagger-2);
+            background: var(--sb-color-accent-2);
+            color: var(--sb-color-neutral-1);
         }
     }
 
@@ -1272,10 +1274,6 @@ import '@fontsource/monda';
         [data-theme=dark] .nav-item-free-trial {
             background: transparent;
             color: var(--sl-color-white);
-            &:hover {
-                background: var(--sb-color-swagger-2);
-                color: var(--sl-color-black);
-            }
         }
 
         .nav-main .nav-item-free-trial,
