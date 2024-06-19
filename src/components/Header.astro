@@ -686,7 +686,7 @@ import '@fontsource/monda';
                     </div>
                 </div>
             </li>
-            <li class='nav-item nav-theme-select h-[58px] xl:h-auto border-t-1 border-[#ddd] border-solid xl:ml-5 order-2'>
+            <li class='nav-item nav-theme-select border-t-1 border-[#ddd] border-solid order-2'>
                 <ThemeSelect {...Astro.props} />
             </li>
             <li class='nav-item nav-item-search xl:border-b-0'>
@@ -1102,6 +1102,10 @@ import '@fontsource/monda';
             margin-top: 5px;
         }
 
+        .nav-theme-select {
+            margin-left: 1.25rem;
+        }
+
         .nav-main .nav-item-search .nav-link {
             padding: 10px 0 0 0;
         }
@@ -1336,6 +1340,8 @@ import '@fontsource/monda';
         }
 
         starlight-theme-select {
+            display: block;
+            height: 58px;
             & label {
                 & .caret {
                 height: 1.6em;
