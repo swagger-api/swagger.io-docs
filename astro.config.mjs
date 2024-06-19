@@ -12,6 +12,7 @@ export default defineConfig({
         './src/tailwind.css',
         './src/styles/custom.css',
         './src/styles/frontpage.css',
+        '@fontsource-variable/open-sans'
       ],
 			social: {
 				github: 'https://github.com/withastro/starlight',
