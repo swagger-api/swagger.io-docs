@@ -1,56 +1,25 @@
 ---
-const { variant = "primary", text, path, iconFontAwesome } = Astro.props;
+const { variant, text, path, iconFontAwesome } = Astro.props;
 
 const buttonVariants: { [key: string]: string } = {
+  default:
+    "text-[16px] color-[#097EB2] font-bold cursor-pointer no-underline hover:underline ml-4 flex items-center",
   primary:
     "w-max text-[16px] bg-[#097eb2] border-[#097eb2] !text-white bg-none cursor-pointer rounded px-[20px] py-[11px] text-base font-bold inline-block m-0 no-underline leading-none border border-solid border-transparent transition-all duration-200 ease-in-out hover:bg-[#075f8a] hover:border-[#075f8a] hover:text-white",
-  secondary:
-    "bg-gray-500 text-white font-semibold py-2 px-4 rounded hover:bg-gray-600",
-  danger:
-    "bg-red-500 text-white font-semibold py-2 px-4 rounded hover:bg-red-600",
+
   // Add more variants as needed
 };
 
-const buttonClasses = buttonVariants[variant] || buttonVariants["primary"];
+const buttonClasses = buttonVariants[variant] || buttonVariants["default"];
 ---
 
 <a href={path} class={buttonClasses}>
   <div class="flex items-center">
     {text}
-    {iconFontAwesome && <span class={`far ${iconFontAwesome} pl-2`} />}
+    {
+      iconFontAwesome && (
+        <span class={`fa ${iconFontAwesome} pl-2 no-underline`} />
+      )
+    }
   </div>
 </a>
-
-<!-- <style>
-  .btn {
-    color: #097eb2;
-    text-decoration: none;
-    background-color: transparent;
-    font-weight: 700;
-  }
-
-  .btn:hover {
-    color: #00537c;
-    text-decoration: underline;
-  }
-
-  .primary {
-    background-color: #097eb2;
-    border-color: #097eb2;
-    color: #fff;
-    background-image: unset;
-    border-radius: 4px;
-    padding: 11px 20px;
-    font-size: 1em;
-    font-weight: 700;
-    display: inline-block;
-    margin: 0;
-    text-decoration: unset;
-    line-height: 1em;
-    border: 1px solid transparent;
-    transition:
-      background 0.2s ease-in-out,
-      border 0.2s ease-in-out,
-      color 0.2s ease-in-out;
-  }
-</style> -->

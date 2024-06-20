@@ -1,5 +1,14 @@
 ---
-const { title, description, buttonTitle, optionalText, iconPath } = Astro.props;
+const {
+  title,
+  description,
+  buttonTitle,
+  optionalText,
+  optionalPath,
+  iconPath,
+  path,
+  iconFontAwesome,
+} = Astro.props;
 import Button from "./Button.astro";
 ---
 
@@ -17,8 +26,21 @@ import Button from "./Button.astro";
     {description}
   </p>
   <div class="mt-4 flex items-center">
-    <Button type="primary" text={buttonTitle} />
+    <Button variant="primary" text={buttonTitle} path={path} />
+
     {
+      optionalText && (
+        <div class="ml-4">
+          <Button
+            text={optionalText}
+            path={optionalPath}
+            iconFontAwesome={iconFontAwesome}
+          />
+        </div>
+      )
+    }
+
+    <!-- {
       optionalText && (
         <a
           href="#"
@@ -28,6 +50,6 @@ import Button from "./Button.astro";
           {iconPath && <img src={iconPath} alt="" class="ml-2 w-4 h-4" />}
         </a>
       )
-    }
+    } -->
   </div>
 </div>
