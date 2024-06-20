@@ -11,7 +11,6 @@ export default defineConfig({
         // Path to your Tailwind base styles:
         './src/tailwind.css',
         './src/styles/custom.css',
-        './src/styles/frontpage.css',
         '@fontsource-variable/open-sans'
       ],
 			social: {
