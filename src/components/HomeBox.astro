@@ -1,0 +1,33 @@
+---
+const { title, description, buttonTitle, optionalText, iconPath } = Astro.props;
+import Button from "./Button.astro";
+---
+
+<div
+  class="flex flex-col justify-between bg-white p-[20px] xs:p-[20px] md:p-[30px] xl:p-[40px] rounded-lg !mt-0"
+>
+  <h2
+    class="text-[#173647] text-[22px] sm:text-[28px] md:text-[33.5px] lg:text-[33.5px] xl:text-[38.25px] font-bold mb-2"
+  >
+    {title}
+  </h2>
+  <p
+    class="text-[#212529] text-[14.75px] sm:text-[15.25px] md:text-[15.75px] xl:text-[16px]"
+  >
+    {description}
+  </p>
+  <div class="mt-4 flex items-center">
+    <Button type="primary" text={buttonTitle} />
+    {
+      optionalText && (
+        <a
+          href="#"
+          class="text-[16px] text-blue-500 hover:underline ml-4 flex items-center"
+        >
+          {optionalText}
+          {iconPath && <img src={iconPath} alt="" class="ml-2 w-4 h-4" />}
+        </a>
+      )
+    }
+  </div>
+</div>

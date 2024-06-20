@@ -1,0 +1,168 @@
+---
+import HomeBox from "./HomeBox.astro";
+---
+
+<section
+  class="relative 2xl:mt-[80px] xl:mt-[80px] lg:mt-[65px] md:mt-[60px] overflow-hidden"
+>
+  <!-- <div
+    class="hidden md:block bg-no-repeat bg-contain absolute h-full w-2/3 left-0 md:-left-28 lg:-left-20 xl:-left-12 2xl:left-0"
+    style="background-image: url(/hero-bubbles.svg);"
+  >
+  </div> -->
+
+  <!-- <div
+    class="container mx-auto text-center 2xl:mb-[125px] xl:mb-[115px] lg:mb-[60px] md:mb-[20px] 2xl:mt-[80px] xl:mt-[80px] lg:mt-[60px] md:mt-[10px] sm:mt-[60px] mt-[45px]"
+    style="position: relative;"
+  >
+    <h1
+      class="md:w-[455px] lg:w-[610px] xl:w-[730px] 2xl:w-[786px] mx-auto font-bold font-roboto text-clr-accent-4"
+    >
+      API Development for<span class="px-1 mx-1">Everyone</span>
+    </h1>
+  </div> -->
+
+  <div class="flex flex-wrap">
+    <div class="w-full sm:w-1/2 content-center">
+      <div class="relative">
+        <div
+          class="h-[175px] hidden sm:block bg-no-repeat bg-contain absolute h-full w-full left-0 md:-left-28 lg:-left-20 xl:-left-12 2xl:left-0"
+          style="background-image: url(/hero-bubbles.svg);"
+        >
+        </div>
+        <div
+          class="relative container w--800 mx-auto text-center h-[175px] content-center"
+        >
+          <h2
+            class="text-[#173647] font-bold text-[24px] sm:text-[28.75px] md:text-[33.5px] lg:text-[33.5px] xl:text-[38.25px]"
+          >
+            Swagger Documentation
+          </h2>
+        </div>
+      </div>
+    </div>
+    <div class="w-full sm:w-1/2 justify-content-center">
+      <img
+        src="/hero-img.svg"
+        alt="Swagger Documentation Example"
+        class="w-full h-auto"
+      />
+    </div>
+  </div>
+</section>
+
+<!-- <div class="w-full">
+  <div
+    class="hidden md:block h-[150px] bg-no-repeat bg-contain absolute h-full w-2/3 left-0 md:-left-32 lg:-left-20 xl:-left-12 2xl:left-0"
+    style="background-image: url(/hero-bubbles.svg);"
+  >
+  </div>
+
+  <div class="max-w-[1240px] mx-auto py-12">
+    <div class="relative pt-16 bg-white overflow-hidden">
+      <div class="container">
+        <div class="flex flex-wrap">
+          <div class="w-full sm:w-1/2">
+            <div class="relative">
+              <div
+                class="container w--800 mx-auto text-center md:py-28"
+                style="position: relative;"
+              >
+                <h2
+                  class="text-[#173647] font-bold text-[24px] sm:text-[28.75px] md:text-[33.5px] lg:text-[33.5px] xl:text-[38.25px]"
+                >
+                  Swagger Documentation
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div class="w-full sm:w-1/2 justify-content-center">
+            <img
+              src="/hero-img.svg"
+              alt="Swagger Documentation Example"
+              class="w-full h-auto"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="max-w-[1240px] mx-auto">
+  <div class="mt-12 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+    <HomeBox
+      title="OpenAPI Specification"
+      description="A standard format for defining APIs, ensuring structured and consistent endpoints, methods, parameters, and responses."
+      buttonTitle="View Docs"
+      optionalText="View on Github"
+      iconPath="/path/to/icon.svg"
+    />
+
+    <HomeBox
+      title="SwaggerHub"
+      description="A comprehensive and collaborative platform for designing, documenting, and managing APIs across the API lifecycle."
+      buttonTitle="View Docs"
+      optionalText="Try Free"
+      iconPath="/path/to/icon.svg"
+    />
+  </div>
+
+  <div
+    class="md:!mt-[75px] grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+  >
+    <HomeBox
+      title="Swagger Editor"
+      description="A user-friendly tool for creating, editing, and visualizing API definitions, streamlining the validation of API documentation."
+      buttonTitle="View Docs"
+      optionalText="Download"
+      iconPath="/path/to/icon.svg"
+    />
+
+    <HomeBox
+      title="Swagger UI"
+      description="An interactive interface for exploring and testing APIs, making it easy to visualize and understand their functionality."
+      buttonTitle="View Docs"
+      optionalText="Download"
+      iconPath="/path/to/icon.svg"
+    />
+
+    <HomeBox
+      title="Swagger CodeGen"
+      description="Automate the generation of client libraries, server stubs, and API documentation efficiently based on API definitions."
+      buttonTitle="View Docs"
+      optionalText="Download"
+      iconPath="/path/to/icon.svg"
+    />
+  </div>
+</div>
+
+<section class="bg-[#F8FAFB] py-12 !mt-24">
+  <div class="max-w-[1240px] mx-auto py-12">
+    <div class="mx-auto text-center">
+      <img
+        src="/smartbear-logo.svg"
+        alt="SmartBear Logo"
+        class="mx-auto mb-4"
+      />
+      <p class="text-2xl font-bold text-gray-900">
+        SmartBear is committed to open source development. Create more with us.
+      </p>
+    </div>
+    <div class="!mt-12 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+      <HomeBox
+        title="SmartBear Communit"
+        description="Join the SmartBear Community to discuss products, share best practices, ask questions, and get support from peers and experts."
+        buttonTitle="Learn More"
+        iconPath="/path/to/icon.svg"
+      />
+
+      <HomeBox
+        title="SmartBear Academy"
+        description="Access training and resources to improve your skills and efficiency with SmartBear's testing and development tools."
+        buttonTitle="Learn more"
+        iconPath="/path/to/icon.svg"
+      />
+    </div>
+  </div>
+</section>

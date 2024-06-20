@@ -1,0 +1,6 @@
+.frontpage {
+    --sl-content-width: 100%;
+    .content-panel:nth-of-type(1) {
+        display: none;
+    }
+}
