@@ -22,26 +22,26 @@ import HomeBox from "./HomeBox.astro";
     </h1>
   </div> -->
 
-  <div class="flex flex-wrap">
-    <div class="w-full sm:w-1/2 content-center">
-      <div class="relative">
+  <div class="max-w-[1440px] mx-auto flex flex-wrap">
+    <div class="w-full md:w-1/2 content-center">
+      <div>
         <div
-          class="h-[175px] hidden sm:block bg-no-repeat bg-contain absolute h-full w-full left-0 md:-left-28 lg:-left-20 xl:-left-12 2xl:left-0"
+          class="absolute h-[175px] w-[50vw] hidden md:block bg-no-repeat bg-contain left-0 md:-left-28 2xl:left-0 homepage-bubbles"
           style="background-image: url(/hero-bubbles.svg);"
         >
         </div>
         <div
-          class="relative container w--800 mx-auto text-center h-[175px] content-center"
+          class="relative container w--800 mx-auto h-[175px] content-center pl-[40px]"
         >
           <h2
-            class="text-[#173647] font-bold text-[24px] sm:text-[28.75px] md:text-[33.5px] lg:text-[33.5px] xl:text-[38.25px]"
+            class="text-center md:text-left text-[#173647] font-bold text-[24px] sm:text-[28.75px] md:text-[33.5px] lg:text-[33.5px] xl:text-[38.25px] lg:pl-10"
           >
             Swagger Documentation
           </h2>
         </div>
       </div>
     </div>
-    <div class="w-full sm:w-1/2 justify-content-center">
+    <div class="w-full md:w-1/2 justify-content-center">
       <img
         src="/hero-img.svg"
         alt="Swagger Documentation Example"
@@ -58,7 +58,7 @@ import HomeBox from "./HomeBox.astro";
   >
   </div>
 
-  <div class="max-w-[1240px] mx-auto py-12">
+  <div class="max-w-[1440px] mx-auto py-12">
     <div class="relative pt-16 bg-white overflow-hidden">
       <div class="container">
         <div class="flex flex-wrap">
@@ -89,7 +89,7 @@ import HomeBox from "./HomeBox.astro";
   </div>
 </div> -->
 
-<div class="max-w-[1240px] mx-auto">
+<div class="max-w-[1440px] mx-auto">
   <div class="mt-12 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
     <HomeBox
       title="OpenAPI Specification"
@@ -138,7 +138,7 @@ import HomeBox from "./HomeBox.astro";
 </div>
 
 <section class="bg-[#F8FAFB] py-12 !mt-24">
-  <div class="max-w-[1240px] mx-auto py-12">
+  <div class="max-w-[1440px] mx-auto py-12">
     <div class="mx-auto text-center">
       <img
         src="/smartbear-logo.svg"
@@ -166,3 +166,16 @@ import HomeBox from "./HomeBox.astro";
     </div>
   </div>
 </section>
+
+<style>
+  @media (min-width: 1440px) {
+    .homepage-bubbles {
+      left: -7rem;
+    }
+  }
+  @media (min-width: 1560px) {
+    .homepage-bubbles {
+      left: 0px;
+    }
+  }
+</style>
