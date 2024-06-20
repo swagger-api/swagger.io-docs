@@ -1,8 +1,8 @@
 ---
 import ThemeSelect from '@astrojs/starlight/components/ThemeSelect.astro';
 import type { Props } from '@astrojs/starlight/props';
-import '@fortawesome/fontawesome-free/css/all.css';
 import '@fontsource/monda';
+import { Icon } from 'astro-icon/components'
 ---
 
 <div class='nav-main mx-auto flex antialiased'>
@@ -272,15 +272,14 @@ import '@fontsource/monda';
         <ul class='nav flex w-full list-none p-0'>
             <li class='nav-item dropdown'>
                 <a
-                    class='nav-link dropdown-toggle flex item-center px-4 py-2'
+                    class='nav-link dropdown-toggle flex items-center px-4 py-2'
                     data-toggle='dropdown'
                     data-display='static'
                     href='#'
                     role='button'
                     aria-haspopup='true'
                     aria-expanded='false'
-                    >Learn<i class='fal fa-chevron-down'
-                    ></i></a
+                    >Learn<Icon name="fluent:chevron-down-48-regular"/></a
                 >
                 <div class='dropdown-menu menu-single'>
                     <div class='dropdown-mega row'>
@@ -415,14 +414,14 @@ import '@fontsource/monda';
             </li>
             <li class='nav-item dropdown'>
                 <a
-                    class='nav-link dropdown-toggle flex item-center px-4 py-2'
+                    class='nav-link dropdown-toggle flex items-center px-4 py-2'
                     data-toggle='dropdown'
                     data-display='static'
                     href='#'
                     role='button'
                     aria-haspopup='true'
                     aria-expanded='false'
-                    >Tools<i class='fal fa-chevron-down'></i></a
+                    >Tools<Icon name="fluent:chevron-down-48-regular"/></a
                 >
                 <div class='dropdown-menu menu-double'>
                     <div class='dropdown-mega row'>
@@ -597,15 +596,14 @@ import '@fontsource/monda';
             </li>
             <li class='nav-item dropdown'>
                 <a
-                    class='nav-link dropdown-toggle flex item-center px-4 py-2'
+                    class='nav-link dropdown-toggle flex items-center px-4 py-2'
                     data-toggle='dropdown'
                     data-display='static'
                     href='#'
                     role='button'
                     aria-haspopup='true'
                     aria-expanded='false'
-                    >Resources<i class='fal fa-chevron-down'
-                    ></i></a
+                    >Resources<Icon name="fluent:chevron-down-48-regular"/></a
                 >
                 <div class='dropdown-menu menu-single'>
                     <div class='dropdown-mega row'>
@@ -692,8 +690,8 @@ import '@fontsource/monda';
             </li>
             <li class='nav-item nav-item-search xl:border-b-0'>
                 <a
-                    class='header-search-ico sb-search-ico text-center p-[14px] xl:px-4 xl:py-2'
-                    href='#'><i class='fal fa-search'></i></a
+                    class='header-search-ico sb-search-ico flex text-center p-[14px] xl:px-4 xl:py-2'
+                    href='#'><Icon name="ph:magnifying-glass-light"></a
                 >
             </li>
             <li class='nav-item nav-item-login'>
@@ -738,6 +736,18 @@ import '@fontsource/monda';
             display: none !important;
         }
     }
+
+    /* Icon styles */
+    [data-icon='fluent:chevron-down-48-regular'] {
+        width: 1.25rem;
+        height: 1.25rem;
+        margin-left: 4px;
+    }
+    [data-icon='ph:magnifying-glass-light'] {
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+
 
     .nav-toggle {
         .header {

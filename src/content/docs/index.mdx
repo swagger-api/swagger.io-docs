@@ -3,10 +3,10 @@ title: "Swagger Docs"
 template: splash
 head:
   - tag: style
-    content: ".content-panel:nth-child(1) { display: none; } .nav-main { max-width: 1440px; padding-inline: 15px; }"
+    content: ".content-panel { padding: 0px !important; } .content-panel:nth-child(1) { display: none; } .sl-container { max-width: 100% !important; } .nav-main { max-width: 1440px; padding-inline: 15px; }"
 ---
 
-import  Homepage from "./src/components/Homepage.astro";
+import  Homepage from "../../components/Homepage.astro";
 
 
 <Homepage class="home"/>
