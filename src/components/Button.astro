@@ -1,11 +1,13 @@
 ---
+import "../styles/custom.css";
+
 const { variant, text, path, iconFontAwesome } = Astro.props;
 
 const buttonVariants: { [key: string]: string } = {
   default:
-    "text-[16px] color-[#097EB2] font-bold cursor-pointer no-underline hover:underline ml-4 flex items-center",
+    "text-[16px] !text-[var(--sb-color-accent-2)] font-bold cursor-pointer no-underline hover:underline ml-4 flex items-center",
   primary:
-    "w-max text-[16px] bg-[#097eb2] border-[#097eb2] !text-white bg-none cursor-pointer rounded px-[20px] py-[11px] text-base font-bold inline-block m-0 no-underline leading-none border border-solid border-transparent transition-all duration-200 ease-in-out hover:bg-[#075f8a] hover:border-[#075f8a] hover:text-white",
+    "w-max text-[16px] !bg-[var(--sb-color-accent-2)] !border-[var(--sb-color-accent-2)] !text-white bg-none cursor-pointer rounded px-[20px] py-[11px] text-base font-bold inline-block m-0 no-underline leading-none border border-solid border-transparent transition-all duration-200 ease-in-out hover:!bg-[var(--sb-color-accent-3)] hover:!border-[var(--sb-color-accent-3)] hover:text-white",
 
   // Add more variants as needed
 };

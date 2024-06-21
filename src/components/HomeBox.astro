@@ -5,51 +5,72 @@ const {
   buttonTitle,
   optionalText,
   optionalPath,
-  iconPath,
   path,
   iconFontAwesome,
+  alternative,
 } = Astro.props;
 import Button from "./Button.astro";
+import "../styles/custom.css";
 ---
 
-<div
-  class="flex flex-col justify-between bg-white p-[20px] xs:p-[20px] md:p-[30px] xl:p-[40px] rounded-lg !mt-0"
->
-  <h2
-    class="text-[#173647] text-[22px] sm:text-[28px] md:text-[33.5px] lg:text-[33.5px] xl:text-[38.25px] font-bold mb-2"
-  >
-    {title}
-  </h2>
-  <p
-    class="text-[#212529] text-[14.75px] sm:text-[15.25px] md:text-[15.75px] xl:text-[16px]"
-  >
-    {description}
-  </p>
-  <div class="mt-4 flex items-center">
-    <Button variant="primary" text={buttonTitle} path={path} />
-
-    {
-      optionalText && (
-        <div class="ml-4">
-          <Button
-            text={optionalText}
-            path={optionalPath}
-            iconFontAwesome={iconFontAwesome}
-          />
+{
+  alternative ? (
+    <a
+      href={path}
+      class={`flex flex-col justify-between !bg-[var(--sb-color-neutral-1)] p-[20px] xs:p-[20px] md:p-[30px] xl:p-[40px] rounded-lg !mt-0 ${
+        alternative ? "hover:shadow-xl" : "hover:shadow-lg"
+      } transition-shadow no-underline text-inherit`}
+    >
+      <h2
+        class={`!text-[var(--sb-color-accent-4)] ${
+          alternative
+            ? "text-[18px] sm:text-[24px] md:text-[28px] lg:text-[28px] xl:text-[32px]"
+            : "text-[22px] sm:text-[28px] md:text-[33.5px] lg:text-[33.5px] xl:text-[38.25px]"
+        } font-bold mb-2`}
+      >
+        {title}
+      </h2>
+      <p class="!text-[var(--sb-color-neutral-14)] text-[14.75px] sm:text-[15.25px] md:text-[15.75px] xl:text-[16px] pr-10">
+        {description}
+      </p>
+      <div class="mt-4 flex items-center">
+        <div class="flex items-center">
+          <span class="w-max text-[16px] !bg-[var(--sb-color-accent-2)] !border-[var(--sb-color-accent-2)] !text-white bg-none cursor-pointer rounded px-[20px] py-[11px] text-base font-bold inline-block m-0 no-underline leading-none border border-solid border-transparent transition-all duration-200 ease-in-out hover:!bg-[var(--sb-color-accent-3)] hover:!border-[var(--sb-color-accent-3)] hover:!text-white">
+            {buttonTitle}
+          </span>
         </div>
-      )
-    }
-
-    <!-- {
-      optionalText && (
-        <a
-          href="#"
-          class="text-[16px] text-blue-500 hover:underline ml-4 flex items-center"
-        >
-          {optionalText}
-          {iconPath && <img src={iconPath} alt="" class="ml-2 w-4 h-4" />}
-        </a>
-      )
-    } -->
-  </div>
-</div>
+      </div>
+    </a>
+  ) : (
+    <div
+      class={`flex flex-col justify-between !bg-[var(--sb-color-neutral-1)] p-[20px] xs:p-[20px] md:p-[30px] xl:p-[40px] rounded-lg !mt-0 ${
+        alternative ? "hover:shadow-xl" : "hover:shadow-lg"
+      } transition-shadow`}
+    >
+      <h2
+        class={`!text-[var(--sb-color-accent-4)] ${
+          alternative
+            ? "text-[18px] sm:text-[24px] md:text-[28px] lg:text-[28px] xl:text-[32px]"
+            : "text-[22px] sm:text-[28px] md:text-[33.5px] lg:text-[33.5px] xl:text-[38.25px]"
+        } font-bold mb-2`}
+      >
+        {title}
+      </h2>
+      <p class="!text-[var(--sb-color-neutral-14)] text-[14.75px] sm:text-[15.25px] md:text-[15.75px] xl:text-[16px] pr-10">
+        {description}
+      </p>
+      <div class="mt-4 flex items-center">
+        <Button variant="primary" text={buttonTitle} path={path} />
+        {optionalText && optionalPath && (
+          <div class="ml-4">
+            <Button
+              text={optionalText}
+              path={optionalPath}
+              iconFontAwesome={iconFontAwesome}
+            />
+          </div>
+        )}
+      </div>
+    </div>
+  )
+}

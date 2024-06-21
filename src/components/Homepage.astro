@@ -1,47 +1,29 @@
 ---
 import HomeBox from "./HomeBox.astro";
+import "../styles/custom.css";
 ---
 
-<section
-  class="relative 2xl:mt-[80px] xl:mt-[80px] lg:mt-[65px] md:mt-[60px] overflow-hidden"
->
-  <!-- <div
-    class="hidden md:block bg-no-repeat bg-contain absolute h-full w-2/3 left-0 md:-left-28 lg:-left-20 xl:-left-12 2xl:left-0"
-    style="background-image: url(/hero-bubbles.svg);"
-  >
-  </div> -->
-
-  <!-- <div
-    class="container mx-auto text-center 2xl:mb-[125px] xl:mb-[115px] lg:mb-[60px] md:mb-[20px] 2xl:mt-[80px] xl:mt-[80px] lg:mt-[60px] md:mt-[10px] sm:mt-[60px] mt-[45px]"
-    style="position: relative;"
-  >
-    <h1
-      class="md:w-[455px] lg:w-[610px] xl:w-[730px] 2xl:w-[786px] mx-auto font-bold font-roboto text-clr-accent-4"
-    >
-      API Development for<span class="px-1 mx-1">Everyone</span>
-    </h1>
-  </div> -->
-
-  <div class="max-w-[1440px] mx-auto flex flex-wrap">
-    <div class="w-full md:w-1/2 content-center">
+<section class="relative overflow-hidden">
+  <div class="max-w-[1400px] mx-auto flex flex-wrap">
+    <div class="w-full md:w-1/2 content-center x!mt-[86px]">
       <div>
-        <div
-          class="absolute h-[175px] w-[50vw] hidden md:block bg-no-repeat bg-contain left-0 md:-left-28 2xl:left-0 homepage-bubbles"
-          style="background-image: url(/hero-bubbles.svg);"
-        >
-        </div>
         <div
           class="relative container w--800 mx-auto h-[175px] content-center pl-[40px]"
         >
+          <div
+            class="absolute h-[175px] w-[50vw] hidden md:block bg-no-repeat bg-contain left-0 md:-left-28 2xl:left-0 homepage-bubbles"
+            style="background-image: url(/hero-bubbles.svg);"
+          >
+          </div>
           <h2
-            class="text-center md:text-left text-[#173647] font-bold text-[24px] sm:text-[28.75px] md:text-[33.5px] lg:text-[33.5px] xl:text-[38.25px] lg:pl-10"
+            class="text-center md:text-left !text-[var(--sb-color-accent-4)] font-bold !text-[24px] sm:!text-[28.75px] md:!text-[33.5px] lg:!text-[33.5px] xl:!text-[38.25px] 2xl:pl-[0px] xl:pl-[26px] pl-[26px] pr-[33px] lg:!mt-[60px] md:!mt-[40px] !leading-[45px]"
           >
             Swagger Documentation
           </h2>
         </div>
       </div>
     </div>
-    <div class="w-full md:w-1/2 justify-content-center">
+    <div class="w-full md:w-1/2 !mt-[45px]">
       <img
         src="/hero-img.svg"
         alt="Swagger Documentation Example"
@@ -50,47 +32,8 @@ import HomeBox from "./HomeBox.astro";
     </div>
   </div>
 </section>
-
-<!-- <div class="w-full">
-  <div
-    class="hidden md:block h-[150px] bg-no-repeat bg-contain absolute h-full w-2/3 left-0 md:-left-32 lg:-left-20 xl:-left-12 2xl:left-0"
-    style="background-image: url(/hero-bubbles.svg);"
-  >
-  </div>
-
-  <div class="max-w-[1440px] mx-auto py-12">
-    <div class="relative pt-16 bg-white overflow-hidden">
-      <div class="container">
-        <div class="flex flex-wrap">
-          <div class="w-full sm:w-1/2">
-            <div class="relative">
-              <div
-                class="container w--800 mx-auto text-center md:py-28"
-                style="position: relative;"
-              >
-                <h2
-                  class="text-[#173647] font-bold text-[24px] sm:text-[28.75px] md:text-[33.5px] lg:text-[33.5px] xl:text-[38.25px]"
-                >
-                  Swagger Documentation
-                </h2>
-              </div>
-            </div>
-          </div>
-          <div class="w-full sm:w-1/2 justify-content-center">
-            <img
-              src="/hero-img.svg"
-              alt="Swagger Documentation Example"
-              class="w-full h-auto"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
-
-<div class="max-w-[1440px] mx-auto">
-  <div class="mt-12 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+<section class="max-w-[1400px] mx-auto">
+  <div class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
     <HomeBox
       title="OpenAPI Specification"
       description="A standard format for defining APIs, ensuring structured and consistent endpoints, methods, parameters, and responses."
@@ -150,19 +93,21 @@ import HomeBox from "./HomeBox.astro";
       iconFontAwesome="fa-download"
     />
   </div>
-</div>
+</section>
 
-<section class="bg-[#F8FAFB] py-12 !mt-24">
-  <div class="max-w-[1440px] mx-auto py-12">
+<section class="!bg-[var(--sb-color-neutral-2)] py-12 !mt-24">
+  <div class="max-w-[1400px] mx-auto">
     <div class="mx-auto text-center">
       <img
         src="/smartbear-logo.svg"
         alt="SmartBear Logo"
         class="mx-auto mb-4"
       />
-      <p class="text-2xl font-bold text-gray-900">
+      <h3
+        class="font-bold text-[var(--clr-accent-4) text-[22px] sm:text-[28px] md:text-[28px] lg:text-[28px] xl:text-[36px] xl:px-80 lg:px-48 md:px-36 sm:px-24 px-12"
+      >
         SmartBear is committed to open source development. Create more with us.
-      </p>
+      </h3>
     </div>
     <div class="!mt-12 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
       <HomeBox
@@ -170,6 +115,7 @@ import HomeBox from "./HomeBox.astro";
         description="Join the SmartBear Community to discuss products, share best practices, ask questions, and get support from peers and experts."
         buttonTitle="Learn More"
         path="https://community.smartbear.com/"
+        alternative
       />
 
       <HomeBox
@@ -177,6 +123,7 @@ import HomeBox from "./HomeBox.astro";
         description="Access training and resources to improve your skills and efficiency with SmartBear's testing and development tools."
         buttonTitle="Learn more"
         path="https://smartbear.com/academy/"
+        alternative
       />
     </div>
   </div>
@@ -185,12 +132,12 @@ import HomeBox from "./HomeBox.astro";
 <style>
   @media (min-width: 1440px) {
     .homepage-bubbles {
-      left: -7rem;
+      left: -9rem;
     }
   }
   @media (min-width: 1560px) {
     .homepage-bubbles {
-      left: 0px;
+      left: -9rem;
     }
   }
 </style>
