@@ -32,6 +32,10 @@ export default {
 			'white': '#ffffff',
 			'black': '#000000',
 		},
+		fontFamily: {
+			'roboto': ['Roboto', 'sans-serif'],
+			'monda': ['Monda', 'sans-serif'],
+		},
 		screens: {
 			xs: '360px',
 			sm: '576px',
