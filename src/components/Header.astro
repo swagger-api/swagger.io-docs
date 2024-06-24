@@ -2,7 +2,6 @@
 import ThemeSelect from '@astrojs/starlight/components/ThemeSelect.astro';
 import type { Props } from '@astrojs/starlight/props';
 import '@fontsource/monda';
-import { Icon } from 'astro-icon/components';
 ---
 
 <div class='nav-main mx-auto flex antialiased'>
@@ -279,7 +278,7 @@ import { Icon } from 'astro-icon/components';
                     role='button'
                     aria-haspopup='true'
                     aria-expanded='false'
-                    >Learn<Icon name="fluent:chevron-down-48-regular"/></a
+                    >Learn<svg class="ml-1" width="1.25rem" height="1.25rem" viewBox="0 0 48 48"><path fill="currentColor" d="M8.366 16.116a1.25 1.25 0 0 0 0 1.768l14.75 14.75a1.25 1.25 0 0 0 1.768 0l14.75-14.75a1.25 1.25 0 0 0-1.768-1.768L24 29.982L10.134 16.116a1.25 1.25 0 0 0-1.768 0"></path></svg></a
                 >
                 <div class='dropdown-menu menu-single'>
                     <div class='dropdown-mega row'>
@@ -421,7 +420,7 @@ import { Icon } from 'astro-icon/components';
                     role='button'
                     aria-haspopup='true'
                     aria-expanded='false'
-                    >Tools<Icon name="fluent:chevron-down-48-regular"/></a
+                    >Tools<svg class="ml-1" width="1.25rem" height="1.25rem" viewBox="0 0 48 48"><path fill="currentColor" d="M8.366 16.116a1.25 1.25 0 0 0 0 1.768l14.75 14.75a1.25 1.25 0 0 0 1.768 0l14.75-14.75a1.25 1.25 0 0 0-1.768-1.768L24 29.982L10.134 16.116a1.25 1.25 0 0 0-1.768 0"></path></svg></a
                 >
                 <div class='dropdown-menu menu-double'>
                     <div class='dropdown-mega row'>
@@ -603,7 +602,7 @@ import { Icon } from 'astro-icon/components';
                     role='button'
                     aria-haspopup='true'
                     aria-expanded='false'
-                    >Resources<Icon name="fluent:chevron-down-48-regular"/></a
+                    >Resources<svg class="ml-1" width="1.25rem" height="1.25rem" viewBox="0 0 48 48"><path fill="currentColor" d="M8.366 16.116a1.25 1.25 0 0 0 0 1.768l14.75 14.75a1.25 1.25 0 0 0 1.768 0l14.75-14.75a1.25 1.25 0 0 0-1.768-1.768L24 29.982L10.134 16.116a1.25 1.25 0 0 0-1.768 0"></path></svg></a
                 >
                 <div class='dropdown-menu menu-single'>
                     <div class='dropdown-mega row'>
@@ -691,7 +690,7 @@ import { Icon } from 'astro-icon/components';
             <li class='nav-item nav-item-search xl:border-b-0'>
                 <a
                     class='header-search-ico sb-search-ico flex text-center p-[14px] xl:px-4 xl:py-2'
-                    href='#'><Icon name="ph:magnifying-glass-light"></a
+                    href='#'><svg width="1.25rem" height="1.25rem" viewBox="0 0 256 256"><path fill="currentColor" d="m228.24 219.76l-51.38-51.38a86.15 86.15 0 1 0-8.48 8.48l51.38 51.38a6 6 0 0 0 8.48-8.48M38 112a74 74 0 1 1 74 74a74.09 74.09 0 0 1-74-74"></path></svg></a
                 >
             </li>
             <li class='nav-item nav-item-login'>
@@ -736,18 +735,6 @@ import { Icon } from 'astro-icon/components';
             display: none !important;
         }
     }
-
-    /* Icon styles */
-    [data-icon='fluent:chevron-down-48-regular'] {
-        width: 1.25rem;
-        height: 1.25rem;
-        margin-left: 4px;
-    }
-    [data-icon='ph:magnifying-glass-light'] {
-        width: 1.25rem;
-        height: 1.25rem;
-    }
-
 
     .nav-toggle {
         .header {
