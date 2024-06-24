@@ -16,7 +16,7 @@ import "../styles/custom.css";
           >
           </div>
           <h2
-            class="text-center md:text-left !text-[var(--sb-color-accent-4)] font-bold !text-[24px] sm:!text-[28.75px] md:!text-[33.5px] lg:!text-[33.5px] xl:!text-[38.25px] 2xl:pl-[0px] xl:pl-[26px] pl-[26px] pr-[33px] lg:!mt-[60px] md:!mt-[40px] !leading-[45px]"
+            class="text-center md:text-left dark:!text-[var(--sb-color-neutral-1)] !text-[var(--sb-color-accent-4)] font-bold !text-[24px] sm:!text-[28.75px] md:!text-[33.5px] lg:!text-[33.5px] xl:!text-[38.25px] 2xl:pl-[0px] xl:pl-[26px] pl-[26px] pr-[33px] lg:!mt-[60px] md:!mt-[40px] !leading-[45px]"
           >
             Swagger Documentation
           </h2>
@@ -25,7 +25,7 @@ import "../styles/custom.css";
     </div>
     <div class="w-full md:w-1/2 !mt-[45px]">
       <img
-        src="/hero-img.svg"
+        src="/hero-img.png"
         alt="Swagger Documentation Example"
         class="w-full h-auto"
       />
@@ -95,16 +95,23 @@ import "../styles/custom.css";
   </div>
 </section>
 
-<section class="!bg-[var(--sb-color-neutral-2)] py-12 !mt-24">
+<section
+  class="dark:!bg-[#1A1D20] !bg-[var(--sb-color-neutral-2)] py-12 !mt-24"
+>
   <div class="max-w-[1400px] mx-auto">
     <div class="mx-auto text-center">
       <img
         src="/smartbear-logo.svg"
         alt="SmartBear Logo"
-        class="mx-auto mb-4"
+        class="mx-auto mb-4 !block dark:!hidden"
+      />
+      <img
+        src="/smartbear-logo-white.svg"
+        alt="SmartBear Logo"
+        class="mx-auto mb-4 !hidden dark:!block"
       />
       <h3
-        class="font-bold text-[var(--clr-accent-4) text-[22px] sm:text-[28px] md:text-[28px] lg:text-[28px] xl:text-[36px] xl:px-80 lg:px-48 md:px-36 sm:px-24 px-12"
+        class="font-bold !text-[var(--clr-accent-4) !text-[22px] sm:!text-[28px] md:!text-[28px] lg:!text-[28px] xl:!text-[36px] xl:px-80 lg:px-48 md:px-36 sm:px-24 px-12"
       >
         SmartBear is committed to open source development. Create more with us.
       </h3>

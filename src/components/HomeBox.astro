@@ -17,25 +17,25 @@ import "../styles/custom.css";
   alternative ? (
     <a
       href={path}
-      class={`flex flex-col justify-between !bg-[var(--sb-color-neutral-1)] p-[20px] xs:p-[20px] md:p-[30px] xl:p-[40px] rounded-lg !mt-0 ${
+      class={`flex flex-col justify-between dark:!bg-[#2B3239] !bg-[var(--sb-color-neutral-1)] p-[20px] xs:p-[20px] md:p-[30px] xl:p-[40px] rounded-lg !mt-0 ${
         alternative ? "hover:shadow-xl" : "hover:shadow-lg"
       } transition-shadow no-underline text-inherit`}
     >
       <h2
-        class={`!text-[var(--sb-color-accent-4)] ${
+        class={`dark:text-[var(--sb-color-neutral-1)] !text-[var(--sb-color-accent-4)] ${
           alternative
-            ? "text-[18px] sm:text-[24px] md:text-[28px] lg:text-[28px] xl:text-[32px]"
-            : "text-[22px] sm:text-[28px] md:text-[33.5px] lg:text-[33.5px] xl:text-[38.25px]"
+            ? "!text-[18px] sm:!text-[24px] md:!text-[28px] lg:!text-[28px] xl:!text-[32px]"
+            : "!text-[22px] sm:!text-[28px] md:!text-[33.5px] lg:!text-[33.5px] xl:!text-[38.25px]"
         } font-bold mb-2`}
       >
         {title}
       </h2>
-      <p class="!text-[var(--sb-color-neutral-14)] text-[14.75px] sm:text-[15.25px] md:text-[15.75px] xl:text-[16px] pr-10">
+      <p class="dark:!text-[var(--sb-color-neutral-9)] !text-[var(--sb-color-neutral-14)] !text-[14.75px] sm:!text-[15.25px] md:!text-[15.75px] xl:!text-[16px] pr-10">
         {description}
       </p>
       <div class="mt-4 flex items-center">
         <div class="flex items-center">
-          <span class="w-max text-[16px] !bg-[var(--sb-color-accent-2)] !border-[var(--sb-color-accent-2)] !text-white bg-none cursor-pointer rounded px-[20px] py-[11px] text-base font-bold inline-block m-0 no-underline leading-none border border-solid border-transparent transition-all duration-200 ease-in-out hover:!bg-[var(--sb-color-accent-3)] hover:!border-[var(--sb-color-accent-3)] hover:!text-white">
+          <span class="w-max !text-[16px] dark:!bg-[var(--sb-color-accent-1)] !bg-[var(--sb-color-accent-2)] !border-[var(--sb-color-accent-2)] !text-[var(--sb-color-neutral-1)] dark:!text-[var(--sb-color-neutral-14)]  bg-none cursor-pointer rounded px-[20px] py-[11px] text-base font-bold inline-block m-0 no-underline leading-none border border-solid border-transparent transition-all duration-200 ease-in-out hover:!bg-[var(--sb-color-accent-3)] hover:!border-[var(--sb-color-accent-3)] hover:text-white">
             {buttonTitle}
           </span>
         </div>
@@ -43,20 +43,20 @@ import "../styles/custom.css";
     </a>
   ) : (
     <div
-      class={`flex flex-col justify-between !bg-[var(--sb-color-neutral-1)] p-[20px] xs:p-[20px] md:p-[30px] xl:p-[40px] rounded-lg !mt-0 ${
-        alternative ? "hover:shadow-xl" : "hover:shadow-lg"
-      } transition-shadow`}
+      class={`flex flex-col justify-between dark:!bg-[#2B3239] !bg-[var(--sb-color-neutral-1)] p-[20px] xs:p-[20px] md:p-[30px] xl:p-[40px] rounded-lg !mt-0 ${
+        alternative ? "hover:shadow-xl transition-shadow" : ""
+      }`}
     >
       <h2
-        class={`!text-[var(--sb-color-accent-4)] ${
+        class={`dark:!text-[var(--sb-color-neutral-1)] !text-[var(--sb-color-accent-4)] ${
           alternative
-            ? "text-[18px] sm:text-[24px] md:text-[28px] lg:text-[28px] xl:text-[32px]"
-            : "text-[22px] sm:text-[28px] md:text-[33.5px] lg:text-[33.5px] xl:text-[38.25px]"
+            ? "!text-[18px] sm:!text-[24px] md:!text-[28px] lg:!text-[28px] xl:!text-[32px]"
+            : "!text-[22px] sm:!text-[28px] md:!text-[33.5px] lg:!text-[33.5px] xl:!text-[38.25px]"
         } font-bold mb-2`}
       >
         {title}
       </h2>
-      <p class="!text-[var(--sb-color-neutral-14)] text-[14.75px] sm:text-[15.25px] md:text-[15.75px] xl:text-[16px] pr-10">
+      <p class="dark:!text-[var(--sb-color-neutral-9)] !text-[var(--sb-color-neutral-14)] !text-[14.75px] sm:!text-[15.25px] md:!text-[15.75px] xl:!text-[16px] pr-10">
         {description}
       </p>
       <div class="mt-4 flex items-center">
