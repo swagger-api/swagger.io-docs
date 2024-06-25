@@ -17,16 +17,12 @@ import "../styles/custom.css";
   alternative ? (
     <a
       href={path}
-      class={`flex flex-col justify-between dark:!bg-[#2B3239] !bg-[var(--sb-color-neutral-1)] p-[20px] xs:p-[20px] md:p-[30px] xl:p-[40px] rounded-lg !mt-0 ${
-        alternative ? "hover:shadow-xl" : "hover:shadow-lg"
-      } transition-shadow no-underline text-inherit`}
+      class={`flex flex-col justify-between dark:!bg-[#2B3239] !bg-[var(--sb-color-neutral-1)] p-[20px] xs:p-[20px] md:p-[30px] xl:p-[40px] rounded-lg !mt-0 hover:shadow-xltransition-shadow no-underline text-inherit`}
     >
       <h2
-        class={`dark:!text-[var(--sb-color-neutral-1)] !text-[var(--sb-color-accent-4)] ${
-          alternative
-            ? "!text-[18px] sm:!text-[24px] md:!text-[28px] lg:!text-[28px] xl:!text-[32px]"
-            : "!text-[22px] sm:!text-[28px] md:!text-[33.5px] lg:!text-[33.5px] xl:!text-[38.25px]"
-        } font-bold mb-2`}
+        class={`dark:!text-[var(--sb-color-neutral-1)] !text-[var(--sb-color-accent-4)] 
+            !text-[14.75px] sm:!text-[22px] md:!text-[23.5px] lg:!text-[25px] xl:!text-[25px]
+      font-bold mb-2`}
       >
         {title}
       </h2>
@@ -48,11 +44,9 @@ import "../styles/custom.css";
       }`}
     >
       <h2
-        class={`dark:!text-[var(--sb-color-neutral-1)] !text-[var(--sb-color-accent-4)] ${
-          alternative
-            ? "!text-[18px] sm:!text-[24px] md:!text-[28px] lg:!text-[28px] xl:!text-[32px]"
-            : "!text-[22px] sm:!text-[28px] md:!text-[33.5px] lg:!text-[33.5px] xl:!text-[38.25px]"
-        } font-bold mb-2`}
+        class={`dark:!text-[var(--sb-color-neutral-1)] !text-[var(--sb-color-accent-4)]
+          !text-[22px] sm:!text-[28px] md:!text-[28px] lg:!text-[28px] xl:!text-[31px]
+           font-bold mb-2`}
       >
         {title}
       </h2>
