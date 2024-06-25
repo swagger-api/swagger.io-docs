@@ -17,7 +17,7 @@ const buttonClasses = buttonVariants[variant] || buttonVariants["default"];
 
 <a href={path} class={buttonClasses}>
   <div class="flex items-center">
-    {text}
+    <span class="whitespace-nowrap">{text}</span>
     {
       iconFontAwesome && (
         <span class={`fa ${iconFontAwesome} pl-2 no-underline`} />
