@@ -6,8 +6,6 @@ export default {
 	plugins: [starlightPlugin()],
 	theme: {
 		colors: {
-			'primary': '#097eb2',
-			'primary-dark': '#00537c',
 			'swagger': '#85EA2D',
 			'swagger-dark': '#5bd621',
 			'clr-neutral-1': '#FFFFFF',
