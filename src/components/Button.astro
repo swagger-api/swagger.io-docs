@@ -1,11 +1,11 @@
 ---
 import "../styles/custom.css";
 
-const { variant, text, path, iconFontAwesome } = Astro.props;
+const { variant, text, path } = Astro.props;
 
 const buttonVariants: { [key: string]: string } = {
   default:
-    "!text-[16px] dark:!text-[var(--sb-color-accent-1)] !text-[var(--sb-color-accent-2)] font-bold cursor-pointer no-underline ml-0 md:ml-2 lg:ml-0 xl:ml-2 flex items-center",
+    "!text-[16px] dark:!text-[var(--sb-color-accent-1)] !text-[var(--sb-color-accent-2)] font-bold cursor-pointer no-underline ml-0 md:ml-2 lg:ml-0 xl:ml-2 flex items-center hover:underline",
   primary:
     "w-max !text-[16px] dark:!bg-[var(--sb-color-accent-1)] !bg-[var(--sb-color-accent-2)] !border-[var(--sb-color-accent-2)] !text-[var(--sb-color-neutral-1)] dark:!text-[var(--sb-color-neutral-14)]  bg-none cursor-pointer rounded px-[15px] py-[11px] text-base font-bold inline-block m-0 no-underline leading-none border border-solid border-transparent transition-all duration-200 ease-in-out hover:!bg-[var(--sb-color-accent-3)] hover:!border-[var(--sb-color-accent-3)] hover:text-white",
 
@@ -16,12 +16,22 @@ const buttonClasses = buttonVariants[variant] || buttonVariants["default"];
 ---
 
 <a href={path} class={buttonClasses}>
-  <div class="flex items-center">
-    <span class="whitespace-nowrap hover:underline">{text}</span>
-    {
-      iconFontAwesome && (
-        <span class={`fa ${iconFontAwesome} pl-2 inline-block !no-underline`} />
-      )
-    }
+  <div class="!mt-0 flex items-center">
+    <span class="button-content whitespace-nowrap justify-center flex">
+      <slot />
+    </span>
   </div>
 </a>
+
+<style is:inline>
+  .button-content svg {
+    fill: currentColor;
+    margin-left: 10px;
+  }
+
+  @media (max-width: 575.98px) {
+    .button-content svg {
+      /* height: 16px; */
+    }
+  }
+</style>
