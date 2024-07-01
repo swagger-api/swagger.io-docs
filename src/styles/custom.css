@@ -57,6 +57,17 @@
 
 	--sl-shadow-md: 0 10px 20px -12px rgb(0 0 0 / 0.25);
 
+	/* Right Sidebar colors */
+	.sl-markdown-content a:not(:where(.not-content *)),
+	.right-sidebar-panel a[aria-current=true] {
+		background-color: #effbe9;
+		border-left: 2px solid var(--sb-color-swagger-2);
+		border-top-left-radius: 0px;
+		border-bottom-left-radius: 0px;
+		color: var(--sl-color-gray-2);
+		font-weight: 600;
+	}
+
 	/* Documentation sidebar colors */
 	.sidebar-content a {
 		--sl-color-text-accent: #effbe9;
@@ -125,7 +136,12 @@
 	/* Link colors for dark mode */
 	.sl-markdown-content a:not(:where(.not-content *)),
 	.right-sidebar-panel a[aria-current=true] {
-		color: var(--sb-color-accent-1);
+		background-color: var(--sl-color-code-bg);
+		border-left: 2px solid var(--sb-color-swagger-2);
+		border-top-left-radius: 0px;
+		border-bottom-left-radius: 0px;
+		color: var(--sb-color-neutral-1);
+		font-weight: 600;
 	}
 
 	/* Documentation sidebar colors */
