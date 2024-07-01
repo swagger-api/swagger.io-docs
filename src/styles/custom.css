@@ -127,6 +127,12 @@
 
 /* Dark Mode */
 :root[data-theme=dark]{
+	/* Content panel */
+
+	.content-panel {
+		border-top: 1px solid var(--sl-color-header-bg);
+	}
+
 	/* Code background color */
 	.expressive-code .frame {
 		--code-background: var(--sl-color-code-bg);
@@ -135,6 +141,12 @@
 	/* Link colors for dark mode */
 	.sl-markdown-content a:not(:where(.not-content *)) {
 		color: var(--sb-color-accent-1);
+	}
+
+	/* Right Sidebar colors */
+
+	.right-sidebar {
+		border-inline-start: 1px solid var(--sl-color-header-bg)
 	}
 
 	/* Right Sidebar colors active link styles*/
