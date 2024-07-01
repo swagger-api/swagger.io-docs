@@ -1,0 +1,84 @@
+---
+import Icon from '../../node_modules/@astrojs/starlight/user-components/Icon.astro';
+
+interface Props {
+	label: string;
+	value: string;
+	icon: Parameters<typeof Icon>[0]['name'];
+	width?: string;
+	options: Array<{
+		label: string;
+		value: string;
+		selected: boolean;
+	}>;
+}
+---
+
+<label style={`--sl-select-width: ${Astro.props.width}`}>
+	<span class="sr-only">{Astro.props.label}</span>
+	<Icon name={Astro.props.icon} class="icon label-icon" />
+	<select value={Astro.props.value}>
+		{
+			Astro.props.options.map(({ value, selected, label }) => (
+				<option value={value} selected={selected} set:html={label} />
+			))
+		}
+	</select>
+	<svg class="icon caret" width="1.25rem" height="1.25rem" viewBox="0 0 48 48"><path fill="currentColor" d="M8.366 16.116a1.25 1.25 0 0 0 0 1.768l14.75 14.75a1.25 1.25 0 0 0 1.768 0l14.75-14.75a1.25 1.25 0 0 0-1.768-1.768L24 29.982L10.134 16.116a1.25 1.25 0 0 0-1.768 0"></path></svg>
+</label>
+
+<style>
+	label {
+		--sl-label-icon-size: 0.875rem;
+		--sl-caret-size: 1.25rem;
+		position: relative;
+		display: flex;
+		align-items: center;
+		gap: 0.25rem;
+		color: var(--sl-color-gray-1);
+	}
+
+	label:hover {
+		color: var(--sl-color-gray-2);
+	}
+
+	.icon {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		pointer-events: none;
+	}
+
+	.label-icon {
+		font-size: var(--sl-label-icon-size);
+		inset-inline-start: 0;
+	}
+
+	.caret {
+		font-size: var(--sl-caret-size);
+		inset-inline-end: 0;
+	}
+
+	select {
+		border: 0;
+		padding-block: 0.625rem;
+		padding-inline: calc(var(--sl-label-icon-size) + 0.25rem) calc(var(--sl-caret-size) + 0.25rem);
+		width: var(--sl-select-width);
+		background-color: transparent;
+		text-overflow: ellipsis;
+		color: inherit;
+		cursor: pointer;
+		appearance: none;
+	}
+
+	option {
+		background-color: var(--sl-color-bg-nav);
+		color: var(--sl-color-gray-1);
+	}
+
+	@media (min-width: 50rem) {
+		select {
+			font-size: var(--sl-text-sm);
+		}
+	}
+</style>

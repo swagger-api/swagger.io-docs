@@ -40,6 +40,8 @@ export default defineConfig({
             ],
             components: {
                 Header: './src/components/Header.astro',
+                Select: './src/components/Select.astro',
+                ThemeSelect: './src/components/ThemeSelect.astro',
                 MobileMenuToggle: './src/components/MobileMenuToggle.astro',
             },
         }),
