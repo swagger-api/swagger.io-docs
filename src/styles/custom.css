@@ -58,7 +58,6 @@
 	--sl-shadow-md: 0 10px 20px -12px rgb(0 0 0 / 0.25);
 
 	/* Right Sidebar colors */
-	.sl-markdown-content a:not(:where(.not-content *)),
 	.right-sidebar-panel a[aria-current=true] {
 		background-color: #effbe9;
 		border-left: 2px solid var(--sb-color-swagger-2);
@@ -134,7 +133,11 @@
 	}
 
 	/* Link colors for dark mode */
-	.sl-markdown-content a:not(:where(.not-content *)),
+	.sl-markdown-content a:not(:where(.not-content *)) {
+		color: var(--sb-color-accent-1);
+	}
+
+	/* Right Sidebar colors active link styles*/
 	.right-sidebar-panel a[aria-current=true] {
 		background-color: var(--sl-color-code-bg);
 		border-left: 2px solid var(--sb-color-swagger-2);
