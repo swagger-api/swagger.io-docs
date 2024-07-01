@@ -29,6 +29,7 @@
 	--sl-color-gray-6: #1a2e1e;
     --sl-color-gray-7: #1a1d20;
 	--sl-color-black: var(--sb-color-neutral-14);
+	--sl-color-text: var(--sb-color-neutral-9);
 	--sl-color-text-accent: var(--sb-color-accent-2);
 	--sl-color-white: var(--sb-color-neutral-1);
 	--sl-color-header-bg: #2b3239;
