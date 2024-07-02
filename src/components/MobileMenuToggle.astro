@@ -6,7 +6,7 @@ const { labels } = Astro.props;
 ---
 
 <starlight-menu-button>
-    <span class="menu-text"><Icon name="document"/> Documentation</span>
+    <span class="menu-text flex items-center font-bold text-2xl"><Icon class="mr-1" name="document"/> Documentation</span>
 	<button
 		aria-expanded="false"
 		aria-label={labels['menuButton.accessibleLabel']}
@@ -70,10 +70,7 @@ const { labels } = Astro.props;
             display: none;
         }
     }
-    .menu-text {
-        font-size: 1.75rem;
-        font-weight: 700;
-    }
+
 	button {
 		border: 0;
 		width: var(--sl-menu-button-size);

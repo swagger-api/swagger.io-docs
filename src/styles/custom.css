@@ -107,9 +107,6 @@
 	/* Mobile documentation menu */
 	starlight-menu-button {
 		background-color: var(--sl-color-gray-6);
-		.menu-text {
-			color: var(--sl-color-white);
-		}
 		button {
 			background-color: var(--sl-color-gray-6) !important;
 		}
@@ -203,9 +200,6 @@
 	/* Mobile documentation menu */
 	starlight-menu-button {
 		background-color: var(--sl-color-code-bg);
-		.menu-text {
-			color: var(--sl-color-white);
-		}
 		button {
 			background-color: var(--sl-color-code-bg) !important;
 		}
@@ -226,6 +220,11 @@
 /* Sidebar pane */
 .sidebar-pane {
 	transition: left var(--transition);
+}
+starlight-menu-button {
+	.menu-text {
+		color: var(--sl-color-white);
+	}
 }
 
 /* Override starlight theme's left position */
