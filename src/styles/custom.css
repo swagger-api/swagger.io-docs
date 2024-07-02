@@ -81,6 +81,11 @@
 		--code-background: #f2f7f3;
 	}
 
+	.expressive-code pre {
+        border: 1px solid var(--sl-color-accent);
+    }
+
+
 	/* Link color */
 	.sl-markdown-content a:not(:where(.not-content *)) {
 		color: var(--sb-color-accent-2);
@@ -111,6 +116,15 @@
 			background-color: var(--sl-color-gray-6) !important;
 		}
 	}
+
+	/* Next&prev buttons */
+    .pagination-links 
+    {
+        a {
+        box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.01), 0 0px 5px rgba(0, 0, 0, 0.06)
+        }
+    }
+
 }
 
 /* Dark Mode */
@@ -142,6 +156,10 @@
 	.expressive-code .frame {
 		--code-background: var(--sl-color-code-bg);
 	}
+
+	.expressive-code pre {
+        border: 1px solid var(--sl-color-header-bg);
+    }
 
 	/* Link colors for dark mode */
 	.sl-markdown-content a:not(:where(.not-content *)) {
