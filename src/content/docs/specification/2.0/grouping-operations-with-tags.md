@@ -48,7 +48,7 @@ tags:
 
 The tag order in the global tags section also controls the default sorting in Swagger UI. Note that it is possible to use a tag in an operation even if it is not defined on the root level.
 
-![OpenAPI tags in Swagger UI](</swagger/media/Images/swagger-ui-tags-(1).png>)
+![OpenAPI tags in Swagger UI](<https://static1.smartbear.co/swagger/media/images/swagger-ui-tags-(1).png>)
 
 _Did not find what you were looking for? [Ask the community](https://community.smartbear.com/t5/Swagger-Open-Source-Tools/bd-p/SwaggerOSTools)  
 Found a mistake? [Let us know](https://github.com/swagger-api/swagger.io/issues)_

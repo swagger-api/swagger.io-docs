@@ -172,7 +172,7 @@ You can mark specific operations as `deprecated` to indicate that they should be
 
 Tools may handle deprecated operations in a specific way. For example, Swagger UI displays them with a different style:
 
-![Deprecated operation in Swagger UI](/swagger/media/Images/deprecated.png)
+![Deprecated operation in Swagger UI](https://static1.smartbear.co/swagger/media/images/deprecated.png)
 
 _Did not find what you were looking for? [Ask the community](https://community.smartbear.com/t5/Swagger-Open-Source-Tools/bd-p/SwaggerOSTools)  
 Found a mistake? [Let us know](https://github.com/swagger-api/swagger.io/issues)_

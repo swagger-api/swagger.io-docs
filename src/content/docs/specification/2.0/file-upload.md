@@ -47,7 +47,7 @@ File contents go here.
 --abcde12345--
 ```
 
-Swagger UI displays file parameters using a file input control, allowing the users to browse for a local file to upload. ![](/swagger/media/Images/swagger-ui-file-upload.png)
+Swagger UI displays file parameters using a file input control, allowing the users to browse for a local file to upload. ![](https://static1.smartbear.co/swagger/media/images/swagger-ui-file-upload.png)
 
 ### Upload a File + Other Data
 

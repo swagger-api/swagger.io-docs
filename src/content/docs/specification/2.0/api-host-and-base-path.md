@@ -17,7 +17,7 @@ REST APIs have a base URL to which the endpoint paths are appended. The base URL
 
 All API paths are relative to this base URL, for example, `/users` actually means `<scheme>://<host>/<basePath>/users`.
 
-![URL structure](/swagger/media/Images/url-structure.png)
+![URL structure](https://static1.smartbear.co/swagger/media/images/url-structure.png)
 
 ### schemes
 

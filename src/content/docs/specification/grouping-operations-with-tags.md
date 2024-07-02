@@ -32,7 +32,7 @@ paths:
       ...
 ```
 
-![OpenAPI tags in Swagger UI](</swagger/media/Images/swagger-ui-tags-(1).png> "OpenAPI tags in Swagger UI")
+![OpenAPI tags in Swagger UI](<https://static1.smartbear.co/swagger/media/images/swagger-ui-tags-(1).png> "OpenAPI tags in Swagger UI")
 
 Optionally, you can specify `description` and `externalDocs` for each tag by using the global `tags` section on the root level. The tag names here should match those used in operations.
 
