@@ -15,6 +15,7 @@
     "@astrojs/starlight": "^0.21.2",
     "@astrojs/starlight-tailwind": "^2.0.1",
     "@astrojs/tailwind": "^5.1.0",
+    "@expressive-code/plugin-line-numbers": "^0.35.3",
     "@fontsource-variable/open-sans": "^5.0.28",
     "@fontsource/monda": "^5.0.14",
     "@fontsource/roboto": "^5.0.13",

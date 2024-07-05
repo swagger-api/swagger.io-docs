@@ -1,6 +1,8 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import tailwind from '@astrojs/tailwind';
+import { pluginLineNumbers } from '@expressive-code/plugin-line-numbers';
+
 
 // https://astro.build/config
 export default defineConfig({
@@ -43,6 +45,13 @@ export default defineConfig({
                 Select: './src/components/Select.astro',
                 ThemeSelect: './src/components/ThemeSelect.astro',
                 MobileMenuToggle: './src/components/MobileMenuToggle.astro',
+            },
+            expressiveCode: {
+                defaultProps: {
+                    wrap: true,
+                },
+                themes: ['dracula','github-light'],
+                plugins: [pluginLineNumbers()],
             },
         }),
         tailwind({
