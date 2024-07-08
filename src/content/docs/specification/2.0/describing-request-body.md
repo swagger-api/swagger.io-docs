@@ -23,8 +23,12 @@ The body parameter is defined in the operation’s parameters section and includ
 
 Many APIs transmit data as an object, such as JSON. `schema` for an object should specify `type: object` and properties for that object. For example, the `POST /users` operation with this JSON body:
 
-```yaml
-{ "userName": "Trillian", "firstName": "Tricia", "lastName": "McMillan" }
+```json
+{ 
+  "userName": "Trillian", 
+  "firstName": "Tricia", 
+  "lastName": "McMillan" 
+}
 ```
 
 can be described as:

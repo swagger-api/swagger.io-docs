@@ -29,36 +29,36 @@ To define API key-based security:
 - Specify whether the API key will be passed `in: header` or `in: query`.
 - Specify a `name` for that parameter or header.
 
-  securityDefinitions:
-
+```yml
+securityDefinitions:
   # X-API-Key: abcdef12345
-
   APIKeyHeader:
-  type: apiKey
-  in: header
-  name: X-API-Key
-
+    type: apiKey
+    in: header
+    name: X-API-Key
   # /path?api_key=abcdef12345
-
   APIKeyQueryParam:
-  type: apiKey
-  in: query
-  name: api_key
+    type: apiKey
+    in: query
+    name: api_key
+```
 
 Then, use the `security` section on the root level or operation level to apply API keys to the whole API or specific operations.
 
-    # Global security (applies to all operations):
-    security:
-      - APIKeyHeader: []
-    paths:
-      /something:
-        get:
-          # Operation-specific security:
-          security:
-            - APIKeyQueryParam: []
-          responses:
-            200:
-              description: OK (successfully authenticated)
+```yml
+# Global security (applies to all operations):
+security:
+  - APIKeyHeader: []
+paths:
+  /something:
+    get:
+      # Operation-specific security:
+      security:
+        - APIKeyQueryParam: []
+      responses:
+        200:
+          description: OK (successfully authenticated)
+```
 
 Note that it is possible to support multiple authorization types in an API. See [Using Multiple Authentication Types](/specification/20/authentication/#multiple).
 
@@ -66,24 +66,28 @@ Note that it is possible to support multiple authorization types in an API. See 
 
 Some APIs use a pair of security keys, say, API Key and App ID. To specify that the keys are used together (as in logical AND), list them in the same array item in the `security` array:
 
-    securityDefinitions:
-      apiKey:
-        type: apiKey
-        in: header
-        name: X-API-KEY
-      appId:
-        type: apiKey
-        in: header
-        name: X-APP-ID
-    security:
-      - apiKey: []
-        appId: []
+```yml
+securityDefinitions:
+  apiKey:
+    type: apiKey
+    in: header
+    name: X-API-KEY
+  appId:
+    type: apiKey
+    in: header
+    name: X-APP-ID
+security:
+  - apiKey: []
+    appId: []
+```
 
 Note the difference from:
 
-    security:
-      - apiKey: []
-      - appId: []
+```yml
+security:
+  - apiKey: []
+  - appId: []
+```
 
 which means either key can be used (as in logical OR). For more examples, see [Using Multiple Authentication Types](/specification/20/authentication/#multiple).
 

@@ -10,10 +10,12 @@ OAS **2** This page applies to OpenAPI Specification ver. 2 (fka Swagger). To le
 
 REST APIs have a base URL to which the endpoint paths are appended. The base URL is defined by `schemes`, `host` and `basePath` on the root level of the API specification.
 
-    host: petstore.swagger.io
-    basePath: /v2
-    schemes:
-      - https
+```yml
+host: petstore.swagger.io
+basePath: /v2
+schemes:
+    - https
+```
 
 All API paths are relative to this base URL, for example, `/users` actually means `<scheme>://<host>/<basePath>/users`.
 
@@ -23,13 +25,17 @@ All API paths are relative to this base URL, for example, `/users` actually mean
 
 `schemes` are the transfer protocols used by the API. Swagger supports the `http`, `https`, and [WebSocket](https://en.wikipedia.org/wiki/WebSocket) schemes – `ws` and `wss`. As with any lists in YAML, schemes can be specified using the list syntax:
 
-    schemes:
-      - http
-      - https
+```yml
+schemes:
+    - http
+    - https
+```
 
 or the array literal syntax:
 
-    schemes: [http, https]
+```yml
+schemes: [http, https]
+```
 
 If `schemes` are not specified, the scheme used to serve the API specification will be used for API calls.
 
@@ -37,15 +43,19 @@ If `schemes` are not specified, the scheme used to serve the API specification w
 
 `host` is the domain name or IP address (IPv4) of the host that serves the API. It may include the port number if different from the scheme’s default port (80 for HTTP and 443 for HTTPS). Note that this must be the host only, without _http(s)://_ or sub-paths. Valid hosts:
 
-    api.example.com
-    example.com:8089
-    93.184.216.34
-    93.184.216.34:8089
+```sh
+api.example.com
+example.com:8089
+93.184.216.34
+93.184.216.34:8089
+```
 
 Incorrect:
 
-    http://api.example.com
-    example.com/api/v1
+```sh
+http://api.example.com
+example.com/api/v1
+```
 
 If `host` is not specified, it is assumed to be the same host where the API documentation is being served.
 
@@ -53,13 +63,17 @@ If `host` is not specified, it is assumed to be the same host where the API docu
 
 `basePath` is the URL prefix for all API paths, relative to the host root. It must start with a leading slash `/`. If `basePath` is not specified, it defaults to `/`, that is, all paths start at the host root. Valid base paths:
 
-    /v2
-    /api/v2
-    /
+```sh
+/v2
+/api/v2
+/
+```
 
 Incorrect:
 
-    v2
+```sh
+v2
+```
 
 ### Omitting host and scheme
 
@@ -73,15 +87,19 @@ Multiple hosts are supported in [OpenAPI 3.0](/specification/api-host-and-base-p
 
 ##### **Do host and basePath support templating? Such as:**
 
-    https://{customer_id}.saas-app.com/api/v1
-    https://api.saas-app.com/v1/{customer_id}/apis
+```sh
+https://{customer_id}.saas-app.com/api/v1
+https://api.saas-app.com/v1/{customer_id}/apis
+```
 
 This is supported in [OpenAPI 3.0](/specification/api-host-and-base-path/), but not in 2.0. For a workaround for host templating, see the previous question.
 
 ##### **Can I specify different ports for HTTP and HTTPS? Such as:**
 
-    http://example.com:8080
-    https://example.com:8443
+```sh
+http://example.com:8080
+https://example.com:8443
+```
 
 This is supported in [OpenAPI 3.0](/specification/api-host-and-base-path/), but not in 2.0. In 2.0, you can omit the `host` and `schemes` and serve the specification from both hosts. This way, each copy of the specification will target the host and port used to access that specification.
 

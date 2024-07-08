@@ -64,67 +64,55 @@ The `flows` keyword specifies one or more named flows supported by this OAuth 2.
 
 The `flows` object can specify multiple flows, but only one of each type. Each flow contains the following information:
 
-Field Name
-
-Description
-
-Applies to flows
-
-`authorizationCode`
-
-`implicit`
-
-`password`
-
-`clientCredentials`
-
-`authorizationUrl`
-
-The authorization URL to use for this flow. Can be relative to the [API server URL](/specification/api-host-and-base-path/).
-
--
-
--
-
-\-
-
-\-
-
-`tokenUrl`
-
-The token URL to use for this flow. Can be relative to the API server URL.
-
--
-
-\-
-
--
-
--
-
-`refreshUrl`
-
-Optional. The URL to be used for obtaining refresh tokens. Can be relative to the API server URL.
-
--
-
--
-
--
-
--
-
-[`scopes`](#scopes-extra)
-
-The available scopes for the OAuth2 security scheme. A map between the scope name and a short description for it.
-
--
-
--
-
--
-
--
+<table>
+	<thead>
+		<tr>
+			<th rowspan="2">Field Name</th>
+			<th rowspan="2">Description</th>
+			<th colspan="4">Applies to flows</th>
+		</tr>
+		<tr>
+			<th><code>authorizationCode</code></th>
+			<th><code>implicit</code></th>
+			<th><code>password</code></th>
+			<th><code>clientCredentials</code></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>authorizationUrl</code></td>
+			<td>The authorization URL to use for this flow. Can be relative to the <a href="/docs/specification/api-host-and-base-path/">API server URL</a>.</td>
+			<td>+</td>
+			<td>+</td>
+			<td>-</td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td><code>tokenUrl</code></td>
+			<td>The token URL to use for this flow. Can be relative to the API server URL.</td>
+			<td>+</td>
+			<td>-</td>
+			<td>+</td>
+			<td>+</td>
+		</tr>
+		<tr>
+			<td><code>refreshUrl</code></td>
+			<td>Optional. The URL to be used for obtaining refresh tokens. Can be relative to the API server URL.</td>
+			<td>+</td>
+			<td>+</td>
+			<td>+</td>
+			<td>+</td>
+		</tr>
+		<tr>
+			<td><a href="#scopes-extra"><code>scopes</code></a></td>
+			<td>The available scopes for the OAuth2 security scheme. A map between the scope name and a short description for it.</td>
+			<td>+</td>
+			<td>+</td>
+			<td>+</td>
+			<td>+</td>
+		</tr>
+	</tbody>
+</table>
 
 ### About Scopes
 
@@ -157,7 +145,7 @@ paths:
       ...
 ```
 
-    If all API operations require the same scopes, you can add `security` on the root level of the API definition instead:
+If all API operations require the same scopes, you can add `security` on the root level of the API definition instead:
 
 ```yaml
 security:
@@ -203,8 +191,9 @@ components:
 
 Relative URLs are resolved according to [RFC 3986](https://tools.ietf.org/html/rfc3986#section-4.2). In the example above, the endpoints will be resolved to:
 
-    authorizationUrl: https://api.example.com/oauth/authorize
-    tokenUrl: https://api.example.com/oauth/token
+`authorizationUrl: https://api.example.com/oauth/authorize`
+
+`tokenUrl: https://api.example.com/oauth/token`
 
 ### Security Scheme Examples
 
@@ -323,7 +312,3 @@ The OpenAPI Specification does not state this, so it is up to you and the tools 
 
 _Did not find what you were looking for? [Ask the community](https://community.smartbear.com/t5/Swagger-Open-Source-Tools/bd-p/SwaggerOSTools)
 Found a mistake? [Let us know](https://github.com/swagger-api/swagger.io/issues)_
-
-```
-
-```

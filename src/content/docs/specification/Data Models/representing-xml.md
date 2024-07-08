@@ -35,11 +35,11 @@ JSON
 XML
 
 ```xml
-    <book>
-      <id>0</id>
-      <title>string</title>
-      <author>string</author>
-    </book>
+<book>
+  <id>0</id>
+  <title>string</title>
+  <author>string</author>
+</book>
 ```
 
 As you can see, in XML representation, the object name serves as a parent element and properties are translated to child elements. The OpenAPI 3 format offers a special `xml` object to help you fine-tune representation of XML data. You can use this object to transform some properties to attributes rather than elements, to change element names, to add namespaces and to control transformations of array items.
@@ -71,11 +71,11 @@ components:
 XML
 
 ```xml
-    <xml-book>
-    	<id>0</id>
-    	<title>string</title>
-    	<author>string</author>
-    </xml-book>
+<xml-book>
+  <id>0</id>
+  <title>string</title>
+  <author>string</author>
+</xml-book>
 ```
 
 **Attribute name**
@@ -101,11 +101,11 @@ components:
 XML
 
 ```xml
-    <book>
-    	<id>0</id>
-    	<xml-title>string</xml-title>
-    	<author>string</author>
-    </book>
+<book>
+  <id>0</id>
+  <xml-title>string</xml-title>
+  <author>string</author>
+</book>
 ```
 
 For arrays, the `xml/name` property works only if another property – `xml/wrapped` – is set to `true`. See below.
@@ -133,10 +133,10 @@ book:
 XML
 
 ```xml
-    <book id="0">
-    	<title>string</title>
-    	<author>string</author>
-    </book>
+<book id="0">
+  <title>string</title>
+  <author>string</author>
+</book>
 ```
 
 This works only for properties. Using `xml/attribute` for objects is meaningless.
@@ -179,11 +179,11 @@ book:
 XML
 
 ```xml
-    <smp:book xmlns:smp="http://example.com/schema">
-    	<id>0</id>
-    	<title>string</title>
-    	<author>string</author>
-    </smp:book>
+<smp:book xmlns:smp="http://example.com/schema">
+  <id>0</id>
+  <title>string</title>
+  <author>string</author>
+</smp:book>
 ```
 
 If needed, you can specify only `prefix` (This works in case the namespace is defined in some parent element). You can also specify prefixes for attributes.
@@ -208,9 +208,9 @@ books:
 XML
 
 ```xml
-    <books>one</books>
-    <books>two</books>
-    <books>three</books>
+<books>one</books>
+<books>two</books>
+<books>three</books>
 ```
 
 If needed, you can add a wrapping element by using the `xml/wrapped` property:
@@ -233,11 +233,11 @@ books:
 XML
 
 ```xml
-    <books>
-      <books>one</books>
-      <books>two</books>
-      <books>three</books>
-    </books>
+<books>
+  <books>one</books>
+  <books>two</books>
+  <books>three</books>
+</books>
 ```
 
 As you can see, by default, the wrapping element has the same name as item elements. Use `xml/name` to give different names to the wrapping element and array items (this will help you resolve possible naming issues):
@@ -263,11 +263,11 @@ books:
 XML
 
 ```xml
-    <books-array>
-      <item>one</item>
-      <item>two</item>
-      <item>three</item>
-    </books-array>
+<books-array>
+  <item>one</item>
+  <item>two</item>
+  <item>three</item>
+</books-array>
 ```
 
 Note that the `xml.name` property of the wrapping element (`books` in our example) has effect only if `wrapped` is _true_. If `wrapped` is _false_, `xml.name` of the wrapping element is ignored.

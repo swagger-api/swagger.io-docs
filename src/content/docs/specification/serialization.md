@@ -104,34 +104,38 @@ OpenAPI serialization rules are based on a subset of URI templates defined by [R
 
 For example, consider the path `/users{id}` with a query parameter `metadata`, defined like so:
 
-    paths:
-      # /users;id=3;id=4?metadata=true
-      /users{id}:
-        get:
-          parameters:
-            - in: path
-              name: id
-              required: true
-              schema:
-                type: array
-                items:
-                  type: integer
-                minItems: 1
-              style: matrix
-              explode: true
-            - in: query
-              name: metadata
-              schema:
-                type: boolean
-              # Using the default serialization for query parameters:
-              # style=form, explode=false, allowReserved=false
-          responses:
-            '200':
-              description: A list of users
+```yml
+paths:
+  # /users;id=3;id=4?metadata=true
+  /users{id}:
+    get:
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: array
+            items:
+              type: integer
+            minItems: 1
+          style: matrix
+          explode: true
+        - in: query
+          name: metadata
+          schema:
+            type: boolean
+          # Using the default serialization for query parameters:
+          # style=form, explode=false, allowReserved=false
+      responses:
+        '200':
+          description: A list of users
+```
 
 The path parameter `id` uses the `matrix` style with the `explode` modifier, which corresponds to the `{;id*}` template. The query parameter `metadata` uses the default `form` style, which corresponds to the `{?metadata}` template. The complete URI template would look like:
 
-    /users{;id*}{?metadata}
+```yml
+/users{;id*}{?metadata}
+```
 
 A client application can then use an URI template library to generate the request URL based on this template and specific parameter values.
 

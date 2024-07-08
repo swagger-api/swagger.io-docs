@@ -51,7 +51,7 @@ If you've determined this is the version you have, to find the exact version:
 - Find an open the `swagger-ui.js`
 - At the top of the page, there would be a comment containing the exact version of Swagger UI. This example shows version `2.2.9`:
 
-```
+```js
 /**
  * swagger-ui - Swagger UI is a dependency-free collection of HTML, JavaScript, and CSS assets that dynamically generate beautiful documentation from a Swagger-compliant API
  * @version v2.2.9

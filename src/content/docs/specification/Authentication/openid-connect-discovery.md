@@ -10,11 +10,11 @@ OAS **3** This guide is for OpenAPI 3.0.
 
 [**OpenID Connect (OIDC)**](http://openid.net/connect/) is an identity layer built on top of the [OAuth 2.0](/specification/authentication/oauth2/) protocol and supported by some OAuth 2.0 providers, such as Google and Azure Active Directory. It defines a sign-in flow that enables a client application to authenticate a user, and to obtain information (or "claims") about that user, such as the user name, email, and so on. User identity information is encoded in a secure JSON Web Token (JWT), called ID token. OpenID Connect defines a discovery mechanism, called [**OpenID Connect Discovery**](https://openid.net/specs/openid-connect-discovery-1_0.html), where an OpenID server publishes its metadata at a well-known URL, typically
 
-    https://server.com/.well-known/openid-configuration
+`https://server.com/.well-known/openid-configuration`
 
 This URL returns a JSON listing of the OpenID/OAuth endpoints, supported scopes and claims, public keys used to sign the tokens, and other details. The clients can use this information to construct a request to the OpenID server. The field names and values are defined in the [OpenID Connect Discovery Specification](https://openid.net/specs/openid-connect-discovery-1_0.html). Here is an example of data returned:
 
-```yaml
+```json
 {
   "issuer": "https://example.com/",
   "authorization_endpoint": "https://example.com/authorize",
@@ -87,11 +87,11 @@ components:
       openIdConnectUrl: /.well-known/openid-configuration
 ```
 
-Relative URLs are resolved according to [RFC 3986](https://tools.ietf.org/html/rfc3986#section-4.2). In the example above, it will be resolved to _https://api.example.com/.well-known/openid-configuration_.
+Relative URLs are resolved according to [RFC 3986](https://tools.ietf.org/html/rfc3986#section-4.2). In the example above, it will be resolved to _https://api.example.com/.well-known/openid-configuration_.
 
 ### Swagger UI support
 
-Support for OpenID Connect Discovery was added in Swagger UI v. 3.38.0 and Swagger Editor 3.14.8.
+Support for OpenID Connect Discovery was added in Swagger UI v. 3.38.0 and Swagger Editor 3.14.8.
 
 _Did not find what you were looking for? [Ask the community](https://community.smartbear.com/t5/Swagger-Open-Source-Tools/bd-p/SwaggerOSTools)  
 Found a mistake? [Let us know](https://github.com/swagger-api/swagger.io/issues)_

@@ -154,22 +154,22 @@ For a list of variables available in the template, please refer to this [page](h
 
 Code change should conform to the programming style guide of the respective languages:
 
-- Android: [https://source.android.com/source/code-style.html](https://source.android.com/source/code-style.html)
-- C#: [https://msdn.microsoft.com/en-us/library/vstudio/ff926074.aspx](https://msdn.microsoft.com/en-us/library/vstudio/ff926074.aspx)
-- C++: [https://google.github.io/styleguide/cppguide.html](https://google.github.io/styleguide/cppguide.html)
-- Haskell: [https://github.com/tibbe/haskell-style-guide/blob/master/haskell-style.md](https://github.com/tibbe/haskell-style-guide/blob/master/haskell-style.md)
-- Java: [https://google.github.io/styleguide/javaguide.html](https://google.github.io/styleguide/javaguide.html)
-- JavaScript: [https://github.com/airbnb/javascript](https://github.com/airbnb/javascript)
-- Groovy: [http://groovy-lang.org/style-guide.html](http://groovy-lang.org/style-guide.html)
-- Go: [https://github.com/golang/go/wiki/CodeReviewComments](https://github.com/golang/go/wiki/CodeReviewComments)
-- ObjC: [https://github.com/NYTimes/objective-c-style-guide](https://github.com/NYTimes/objective-c-style-guide)
-- Perl: [http://perldoc.perl.org/perlstyle.html](http://perldoc.perl.org/perlstyle.html)
-- PHP: [https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md)
-- Python: [https://www.python.org/dev/peps/pep-0008/](https://www.python.org/dev/peps/pep-0008/)
-- Ruby: [https://github.com/bbatsov/ruby-style-guide](https://github.com/bbatsov/ruby-style-guide)
-- Scala: [http://docs.scala-lang.org/style/](http://docs.scala-lang.org/style/)
-- Swift: [https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/TheBasics.html](https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/TheBasics.html)
-- TypeScript: [https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines](https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines)
+- [Android](https://source.android.com/source/code-style.html)
+- [C#](https://msdn.microsoft.com/en-us/library/vstudio/ff926074.aspx)
+- [C++](https://google.github.io/styleguide/cppguide.html)
+-  [Haskell](https://github.com/tibbe/haskell-style-guide/blob/master/haskell-style.md)
+-  [Java](https://google.github.io/styleguide/javaguide.html)
+-  [JavaScript](https://github.com/airbnb/javascript)
+-  [Groovy](http://groovy-lang.org/style-guide.html)
+-  [Go](https://github.com/golang/go/wiki/CodeReviewComments)
+-  [ObjC](https://github.com/NYTimes/objective-c-style-guide)
+-  [Perl](http://perldoc.perl.org/perlstyle.html)
+-  [PHP](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md)
+-  [Python](https://www.python.org/dev/peps/pep-0008/)
+-  [Ruby](https://github.com/bbatsov/ruby-style-guide)
+-  [Scala](http://docs.scala-lang.org/style/)
+-  [Swift](https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/TheBasics.html)
+-  [TypeScript](https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines)
 
 For other languages, feel free to suggest.
 
@@ -181,7 +181,7 @@ For [Vendor Extensions](https://github.com/OAI/OpenAPI-Specification/blob/master
 - For language-specified vendor extension, put it in the form of `x-{lang}-{extension-name}`. e.g. `x-objc-operation-id`, `x-java-feign-retry-limit`
 - For a list of existing vendor extensions in use, please refer to [https://github.com/swagger-api/swagger-codegen/wiki/Vendor-Extensions](https://github.com/swagger-api/swagger-codegen/wiki/Vendor-Extensions). If you've added new vendor extensions as part of your PR, please update the wiki page.
 
-### Testing {#testing-27}
+### Testing
 
 To add test cases (optional) covering the change in the code generator, please refer to [modules/swagger-codegen/src/test/java/io/swagger/codegen](https://github.com/swagger-api/swagger-codegen/tree/master/modules/swagger-codegen/src/test/java/io/swagger/codegen).
 
@@ -193,7 +193,7 @@ To test the templates, please perform the following:
 
 To start the CI tests, you can run `mvn verify -Psamples` (assuming you've all the required tools installed to run tests for different languages) or you can leverage [http://travis-ci.org/](http://travis-ci.org/) to run the CI tests by adding your own Swagger-Codegen repository.
 
-### Tips {#tips-28}
+### Tips
 
 - Smaller changes are easier to review
 - [Optional] For bug fixes, provide a OpenAPI Spec to repeat the issue so that the reviewer can use it to confirm the fix

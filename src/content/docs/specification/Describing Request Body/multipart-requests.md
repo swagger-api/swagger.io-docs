@@ -82,28 +82,30 @@ String in the `binary` or `base64` format
 
 To set a specific `Content-Type` for a request part, use the `encoding/_{property-name}_/contentType` field. You add `encoding` as a child of the media type property, one the same level where `schema` is located. In the example below, we set the `contentType` for the `profileImage` part of a multipart request to `image/png, image/jpg`:
 
-    requestBody:
-      content:
-        multipart/form-data:
-          schema:
+```yml
+requestBody:
+  content:
+    multipart/form-data:
+      schema:
+        type: object
+        properties: # Request parts
+          id:
+            type: string
+            format: uuid
+          address:
             type: object
-            properties: # Request parts
-              id:
+            properties:
+              street:
                 type: string
-                format: uuid
-              address:
-                type: object
-                properties:
-                  street:
-                    type: string
-                  city:
-                    type: string
-              profileImage:
+              city:
                 type: string
-                format: base64
-          encoding: # The same level as schema
-            profileImage: # Property name (see above)
-              contentType: image/png, image/jpeg
+          profileImage:
+            type: string
+            format: base64
+      encoding: # The same level as schema
+        profileImage: # Property name (see above)
+          contentType: image/png, image/jpeg
+```
 
 ### Specifying Custom Headers
 

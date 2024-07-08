@@ -27,12 +27,12 @@ Swagger UI includes a development server that provides hot module reloading and 
 You can specify a local file in `dev-helpers/dev-helper-initializer.js` by changing the `url` parameter. This local file MUST be located in the `dev-helpers` directory or a subdirectory. As a convenience and best practice, we recommend that you create a subdirectory, `dev-helpers/examples`, which is already specified in `.gitignore`.
 
 replace
-```
+```js
 url: "https://petstore.swagger.io/v2/swagger.json",
 ```
 
 with
-```
+```js
 url: "./examples/your-local-api-definition.yaml",
 ```
 

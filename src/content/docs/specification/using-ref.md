@@ -16,11 +16,7 @@ $ref: "reference to definition"
 
 For example, suppose you have the following schema object, which you want to use inside your response:
 
-JSON Example
-
-YAML Example
-
-```yaml
+```json frame="terminal" title="JSON Example"
 "components":
   {
     "schemas":
@@ -34,7 +30,7 @@ YAML Example
   }
 ```
 
-```yaml
+```yaml frame="terminal" title="YAML Example"
 components:
   schemas:
     User:
@@ -47,11 +43,7 @@ components:
 
 To refer that object, you need to add `$ref` with the corresponding path to your response:
 
-JSON Example
-
-YAML Example
-
-```yaml
+```json frame="terminal" title="JSON Example"
 "responses":
   {
     "200":
@@ -62,7 +54,7 @@ YAML Example
   }
 ```
 
-```yaml
+```yaml frame="terminal" title="YAML Example"
 responses:
   "200":
     description: The response

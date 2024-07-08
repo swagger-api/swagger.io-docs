@@ -5,23 +5,23 @@ sidebar:
 ---
 
 :::note
-OAS **3** This page is about OpenAPI 3.0. If you use OpenAPI 2.0, see our [OpenAPI 2.0 guide](/specification/20/describing-parameters/).
+OAS **3** This page is about OpenAPI 3.0. If you use OpenAPI 2.0, see our [OpenAPI 2.0 guide](/specification/20/describing-parameters/).
 :::
 
 In OpenAPI 3.0, parameters are defined in the `parameters` section of an operation or path. To describe a parameter, you specify its `name`, location (`in`), data type (defined by either `schema` or `content`) and other attributes, such as `description` or `required`. Here is an example:
 
 ```yaml
 paths:
-  /users/{userId}:
-    get:
-      summary: Get a user by ID
-      parameters:
-        - in: path
-          name: userId
-          schema:
-            type: integer
-          required: true
-          description: Numeric ID of the user to get
+  /users/{userId}:
+    get:
+      summary: Get a user by ID
+      parameters:
+        - in: path
+          name: userId
+          schema:
+            type: integer
+          required: true
+          description: Numeric ID of the user to get
 ```
 
 Note that `parameters` is an array, so, in YAML, each parameter definition must be listed with a dash (`-`) in front of it.
@@ -49,16 +49,16 @@ Each path parameter must be substituted with an actual value when the client mak
 
 ```yaml
 paths:
-  /users/{id}:
-    get:
-      parameters:
-        - in: path
-          name: id # Note the name is the same as in the path
-          required: true
-          schema:
-            type: integer
-            minimum: 1
-          description: The user ID
+  /users/{id}:
+    get:
+      parameters:
+        - in: path
+          name: id # Note the name is the same as in the path
+          required: true
+          schema:
+            type: integer
+            minimum: 1
+          description: The user ID
 ```
 
 Path parameters containing arrays and objects can be serialized in different ways:
@@ -81,17 +81,17 @@ GET /notes?offset=100&limit=50
 Use `in: query` to denote query parameters:
 
 ```yaml
-     parameters:
-        - in: query
-          name: offset
-          schema:
-            type: integer
-          description: The number of items to skip before starting to collect the result set
-        - in: query
-          name: limit
-          schema:
-            type: integer
-          description: The numbers of items to return
+parameters:
+  - in: query
+    name: offset
+    schema:
+      type: integer
+    description: The number of items to skip before starting to collect the result set
+  - in: query
+    name: limit
+    schema:
+      type: integer
+    description: The numbers of items to return
 ```
 
 **Note:** To describe API keys passed as query parameters, use `securitySchemes` and `security` instead. See [API Keys](/specification/authentication/api-keys/).
@@ -113,7 +113,7 @@ The serialization method is specified by the `style` and `explode` keywords. To 
 
 #### Reserved Characters in Query Parameters
 
-[RFC 3986](https://tools.ietf.org/html/rfc3986#section-2.2) defines a set of reserved characters `:/?#[]@!$&'()*+,;=` that are used as URI component delimiters. When these characters need to be used literally in a query parameter value, they are usually percent-encoded. For example, `/` is encoded as `%2F` (or `%2f`), so that the parameter value `quotes/h2g2.txt` would be sent as
+[RFC 3986](https://tools.ietf.org/html/rfc3986#section-2.2) defines a set of reserved characters `:/?#[]@!$&'()*+,;=` that are used as URI component delimiters. When these characters need to be used literally in a query parameter value, they are usually percent-encoded. For example, `/` is encoded as `%2F` (or `%2f`), so that the parameter value `quotes/h2g2.txt` would be sent as
 
 ```yaml
 GET /file?path=quotes%2Fh2g2.txt
@@ -122,13 +122,13 @@ GET /file?path=quotes%2Fh2g2.txt
 If you want a query parameter that is not percent-encoded, add `allowReserved: true` to the parameter definition:
 
 ```yaml
-      parameters:
-        - in: query
-          name: path
-          required: true
-          schema:
-            type: string
-          allowReserved: true # <-----
+      parameters:
+        - in: query
+          name: path
+          required: true
+          schema:
+            type: string
+          allowReserved: true # <-----
 ```
 
 In this case, the parameter value would be sent like so:
@@ -151,16 +151,16 @@ Using OpenAPI 3.0, you would define this operation as follows:
 
 ```yaml
 paths:
-  /ping:
-    get:
-      summary: Checks if the server is alive
-      parameters:
-        - in: header
-          name: X-Request-ID
-          schema:
-            type: string
-            format: uuid
-          required: true
+  /ping:
+    get:
+      summary: Checks if the server is alive
+      parameters:
+        - in: header
+          name: X-Request-ID
+          schema:
+            type: string
+            format: uuid
+          required: true
 ```
 
 In a similar way, you can define [custom response headers](/specification/describing-responses/#response-headers). Header parameter can be primitives, arrays and objects. Arrays and objects are serialized using the `simple` style. For more information, see [Parameter Serialization](/specification/serialization/).
@@ -209,17 +209,17 @@ Cookie: debug=0; csrftoken=BUSe35dohU3O1MZvDCUOJ
 Use `in: cookie` to define cookie parameters:
 
 ```yaml
-      parameters:
-        - in: cookie
-          name: debug
-          schema:
-            type: integer
-            enum: [0, 1]
-            default: 0
-        - in: cookie
-          name: csrftoken
-          schema:
-            type: string
+      parameters:
+        - in: cookie
+          name: debug
+          schema:
+            type: integer
+            enum: [0, 1]
+            default: 0
+        - in: cookie
+          name: csrftoken
+          schema:
+            type: string
 ```
 
 Cookie parameters can be primitive values, arrays and objects. Arrays and objects are serialized using the `form` style. For more information, see [Parameter Serialization](/specification/serialization/).

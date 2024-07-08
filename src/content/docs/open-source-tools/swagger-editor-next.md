@@ -54,9 +54,7 @@ by extending the Node.js max heap limit: `export NODE_OPTIONS="--max_old_space_s
 
 Use the package in you application:
 
-**index.js**:
-
-```js
+```js title="index.js"
 import React from 'react';
 import ReactDOM from 'react-dom';
 import SwaggerEditor from 'swagger-editor';
@@ -385,7 +383,7 @@ Package can also be produced manually by running following commands (assuming yo
 
 SwaggerEditor maps its [build artifacts](#build-artifacts) in `package.json` file in following way:
 
-```json
+```json title="package.json"
 "unpkg": "./dist/umd/swagger-editor.js",
 "module": "./dist/esm/swagger-editor.js",
 "browser": "./dist/esm/swagger-editor.js",

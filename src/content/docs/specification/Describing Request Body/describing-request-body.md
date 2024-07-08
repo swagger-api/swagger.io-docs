@@ -107,35 +107,35 @@ requestBody:
 The `examples` (plural) are more flexible – you can have an inline example, a `$ref` reference, or point to an external URL containing the payload example. Each example can also have optional `summary` and `description` for documentation purposes.
 
 ```yaml
-          requestBody:
-            content:
-              application/json:
-                schema:
-                  $ref: '#/components/schemas/Pet'
-                examples:
-
-                  dog:  # <--- example name
-                    summary: An example of a dog
-                    value:
-                      # vv Actual payload goes here vv
-                      name: Fluffy
-                      petType: dog
-
-                  cat:  # <--- example name
-                    summary: An example of a cat
-                    externalValue: http://api.example.com/examples/cat.json   # cat.json contains {"name": "Tiger", "petType": "cat"}
-
-                  hamster:  # <--- example name
-                    $ref: '#/components/examples/hamster'
-
-    components:
+requestBody:
+  content:
+    application/json:
+      schema:
+        $ref: '#/components/schemas/Pet'
       examples:
-        hamster:  # <--- example name
-          summary: An example of a hamster
+
+        dog:  # <--- example name
+          summary: An example of a dog
           value:
             # vv Actual payload goes here vv
-            name: Ginger
-            petType: hamster
+            name: Fluffy
+            petType: dog
+
+        cat:  # <--- example name
+          summary: An example of a cat
+          externalValue: http://api.example.com/examples/cat.json   # cat.json contains {"name": "Tiger", "petType": "cat"}
+
+        hamster:  # <--- example name
+          $ref: '#/components/examples/hamster'
+
+  components:
+    examples:
+      hamster:  # <--- example name
+        summary: An example of a hamster
+        value:
+          # vv Actual payload goes here vv
+          name: Ginger
+          petType: hamster
 ```
 
 See [Adding Examples](/specification/adding-examples/) for more information.
