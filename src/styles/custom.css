@@ -284,6 +284,11 @@ mobile-starlight-toc nav {
 	}
 }
 
+/* Hide dark/light theme selector in documentation nav */
+.mobile-preferences {
+	display: none;
+}
+
 /* Pagination colors */
 .pagination-links a {
 	border: none;
