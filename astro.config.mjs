@@ -33,7 +33,7 @@ export default defineConfig({
             },
             {
               label: "Swagger Editor Next",
-              link: "open-source-tools/readme/",
+              link: "open-source-tools/swagger-editor-next/",
             },
             {
               label: "Swagger UI",
