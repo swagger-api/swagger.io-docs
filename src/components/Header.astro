@@ -683,14 +683,14 @@ import type { Props } from '@astrojs/starlight/props';
                     </div>
                 </div>
             </li>
-            <li class='nav-item nav-theme-select border-t-1 border-[#ddd] border-solid order-2'>
-                <ThemeSelect {...Astro.props} />
-            </li>
             <li class='nav-item nav-item-search xl:border-b-0'>
                 <a
                     class='header-search-ico sb-search-ico !flex items-center text-center p-[14px] xl:px-4 xl:py-2'
                     href='#'><svg width="1.25rem" height="1.25rem" viewBox="0 0 256 256"><path fill="currentColor" d="m228.24 219.76l-51.38-51.38a86.15 86.15 0 1 0-8.48 8.48l51.38 51.38a6 6 0 0 0 8.48-8.48M38 112a74 74 0 1 1 74 74a74.09 74.09 0 0 1-74-74"></path></svg></a
                 >
+            </li>
+            <li class='nav-item nav-theme-select border-t-1 border-[#ddd] border-solid'>
+                <ThemeSelect {...Astro.props} />
             </li>
             <li class='nav-item nav-item-login'>
                 <a
@@ -746,7 +746,6 @@ import type { Props } from '@astrojs/starlight/props';
         align-items: center;
         justify-content: center;
         margin-left: auto;
-        order: 1;
     }
 
     starlight-theme-select {
@@ -1015,7 +1014,6 @@ import type { Props } from '@astrojs/starlight/props';
         order: 3;
         border-radius: 0.25rem;
         background: var(--sb-color-accent-2);
-        margin-left: 1.25rem;
         &:hover {
             border-color: var(--sb-color-accent-3);
             background: var(--sb-color-accent-3);
@@ -1105,6 +1103,10 @@ import type { Props } from '@astrojs/starlight/props';
 
         .nav-main .nav-item-search .nav-link {
             padding: 10px 0 0 0;
+        }
+
+        .nav-item-free-trial {
+            margin-left: 1.25rem;
         }
     }
 
@@ -1282,12 +1284,26 @@ import type { Props } from '@astrojs/starlight/props';
             color: var(--sl-color-white);
         }
 
+        starlight-theme-select label .label-icon {
+            left: 1rem;
+        }
+
+        .icon.label-icon + select {
+            padding-inline: 2.25rem;
+        }
+
         .nav-main .nav-item-free-trial,
         .nav-main .nav-item-login,
         .nav-main .nav-item-search {
             display: table;
             height: 60px;
             border-bottom: 1px solid #dddddd;
+        }
+
+        .nav-theme-select {
+            width: calc(100% + 15%);
+            position: relative;
+            left: -15%;
         }
 
         [data-theme=dark] {
@@ -1306,6 +1322,11 @@ import type { Props } from '@astrojs/starlight/props';
             vertical-align: middle;
         }
 
+        .nav-item-login,
+        .nav-item-free-trial {
+            position: relative;
+            left: 15%;
+        }
         .nav-main .nav-item-free-trial {
             width: 45%;
         }
@@ -1313,14 +1334,15 @@ import type { Props } from '@astrojs/starlight/props';
         .nav-main .nav-item-login {
             float: left;
             margin: 0 !important;
-            position: static;
             width: 40%;
         }
 
         .nav-item-search {
             width: 15%;
-            float: left;    
+            float: left;
             border-bottom: 1px solid #2b3239;
+            position: relative;
+            top: 60px;
             &:hover {
                 background: var(--sl-color-gray-6);
             }
