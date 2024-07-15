@@ -10,10 +10,8 @@ export default defineConfig({
       title: "Swagger Docs",
       customCss: [
         // Path to your Tailwind base styles:
-        // "@fontsource/monda",
-        // "@fontsource-variable/open-sans",
-        // "@fontsource/roboto",
         "./src/tailwind.css",
+        "./src/styles/fonts.css",
         "./src/styles/custom.css",
       ],
       social: {
