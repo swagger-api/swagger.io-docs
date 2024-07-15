@@ -1,54 +1,80 @@
-# Starlight Starter Kit: Basics
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+# Swagger Open Source Docs
 
-```
-npm create astro@latest -- --template starlight
-```
+Welcome to the Swagger Open Source Documentation repository. This repository contains all the documentation for Swagger, an open-source suite of tools for API development.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/starlight/tree/main/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/starlight/tree/main/examples/basics)
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwithastro%2Fstarlight%2Ftree%2Fmain%2Fexamples%2Fbasics&project-name=my-starlight-docs&repository-name=my-starlight-docs)
+## Tech Stack
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+We use [Starlight by Astro](https://astro.build/starlight) to build and maintain our documentation. Starlight is a powerful static site generator that allows us to create performant, content-rich documentation sites with ease.
 
-## 🚀 Project Structure
+## Getting Started
 
-Inside of your Astro + Starlight project, you'll see the following folders and files:
+To get started with contributing to the Swagger Open Source Docs, follow these steps:
 
-```
-.
-├── public/
-├── src/
-│   ├── assets/
-│   ├── content/
-│   │   ├── docs/
-│   │   └── config.ts
-│   └── env.d.ts
-├── astro.config.mjs
-├── package.json
-└── tsconfig.json
-```
+### Prerequisites
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+Ensure you have the following installed on your machine:
+- [Node.js](https://nodejs.org/) (version 14 or later)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+### Installation
 
-Static assets, like favicons, can be placed in the `public/` directory.
+1. Clone the repository:
 
-## 🧞 Commands
+    \```bash
+    git clone https://github.com/swagger-api/swagger-open-source-docs.git
+    cd swagger-open-source-docs
+    \```
 
-All commands are run from the root of the project, from a terminal:
+2. Install dependencies:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+    \```bash
+    npm install
+    # or
+    yarn install
+    \```
 
-## 👀 Want to learn more?
+### Running the Development Server
 
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+To start the development server and view the documentation locally:
+
+\```bash
+npm run dev
+# or
+yarn dev
+\```
+
+This will start the development server at `http://localhost:3000`, where you can view and edit the documentation.
+
+### Building the Documentation
+
+To build the documentation for production:
+
+\```bash
+npm run build
+# or
+yarn build
+\```
+
+The built files will be output to the `dist` directory.
+
+## Contributing
+
+We welcome contributions from the community! To contribute:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch-name`).
+3. Make your changes.
+4. Commit your changes (`git commit -m 'Add some feature'`).
+5. Push to the branch (`git push origin feature-branch-name`).
+6. Open a pull request.
+
+Please ensure your code adheres to our coding standards and is well-documented.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## Contact
+
+For any questions or feedback, please reach out to us at [support@swagger.io](mailto:support@swagger.io).
