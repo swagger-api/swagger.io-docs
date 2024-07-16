@@ -20,7 +20,7 @@ export default defineConfig({
       sidebar: [
         {
           label: "SwaggerHub",
-          link: "https://support.smartbear.com/swaggerhub/docs/?lang=en&_ga=2.60681774.2026413304.1711629066-1405927530.1692968928&_gac=1.120446330.1710339688.Cj0KCQjwncWvBhD_ARIsAEb2HW_RZZphNpeARZhDRQWA4Ii4eNXuem_2gPRrlSS-Izy1vUE-xr0wemMaAsJDEALw_wcB.html",
+          link: "https://support.smartbear.com/swaggerhub/docs/",
         },
         {
           label: "Open Source Tools",
@@ -119,6 +119,9 @@ export default defineConfig({
         {
           label: "OpenAPI Guide",
           items: [
+            {
+              label: "Version 3.0",
+              items: [
             {
               label: "What Is OpenAPI?",
               link: "specification/about/",
@@ -273,82 +276,84 @@ export default defineConfig({
               label: "OpenAPI Extensions",
               link: "specification/openapi-extensions/",
             },
-            {
-              label: "2.0",
-              items: [
+          ],
+        },
                 {
-                  label: "What is Swagger",
-                  link: "specification/20/what-is-swagger/",
-                },
-                {
-                  label: "Basic Structure",
-                  link: "specification/20/basic-structure/",
-                },
-                {
-                  label: "API Host and Base Path",
-                  link: "specification/20/api-host-and-base-path/",
-                },
-                {
-                  label: "MIME Types",
-                  link: "specification/20/mime-types/",
-                },
-                {
-                  label: "Paths and Operations",
-                  link: "specification/20/paths-and-operations/",
-                },
-                {
-                  label: "Describing Parameters",
-                  link: "specification/20/describing-parameters/",
-                },
-                {
-                  label: "Describing Request Body",
-                  link: "specification/20/describing-request-body/",
-                },
-                {
-                  label: "File Upload",
-                  link: "specification/20/file-upload/",
-                },
-                {
-                  label: "Describing Responses",
-                  link: "specification/20/describing-responses/",
-                },
-                {
-                  label: "Authentication",
+                  label: "Version 2.0",
                   items: [
                     {
+                      label: "What is Swagger",
+                      link: "specification/v2_0/what-is-swagger/",
+                    },
+                    {
+                      label: "Basic Structure",
+                      link: "specification/v2_0/basic-structure/",
+                    },
+                    {
+                      label: "API Host and Base Path",
+                      link: "specification/v2_0/api-host-and-base-path/",
+                    },
+                    {
+                      label: "MIME Types",
+                      link: "specification/v2_0/mime-types/",
+                    },
+                    {
+                      label: "Paths and Operations",
+                      link: "specification/v2_0/paths-and-operations/",
+                    },
+                    {
+                      label: "Describing Parameters",
+                      link: "specification/v2_0/describing-parameters/",
+                    },
+                    {
+                      label: "Describing Request Body",
+                      link: "specification/v2_0/describing-request-body/",
+                    },
+                    {
+                      label: "File Upload",
+                      link: "specification/v2_0/file-upload/",
+                    },
+                    {
+                      label: "Describing Responses",
+                      link: "specification/v2_0/describing-responses/",
+                    },
+                    {
                       label: "Authentication",
-                      link: "specification/20/authentication/authentication/",
+                      items: [
+                        {
+                          label: "Authentication",
+                          link: "specification/v2_0/authentication/authentication/",
+                        },
+                        {
+                          label: "API Keys",
+                          link: "specification/v2_0/authentication/api-keys/",
+                        },
+                        {
+                          label: "Basic Authentication",
+                          link: "specification/v2_0/authentication/basic-authentication/",
+                        },
+                      ],
+                      collapsed: true,
                     },
                     {
-                      label: "API Keys",
-                      link: "specification/20/authentication/api-keys/",
+                      label: "Adding Examples",
+                      link: "specification/v2_0/adding-examples/",
                     },
                     {
-                      label: "Basic Authentication",
-                      link: "specification/20/authentication/basic-authentication/",
+                      label: "Enums",
+                      link: "specification/v2_0/enums/",
+                    },
+                    {
+                      label: "Grouping Operations With Tags",
+                      link: "specification/v2_0/grouping-operations-with-tags/",
+                    },
+                    {
+                      label: "Swagger Extensions",
+                      link: "specification/v2_0/swagger-extensions/",
                     },
                   ],
                   collapsed: true,
-                },
-                {
-                  label: "Adding Examples",
-                  link: "specification/20/adding-examples/",
-                },
-                {
-                  label: "Enums",
-                  link: "specification/20/enums/",
-                },
-                {
-                  label: "Grouping Operations With Tags",
-                  link: "specification/20/grouping-operations-with-tags/",
-                },
-                {
-                  label: "Swagger Extensions",
-                  link: "specification/20/swagger-extensions/",
-                },
-              ],
-              collapsed: true,
-            },
+            }
           ],
           collapsed: true,
         },
