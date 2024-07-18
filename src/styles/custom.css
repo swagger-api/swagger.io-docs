@@ -340,6 +340,11 @@
 	border-radius: 0.25rem;
 }
 
+/* Main */
+main {
+	padding: 0 !important;
+}
+
 /* Sidebar pane */
 .sidebar-pane {
 	transition: left var(--transition);
@@ -405,3 +410,11 @@ mobile-starlight-toc nav {
 		}
 	}
 }
+
+/* Footer */
+footer {
+	margin-top: 0 !important;
+}
+/* footer:nth-child(2) {
+	display: none;
+} */
