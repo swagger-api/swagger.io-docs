@@ -1115,10 +1115,9 @@ import Pagination from 'virtual:starlight/components/Pagination';
     }
 
     @media (max-width: 1279px) {
-        body > :not([id*='wistia-']) {
+        body > :not([id*='wistia-'], [href="#_top"]) {
             left: 0;
             position: relative;
-            top: -30px;
             transition: left var(--transition);
         }
 
@@ -1127,7 +1126,7 @@ import Pagination from 'virtual:starlight/components/Pagination';
             overflow: hidden;
         }
 
-        body.nav-toggle > * {
+        body.nav-toggle > :not([href="#_top"]) {
             left: var(--sb-mobile-menu-width);
             position: relative;
             transition: left var(--transition);
