@@ -256,9 +256,10 @@ starlight-menu-button {
 }
 
 /* Right sidebar */
-@media (min-width: 1152px) {
+@media (min-width: 72rem) {
 	.right-sidebar-container {
 		border-inline-start: 1px solid var(--sl-color-gray-6);
+		width: auto;
 	}
 	.right-sidebar {
 		position: sticky;
@@ -309,6 +310,9 @@ mobile-starlight-toc nav {
 	@media (min-width: 50rem) {
 		padding-top: calc(var(--sl-nav-height) + var(--sl-mobile-toc-height));
 	}
+}
+[data-has-sidebar][data-has-toc] .main-pane {
+	width: 100%;
 }
 
 /* Hide dark/light theme selector in documentation nav */
