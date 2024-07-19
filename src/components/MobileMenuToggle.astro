@@ -5,7 +5,7 @@ import type { Props } from '@astrojs/starlight/props';
 const { labels } = Astro.props;
 ---
 
-<starlight-menu-button>
+<starlight-menu-button class="docs-menu">
     <span class="menu-text flex items-center font-bold text-2xl"><Icon class="mr-1" name="document"/> Documentation</span>
 	<button
 		aria-expanded="false"
@@ -20,6 +20,7 @@ const { labels } = Astro.props;
 <script>
 	class StarlightMenuButton extends HTMLElement {
 		btn = this.querySelector('button')!;
+		nav = this.btn.closest('nav')!;
 
 		constructor() {
 			super();
@@ -33,6 +34,11 @@ const { labels } = Astro.props;
 			}
 		}
 
+		setActive() {
+			this.classList.toggle('active');
+			this.nav.classList.toggle('active');
+		}
+
 		setExpanded(expanded: boolean) {
 			this.setAttribute('aria-expanded', String(expanded));
 			document.body.toggleAttribute('data-mobile-menu-expanded', expanded);
@@ -40,6 +46,7 @@ const { labels } = Astro.props;
 
 		toggleExpanded() {
 			this.setExpanded(this.getAttribute('aria-expanded') !== 'true');
+			this.setActive();
 		}
 
 		closeOnEscape(e: KeyboardEvent) {
