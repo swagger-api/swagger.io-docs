@@ -1,25 +1,27 @@
 ---
-import MobileMenuToggle from 'virtual:starlight/components/MobileMenuToggle';
-import type { Props } from '../props';
+import MobileMenuToggle from './MobileMenuToggle.astro';
+import type { Props } from '@astrojs/starlight/props';
 import Footer from './Footer.astro';
 const { hasSidebar, labels } = Astro.props;
 ---
 
 <div class="page sl-flex">
 	<header class="header"><slot name="header" /></header>
-	{
-		hasSidebar && (
-			<nav class="sidebar" aria-label={labels['sidebarNav.accessibleLabel']}>
-				<MobileMenuToggle {...Astro.props} />
-				<div id="starlight__sidebar" class="sidebar-pane">
-					<div class="sidebar-content sl-flex">
-						<slot name="sidebar" />
+	<div class="flex flex-wrap md:flex-nowrap">
+		{
+			hasSidebar && (
+				<nav class="sidebar pb-[1px]" aria-label={labels['sidebarNav.accessibleLabel']}>
+					<MobileMenuToggle {...Astro.props} />
+					<div id="starlight__sidebar" class="sidebar-pane sticky top-1">
+						<div class="sidebar-content sl-flex h-auto max-h-0 min-h-auto md:max-h-full">
+							<slot name="sidebar" />
+						</div>
 					</div>
-				</div>
-			</nav>
-		)
-	}
-	<div class="main-frame"><slot /></div>
+				</nav>
+			)
+		}
+		<div class="main-frame"><slot /></div>
+	</div>
 	<Footer />
 </div>
 
@@ -27,6 +29,9 @@ const { hasSidebar, labels } = Astro.props;
 	.page {
 		flex-direction: column;
 		min-height: 100vh;
+	}
+	.sidebar.active .sidebar-content {
+		max-height: 100%;
 	}
 
 	.header {
@@ -78,7 +83,6 @@ const { hasSidebar, labels } = Astro.props;
 
 	.main-frame {
 		padding-top: calc(var(--sl-nav-height) + var(--sl-mobile-toc-height));
-		padding-inline-start: var(--sl-content-inline-start);
 	}
 
 	@media (min-width: 50rem) {
