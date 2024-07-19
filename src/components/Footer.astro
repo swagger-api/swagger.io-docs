@@ -1,15 +1,19 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
 <footer>
     <nav class='main-footer'>
-        <div class='container mx-auto'>
+        <div class='container mx-auto 2xl:px-4'>
             <div class='flex flex-wrap -mx-[15px]'>
-                <div class='md:w-full xl:w-3/4 px-[20px]'>
+                <div class='md:w-full 2xl:w-3/4 px-[20px]'>
                     <div class='flex flex-wrap'>
                         <div class='product-column w-full'>
                             <div
-                                class='display-5 font-roboto product-column-category ab-orange-sm text-white lg:text-left text-center'
+                                class='display-5 font-roboto product-column-category ab-orange-sm text-white xl:text-left text-center'
                             >
                                 Explore SmartBear Products <i
-                                    class='!inline-block 2xl:!hidden ml-2 fal fa-plus-square cursor-hover-md-pointer text-white'
+                                    class='!inline-block xl:!hidden ml-2 fal fa-plus-square cursor-hover-md-pointer text-white'
                                 >
                                 </i>
                             </div>
@@ -283,51 +287,49 @@
                         </div>
                     </div>
                 </div>
-                <div class='relative right-side w-full md:w-full xl:w-1/4 px-[20px]'>
-                    <ul
-                        class='flex flex-wrap xl:flex-col justify-center text-white px-0'
-                    >
-                        <li>
+                <div class='relative right-side flex flex-col items-center 2xl:block w-full md:w-full 2xl:w-1/4 px-[20px]'>
+                    <ul class='flex flex-wrap 2xl:flex-col justify-center text-white px-0 pb-3 2xl:pb-0 leading-6'>
+                        <li class="2xl:my-1">
                             <a
                                 class='text-orange'
                                 href='https://smartbear.com/company/about-us/'
                             >
                                 About Us
                             </a>
-                        </li><span class='xl:hidden inline px-2 text-gray-100'
+                        </li><span class='2xl:hidden inline px-2 text-gray-100'
                             >|</span
                         >
-                        <li>
+                        <li class="2xl:my-1">
                             <a
                                 class='text-orange'
                                 href='https://smartbear.com/company/careers/'
                             >
                                 Careers
                             </a>
-                        </li><span class='xl:hidden inline px-2 text-gray-100'
+                        </li><span class='2xl:hidden inline px-2 text-gray-100'
                             >|</span
                         >
-                        <li>
+                        <li class="2xl:my-1">
                             <a
                                 class='text-orange'
                                 href='https://smartbear.com/solutions/'
                             >
                                 Solutions
                             </a>
-                        </li><span class='xl:hidden inline px-2 text-gray-100'
+                        </li><span class='2xl:hidden inline px-2 text-gray-100'
                             >|</span
                         >
-                        <li>
+                        <li class="2xl:my-1">
                             <a
                                 class='text-orange'
                                 href='https://smartbear.com/partners/'
                             >
                                 Partners
                             </a>
-                        </li><span class='xl:hidden inline px-2 text-gray-100'
+                        </li><span class='2xl:hidden inline px-2 text-gray-100'
                             >|</span
                         >
-                        <li>
+                        <li class="2xl:my-1">
                             <a
                                 class='text-orange'
                                 href='https://smartbear.com/company/responsibility/'
@@ -336,11 +338,9 @@
                             </a>
                         </li>
                     </ul>
-                    <hr class='xl:inline-block hidden' />
-                    <ul
-                        class='flex xl:flex-col sm:flex-row flex-col xl:items-end items-center flex-wrap justify-center text-white px-0'
-                    >
-                        <li class='py-1'>
+                    <hr class='hidden 2xl:inline-block w-8' />
+                    <ul class='flex 2xl:flex-col sm:flex-row flex-col xl:items-end items-center flex-wrap justify-center text-white px-0 font-roboto leading-6'>
+                        <li class="2xl:my-1">
                             <a
                                 href='https://smartbear.com/contact-us/'
                                 class='text-orange flex items-center gap-2'
@@ -348,7 +348,9 @@
                                 Contact Us
                                 <span class=''>
                                     <svg
-                                        style='width: 19px;'
+                                        class="align-middle"
+                                        width="19"
+                                        height="16"
                                         x='0px'
                                         y='0px'
                                         viewBox='0 0 24.773 20.137'
@@ -386,29 +388,29 @@
                                 </span>
                             </a>
                         </li><span
-                            class='xl:hidden sm:inline hidden px-2 text-gray-100'
+                            class='2xl:hidden sm:inline hidden px-2 text-gray-100'
                         >
                             |
                         </span>
-                        <li class='py-1'>
+                        <li class="2xl:my-1">
                             +1 617-684-2600 <span class='text-clr-neutral-10'
                                 >USA</span
                             >
                         </li><span
-                            class='xl:hidden sm:inline hidden px-2 text-gray-100'
+                            class='2xl:hidden sm:inline hidden px-2 text-gray-100'
                         >
                             |
                         </span>
-                        <li class='py-1'>
+                        <li class="2xl:my-1">
                             +353 91 398300 <span class='text-clr-neutral-10'
                                 >EUR</span
                             >
                         </li><span
-                            class='xl:hidden sm:inline hidden px-2 text-gray-100'
+                            class='2xl:hidden sm:inline hidden px-2 text-gray-100'
                         >
                             |
                         </span>
-                        <li class='py-1'>
+                        <li class="2xl:my-1">
                             +61 391929960 <span class='text-clr-neutral-10'
                                 >AUS</span
                             >
@@ -437,7 +439,7 @@
             <div class='flex flex-wrap -mx-[15px]'>
                 <div class='bottom-links-container md:w-2/3 px-[20px]'>
                     <span class='copyright'>
-                        © 2023 SmartBear Software. All Rights Reserved.
+                        © {currentYear} SmartBear Software. All Rights Reserved.
                     </span><br />
                     <div class='bottom-links md:w-full'>
                         <ul>
@@ -528,7 +530,7 @@
     .main-footer .gearbear {
         @apply w-[78px] absolute bottom-[-68px] right-2.5;
     }
-    @media (max-width: 1229px) {
+    @media (max-width: 1199px) {
         .main-footer .gearbear {
             @apply -bottom-5 bottom-[-60px];
         }
@@ -569,7 +571,7 @@
     .main-footer .product-column a {
         @apply text-[#d2e1e8] text-base inline-block;
     }
-    @media (max-width: 1229px) {
+    @media (max-width: 1199px) {
         .main-footer .product-column a {
             @apply text-[15px];
         }
@@ -581,7 +583,7 @@
     .main-footer .product-column a .prod-icon {
         @apply h-[25px] w-[25px] mr-[15px] relative top-[6px];
     }
-    @media (max-width: 1229px) {
+    @media (max-width: 1199px) {
         .main-footer .product-column a .prod-icon {
             @apply h-5 w-5;
         }
@@ -593,10 +595,10 @@
         @apply float-left p-0;
     }
     .main-footer .product-column .product-column-category {
-        @apply leading-10 text-lg text-center lg:text-left;
+        @apply leading-10 text-lg;
         cursor: pointer;
     }
-    @media (max-width: 1229px) {
+    @media (max-width: 1199px) {
         .main-footer .product-column .product-column-content {
             @apply max-h-0 transition-all duration-[0.2s] ease-[ease-in-out] overflow-hidden;
         }
@@ -605,14 +607,14 @@
         }
     }
     .main-footer .right-side {
-        @apply text-right border-l-[#758491] border-l border-solid top-10;
+        @apply text-right border-l-[#758491] border-l border-solid;
         a {
             text-decoration: none;
         }
     }
-    @media (max-width: 1479px) {
+    @media (max-width: 1439px) {
         .main-footer .right-side {
-            @apply border-l-[none];
+            @apply border-l-0;
         }
     }
     @media (max-width: 1029px) {
@@ -624,7 +626,7 @@
     .main-footer .right-side .right-side-container {
         @apply float-left -mt-10;
     }
-    @media (max-width: 1479px) {
+    @media (max-width: 1439px) {
         .main-footer .right-side .right-side-container {
             @apply float-none;
         }
@@ -638,7 +640,7 @@
     .main-footer .right-side .more-links a {
         @apply text-[#ff8f0f];
     }
-    @media (max-width: 1479px) {
+    @media (max-width: 1439px) {
         .main-footer .right-side .more-links {
             @apply text-center;
         }
@@ -649,12 +651,12 @@
     .main-footer .right-side .more-links li {
         list-style: none;
     }
-    @media (max-width: 1479px) {
+    @media (max-width: 1439px) {
         .main-footer .right-side .more-links li {
             @apply inline;
         }
     }
-    @media (max-width: 1479px) {
+    @media (max-width: 1439px) {
         .main-footer .right-side .more-links hr {
             @apply hidden;
         }
@@ -662,7 +664,7 @@
     .main-footer .right-side .more-links .vertical-line {
         @apply hidden text-[#eff0f0] px-[1%] py-0;
     }
-    @media (max-width: 1479px) {
+    @media (max-width: 1439px) {
         .main-footer .right-side .more-links .vertical-line {
             @apply inline;
         }
@@ -670,7 +672,7 @@
     .main-footer .right-side .contact {
         @apply text-white float-right;
     }
-    @media (max-width: 1479px) {
+    @media (max-width: 1439px) {
         .main-footer .right-side .contact {
             @apply mb-[15px];
         }
@@ -690,7 +692,7 @@
         font-family: 'Roboto Mono', monospace;
         list-style: none;
     }
-    @media (max-width: 1479px) {
+    @media (max-width: 1439px) {
         .main-footer .right-side .contact li {
             @apply inline-block text-center;
         }
@@ -703,7 +705,7 @@
     .main-footer .right-side .contact .vertical-line {
         @apply hidden text-[#eff0f0] px-[1%] py-0;
     }
-    @media (max-width: 1479px) {
+    @media (max-width: 1439px) {
         .main-footer .right-side .contact .vertical-line {
             @apply inline-block last-of-type:hidden;
         }
@@ -714,7 +716,7 @@
         }
     }
     .main-footer .right-side hr {
-        @apply border w-10 mx-0 my-5 border-solid border-[#758491];
+        @apply border mx-0 my-5 border-solid border-[#758491];
     }
     .bottom-footer {
         @apply bg-[#231f20] px-0 py-[30px];
@@ -731,7 +733,7 @@
     .bottom-footer .bottom-links-container .bottom-links {
         @apply float-left pl-0;
     }
-    @media (max-width: 1229px) {
+    @media (max-width: 1199px) {
         .bottom-footer .bottom-links-container .bottom-links {
             @apply float-none;
         }
@@ -744,7 +746,7 @@
         @apply text-left float-left;
         list-style: none;
     }
-    @media (max-width: 1229px) {
+    @media (max-width: 1199px) {
         .bottom-footer .bottom-links-container .bottom-links li,
         .bottom-footer .bottom-links-container .bottom-links span {
             @apply float-none inline-block;
@@ -762,7 +764,7 @@
     .bottom-footer .social-links-container i {
         @apply text-white text-[35px] mx-[6px];
     }
-    @media (max-width: 1229px) {
+    @media (max-width: 1199px) {
         .bottom-footer .social-links-container {
             @apply text-center mt-5;
         }
@@ -1278,6 +1280,7 @@
         height: 2px;
         width: 60px;
         display: block;
+        @apply mx-auto xl:mx-0;
     }
 </style>
 
