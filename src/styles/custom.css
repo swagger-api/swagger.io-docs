@@ -240,6 +240,11 @@ main {
 	padding: 0 !important;
 }
 
+/* Make content centered */
+.sl-container {
+	margin-inline: auto;
+}
+
 /* Sidebar pane */
 .sidebar-pane {
 	transition: left var(--transition);
@@ -283,6 +288,7 @@ mobile-starlight-toc nav {
 	position: relative;
 	left: 0px;
 	transition: left var(--transition);
+	border-inline-start: 1px solid var(--sl-color-gray-6)
 }
 
 /* Move TOC menu to left once Swagger nav menu opens */
