@@ -1,5 +1,7 @@
 ---
 import HomeBox from "./HomeBox.astro";
+import { Image } from 'astro:assets';
+import heroImage from '../assets/hero-img.png';
 ---
 
 <section class="relative overflow-hidden">
@@ -23,11 +25,7 @@ import HomeBox from "./HomeBox.astro";
       </div>
     </div>
     <div class="w-full md:w-1/2 !mt-[45px]">
-      <img
-        src="/hero-img.png"
-        alt="Swagger Documentation Example"
-        class="w-full h-auto"
-      />
+      <Image src={heroImage} alt="" />
     </div>
   </div>
 </section>
