@@ -372,6 +372,9 @@ export default defineConfig({
         themes: ["dracula", "github-light"],
         plugins: [pluginLineNumbers()],
       },
+      editLink: {
+        baseUrl: 'https://github.com/swagger-api/swagger.io/tree/stage',
+      },
     }),
     tailwind({
       // Disable the default base styles:
