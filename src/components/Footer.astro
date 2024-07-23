@@ -3,11 +3,11 @@ const currentYear = new Date().getFullYear();
 ---
 
 <footer>
-    <nav class='main-footer'>
-        <div class='container mx-auto 2xl:px-4'>
-            <div class='flex flex-wrap -mx-[15px]'>
-                <div class='md:w-full 2xl:w-3/4 px-[20px]'>
-                    <div class='flex flex-wrap'>
+    <nav class='main-footer isolate relative z-[2]'>
+        <div class='container mx-auto px-5'>
+            <div class='flex flex-col 2xl:flex-row'>
+                <div class='md:w-full 2xl:w-3/4'>
+                    <div class='flex flex-col'>
                         <div class='product-column w-full'>
                             <div
                                 class='display-5 font-roboto product-column-category ab-orange-sm text-white xl:text-left text-center'
@@ -21,11 +21,12 @@ const currentYear = new Date().getFullYear();
                                 class='product-column-content mb-3'
                                 id='menu-1'
                             >
-                                <div class='flex flex-wrap'>
-                                    <div class='sm:w-1/2 md:w-1/4 order-1'>
+                                <div class='flex flex-col sm:flex-row sm:flex-wrap'>
+                                    <div class='sm:w-1/2 lg:w-1/4 order-1'>
                                         <ul class='mb-0'>
                                             <li>
                                                 <a
+                                                    class='footer-external'
                                                     href='https://smartbear.com/product/alertsite/overview/'
                                                 >
                                                     <span
@@ -36,6 +37,7 @@ const currentYear = new Date().getFullYear();
                                             </li>
                                             <li>
                                                 <a
+                                                    class='footer-external'
                                                     href='https://smartbear.com/product/aqtime-pro/overview/'
                                                 >
                                                     <span
@@ -46,6 +48,7 @@ const currentYear = new Date().getFullYear();
                                             </li>
                                             <li>
                                                 <a
+                                                    class='footer-external'
                                                     href='https://smartbear.com/product/bitbar/'
                                                 >
                                                     <span
@@ -69,6 +72,7 @@ const currentYear = new Date().getFullYear();
                                             </li>
                                             <li>
                                                 <a
+                                                    class='footer-external'
                                                     href='https://smartbear.com/product/capture-for-jira/'
                                                 >
                                                     <span
@@ -79,6 +83,7 @@ const currentYear = new Date().getFullYear();
                                             </li>
                                             <li>
                                                 <a
+                                                    class='footer-external'
                                                     href='https://smartbear.com/product/collaborator/overview/'
                                                 >
                                                     <span
@@ -90,7 +95,7 @@ const currentYear = new Date().getFullYear();
                                         </ul>
                                     </div>
                                     <div
-                                        class='sm:w-1/2 md:w-1/4 md:order-2 sm:order-3 order-2'
+                                        class='sm:w-1/2 lg:w-1/4 lg:order-2 sm:order-3 order-2'
                                     >
                                         <ul class='mb-0'>
                                             <li>
@@ -160,6 +165,7 @@ const currentYear = new Date().getFullYear();
                                             </li>
                                             <li>
                                                 <a
+                                                    class='footer-external'
                                                     href='https://smartbear.com/product/ready-api/overview/'
                                                 >
                                                     <span
@@ -171,7 +177,7 @@ const currentYear = new Date().getFullYear();
                                         </ul>
                                     </div>
                                     <div
-                                        class='sm:w-1/2 md:w-1/4 md:order-3 sm:order-2 order-3'
+                                        class='sm:w-1/2 lg:w-1/4 lg:order-3 sm:order-2 order-3'
                                     >
                                         <ul class='mb-0'>
                                             <li>
@@ -190,7 +196,6 @@ const currentYear = new Date().getFullYear();
                                             <li>
                                                 <a
                                                     href='https://swagger.io/tools/open-source/?utm_medium=referral&utm_source=smartbear.com&utm_campaign=footer'
-                                                    class='footer-external'
                                                     target='_blank'
                                                     rel='noopener noreferrer'
                                                 >
@@ -203,7 +208,6 @@ const currentYear = new Date().getFullYear();
                                             <li>
                                                 <a
                                                     href='https://swagger.io/tools/swaggerhub/?utm_medium=referral&utm_source=smartbear.com&utm_campaign=footer'
-                                                    class='footer-external'
                                                     target='_blank'
                                                     rel='noopener noreferrer'
                                                 >
@@ -216,7 +220,6 @@ const currentYear = new Date().getFullYear();
                                             <li>
                                                 <a
                                                     href='https://swagger.io/tools/swaggerhub-explore/?utm_medium=referral&utm_source=smartbear.com&utm_campaign=footer'
-                                                    class='footer-external'
                                                     target='_blank'
                                                     rel='noopener noreferrer'
                                                 >
@@ -228,6 +231,7 @@ const currentYear = new Date().getFullYear();
                                             </li>
                                             <li>
                                                 <a
+                                                    class='footer-external'
                                                     href='https://smartbear.com/product/testcomplete/overview/'
                                                 >
                                                     <span
@@ -238,6 +242,7 @@ const currentYear = new Date().getFullYear();
                                             </li>
                                             <li>
                                                 <a
+                                                    class='footer-external'
                                                     href='https://smartbear.com/product/ready-api/testengine/overview/'
                                                 >
                                                     <span
@@ -248,10 +253,11 @@ const currentYear = new Date().getFullYear();
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class='sm:w-1/2 md:w-1/4 order-4'>
+                                    <div class='sm:w-1/2 lg:w-1/4 order-4'>
                                         <ul class='mb-0'>
                                             <li>
                                                 <a
+                                                    class='footer-external'
                                                     href='https://smartbear.com/product/testleft/overview/'
                                                 >
                                                     <span
@@ -262,6 +268,7 @@ const currentYear = new Date().getFullYear();
                                             </li>
                                             <li>
                                                 <a
+                                                    class='footer-external'
                                                     href='https://smartbear.com/product/visualtest/'
                                                 >
                                                     <span
@@ -272,6 +279,7 @@ const currentYear = new Date().getFullYear();
                                             </li>
                                             <li>
                                                 <a
+                                                    class='footer-external'
                                                     href='https://smartbear.com/test-management/zephyr/'
                                                 >
                                                     <span
@@ -287,8 +295,8 @@ const currentYear = new Date().getFullYear();
                         </div>
                     </div>
                 </div>
-                <div class='relative right-side flex flex-col items-center 2xl:block w-full md:w-full 2xl:w-1/4 px-[20px]'>
-                    <ul class='flex flex-wrap 2xl:flex-col justify-center text-white px-0 pb-3 2xl:pb-0 leading-6'>
+                <div class='right-side xl:relative flex flex-col items-center 2xl:block w-full md:w-full 2xl:w-1/4'>
+                    <ul class='flex flex-wrap 2xl:flex-col justify-center text-white px-0 pb-3 2xl:pb-0'>
                         <li class="2xl:my-1">
                             <a
                                 class='text-orange'
@@ -339,7 +347,7 @@ const currentYear = new Date().getFullYear();
                         </li>
                     </ul>
                     <hr class='hidden 2xl:inline-block w-8' />
-                    <ul class='flex 2xl:flex-col sm:flex-row flex-col xl:items-end items-center flex-wrap justify-center text-white px-0 font-roboto leading-6'>
+                    <ul class='flex flex-col md:flex-row 2xl:flex-col xl:items-end items-center justify-center text-white px-0 font-roboto'>
                         <li class="2xl:my-1">
                             <a
                                 href='https://smartbear.com/contact-us/'
@@ -388,7 +396,7 @@ const currentYear = new Date().getFullYear();
                                 </span>
                             </a>
                         </li><span
-                            class='2xl:hidden sm:inline hidden px-2 text-gray-100'
+                            class='2xl:hidden md:inline hidden px-2 text-gray-100'
                         >
                             |
                         </span>
@@ -397,7 +405,7 @@ const currentYear = new Date().getFullYear();
                                 >USA</span
                             >
                         </li><span
-                            class='2xl:hidden sm:inline hidden px-2 text-gray-100'
+                            class='2xl:hidden md:inline hidden px-2 text-gray-100'
                         >
                             |
                         </span>
@@ -406,7 +414,7 @@ const currentYear = new Date().getFullYear();
                                 >EUR</span
                             >
                         </li><span
-                            class='2xl:hidden sm:inline hidden px-2 text-gray-100'
+                            class='2xl:hidden md:inline hidden px-2 text-gray-100'
                         >
                             |
                         </span>
@@ -416,28 +424,27 @@ const currentYear = new Date().getFullYear();
                             >
                         </li>
                     </ul>
-                    <div class='gearbear'>
-                        <svg
-                            xmlns='http://www.w3.org/2000/svg'
-                            viewBox='0 0 51.141 28.719'
+                    <svg
+                        class='gearbear absolute w-20 bottom-0 right-3 2xl:right-0 xl:bottom-[-100px]'
+                        xmlns='http://www.w3.org/2000/svg'
+                        viewBox='0 0 51.141 28.719'
+                    >
+                        <path
+                            id='Path_111'
+                            data-name='Path 111'
+                            style='fill: rgb(210, 225, 232); opacity: 0.15;'
+                            d='M29.591,24.318H21.549l-1.442,4.4H31Zm21.549,4.4L46.929,15.744,49.66,7.36,39.531,0,32.4,5.2H18.741L11.609,0,1.48,7.36l2.732,8.384L0,28.719H13.316l-1.024-3.187,13.316-9.674,13.316,9.674L37.9,28.719Z'
                         >
-                            <path
-                                id='Path_111'
-                                data-name='Path 111'
-                                style='fill: rgb(210, 225, 232); opacity: 0.15;'
-                                d='M29.591,24.318H21.549l-1.442,4.4H31Zm21.549,4.4L46.929,15.744,49.66,7.36,39.531,0,32.4,5.2H18.741L11.609,0,1.48,7.36l2.732,8.384L0,28.719H13.316l-1.024-3.187,13.316-9.674,13.316,9.674L37.9,28.719Z'
-                            >
-                            </path>
-                        </svg>
-                    </div>
+                        </path>
+                    </svg>
                 </div>
             </div>
         </div>
     </nav>
-    <nav class='bottom-footer'>
-        <div class='container mx-auto'>
-            <div class='flex flex-wrap -mx-[15px]'>
-                <div class='bottom-links-container md:w-2/3 px-[20px]'>
+    <nav class='bottom-footer pt-12'>
+        <div class='container mx-auto px-4'>
+            <div class='flex flex-col xl:flex-row'>
+                <div class='bottom-links-container text-center xl:text-left xl:w-3/4 px-[20px]'>
                     <span class='copyright'>
                         © {currentYear} SmartBear Software. All Rights Reserved.
                     </span><br />
@@ -473,7 +480,7 @@ const currentYear = new Date().getFullYear();
                         </ul>
                     </div>
                 </div>
-                <div class='social-links-container md:w-1/3 px-[20px]'>
+                <div class='social-links-container text-center xl:text-right xl:w-1/4 px-[20px]'>
                     <a
                         href='http://twitter.com/smartbear'
                         target='_blank'
@@ -527,14 +534,6 @@ const currentYear = new Date().getFullYear();
     .main-footer {
         @apply bg-[#173647] pt-[60px] pb-[100px] px-0;
     }
-    .main-footer .gearbear {
-        @apply w-[78px] absolute bottom-[-68px] right-2.5;
-    }
-    @media (max-width: 1199px) {
-        .main-footer .gearbear {
-            @apply -bottom-5 bottom-[-60px];
-        }
-    }
     @media screen and (-ms-high-contrast: active),
         screen and (-ms-high-contrast: none) {
         .main-footer .gearbear {
@@ -544,7 +543,7 @@ const currentYear = new Date().getFullYear();
     .main-footer .product-column {
         @apply isolate;
     }
-    @media (max-width: 649px) {
+    @media (max-width: 546px) {
         .main-footer .product-column {
             @apply text-center;
         }
@@ -552,7 +551,7 @@ const currentYear = new Date().getFullYear();
     .main-footer .product-column ul {
         @apply p-0;
     }
-    @media (max-width: 649px) {
+    @media (max-width: 546px) {
         .main-footer .product-column ul {
             @apply inline-block mx-auto my-0;
         }
@@ -597,6 +596,13 @@ const currentYear = new Date().getFullYear();
     .main-footer .product-column .product-column-category {
         @apply leading-10 text-lg;
         cursor: pointer;
+    }
+    .product-column-content li a,
+    .bottom-links li a {
+        @apply no-underline;
+        &:hover {
+            @apply underline;
+        }
     }
     @media (max-width: 1199px) {
         .main-footer .product-column .product-column-content {
@@ -697,7 +703,7 @@ const currentYear = new Date().getFullYear();
             @apply inline-block text-center;
         }
     }
-    @media (max-width: 649px) {
+    @media (max-width: 546px) {
         .main-footer .right-side .contact li {
             @apply block;
         }
@@ -710,7 +716,7 @@ const currentYear = new Date().getFullYear();
             @apply inline-block last-of-type:hidden;
         }
     }
-    @media (max-width: 649px) {
+    @media (max-width: 546px) {
         .main-footer .right-side .contact .vertical-line {
             @apply hidden;
         }
@@ -721,11 +727,6 @@ const currentYear = new Date().getFullYear();
     .bottom-footer {
         @apply bg-[#231f20] px-0 py-[30px];
         margin-top: 0 !important;
-    }
-    @media (max-width: 1029px) {
-        .bottom-footer .bottom-links-container {
-            @apply text-center;
-        }
     }
     .bottom-footer .bottom-links-container span {
         @apply text-[#758491];
@@ -758,15 +759,12 @@ const currentYear = new Date().getFullYear();
     .bottom-footer .bottom-links-container .bottom-links .vertical-line {
         @apply px-[1%] py-0;
     }
-    .bottom-footer .social-links-container {
-        @apply text-right;
-    }
     .bottom-footer .social-links-container i {
         @apply text-white text-[35px] mx-[6px];
     }
     @media (max-width: 1199px) {
         .bottom-footer .social-links-container {
-            @apply text-center mt-5;
+            @apply mt-5;
         }
     }
     .text-orange {

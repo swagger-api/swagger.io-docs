@@ -2,6 +2,7 @@
 import MobileMenuToggle from './MobileMenuToggle.astro';
 import type { Props } from '@astrojs/starlight/props';
 import Footer from './Footer.astro';
+import SwaggerFooter from './SwaggerFooter.astro';
 const { hasSidebar, labels } = Astro.props;
 ---
 
@@ -10,7 +11,7 @@ const { hasSidebar, labels } = Astro.props;
 	<div class="flex flex-wrap md:flex-nowrap">
 		{
 			hasSidebar && (
-				<nav class="sidebar pb-[1px]" aria-label={labels['sidebarNav.accessibleLabel']}>
+				<nav class="sidebar relative z-[1] pb-[1px]" aria-label={labels['sidebarNav.accessibleLabel']}>
 					<MobileMenuToggle {...Astro.props} />
 					<div id="starlight__sidebar" class="sidebar-pane fixed menu-md:sticky top-1">
 						<div class="sidebar-content sl-flex h-auto max-h-0 min-h-auto md:max-h-full">
@@ -22,7 +23,8 @@ const { hasSidebar, labels } = Astro.props;
 		}
 		<div class="main-frame"><slot /></div>
 	</div>
-	<Footer />
+	<SwaggerFooter />
+	<Footer/>
 </div>
 
 <style>

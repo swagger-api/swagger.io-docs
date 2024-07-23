@@ -307,6 +307,7 @@ mobile-starlight-toc nav {
 .main-frame {
 	flex: 1;
 	padding-top: calc(var(--sl-nav-height) + var(--sl-mobile-toc-height) + var(--sl-mobile-docs-height));
+	isolation: isolate;
 	@media (min-width: 50rem) {
 		padding-top: calc(var(--sl-nav-height) + var(--sl-mobile-toc-height));
 	}
