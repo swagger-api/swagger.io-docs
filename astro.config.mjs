@@ -375,6 +375,7 @@ export default defineConfig({
       editLink: {
         baseUrl: 'https://github.com/swagger-api/swagger.io/tree/stage',
       },
+      favicon: 'favicon.png',
     }),
     tailwind({
       // Disable the default base styles:
