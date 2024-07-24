@@ -14,7 +14,7 @@ const { hasSidebar, labels } = Astro.props;
 				<nav class="sidebar relative z-[1] pb-[1px] bg-[var(--sl-color-header-bg)]" aria-label={labels['sidebarNav.accessibleLabel']}>
 					<MobileMenuToggle {...Astro.props} />
 					<div id="starlight__sidebar" class="sidebar-pane fixed menu-md:sticky top-1">
-						<div class="sidebar-content sl-flex h-auto max-h-0 min-h-auto md:max-h-full">
+						<div class="sidebar-content sl-flex h-auto max-h-0 min-h-auto md:max-h-screen">
 							<slot name="sidebar" />
 						</div>
 					</div>

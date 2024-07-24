@@ -254,6 +254,10 @@ starlight-menu-button {
 		color: var(--sl-color-white);
 	}
 }
+.sidebar-content .large {
+	font-weight: 400;
+	font-size: 0.875rem;
+}
 
 /* Right sidebar */
 @media (min-width: 72rem) {
