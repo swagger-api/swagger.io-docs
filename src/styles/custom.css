@@ -76,9 +76,12 @@
         }
 	}
 
-	/* Code background color */
+	/* Code */
+	code {
+		--sl-color-bg-inline-code: var(--clr-neutral-3);
+	}
 	.expressive-code .frame {
-		--code-background: #f2f7f3;
+		--code-background: var(--clr-neutral-3);
 	}
 
 	.expressive-code pre {
@@ -152,8 +155,11 @@
 		border-top: 1px solid var(--sl-color-header-bg);
 	}
 
-	/* Code background color */
-	.expressive-code .frame {
+	/* Code */
+	code {
+		--sl-color-bg-inline-code: var(--sl-color-header-bg);
+	}
+	.expressive-code .frame pre {
 		--code-background: var(--sl-color-code-bg);
 	}
 
