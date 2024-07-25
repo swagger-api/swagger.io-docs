@@ -170,6 +170,9 @@
 	.right-sidebar {
 		border-inline-start: 1px solid var(--sl-color-header-bg)
 	}
+	.right-sidebar-panel a {
+		color: var(--clr-neutral-9);
+	}
 	.right-sidebar-panel a[aria-current=true] {
 		background-color: var(--sl-color-code-bg);
 		border-left: 2px solid var(--clr-accent-1);
@@ -180,13 +183,19 @@
 	}
 
 	/* Documentation sidebar */
-	.sidebar-content a {
-		--sl-color-text-accent: var(--sl-color-code-bg);
-		--sl-color-text-invert: var(--clr-neutral-1);
-		&[aria-current=page] {
-			border-left: 2px solid var(--clr-accent-1);
-			border-top-left-radius: 0px;
-			border-bottom-left-radius: 0px;
+	.sidebar-content {
+		a {
+			--sl-color-text-accent: var(--sl-color-code-bg);
+			color: var(--clr-neutral-9);
+			&[aria-current=page] {
+				border-left: 2px solid var(--clr-accent-1);
+				border-top-left-radius: 0px;
+				border-bottom-left-radius: 0px;
+				color: var(--clr-neutral-1);
+			}
+		}
+		.large {
+			color: var(--clr-neutral-9);
 		}
 	}
 	.sidebar-pane {
