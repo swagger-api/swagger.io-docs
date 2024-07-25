@@ -48,22 +48,22 @@
 
 	--sl-shadow-md: 0 10px 20px -12px rgb(0 0 0 / 0.25);
 
-	/* Right Sidebar colors */
+	/* TOC Sidebar */
 	.right-sidebar-panel a[aria-current=true] {
-		background-color: #effbe9;
-		border-left: 2px solid var(--swagger-dark);
+		background-color: var(--clr-neutral-3);
+		border-left: 2px solid var(--clr-accent-2);
 		border-top-left-radius: 0px;
 		border-bottom-left-radius: 0px;
-		color: var(--sl-color-gray-2);
+		color: var(--clr-accent-4);
 		font-weight: 600;
 	}
 
-	/* Documentation sidebar colors */
+	/* Documentation Sidebar */
 	.sidebar-content a {
-		--sl-color-text-accent: #effbe9;
-		--sl-color-text-invert: var(--sl-color-gray-2);
+		--sl-color-text-accent: var(--clr-neutral-3);
+		--sl-color-text-invert: var(--clr-accent-4);
 		&[aria-current=page] {
-			border-left: 2px solid var(--swagger-dark);
+			border-left: 2px solid var(--clr-accent-2);
 			border-top-left-radius: 0px;
 			border-bottom-left-radius: 0px;
 		}
@@ -166,13 +166,13 @@
 		color: var(--clr-accent-1);
 	}
 
-	/* Right sidebar */
+	/* TOC Sidebar */
 	.right-sidebar {
 		border-inline-start: 1px solid var(--sl-color-header-bg)
 	}
 	.right-sidebar-panel a[aria-current=true] {
 		background-color: var(--sl-color-code-bg);
-		border-left: 2px solid var(--swagger-dark);
+		border-left: 2px solid var(--clr-accent-1);
 		border-top-left-radius: 0px;
 		border-bottom-left-radius: 0px;
 		color: var(--clr-neutral-1);
@@ -184,7 +184,7 @@
 		--sl-color-text-accent: var(--sl-color-code-bg);
 		--sl-color-text-invert: var(--clr-neutral-1);
 		&[aria-current=page] {
-			border-left: 2px solid var(--swagger-dark);
+			border-left: 2px solid var(--clr-accent-1);
 			border-top-left-radius: 0px;
 			border-bottom-left-radius: 0px;
 		}
