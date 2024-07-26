@@ -50,7 +50,7 @@ paths:
           description: OK
 ```
 
-_More info:_ [MIME Types](/specification/20/mime-types/).
+_More info:_ [MIME Types](/specification/v2_0/mime-types/).
 
 ### HTTP Status Codes
 

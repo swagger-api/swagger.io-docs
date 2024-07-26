@@ -5,7 +5,7 @@ sidebar:
 ---
 
 :::note
-OAS **3** This guide is for OpenAPI 3.0. If you use OpenAPI 2.0, see our [OpenAPI 2.0 guide](/specification/20/authentication/api-keys/).
+OAS **3** This guide is for OpenAPI 3.0. If you use OpenAPI 2.0, see our [OpenAPI 2.0 guide](/specification/v2_0/authentication/api-keys/).
 :::
 
 Some APIs use API keys for authorization. An API key is a token that a client provides when making API calls. The key can be sent in the query string:
@@ -28,7 +28,7 @@ GET /something HTTP/1.1
 Cookie: X-API-KEY=abcdef12345
 ```
 
-API keys are supposed to be a secret that only the client and server know. Like [Basic authentication](/specification/authentication/basic-authentication/), API key-based authentication is only considered secure if used together with other security mechanisms such as HTTPS/SSL.
+API keys are supposed to be a secret that only the client and server know. Like [Basic authentication](/specification/authentication/basic-authentication/), API key-based authentication is only considered secure if used together with other security mechanisms such as HTTPS/SSL.
 
 ### Describing API Keys
 

@@ -32,8 +32,8 @@ Swagger distinguishes between the following parameter types based on the paramet
 - [query parameters](#query-parameters), such as `/users?role=admin`
 - [path parameters](#path-parameters), such as `/users/{id}`
 - [header parameters](#header-parameters), such as `X-MyHeader: Value`
-- body parameters that describe the body of POST, PUT and PATCH requests (see [Describing Request Body](/specification/20/describing-request-body/))
-- [form parameters](#form-parameters) – a variety of body parameters used to describe the payload of requests with `Content-Type` of `application/x-www-form-urlencoded` and `multipart/form-data` (the latter is typically used for [file uploads](/specification/20/file-upload/))
+- body parameters that describe the body of POST, PUT and PATCH requests (see [Describing Request Body](/specification/v2_0/describing-request-body/))
+- [form parameters](#form-parameters) – a variety of body parameters used to describe the payload of requests with `Content-Type` of `application/x-www-form-urlencoded` and `multipart/form-data` (the latter is typically used for [file uploads](/specification/v2_0/file-upload/))
 
 ### Query Parameters
 
@@ -60,7 +60,7 @@ parameters:
 
 Query parameters only support primitive types. You can have an `array`, but the `items` must be a primitive value type. Objects are not supported.
 
-**Note:** To describe API keys passed as query parameters, use a security definition instead. See [API Keys](/specification/20/authentication/api-keys/).
+**Note:** To describe API keys passed as query parameters, use a security definition instead. See [API Keys](/specification/v2_0/authentication/api-keys/).
 
 ### Path Parameters
 
@@ -115,7 +115,7 @@ paths:
           required: true
 ```
 
-In a similar way, you can define [custom response headers](/specification/20/describing-responses/#headers).
+In a similar way, you can define [custom response headers](/specification/v2_0/describing-responses/#headers).
 
 **Note:** Swagger specification has special keywords for some headers:
 
@@ -130,19 +130,19 @@ For more information, see...
 `consumes` (request content type)  
 `produces` (response content type)
 
-[MIME Types](/specification/20/mime-types/)
+[MIME Types](/specification/v2_0/mime-types/)
 
 `Accept`
 
 `produces`
 
-[MIME Types](/specification/20/mime-types/)
+[MIME Types](/specification/v2_0/mime-types/)
 
 `Authorization`
 
 `securityDefinitions`, `security`
 
-[Authentication](/specification/20/authentication/)
+[Authentication](/specification/v2_0/authentication/)
 
 ### Form Parameters
 
@@ -195,7 +195,7 @@ paths:
           description: OK
 ```
 
-To learn how to define form parameters for file uploads, see [File Upload](/specification/20/file-upload/).
+To learn how to define form parameters for file uploads, see [File Upload](/specification/v2_0/file-upload/).
 
 ### Required and Optional Parameters
 
@@ -258,7 +258,7 @@ The `enum` keyword allows you to restrict a parameter value to a fixed set of va
   enum: [available, pending, sold]
 ```
 
-More info: [Defining an Enum](/specification/20/enums/).
+More info: [Defining an Enum](/specification/v2_0/enums/).
 
 ### Array and Multi-Value Parameters
 

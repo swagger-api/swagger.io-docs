@@ -5,7 +5,7 @@ sidebar:
 ---
 
 :::note
-OAS **2** This page applies to OpenAPI Specification ver. 2 (fka Swagger). To learn about the latest version, visit [OpenAPI 3 pages](/specification/authentication/api-keys/).
+OAS **2** This page applies to OpenAPI Specification ver. 2 (fka Swagger). To learn about the latest version, visit [OpenAPI 3 pages](/specification/v2_0/hentication/api-keys/).
 :::
 
 Some APIs use API keys for authorization. An API key is a special token that the client needs to provide when making API calls. The key is usually sent as a request header:
@@ -60,7 +60,7 @@ paths:
           description: OK (successfully authenticated)
 ```
 
-Note that it is possible to support multiple authorization types in an API. See [Using Multiple Authentication Types](/specification/20/authentication/#multiple).
+Note that it is possible to support multiple authorization types in an API. See [Using Multiple Authentication Types](/specification/v2_0/authentication/#multiple).
 
 ### Pair of API Keys
 
@@ -89,7 +89,7 @@ security:
   - appId: []
 ```
 
-which means either key can be used (as in logical OR). For more examples, see [Using Multiple Authentication Types](/specification/20/authentication/#multiple).
+which means either key can be used (as in logical OR). For more examples, see [Using Multiple Authentication Types](/specification/v2_0/authentication/#multiple).
 
 ### 401 Response
 

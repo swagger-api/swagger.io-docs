@@ -5,7 +5,7 @@ sidebar:
 ---
 
 :::note
-OAS **3** This page is about OpenAPI 3.0. If you use OpenAPI 2.0, see the [OpenAPI 2.0 guide](/specification/20/mime-types/).
+OAS **3** This page is about OpenAPI 3.0. If you use OpenAPI 2.0, see the [OpenAPI 2.0 guide](/specification/v2_0/mime-types/).
 :::
 
 **Media type** is a format of a request or response body data. Web service operations can accept and return data in different formats, the most common being JSON, XML and images. You specify the media type in request and response definitions. Here is an example of a response definition:
@@ -144,7 +144,7 @@ paths:
 The value you use as media type – `image/*` in our example – is very similar to what you can see in the `Accept` or `Content-Type` headers of HTTP requests and responses. Do not confuse the placeholder and the actual value of the `Accept` or `Content-Type` headers. For example, the `image/*` placeholder for a response body means that the server will use the same data structure for all the responses that match the placeholder. It does not mean that the string _image/\*_ will be specified in the `Content-Type` header. The `Content-Type` header most likely will have _image/png_, _image/jpeg_, or some other similar value.
 
 \_Did not find what you were looking for? [Ask the community](https://community.smartbear.com/t5/Swagger-Open-Source-Tools/bd-p/SwaggerOSTools)
-Found a mistake? [Let us know](https://github.com/swagger-api/swagger.io/issues)\_OAS **3** This page is about OpenAPI 3.0. If you use OpenAPI 2.0, see the [OpenAPI 2.0 guide](/specification/20/mime-types/).
+Found a mistake? [Let us know](https://github.com/swagger-api/swagger.io/issues)\_OAS **3** This page is about OpenAPI 3.0. If you use OpenAPI 2.0, see the [OpenAPI 2.0 guide](/specification/v2_0/mime-types/).
 
 ## Media Types
 

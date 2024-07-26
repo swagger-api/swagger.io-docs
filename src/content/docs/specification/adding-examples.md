@@ -5,7 +5,7 @@ sidebar:
 ---
 
 :::note
-OAS **3** This guide is for OpenAPI 3.0. If you use OpenAPI 2.0, see our [OpenAPI 2.0 guide](/specification/20/adding-examples/).
+OAS **3** This guide is for OpenAPI 3.0. If you use OpenAPI 2.0, see our [OpenAPI 2.0 guide](/specification/v2_0/adding-examples/).
 :::
 
 You can add examples to parameters, properties and objects to make OpenAPI specification of your web service clearer. Examples can be read by tools and libraries that process your API in some way. For example, an API mocking tool can use sample values to generate mock requests. You can specify examples for objects, individual properties and operation parameters. To specify an example, you use the **`example`** or **`examples`** keys. See below for details.
@@ -301,7 +301,7 @@ content:
 
 ### Reusing Examples
 
-You can define common examples in the `components/examples` section of your specification and then re-use them in various parameter descriptions, request and response body descriptions, objects and properties:
+You can define common examples in the `components/examples` section of your specification and then re-use them in various parameter descriptions, request and response body descriptions, objects and properties:
 
 ```yaml
     content:

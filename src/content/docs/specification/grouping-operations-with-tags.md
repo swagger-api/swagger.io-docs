@@ -5,7 +5,7 @@ sidebar:
 ---
 
 :::note
-OAS **3** This guide is for OpenAPI 3.0. If you use OpenAPI 2.0, see our [OpenAPI 2.0 guide](/specification/20/grouping-operations-with-tags/).
+OAS **3** This guide is for OpenAPI 3.0. If you use OpenAPI 2.0, see our [OpenAPI 2.0 guide](/specification/v2_0/grouping-operations-with-tags/).
 :::
 
 You can assign a list of `tags` to each API operation. Tagged operations may be handled differently by tools and libraries. For example, Swagger UI uses `tags` to group the displayed operations.

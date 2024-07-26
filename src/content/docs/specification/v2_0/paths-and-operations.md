@@ -21,11 +21,11 @@ paths:
   /users/{id}: ...
 ```
 
-All paths are relative to `basePath` (see [API Host and Base URL](/specification/20/api-host-and-base-path/)). The full request URL is constructed as `scheme://host/basePath/path`.
+All paths are relative to `basePath` (see [API Host and Base URL](/specification/v2_0/api-host-and-base-path/)). The full request URL is constructed as `scheme://host/basePath/path`.
 
 ### Path Templating
 
-Swagger supports path templating, meaning you can use curly braces `{}` to mark parts of a URL as [path parameters](/specification/20/describing-parameters/#path-parameters):
+Swagger supports path templating, meaning you can use curly braces `{}` to mark parts of a URL as [path parameters](/specification/v2_0/describing-parameters/#path-parameters):
 
 ```yaml
 /users/{id}
@@ -100,7 +100,7 @@ Operations support some optional elements for documentation purposes:
 
 ### Operation Parameters
 
-Swagger supports operation parameters passed via path, query string, headers and request body. For details, see [Describing Parameters](/specification/20/describing-parameters/#query-parameters).
+Swagger supports operation parameters passed via path, query string, headers and request body. For details, see [Describing Parameters](/specification/v2_0/describing-parameters/#query-parameters).
 
 ### operationId
 
@@ -125,7 +125,7 @@ Each operation may specify a unique `operationId`. Some code generators use this
 
 ### Query String in Paths
 
-Query string parameters **must not** be included in paths. They should be defined as [query parameters](/specification/20/describing-parameters/#query-parameters) instead. Incorrect:
+Query string parameters **must not** be included in paths. They should be defined as [query parameters](/specification/v2_0/describing-parameters/#query-parameters) instead. Incorrect:
 
 ```yaml
 paths:

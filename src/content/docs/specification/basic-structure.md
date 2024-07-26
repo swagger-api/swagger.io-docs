@@ -5,7 +5,7 @@ sidebar:
 ---
 
 :::note
-OAS **3** This page is about OpenAPI 3.0. If you use OpenAPI 2.0, visit [OpenAPI 2.0 pages](/specification/20/basic-structure/).
+OAS **3** This page is about OpenAPI 3.0. If you use OpenAPI 2.0, visit [OpenAPI 2.0 pages](/specification/v2_0/basic-structure/).
 :::
 
 You can write OpenAPI definitions in [YAML](https://en.wikipedia.org/wiki/YAML) or [JSON](https://en.wikipedia.org/wiki/JSON). In this guide, we use only YAML examples but JSON works equally well. A sample OpenAPI 3.0 definition written in YAML looks like:
@@ -49,7 +49,7 @@ Every API definition must include the version of the OpenAPI Specification that 
 openapi: 3.0.0
 ```
 
-The OpenAPI version defines the overall structure of an API definition – what you can document and how you document it. OpenAPI 3.0 uses [semantic versioning](http://semver.org/) with a three-part version number. The [available versions](https://github.com/OAI/OpenAPI-Specification/releases) are `3.0.0`, `3.0.1`, `3.0.2`, and `3.0.3`; they are functionally the same.
+The OpenAPI version defines the overall structure of an API definition – what you can document and how you document it. OpenAPI 3.0 uses [semantic versioning](http://semver.org/) with a three-part version number. The [available versions](https://github.com/OAI/OpenAPI-Specification/releases) are `3.0.0`, `3.0.1`, `3.0.2`, and `3.0.3`; they are functionally the same.
 
 The `info` section contains API information: `title`, `description` (optional), `version`:
 

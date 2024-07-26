@@ -5,7 +5,7 @@ sidebar:
 ---
 
 :::note
-OAS **3** This guide is for OpenAPI 3.0. If you use OpenAPI 2.0, see our [OpenAPI 2.0 guide](/specification/20/enums/).
+OAS **3** This guide is for OpenAPI 3.0. If you use OpenAPI 2.0, see our [OpenAPI 2.0 guide](/specification/v2_0/enums/).
 :::
 
 You can use the `enum` keyword to specify possible values of a request parameter or a model property. For example, the sort parameter in `GET /items?sort=[asc|desc]` can be described as:
@@ -52,11 +52,11 @@ A nullable enum can be defined as follows:
 
 ```yaml
 type: string
-nullable: true  # <---
+nullable: true  # <---
 enum:
   - asc
   - desc
-  - null        # <--- without quotes, i.e. null not "null"
+  - null        # <--- without quotes, i.e. null not "null"
 ```
 
 Note that `null` must be explicitly included in the list of `enum` values. Using `nullable: true` alone [is not enough](https://github.com/OAI/OpenAPI-Specification/blob/main/proposals/2019-10-31-Clarify-Nullable.md#if-a-schema-specifies-nullable-true-and-enum-1-2-3-does-that-schema-allow-null-values-see-1900) here.
