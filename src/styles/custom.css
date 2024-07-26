@@ -1,5 +1,5 @@
 :root {
-    --sl-font: 'Open Sans', sans-serif;
+	--sl-font: 'Open Sans', sans-serif;
 	--sl-mobile-docs-height: 60px;
 	--sl-nav-height: 4rem;
 	--clr-accent-1: #20B1FD;
@@ -48,6 +48,14 @@
 
 	--sl-shadow-md: 0 10px 20px -12px rgb(0 0 0 / 0.25);
 
+	/* Pagination colors */
+	.pagination-links a {
+		border-color: var(--clr-neutral-6);
+		&:hover {
+			border-color: var(--clr-neutral-12);
+		}
+	}
+
 	/* TOC Sidebar */
 	.right-sidebar-panel a[aria-current=true] {
 		background-color: var(--clr-neutral-3);
@@ -71,9 +79,9 @@
 	.sidebar-pane {
 		background-color: var(--clr-neutral-1);
 		top: calc(var(--sl-nav-height) + var(--sl-mobile-toc-height));
-        @media (min-width: 50rem) {
-            top: calc(var(--sl-nav-height));
-        }
+		@media (min-width: 50rem) {
+			top: calc(var(--sl-nav-height));
+		}
 	}
 
 	/* Code */
@@ -85,8 +93,8 @@
 	}
 
 	.expressive-code pre {
-        border: 1px solid var(--sl-color-accent);
-    }
+		border: 1px solid var(--sl-color-accent);
+	}
 
 
 	/* Link color */
@@ -111,15 +119,6 @@
 			background-color: var(--sl-color-gray-6) !important;
 		}
 	}
-
-	/* Next&prev buttons */
-    .pagination-links 
-    {
-        a {
-        box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.01), 0 0px 5px rgba(0, 0, 0, 0.06)
-        }
-    }
-
 }
 
 /* Dark Mode */
@@ -133,7 +132,7 @@
 	--sl-color-gray-4: #4a5e4d;
 	--sl-color-gray-5: #2c3f2f;
 	--sl-color-gray-6: #1a2e1e;
-    --sl-color-gray-7: #1a1d20;
+	--sl-color-gray-7: #1a1d20;
 	--sl-color-black: var(--clr-neutral-14);
 	--sl-color-text: var(--clr-neutral-9);
 	--sl-color-text-accent: var(--clr-accent-2);
@@ -141,6 +140,15 @@
 	--sl-color-header-bg: #2b3239;
 	--sl-color-code-bg: #1a1d20;
 	--sb-nav-cta: var(--clr-accent-2);
+
+	/* Pagination colors */
+	.pagination-links a {
+		border-color: transparent;
+		background-color: var(--sl-color-header-bg);
+		&:hover {
+			border-color: var(--clr-neutral-9);
+		}
+	}
 
 	/* Content panel */
 	.content-panel {
@@ -156,8 +164,8 @@
 	}
 
 	.expressive-code pre {
-        border: 1px solid var(--sl-color-header-bg);
-    }
+		border: 1px solid var(--sl-color-header-bg);
+	}
 
 	/* Link colors for dark mode */
 	.sl-markdown-content a:not(:where(.not-content *)) {
@@ -245,6 +253,11 @@ main {
 	background-color: hsla(120, 100%, 50%, 0.1); 
 }
 
+/* Remove pagination shadows */
+.pagination-links a {
+	box-shadow: none;
+}
+
 /* Make content centered */
 .sl-container {
 	margin-inline: auto;
@@ -328,18 +341,6 @@ mobile-starlight-toc nav {
 /* Hide dark/light theme selector in documentation nav */
 .mobile-preferences {
 	display: none;
-}
-
-/* Pagination colors */
-.pagination-links a {
-	border: none;
-	&:hover {
-		background-color: var(--clr-accent-2);
-		color: var(--clr-neutral-1);
-		.link-title {
-			color: var(--clr-neutral-1);
-		}
-	}
 }
 
 /* Footer */
