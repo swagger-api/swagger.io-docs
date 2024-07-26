@@ -103,14 +103,6 @@
 	.starlight-aside .starlight-aside__title {
 		color: var(--clr-neutral-14);
 	}
-	.starlight-aside--note {
-		border-color: var(--swagger-dark);
-		background-color: #effbe9; 
-	}
-	.starlight-aside--tip {
-		border-color: var(--clr-accent-2);
-		background-color: #e6f2f7; 
-	}
 
 	/* Mobile documentation menu */
 	starlight-menu-button {
@@ -217,18 +209,6 @@
 	.starlight-aside .starlight-aside__title {
 		color: var(--sl-color-white);
 	}
-	.starlight-aside--note,
-	.starlight-aside--tip,
-	.starlight-aside--caution,
-	.starlight-aside--danger {
-		background-color: var(--sl-color-code-bg); 
-	}
-	.starlight-aside--note {
-		border-color: var(--clr-accent-2);
-	}
-	.starlight-aside--tip {
-		border-color: var(--swagger-dark);
-	}
 
 	/* Mobile documentation menu */
 	starlight-menu-button {
@@ -253,6 +233,16 @@
 /* Main */
 main {
 	padding: 0 !important;
+}
+
+/* Banners */
+.starlight-aside--note {
+	border-color: var(--clr-accent-1);
+	background-color: hsla(201, 90%, 50%, 0.1);
+}
+.starlight-aside--tip {
+	border-color: var(--swagger-dark);
+	background-color: hsla(120, 100%, 50%, 0.1); 
 }
 
 /* Make content centered */
