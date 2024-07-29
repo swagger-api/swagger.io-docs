@@ -685,7 +685,7 @@ import type { Props } from '@astrojs/starlight/props';
             </li>
             <li class='nav-item nav-item-search xl:border-b-0'>
                 <a
-                    class='header-search-ico sb-search-ico !flex items-center text-center p-[14px] xl:px-4 xl:py-2'
+                    class='header-search-ico sb-search-ico !flex items-center text-center py-[20px] px-[14px] xl:px-4 xl:py-2'
                     href='#'><svg width="1.25rem" height="1.25rem" viewBox="0 0 256 256"><path fill="currentColor" d="m228.24 219.76l-51.38-51.38a86.15 86.15 0 1 0-8.48 8.48l51.38 51.38a6 6 0 0 0 8.48-8.48M38 112a74 74 0 1 1 74 74a74.09 74.09 0 0 1-74-74"></path></svg></a
                 >
             </li>
@@ -1385,8 +1385,19 @@ import type { Props } from '@astrojs/starlight/props';
             padding: 15px;
         }
 
-        .nav-main .nav-link:hover {
-            background-color: var(--sl-color-gray-6);
+        [data-theme='dark'] .nav-main .nav-item:hover {
+
+            starlight-theme-select label {
+                color: var(--clr-neutral-1);
+            }
+            background-color: var(--clr-accent-2);
+        }
+        [data-theme='light'] .nav-main .nav-item:hover {
+            a:hover,
+            starlight-theme-select label {
+                color: var(--clr-neutral-1);
+            }
+            background-color: var(--clr-accent-3);
         }
 
         .nav-link.dropdown-toggle {
