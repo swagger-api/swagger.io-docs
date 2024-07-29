@@ -1393,7 +1393,8 @@ import type { Props } from '@astrojs/starlight/props';
             background-color: var(--clr-accent-2);
         }
         [data-theme='light'] .nav-main .nav-item:hover {
-            a:hover,
+            & > a:hover,
+            .dropdown-toggle,
             starlight-theme-select label {
                 color: var(--clr-neutral-1);
             }
