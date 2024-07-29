@@ -160,6 +160,9 @@
 	}
 
 	/* On this page */
+	details {
+		color: var(--clr-neutral-1);
+	}
 	details .toggle:hover {
 		border-color: var(--clr-neutral-9);
 	}
