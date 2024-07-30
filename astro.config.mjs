@@ -154,7 +154,7 @@ export default defineConfig({
               label: "Describing Request Body",
               items: [
                 {
-                  label: "Describing Request Body",
+                  label: "Overview",
                   link: "specification/describing-request-body/describing-request-body",
                 },
                 {
@@ -176,7 +176,7 @@ export default defineConfig({
               label: "Data Models",
               items: [
                 {
-                  label: "Data Models (Schemas)",
+                  label: "Overview",
                   link: "specification/data-models/data-models/",
                 },
                 {
@@ -218,7 +218,7 @@ export default defineConfig({
               label: "Authentication",
               items: [
                 {
-                  label: "Authentication and Authorization",
+                  label: "Overview",
                   link: "specification/authentication/",
                 },
                 {
@@ -321,7 +321,7 @@ export default defineConfig({
                       label: "Authentication",
                       items: [
                         {
-                          label: "Authentication",
+                          label: "Overview",
                           link: "specification/v2_0/authentication/authentication/",
                         },
                         {
