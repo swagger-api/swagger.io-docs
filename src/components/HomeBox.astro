@@ -48,14 +48,14 @@ import "../styles/custom.css";
       </div>
     </a>
   ) : (
-    <div class={`flex flex-col justify-between dark:bg-[#2B3239] bg-[var(--clr-neutral-1)] rounded-[10px] !mt-0 overflow-hidden ${cards === 3 ? "p-[20px] md:p-[30px] lg:p-[20px] xl:p-[40px]" : "p-[20px] md:p-[30px] xl:p-[40px]" }`}>
+    <div class={`flex flex-col gap-5 xl:gap-[30px] justify-between dark:bg-[#2B3239] bg-[var(--clr-neutral-1)] rounded-[10px] !mt-0 overflow-hidden ${cards === 3 ? "p-[20px] md:p-[30px] lg:p-[20px] xl:p-[40px]" : "p-[20px] md:p-[30px] xl:p-[40px]" }`}>
       <h2
         class="font-roboto dark:!text-[var(--clr-neutral-1)] !text-[var(--clr-accent-4)]
       !text-[22px] sm:!text-[28px] md:!text-[28px] lg:!text-[28px] xl:!text-[31px] font-bold"
       >
         {title}
       </h2>
-      <p class="dark:!text-[var(--clr-neutral-9)] !text-[var(--clr-neutral-14)] !text-[14.75px] sm:!text-[15.25px] md:!text-[15.75px] xl:!text-[16px] pr-0 md:pr-10 !mt-[30px] !mb-[30px]">
+      <p class="dark:!text-[var(--clr-neutral-9)] !text-[var(--clr-neutral-14)] !text-[14.75px] sm:!text-[15.25px] md:!text-[15.75px] xl:!text-[16px] !mt-0">
         {description}
       </p>
       <div class="!mt-0 flex items-center">

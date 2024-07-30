@@ -17,7 +17,7 @@ const buttonClasses = buttonVariants[variant] || buttonVariants["default"];
 
 <a href={path} class={buttonClasses}>
   <div class="!mt-0 flex items-center">
-    <span class="button-content whitespace-nowrap justify-center flex">
+    <span class="button-content whitespace-nowrap items-center flex">
       <slot />
     </span>
   </div>
@@ -27,11 +27,7 @@ const buttonClasses = buttonVariants[variant] || buttonVariants["default"];
   .button-content svg {
     fill: currentColor;
     margin-left: 10px;
-  }
-
-  @media (max-width: 575.98px) {
-    .button-content svg {
-      /* height: 16px; */
-    }
+    width: 16px;
+    height: 16px;
   }
 </style>
