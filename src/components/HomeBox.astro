@@ -1,4 +1,15 @@
 ---
+interface Props {
+  title: string;
+  description?: string;
+  buttonTitle?: string;
+  optionalText?: string;
+  optionalPath?: string;
+  path?: string;
+  alternative?: boolean;
+  cards?: number;
+}
+
 const {
   title,
   description,
@@ -7,7 +18,9 @@ const {
   optionalPath,
   path,
   alternative,
+  cards,
 } = Astro.props;
+
 import Button from "./Button.astro";
 import "../styles/custom.css";
 ---
@@ -35,7 +48,7 @@ import "../styles/custom.css";
       </div>
     </a>
   ) : (
-    <div class="flex flex-col justify-between dark:bg-[#2B3239] bg-[var(--clr-neutral-1)] p-[20px] xs:p-[20px] md:p-[30px] xl:p-[40px] rounded-[10px] !mt-0 overflow-hidden">
+    <div class={`flex flex-col justify-between dark:bg-[#2B3239] bg-[var(--clr-neutral-1)] rounded-[10px] !mt-0 overflow-hidden ${cards === 3 ? "p-[20px] md:p-[30px] lg:p-[20px] xl:p-[40px]" : "p-[20px] md:p-[30px] xl:p-[40px]" }`}>
       <h2
         class="font-roboto dark:!text-[var(--clr-neutral-1)] !text-[var(--clr-accent-4)]
       !text-[22px] sm:!text-[28px] md:!text-[28px] lg:!text-[28px] xl:!text-[31px] font-bold"
