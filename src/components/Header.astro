@@ -1385,20 +1385,12 @@ import type { Props } from '@astrojs/starlight/props';
             padding: 15px;
         }
 
-        [data-theme='dark'] .nav-main .nav-item:hover {
+        [data-theme='dark'] .nav-main .nav-item:not(.nav-item-login, .nav-item-free-trial):hover {
 
             starlight-theme-select label {
                 color: var(--clr-neutral-1);
             }
-            background-color: var(--clr-accent-2);
-        }
-        [data-theme='light'] .nav-main .nav-item:hover {
-            & > a:hover,
-            .dropdown-toggle,
-            starlight-theme-select label {
-                color: var(--clr-neutral-1);
-            }
-            background-color: var(--clr-accent-3);
+            background-color: var(--sl-color-header-bg);
         }
 
         .nav-link.dropdown-toggle {
