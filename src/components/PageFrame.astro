@@ -11,10 +11,10 @@ const { hasSidebar, labels } = Astro.props;
 	<div class="flex flex-wrap md:flex-nowrap">
 		{
 			hasSidebar && (
-				<nav class="sidebar relative z-[1] pb-[1px] bg-[var(--sl-color-header-bg)]" aria-label={labels['sidebarNav.accessibleLabel']}>
+				<nav class="sidebar relative z-[3] pb-[1px] bg-[var(--sl-color-header-bg)]" aria-label={labels['sidebarNav.accessibleLabel']}>
 					<MobileMenuToggle {...Astro.props} />
 					<div id="starlight__sidebar" class="sidebar-pane fixed menu-md:sticky top-1">
-						<div class="sidebar-content sl-flex h-auto max-h-0 min-h-auto md:max-h-screen">
+						<div class="sidebar-content sl-flex h-auto max-h-0 min-h-auto menu-md:max-h-screen">
 							<slot name="sidebar" />
 						</div>
 					</div>
@@ -98,6 +98,9 @@ const { hasSidebar, labels } = Astro.props;
 			--sl-sidebar-visibility: visible;
 			width: var(--sl-sidebar-width);
 			background-color: var(--sl-color-bg-sidebar);
+		}
+		.sidebar-content {
+			height: calc(100vh - var(--sl-nav-height)) !important;
 		}
 	}
 </style>
