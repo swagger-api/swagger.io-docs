@@ -7,23 +7,6 @@ sidebar:
 
 SwaggerEditor is using [**forked** Create React App](https://github.com/swagger-api/swagger-editor-cra/) as it's building infrastructure.
 
-## Table of Contents
-
-- [Getting started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-  - [Usage](#usage)
-- [Development](#development)
-  - [Prerequisites](#prerequisites)
-  - [Setting up](#setting-up)
-  - [npm scripts](#npm-scripts)
-  - [Build artifacts](#build-artifacts)
-  - [Package mapping](#package-mapping)
-- [Documentation](#documentation)
-- [Docker](#docker)
-- [License](#license)
-- [Software Bill Of Materials (SBOM)](#software-bill-of-materials-sbom)
-
 ## Getting started
 
 ### Prerequisites
