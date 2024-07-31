@@ -1004,7 +1004,7 @@ import type { Props } from '@astrojs/starlight/props';
     [data-theme=dark] .nav-item-login {
         border: 1px solid var(--clr-accent-2);
         &:hover {
-            background: var(--clr-accent-2);
+            background-color: var(--clr-accent-2);
             color: var(--clr-neutral-1);
         }
     }
@@ -1148,6 +1148,9 @@ import type { Props } from '@astrojs/starlight/props';
             margin: 0;
             padding: 20px;
         }
+        [data-theme='dark'] .nav-main .nav .show .dropdown-mega {
+            box-shadow: 0 0 10px -8px hsl(0, 0%, 80%, 0.5) inset;
+        }
         .nav-main .nav-tabs {
             background-color: var(--sl-color-black);
             width: 100%;
@@ -1246,6 +1249,10 @@ import type { Props } from '@astrojs/starlight/props';
 
         .nav-toggle .nav-main .nav:not(.nav-tabs) {
             box-shadow: 0 0 10px -8px #000 inset;
+            left: 0;
+        }
+        [data-theme='dark'] .nav-toggle .nav-main .nav:not(.nav-tabs) {
+            box-shadow: 0 0 10px -8px hsl(0, 0%, 80% / 0.5) inset;
             left: 0;
         }
 
@@ -1390,7 +1397,7 @@ import type { Props } from '@astrojs/starlight/props';
             starlight-theme-select label {
                 color: var(--clr-neutral-1);
             }
-            background-color: var(--sl-color-header-bg);
+            background-color: hsla(210, 14%, 20%, 0.8);
         }
 
         .nav-link.dropdown-toggle {
