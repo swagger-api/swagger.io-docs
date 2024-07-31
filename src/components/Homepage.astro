@@ -1,5 +1,5 @@
 ---
-import HomeBox from "./HomeBox.astro";
+import Card from "./Card.astro";
 import { Image } from "astro:assets";
 import heroImage from "../assets/hero-img.png";
 ---
@@ -36,7 +36,7 @@ import heroImage from "../assets/hero-img.png";
   class="max-w-[1490px] mx-auto mb-[70px] sm:mb-[80px] md:mb-[106px] lg:mb-[75px] xl:mb-[90px] 2xl:mb-[110px] px-[18px] sm:px-[33px] md:px-[97px] lg:px-[31px] xl:px-[45px]"
 >
   <div class="grid gap-8 2xl:gap-10 grid-cols-1 lg:grid-cols-2">
-    <HomeBox
+    <Card
       title="OpenAPI Specification"
       description="A standard format for defining APIs, ensuring structured and consistent endpoints, methods, parameters, and responses."
       buttonTitle="View Docs"
@@ -56,8 +56,8 @@ import heroImage from "../assets/hero-img.png";
           d="M10 0C9.44687 0 9 0.446875 9 1C9 1.55313 9.44687 2 10 2H12.5844L6.29375 8.29375C5.90312 8.68437 5.90312 9.31875 6.29375 9.70938C6.68437 10.1 7.31875 10.1 7.70937 9.70938L14 3.41563V6C14 6.55312 14.4469 7 15 7C15.5531 7 16 6.55312 16 6V1C16 0.446875 15.5531 0 15 0H10ZM2.5 1C1.11875 1 0 2.11875 0 3.5V13.5C0 14.8813 1.11875 16 2.5 16H12.5C13.8813 16 15 14.8813 15 13.5V10C15 9.44687 14.5531 9 14 9C13.4469 9 13 9.44687 13 10V13.5C13 13.775 12.775 14 12.5 14H2.5C2.225 14 2 13.775 2 13.5V3.5C2 3.225 2.225 3 2.5 3H6C6.55312 3 7 2.55312 7 2C7 1.44687 6.55312 1 6 1H2.5Z"
         ></path>
       </svg>
-    </HomeBox>
-    <HomeBox
+    </Card>
+    <Card
       title="SwaggerHub"
       description="A comprehensive and collaborative platform for designing, documenting, and managing APIs across the API lifecycle."
       buttonTitle="View Docs"
@@ -78,13 +78,13 @@ import heroImage from "../assets/hero-img.png";
           d="M15.7063 5.70627C16.0969 5.31565 16.0969 4.68127 15.7063 4.29065L11.7063 0.290649C11.3156 -0.0999756 10.6812 -0.0999756 10.2906 0.290649C9.9 0.681274 9.9 1.31565 10.2906 1.70627L12.5844 4.00002H1C0.446875 4.00002 0 4.4469 0 5.00002C0 5.55315 0.446875 6.00002 1 6.00002H12.5844L10.2906 8.29377C9.9 8.6844 9.9 9.31878 10.2906 9.7094C10.6812 10.1 11.3156 10.1 11.7063 9.7094L15.7063 5.7094V5.70627Z"
         ></path>
       </svg>
-    </HomeBox>
+    </Card>
   </div>
 
   <div
     class="!mt-[30px] lg:!mt-[75px] grid gap-8 2xl:gap-10 grid-cols-1 lg:grid-cols-3"
   >
-    <HomeBox
+    <Card
       title="Swagger Editor"
       description="A user-friendly tool for creating, editing, and visualizing API definitions, streamlining the validation of API documentation."
       buttonTitle="View Docs"
@@ -103,8 +103,8 @@ import heroImage from "../assets/hero-img.png";
           d="M11.8156 6.20625L7.79688 10.6687C7.60625 10.8781 7.3375 11 7.05312 11H6.94375C6.65937 11 6.39062 10.8812 6.2 10.6687L2.18438 6.20625C2.06562 6.075 2 5.9 2 5.72188C2 5.325 2.325 5 2.72187 5H5V1C5 0.446875 5.44688 0 6 0H8C8.55313 0 9 0.446875 9 1V5H11.2781C11.6781 5 12 5.325 12 5.72188C12 5.9 11.9344 6.07188 11.8156 6.20625ZM2 11V13C2 13.5531 2.44688 14 3 14H11C11.5531 14 12 13.5531 12 13V11C12 10.4469 12.4469 10 13 10C13.5531 10 14 10.4469 14 11V13C14 14.6562 12.6562 16 11 16H3C1.34375 16 0 14.6562 0 13V11C0 10.4469 0.446875 10 1 10C1.55313 10 2 10.4469 2 11Z"
         ></path>
       </svg>
-    </HomeBox>
-    <HomeBox
+    </Card>
+    <Card
       title="Swagger UI"
       description="An interactive interface for exploring and testing APIs, making it easy to visualize and understand their functionality."
       buttonTitle="View Docs"
@@ -124,8 +124,8 @@ import heroImage from "../assets/hero-img.png";
           d="M11.8156 6.20625L7.79688 10.6687C7.60625 10.8781 7.3375 11 7.05312 11H6.94375C6.65937 11 6.39062 10.8812 6.2 10.6687L2.18438 6.20625C2.06562 6.075 2 5.9 2 5.72188C2 5.325 2.325 5 2.72187 5H5V1C5 0.446875 5.44688 0 6 0H8C8.55313 0 9 0.446875 9 1V5H11.2781C11.6781 5 12 5.325 12 5.72188C12 5.9 11.9344 6.07188 11.8156 6.20625ZM2 11V13C2 13.5531 2.44688 14 3 14H11C11.5531 14 12 13.5531 12 13V11C12 10.4469 12.4469 10 13 10C13.5531 10 14 10.4469 14 11V13C14 14.6562 12.6562 16 11 16H3C1.34375 16 0 14.6562 0 13V11C0 10.4469 0.446875 10 1 10C1.55313 10 2 10.4469 2 11Z"
         ></path>
       </svg>
-    </HomeBox>
-    <HomeBox
+    </Card>
+    <Card
       title="Swagger CodeGen"
       description="Automate the generation of client libraries, server stubs, and API documentation efficiently based on API definitions."
       buttonTitle="View Docs"
@@ -145,7 +145,7 @@ import heroImage from "../assets/hero-img.png";
           d="M11.8156 6.20625L7.79688 10.6687C7.60625 10.8781 7.3375 11 7.05312 11H6.94375C6.65937 11 6.39062 10.8812 6.2 10.6687L2.18438 6.20625C2.06562 6.075 2 5.9 2 5.72188C2 5.325 2.325 5 2.72187 5H5V1C5 0.446875 5.44688 0 6 0H8C8.55313 0 9 0.446875 9 1V5H11.2781C11.6781 5 12 5.325 12 5.72188C12 5.9 11.9344 6.07188 11.8156 6.20625ZM2 11V13C2 13.5531 2.44688 14 3 14H11C11.5531 14 12 13.5531 12 13V11C12 10.4469 12.4469 10 13 10C13.5531 10 14 10.4469 14 11V13C14 14.6562 12.6562 16 11 16H3C1.34375 16 0 14.6562 0 13V11C0 10.4469 0.446875 10 1 10C1.55313 10 2 10.4469 2 11Z"
         ></path>
       </svg>
-    </HomeBox>
+    </Card>
   </div>
 </section>
 
@@ -173,14 +173,14 @@ import heroImage from "../assets/hero-img.png";
     <div
       class="!mt-16 grid gap-8 sm:gap-[60px] lg:gap-8 2xl:gap-10 grid-cols-1 lg:grid-cols-2"
     >
-      <HomeBox
+      <Card
         title="SmartBear Community"
         description="Join the SmartBear Community to discuss products, share best practices, ask questions, and get support from peers and experts."
         buttonTitle="Learn More"
         path="https://community.smartbear.com/"
         alternative
       />
-      <HomeBox
+      <Card
         title="SmartBear Academy"
         description="Access training and resources to improve your skills and efficiency with SmartBear's testing and development tools."
         buttonTitle="Learn More"
