@@ -40,7 +40,7 @@ export default defineConfig({
                   label: "Usage",
                   items: [
                     {
-                      label: "Instalation",
+                      label: "Installation",
                       link: "open-source-tools/swagger-ui/usage/installation/",
                     },
                     {
