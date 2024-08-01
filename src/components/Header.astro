@@ -1149,7 +1149,7 @@ import type { Props } from '@astrojs/starlight/props';
             padding: 20px;
         }
         [data-theme='dark'] .nav-main .nav .show .dropdown-mega {
-            box-shadow: 0 0 10px 0px hsl(0, 0%, 0%, 0.5) inset;
+            box-shadow: -3px 0px 7px -3px hsl(0, 0%, 0%, 0.5) inset;
         }
         .nav-main .nav-tabs {
             background-color: var(--sl-color-black);
@@ -1191,7 +1191,6 @@ import type { Props } from '@astrojs/starlight/props';
             }
         }
         .nav-main .dropdown-menu {
-            box-shadow: 0 0 10px -5px rgba(23, 54, 71, 0.5);
             padding: 20px;
         }
         .nav-main .dropdown-menu {
@@ -1252,8 +1251,7 @@ import type { Props } from '@astrojs/starlight/props';
             left: 0;
         }
         [data-theme='dark'] .nav-toggle .nav-main .nav:not(.nav-tabs) {
-            box-shadow: 0 0 10px 0px hsl(0, 0%, 0%, 0.5) inset;
-            left: 0;
+            box-shadow: -4px 0 7px -4px hsl(0, 0%, 0%, 0.5) inset;
         }
 
         .nav-main .nav-item {
@@ -1392,12 +1390,15 @@ import type { Props } from '@astrojs/starlight/props';
             padding: 15px;
         }
 
-        [data-theme='dark'] .nav-main .nav-item:not(.nav-item-login, .nav-item-free-trial):hover {
+        [data-theme='dark'] .nav-main .nav-item:not(.nav-item-login, .nav-item-free-trial):hover,
+        [data-theme='dark'] .nav-main .nav-item.dropdown.show:not(.nav-item-login, .nav-item-free-trial) {
 
             starlight-theme-select label {
                 color: var(--clr-neutral-1);
             }
-            background-color: hsla(210, 14%, 20%, 0.8);
+            background-color: var(--sl-color-header-bg);
+            box-shadow: -3px 1px 4px -4px hsl(0, 0%, 10%, 0.5) inset;
+            border-top: 1px solid var(--clr-neutral-14);
         }
 
         .nav-link.dropdown-toggle {
@@ -1590,9 +1591,11 @@ import type { Props } from '@astrojs/starlight/props';
                 .classList;
             if (currentDropdown.contains('show')) {
                 currentDropdown.remove('show')
+                dropdown.classList.remove('show');
             } else {
                 closeDropdown();
                 currentDropdown.add('show');
+                dropdown.classList.add('show');
             }
         });
     });
@@ -1606,8 +1609,12 @@ import type { Props } from '@astrojs/starlight/props';
     });
 
     function closeDropdown () {
-        const dropdowns = document.querySelectorAll('.dropdown-menu');
+        const dropdowns = document.querySelectorAll('.dropdown');
+        const dropdownMenus = document.querySelectorAll('.dropdown-menu');
         dropdowns.forEach((dropdown) => {
+            dropdown.classList.remove('show');
+        });
+        dropdownMenus.forEach((dropdown) => {
             dropdown.classList.remove('show');
         });
     };
