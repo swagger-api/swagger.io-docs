@@ -104,3 +104,14 @@ const { hasSidebar, labels } = Astro.props;
 		}
 	}
 </style>
+
+<script>
+	// Clicking on a group label element should trigger the click on the first link inside it
+	const groupLabelElements = document.querySelectorAll('.group-label');
+	groupLabelElements.forEach((groupLabel) => {
+		groupLabel.addEventListener('click', (event) => {
+			groupLabel.parentElement?.nextElementSibling?.querySelector('a')?.click();
+			event.stopPropagation();
+		});
+	});
+</script>
