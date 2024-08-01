@@ -42,6 +42,7 @@ export default {
 			lg: '992px',
 			'menu-lg': '1152px',
 			xl: '1200px',
+			'menu-xl': '1280px',
 			'2xl': '1440px',
 		},
 		extend: {},
