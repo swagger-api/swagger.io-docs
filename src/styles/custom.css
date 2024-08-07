@@ -367,6 +367,11 @@ mobile-starlight-toc nav {
 	width: 100%;
 }
 
+/* Fix overflow due to code blocks on small screens */
+.expressive-code pre.wrap .ec-line .code {
+	min-width: min(9ch, var(--ecMaxLine, 9ch)) !important;
+}
+
 /* Hide dark/light theme selector in documentation nav */
 .mobile-preferences {
 	display: none;
