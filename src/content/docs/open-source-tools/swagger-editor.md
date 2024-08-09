@@ -6,7 +6,7 @@ sidebar:
 ---
 
 This page is about the current Swagger Editor. If you're looking for Swagger Editor Next (beta) docs, visit [Swagger
-Editor Next (beta)](/docs/open-source-tools/swagger-editor-next).
+Editor Next (beta)](/open-source-tools/swagger-editor-next).
 
 The Swagger Editor is an open source editor to design, define and document RESTful APIs in the Swagger Specification.
 The source code for the Swagger Editor can be found in GitHub.

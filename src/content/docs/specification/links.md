@@ -223,7 +223,7 @@ links:
     requestBody: "$response.body#/id"
 ```
 
-The syntax is `_parameter_name: value_` or _`requestBody: value`_. The parameter names and request body are those of the target operation. There is no need to list all the parameters, just those required to follow the link. Similarly, `requestBody` is only used if the target operation has a [body](/specification/describing-request-body/) and the link purpose is to define the body contents. If two or more parameters have the same name, prefix the names with the parameter location – _path_, _query_, *header* or _cookie_, like so:
+The syntax is `_parameter_name: value_` or _`requestBody: value`_. The parameter names and request body are those of the target operation. There is no need to list all the parameters, just those required to follow the link. Similarly, `requestBody` is only used if the target operation has a [body](/specification/describing-request-body/describing-request-body/) and the link purpose is to define the body contents. If two or more parameters have the same name, prefix the names with the parameter location – _path_, _query_, *header* or _cookie_, like so:
 
 ```yaml
 parameters:

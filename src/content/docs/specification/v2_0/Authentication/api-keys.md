@@ -5,7 +5,7 @@ sidebar:
 ---
 
 :::note
-OAS **2** This page applies to OpenAPI Specification ver. 2 (fka Swagger). To learn about the latest version, visit [OpenAPI 3 pages](/specification/v2_0/hentication/api-keys/).
+OAS **2** This page applies to OpenAPI Specification ver. 2 (fka Swagger). To learn about the latest version, visit [OpenAPI 3 pages](/specification/authentication/api-keys/).
 :::
 
 Some APIs use API keys for authorization. An API key is a special token that the client needs to provide when making API calls. The key is usually sent as a request header:

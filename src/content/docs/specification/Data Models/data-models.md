@@ -11,7 +11,7 @@ OAS **3** This guide is for OpenAPI 3.0.
 OpenAPI 3.0 data types are based on an extended subset [JSON Schema Specification Wright Draft 00](https://tools.ietf.org/html/draft-wright-json-schema-00#section-4.2) (aka Draft 5). The data types are described using a [Schema object](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#schemaObject). To learn how to model various data types, see the following topics:
 
 - [Data Types](/specification/data-models/data-types/)
-- [Enums](/specification/enums/)
+- [Enums](/specification/data-models/enums/)
 - [Dictionaries, Hashmaps, Associative Arrays](/specification/data-models/dictionaries/)
 - [oneOf, anyOf, allOf, not](/specification/data-models/oneof-anyof-allof-not/)
 - [Inheritance and Polymorphism](/specification/data-models/inheritance-and-polymorphism/)

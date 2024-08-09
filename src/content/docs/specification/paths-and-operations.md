@@ -16,12 +16,9 @@ API paths and operations are defined in the global `paths` section of the API sp
 
 ```yaml
 paths:
-  /ping:
-    ...
-  /users:
-    ...
-  /users/{id}:
-    ...
+  /ping: ...
+  /users: ...
+  /users/{id}: ...
 ```
 
 All paths are relative to the [API server URL](/specification/api-host-and-base-path/). The full request URL is constructed as `<server-url>/path`. Global `servers` can also be overridden on the path level or operation level (more on that [below](#overriding-servers)). Paths may have an optional short `summary` and a longer `description` for documentation purposes. This information is supposed to be relevant to all operations in this path. `description` can be [multi-line](http://stackoverflow.com/questions/3790454/in-yaml-how-do-i-break-a-string-over-multiple-lines) and supports [Markdown](http://commonmark.org/help/) (CommonMark) for rich text representation.
@@ -34,12 +31,9 @@ paths:
       This resource represents an individual user in the system.
       Each user is identified by a numeric `id`.
 
-    get:
-      ...
-    patch:
-      ...
-    delete:
-      ...
+    get: ...
+    patch: ...
+    delete: ...
 ```
 
 ### Path Templating
@@ -63,7 +57,7 @@ paths:
   /ping:
     get:
       responses:
-        '200':
+        "200":
           description: OK
 ```
 
@@ -90,12 +84,12 @@ paths:
             type: integer
             format: int64
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/User'
+                $ref: "#/components/schemas/User"
       externalDocs:
         description: Learn more about user operations provided by this API.
         url: http://api.example.com/docs/user-operations/
@@ -123,7 +117,7 @@ Operations also support some optional elements for documentation purposes:
 
 ### Operation Parameters
 
-OpenAPI 3.0 supports operation parameters passed via path, query string, headers, and cookies. You can also define the request body for operations that transmit data to the server, such as POST, PUT and PATCH. For details, see [Describing Parameters](/specification/describing-parameters/) and [Describing Request Body](/specification/describing-request-body/).
+OpenAPI 3.0 supports operation parameters passed via path, query string, headers, and cookies. You can also define the request body for operations that transmit data to the server, such as POST, PUT and PATCH. For details, see [Describing Parameters](/specification/describing-parameters/) and [Describing Request Body](/specification/describing-request-body/describing-request-body/).
 
 ### Query String in Paths
 
@@ -213,7 +207,8 @@ The global `servers` array can be overridden on the path level or operation leve
 - Deprecated but still functional endpoints.
 
   servers:
-    - url: https://api.example.com/v1
+
+  - url: https://api.example.com/v1
 
 ```yaml
 paths:

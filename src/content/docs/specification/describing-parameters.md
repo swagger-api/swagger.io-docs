@@ -122,13 +122,13 @@ GET /file?path=quotes%2Fh2g2.txt
 If you want a query parameter that is not percent-encoded, add `allowReserved: true` to the parameter definition:
 
 ```yaml
-      parameters:
-        - in: query
-          name: path
-          required: true
-          schema:
-            type: string
-          allowReserved: true # <-----
+parameters:
+  - in: query
+    name: path
+    required: true
+    schema:
+      type: string
+    allowReserved: true # <-----
 ```
 
 In this case, the parameter value would be sent like so:
@@ -179,16 +179,16 @@ Request content type: `requestBody.content.<media-type>`
 
 Response content type: `responses.<code>.content.<media-type>`
 
-[Describing Request Body](/specification/describing-request-body/),  
+[Describing Request Body](/specification/describing-request-body/describing-request-body/),  
 [Describing Responses](/specification/describing-responses/),  
-[Media Types](/specification/mime-types)
+[Media Types](/specification/media-types)
 
 `Accept`
 
 `responses.<code>.content.<media-type>`
 
 [Describing Responses](/specification/describing-responses/),  
-[Media Types](/specification/mime-types)
+[Media Types](/specification/media-types)
 
 `Authorization`
 
@@ -209,17 +209,17 @@ Cookie: debug=0; csrftoken=BUSe35dohU3O1MZvDCUOJ
 Use `in: cookie` to define cookie parameters:
 
 ```yaml
-      parameters:
-        - in: cookie
-          name: debug
-          schema:
-            type: integer
-            enum: [0, 1]
-            default: 0
-        - in: cookie
-          name: csrftoken
-          schema:
-            type: string
+parameters:
+  - in: cookie
+    name: debug
+    schema:
+      type: integer
+      enum: [0, 1]
+      default: 0
+  - in: cookie
+    name: csrftoken
+    schema:
+      type: string
 ```
 
 Cookie parameters can be primitive values, arrays and objects. Arrays and objects are serialized using the `form` style. For more information, see [Parameter Serialization](/specification/serialization/).

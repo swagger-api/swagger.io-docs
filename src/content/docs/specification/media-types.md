@@ -35,7 +35,7 @@ paths:
                   fullTime: true
 ```
 
-Under `responses` we have definitions of individual responses. As you can see, each response is defined by its code (`'200'` in our example.). The keyword `content` below the code corresponds to the response body. One or multiple media types go as child keywords of this `content` keyword. Each media type includes a `schema`, defining the data type of the message body, and, optionally, one or several examples. For more information on defining body data, see [Defining Request Body](/specification/describing-request-body/) and [Defining Responses](/specification/describing-responses/).
+Under `responses` we have definitions of individual responses. As you can see, each response is defined by its code (`'200'` in our example.). The keyword `content` below the code corresponds to the response body. One or multiple media types go as child keywords of this `content` keyword. Each media type includes a `schema`, defining the data type of the message body, and, optionally, one or several examples. For more information on defining body data, see [Defining Request Body](/specification/describing-request-body/describing-request-body/) and [Defining Responses](/specification/describing-responses/).
 
 ### Media Type Names
 
@@ -175,7 +175,7 @@ paths:
                   fullTime: true
 ```
 
-Under `responses` we have definitions of individual responses. As you can see, each response is defined by its code (`'200'` in our example.). The keyword `content` below the code corresponds to the response body. One or multiple media types go as child keywords of this `content` keyword. Each media type includes a `schema`, defining the data type of the message body, and, optionally, one or several examples. For more information on defining body data, see [Defining Request Body](/specification/describing-request-body/) and [Defining Responses](/specification/describing-responses/).
+Under `responses` we have definitions of individual responses. As you can see, each response is defined by its code (`'200'` in our example.). The keyword `content` below the code corresponds to the response body. One or multiple media types go as child keywords of this `content` keyword. Each media type includes a `schema`, defining the data type of the message body, and, optionally, one or several examples. For more information on defining body data, see [Defining Request Body](/specification/describing-request-body/describing-request-body/) and [Defining Responses](/specification/describing-responses/).
 
 ### Media Type Names
 

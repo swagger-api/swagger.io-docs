@@ -204,7 +204,7 @@ paths:
         200:
           description: OK
           schema:
-            $ref: '#/definitions/User'
+            $ref: "#/definitions/User"
   /users:
     post:
       summary: Creates a new user.
@@ -212,7 +212,7 @@ paths:
         - in: body
           name: user
           schema:
-            $ref: '#/definitions/User'
+            $ref: "#/definitions/User"
       responses:
         200:
           description: OK
@@ -237,7 +237,7 @@ Supported authentication methods are:
 - [API key](/specification/v2_0/authentication/api-keys/) (as a header or query parameter)
 - OAuth 2 common flows (implicit, password, application and access code)
 
-_More info:_ [Authentication](/specification/v2_0/authentication/).
+_More info:_ [Authentication](/specification/v2_0/authentication/authentication/).
 
 _Did not find what you were looking for? [Ask the community](https://community.smartbear.com/t5/Swagger-Open-Source-Tools/bd-p/SwaggerOSTools)  
 Found a mistake? [Let us know](https://github.com/swagger-api/swagger.io/issues)_

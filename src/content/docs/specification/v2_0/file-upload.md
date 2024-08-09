@@ -132,7 +132,7 @@ Note also that file uploading in Swagger UI only works for POST requests, becaus
 
 This is supported in OpenAPI 3.0, but not in OpenAPI/Swagger 2.0. In 2.0, you can say that an operation accepts a file, but you cannot say that this file is of a specific type or structure.
 
-As a workaround, [vendor extensions](/specification/swagger-extensions/) may be used to extend this functionality, for example:
+As a workaround, [vendor extensions](/specification/openapi-extensions/) may be used to extend this functionality, for example:
 
 ```yaml
 - in: formData

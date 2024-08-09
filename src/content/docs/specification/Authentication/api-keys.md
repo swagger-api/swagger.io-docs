@@ -21,7 +21,7 @@ GET /something HTTP/1.1
 X-API-Key: abcdef12345
 ```
 
-or as a [cookie](https://swagger.io/specification/authentication/cookie-authentication/):
+or as a [cookie](/specification/authentication/cookie-authentication/):
 
 ```yaml
 GET /something HTTP/1.1

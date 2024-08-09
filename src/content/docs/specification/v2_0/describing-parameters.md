@@ -142,7 +142,7 @@ For more information, see...
 
 `securityDefinitions`, `security`
 
-[Authentication](/specification/v2_0/authentication/)
+[Authentication](/specification/v2_0/authentication/authentication/)
 
 ### Form Parameters
 
@@ -155,9 +155,9 @@ That is, the operation’s `consumes` property must specify one of these content
 
 ```html
 <form action="http://example.com/survey" method="post">
-  <input type="text"   name="name" />
+  <input type="text" name="name" />
   <input type="number" name="fav_number" />
-  <input type="submit"/>
+  <input type="submit" />
 </form>
 ```
 
@@ -206,7 +206,7 @@ parameters:
   - in: path
     name: userId
     type: integer
-    required: true    # <----------
+    required: true # <----------
     description: Numeric ID of the user to get.
 ```
 
@@ -342,7 +342,20 @@ For example:
   uniqueItems: true
   items:
     type: string
-    enum: [black, white, gray, red, pink, orange, yellow, green, blue, purple, brown]
+    enum:
+      [
+        black,
+        white,
+        gray,
+        red,
+        pink,
+        orange,
+        yellow,
+        green,
+        blue,
+        purple,
+        brown,
+      ]
 ```
 
 You can also specify the default array that the server will use if this parameter is omitted:
@@ -388,7 +401,7 @@ Use `allowEmptyValue` to describe such parameters:
   name: metadata
   required: true
   type: boolean
-  allowEmptyValue: true  # <-----
+  allowEmptyValue: true # <-----
 ```
 
 ### Common Parameters
@@ -490,8 +503,8 @@ Different API paths may have some common parameters, such as pagination paramete
 
 ```yml
 parameters:
-  offsetParam:  # <-- Arbitrary name for the definition that will be used to refer to it.
-                # Not necessarily the same as the parameter name.
+  offsetParam: # <-- Arbitrary name for the definition that will be used to refer to it.
+    # Not necessarily the same as the parameter name.
     in: query
     name: offset
     required: false
@@ -512,8 +525,8 @@ paths:
     get:
       summary: Gets a list of users.
       parameters:
-        - $ref: '#/parameters/offsetParam'
-        - $ref: '#/parameters/limitParam'
+        - $ref: "#/parameters/offsetParam"
+        - $ref: "#/parameters/limitParam"
       responses:
         200:
           description: OK
@@ -521,8 +534,8 @@ paths:
     get:
       summary: Gets a list of teams.
       parameters:
-        - $ref: '#/parameters/offsetParam'
-        - $ref: '#/parameters/limitParam'
+        - $ref: "#/parameters/offsetParam"
+        - $ref: "#/parameters/limitParam"
       responses:
         200:
           description: OK
@@ -550,8 +563,8 @@ paths:
           in: query
           type: string
           description: >
-              A relative date range for the report, such as `Today` or `LastWeek`.
-              For an exact range, use `start_date` and `end_date` instead.
+            A relative date range for the report, such as `Today` or `LastWeek`.
+            For an exact range, use `start_date` and `end_date` instead.
         - name: start_date
           in: query
           type: string
