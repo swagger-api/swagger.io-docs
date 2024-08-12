@@ -167,34 +167,37 @@ In a similar way, you can define [custom response headers](/specification/descri
 
 **Note:** Header parameters named `Accept`, `Content-Type` and `Authorization` are not allowed. To describe these headers, use the corresponding OpenAPI keywords:
 
-Header
-
-OpenAPI keywords
-
-For more information, see...
-
-`Content-Type`
-
-Request content type: `requestBody.content.<media-type>`
-
-Response content type: `responses.<code>.content.<media-type>`
-
-[Describing Request Body](/specification/describing-request-body/describing-request-body/),  
-[Describing Responses](/specification/describing-responses/),  
-[Media Types](/specification/media-types)
-
-`Accept`
-
-`responses.<code>.content.<media-type>`
-
-[Describing Responses](/specification/describing-responses/),  
-[Media Types](/specification/media-types)
-
-`Authorization`
-
-`securitySchemes`, `security`
-
-[Authentication](/specification/authentication/)
+<table>
+	<thead>
+		<tr>
+			<th>Header</th>
+			<th>OpenAPI keywords</th>
+			<th>For more information, see...</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>Content-Type</code></td>
+			<td>Request content type: <code>requestBody.content.&lt;media-type&gt;</code><br>
+			<br>
+			Response content type: <code>responses.&lt;code&gt;.content.&lt;media-type&gt;</code></td>
+			<td><a href="/specification/describing-request-body/describing-request-body/">Describing Request Body</a>,<br>
+			<a href="/specification/describing-responses/">Describing Responses</a>,<br>
+			<a href="/specification/media-types">Media Types</a></td>
+		</tr>
+		<tr>
+			<td><code>Accept</code></td>
+			<td><code>responses.&lt;code&gt;.content.&lt;media-type&gt;</code></td>
+			<td><a href="/specification/describing-responses/">Describing Responses</a>,<br>
+			<a href="/specification/media-types">Media Types</a></td>
+		</tr>
+		<tr>
+			<td><code>Authorization</code></td>
+			<td><code>securitySchemes</code>, <code>security</code></td>
+			<td><a href="/specification/authentication/">Authentication</a></td>
+		</tr>
+	</tbody>
+</table>
 
 ### Cookie Parameters
 
@@ -340,7 +343,7 @@ parameters:
         - sold
 ```
 
-More info: [Defining an Enum](/specification/enums).
+More info: [Defining an Enum](/specification/data-models/enums).
 
 ### Constant Parameters
 

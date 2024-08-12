@@ -457,7 +457,7 @@ In order to inform `swagger-editor@5` npm package that I require it to use my sp
 
 ### Customization
 
-- [Plug points](./docs/customization/plug-points/README.md)
+- [Plug points](https://github.com/swagger-api/swagger-editor/blob/next/docs/customization/plug-points/README.md)
 
 ### Environment Variables
 

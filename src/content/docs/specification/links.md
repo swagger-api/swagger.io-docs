@@ -170,7 +170,7 @@ Each link contains the following information:
 
 The rest of this page goes into more detail about these keywords.
 
-[![OpenAPI 3.0 links](https://static1.smartbear.co/swagger/media/images/links.png "OpenAPI 3.0 links")](/wp-content/uploads/2017/08/links.png)
+![OpenAPI 3.0 links](https://static1.smartbear.co/swagger/media/images/links.png "OpenAPI 3.0 links")
 
 ### operationId
 
