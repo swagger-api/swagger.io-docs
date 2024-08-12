@@ -119,30 +119,33 @@ In a similar way, you can define [custom response headers](/specification/v2_0/d
 
 **Note:** Swagger specification has special keywords for some headers:
 
-Header
-
-Swagger Keywords
-
-For more information, see...
-
-`Content-Type`
-
-`consumes` (request content type)  
-`produces` (response content type)
-
-[MIME Types](/specification/v2_0/mime-types/)
-
-`Accept`
-
-`produces`
-
-[MIME Types](/specification/v2_0/mime-types/)
-
-`Authorization`
-
-`securityDefinitions`, `security`
-
-[Authentication](/specification/v2_0/authentication/authentication/)
+<table>
+	<thead>
+		<tr>
+			<th>Header</th>
+			<th>Swagger Keywords</th>
+			<th>For more information, see...</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>Content-Type</code></td>
+			<td><code>consumes</code> (request content type)<br>
+			<code>produces</code> (response content type)</td>
+			<td><a href="/docs/specification/2-0/mime-types/">MIME Types</a></td>
+		</tr>
+		<tr>
+			<td><code>Accept</code></td>
+			<td><code>produces</code></td>
+			<td><a href="/docs/specification/2-0/mime-types/">MIME Types</a></td>
+		</tr>
+		<tr>
+			<td><code>Authorization</code></td>
+			<td><code>securityDefinitions</code>, <code>security</code></td>
+			<td><a href="/docs/specification/2-0/authentication/">Authentication</a></td>
+		</tr>
+	</tbody>
+</table>
 
 ### Form Parameters
 
@@ -288,41 +291,42 @@ parameters:
 
 `collectionFormat` specifies the array format (a single parameter with multiple parameter or multiple parameters with the same name) and the separator for array items.
 
-collectionFormat
-
-Description
-
-Example
-
-`csv` (default)
-
-Comma-separated values.
-
-`foo,bar,baz`
-
-`ssv`
-
-Space-separated values.
-
-`foo bar baz`
-
-`tsv`
-
-Tab-separated values.
-
-`"foo\tbar\tbaz"`
-
-`pipes`
-
-Pipe-separated values.
-
-`foo|bar|baz`
-
-`multi`
-
-Multiple parameter instances rather than multiple values. This is only supported for the `in: query` and `in: formData` parameters.
-
-`foo=value&foo=another_value`
+<table>
+	<thead>
+		<tr>
+			<th>collectionFormat</th>
+			<th>Description</th>
+			<th>Example</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>csv</code> (default)</td>
+			<td>Comma-separated values.</td>
+			<td><code>foo,bar,baz</code></td>
+		</tr>
+		<tr>
+			<td><code>ssv</code></td>
+			<td>Space-separated values.</td>
+			<td><code>foo bar baz</code></td>
+		</tr>
+		<tr>
+			<td><code>tsv</code></td>
+			<td>Tab-separated values.</td>
+			<td><code>"foo\tbar\tbaz"</code></td>
+		</tr>
+		<tr>
+			<td><code>pipes</code></td>
+			<td>Pipe-separated values.</td>
+			<td><code>foo|bar|baz</code></td>
+		</tr>
+		<tr>
+			<td><code>multi</code></td>
+			<td>Multiple parameter instances rather than multiple values. This is only supported for the <code>in: query</code> and <code>in: formData</code> parameters.</td>
+			<td><code>foo=value&amp;foo=another_value</code></td>
+		</tr>
+	</tbody>
+</table>
 
 Additionally, you can:
 
