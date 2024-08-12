@@ -49,47 +49,47 @@ See also [Any Type](#any).
 
 OpenAPI has two numeric types, `number` and `integer`, where `number` includes both integer and floating-point numbers. An optional `format` keyword serves as a hint for the tools to use a specific numeric type:
 
-`type`
-
-`format`
-
-Description
-
-number
-
-–
-
-Any numbers.
-
-number
-
-float
-
-Floating-point numbers.
-
-number
-
-double
-
-Floating-point numbers with double precision.
-
-integer
-
-–
-
-Integer numbers.
-
-integer
-
-int32
-
-Signed 32-bit integers (commonly used integer type).
-
-integer
-
-int64
-
-Signed 64-bit integers (`long` type).
+<table>
+  <thead>
+    <tr>
+			<th><code>type</code></th>
+			<th><code>format</code></th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>number</td>
+			<td>&ndash;</td>
+			<td>Any numbers.</td>
+		</tr>
+		<tr>
+			<td>number</td>
+			<td>float</td>
+			<td>Floating-point numbers.</td>
+		</tr>
+		<tr>
+			<td>number</td>
+			<td>double</td>
+			<td>Floating-point numbers with double precision.</td>
+		</tr>
+		<tr>
+			<td>integer</td>
+			<td>&ndash;</td>
+			<td>Integer numbers.</td>
+		</tr>
+		<tr>
+			<td>integer</td>
+			<td>int32</td>
+			<td>Signed 32-bit integers (commonly used integer type).</td>
+		</tr>
+		<tr>
+			<td>integer</td>
+			<td>int64</td>
+			<td>Signed 64-bit integers (<code>long</code> type).</td>
+		</tr>
+	</tbody>
+</table>
 
 Note that strings containing numbers, such as "17", are considered strings and not numbers.
 
@@ -120,25 +120,32 @@ maximum: 50
 
 The word “exclusive” in `exclusiveMinimum` and `exclusiveMaximum` means the corresponding boundary is _excluded_:
 
-Keyword
-
-Description
-
-`exclusiveMinimum: false` or not included
-
-value ≥ `minimum`
-
-`exclusiveMinimum: true`
-
-value > `minimum`
-
-`exclusiveMaximum: false` or not included
-
-value ≤ `maximum`
-
-`exclusiveMaximum: true`
-
-value < `maximum`
+<table>
+	<thead>
+		<tr>
+			<th>Keyword</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>exclusiveMinimum: false</code> or not included</td>
+			<td>value ≥ <code>minimum</code></td>
+		</tr>
+		<tr>
+			<td><code>exclusiveMinimum: true</code></td>
+			<td>value &gt; <code>minimum</code></td>
+		</tr>
+		<tr>
+			<td><code>exclusiveMaximum: false</code> or not included</td>
+			<td>value ≤ <code>maximum</code></td>
+		</tr>
+		<tr>
+			<td><code>exclusiveMaximum: true</code></td>
+			<td>value &lt; <code>maximum</code></td>
+		</tr>
+	</tbody>
+</table>
 
 #### Multiples
 
