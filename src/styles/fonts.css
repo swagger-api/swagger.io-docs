@@ -1,6 +1,6 @@
 /* open-sans-300 - latin */
 @font-face {
-	font-display: swap;
+	font-display: fallback;
 	font-family: 'Open Sans';
 	font-style: normal;
 	font-weight: 300;
@@ -8,7 +8,7 @@
 }
 /* open-sans-300italic - latin */
 @font-face {
-	font-display: swap;
+	font-display: fallback;
 	font-family: 'Open Sans';
 	font-style: italic;
 	font-weight: 300;
@@ -16,7 +16,7 @@
 }
 /* open-sans-regular - latin */
 @font-face {
-	font-display: swap;
+	font-display: fallback;
 	font-family: 'Open Sans';
 	font-style: normal;
 	font-weight: 400;
@@ -24,7 +24,7 @@
 }
 /* open-sans-italic - latin */
 @font-face {
-	font-display: swap;
+	font-display: fallback;
 	font-family: 'Open Sans';
 	font-style: italic;
 	font-weight: 400;
@@ -32,7 +32,7 @@
 }
 /* open-sans-600 - latin */
 @font-face {
-	font-display: swap;
+	font-display: fallback;
 	font-family: 'Open Sans';
 	font-style: normal;
 	font-weight: 600;
@@ -40,7 +40,7 @@
 }
 /* open-sans-600italic - latin */
 @font-face {
-	font-display: swap;
+	font-display: fallback;
 	font-family: 'Open Sans';
 	font-style: italic;
 	font-weight: 600;
@@ -48,7 +48,7 @@
 }
 /* open-sans-700 - latin */
 @font-face {
-	font-display: swap;
+	font-display: fallback;
 	font-family: 'Open Sans';
 	font-style: normal;
 	font-weight: 700;
@@ -56,7 +56,7 @@
 }
 /* open-sans-700italic - latin */
 @font-face {
-	font-display: swap;
+	font-display: fallback;
 	font-family: 'Open Sans';
 	font-style: italic;
 	font-weight: 700;
@@ -64,7 +64,7 @@
 }
 /* monda-regular - latin */
 @font-face {
-	font-display: swap;
+	font-display: fallback;
 	font-family: 'Monda';
 	font-style: normal;
 	font-weight: 400;
@@ -72,7 +72,7 @@
 }
 /* monda-700 - latin */
 @font-face {
-	font-display: swap;
+	font-display: fallback;
 	font-family: 'Monda';
 	font-style: normal;
 	font-weight: 700;
@@ -80,7 +80,7 @@
 }
 /* roboto-regular - latin */
 @font-face {
-	font-display: swap;
+	font-display: fallback;
 	font-family: 'Roboto';
 	font-style: normal;
 	font-weight: 400;
@@ -88,7 +88,7 @@
 }
 /* roboto-700 - latin */
 @font-face {
-	font-display: swap;
+	font-display: fallback;
 	font-family: 'Roboto';
 	font-style: normal;
 	font-weight: 700;
@@ -96,7 +96,7 @@
 }
 /* roboto-700italic - latin */
 @font-face {
-	font-display: swap;
+	font-display: fallback;
 	font-family: 'Roboto';
 	font-style: italic;
 	font-weight: 700;
