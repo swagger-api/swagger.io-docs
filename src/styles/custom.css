@@ -287,11 +287,6 @@ main {
 	box-shadow: none;
 }
 
-/* Make content centered */
-.sl-container {
-	margin-inline: auto;
-}
-
 /* Sidebar pane */
 .sidebar-pane {
 	transition: left var(--transition);
@@ -310,7 +305,6 @@ starlight-menu-button {
 @media (min-width: 72rem) {
 	.right-sidebar-container {
 		border-inline-start: 1px solid var(--sl-color-gray-6);
-		width: auto;
 	}
 	.right-sidebar {
 		position: sticky;
@@ -343,6 +337,19 @@ mobile-starlight-toc nav {
 	border-inline-start: 1px solid var(--sl-color-header-bg)
 }
 
+/* Prevent overflow */
+.main-frame {
+	max-width: 100%;
+}
+@media (min-width: 50rem) {
+	.sidebar {
+		width: calc(var(--sb-mobile-menu-width) + 1px);
+	}
+	.main-frame {
+		width: calc(100% - calc(var(--sb-mobile-menu-width) + 1px));
+	}
+}
+
 /* Move TOC menu to left once Swagger nav menu opens */
 .nav-toggle #starlight__mobile-toc {
 	left: var(--sb-mobile-menu-width);
@@ -362,9 +369,6 @@ mobile-starlight-toc nav {
 	@media (min-width: 50rem) {
 		padding-top: calc(var(--sl-nav-height) + var(--sl-mobile-toc-height));
 	}
-}
-[data-has-sidebar][data-has-toc] .main-pane {
-	width: 100%;
 }
 
 /* Fix overflow due to code blocks on small screens */
