@@ -1,11 +1,31 @@
 
-# Swagger Open Source Docs
+# <img src="https://raw.githubusercontent.com/swagger-api/swagger.io/wordpress/images/assets/SW-logo-clr.png" height="60">  
 
-Welcome to the Swagger Open Source Documentation repository. This repository contains all the documentation for Swagger, an open-source suite of tools for API development.
+For general support questions, please refer to the [Community Forums](https://community.smartbear.com/t5/Swagger-Open-Source-Tools/bd-p/SwaggerOSTools).
+
+# Swagger Open Source Documentation
+
+Welcome to the Swagger Open Source Documentation repository. This repository contains all the documentation for Swagger, an open-source suite of tools for API development, and OpenAPI Specification (FKA Swagger). The content of this repository is published at https://swagger.io/docs/.
+
 
 ## Tech Stack
 
-We use [Starlight by Astro](https://astro.build/starlight) to build and maintain our documentation. Starlight is a powerful static site generator that allows us to create performant, content-rich documentation sites with ease.
+We use [Astro](https://astro.build) to build and maintain our documentation. Astro is a powerful static site generator that allows us to create performant, content-rich documentation sites with ease.
+
+## Contributing
+
+We welcome contributions from the community! To contribute:
+
+1. Clone the repository. (`git clone https://github.com/swagger-api/swagger.io.git`)
+2. Create a new branch (`git checkout -b feature-branch-name`).
+3. Make your changes.
+4. Commit your changes (`git commit -m 'Add some feature'`).
+5. Push to the branch (`git push origin feature-branch-name`).
+6. Open a pull request.
+7. A maintainer will review your changes and merge them if they are approved.
+
+Please ensure your change adheres to our coding standards and is well-documented.
+
 
 ## Getting Started
 
@@ -57,24 +77,3 @@ yarn build
 ```
 
 The built files will be output to the `dist` directory.
-
-## Contributing
-
-We welcome contributions from the community! To contribute:
-
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature-branch-name`).
-3. Make your changes.
-4. Commit your changes (`git commit -m 'Add some feature'`).
-5. Push to the branch (`git push origin feature-branch-name`).
-6. Open a pull request.
-
-Please ensure your code adheres to our coding standards and is well-documented.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
-
-## Contact
-
-For any questions or feedback, please reach out to us at [support@swagger.io](mailto:support@swagger.io).
