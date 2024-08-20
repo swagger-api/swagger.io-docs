@@ -140,7 +140,7 @@
 	--sl-color-gray-6: var(--clr-accent-2);
 	--sl-color-gray-7: var(--clr-neutral-15);
 	--sl-color-black: var(--clr-neutral-14);
-	--sl-color-text: var(--clr-neutral-9);
+	--sl-color-text: var(--clr-neutral-3);
 	--sl-color-text-accent: var(--clr-accent-2);
 	--sl-color-white: var(--clr-neutral-1);
 	--sl-color-header-bg: #2B3239;
@@ -196,7 +196,7 @@
 		border-inline-start: 1px solid var(--sl-color-header-bg);
 	}
 	.right-sidebar-panel a {
-		color: var(--clr-neutral-9);
+		color: var(--clr-neutral-3);
 	}
 	.right-sidebar-panel a[aria-current=true] {
 		background-color: var(--sl-color-code-bg);
@@ -216,7 +216,7 @@
 	.sidebar-content {
 		a {
 			--sl-color-text-accent: var(--sl-color-code-bg);
-			color: var(--clr-neutral-9);
+			color: var(--clr-neutral-3);
 			&[aria-current=page] {
 				border-left: 2px solid var(--clr-accent-1);
 				border-top-left-radius: 0px;
@@ -225,7 +225,7 @@
 			}
 		}
 		.large {
-			color: var(--clr-neutral-9);
+			color: var(--clr-neutral-3);
 		}
 	}
 	.sidebar-pane {

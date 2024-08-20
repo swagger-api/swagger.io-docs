@@ -21,40 +21,40 @@ Ensure you have the following installed on your machine:
 
 1. Clone the repository:
 
-    \```bash
-    git clone https://github.com/swagger-api/swagger-open-source-docs.git
-    cd swagger-open-source-docs
-    \```
+    ```bash
+    git clone https://github.com/swagger-api/swagger.io.git
+    cd swagger.io
+    ```
 
 2. Install dependencies:
 
-    \```bash
+    ```bash
     npm install
     # or
     yarn install
-    \```
+    ```
 
 ### Running the Development Server
 
 To start the development server and view the documentation locally:
 
-\```bash
+```bash
 npm run dev
 # or
 yarn dev
-\```
+```
 
-This will start the development server at `http://localhost:3000`, where you can view and edit the documentation.
+This will start the development server at `http://localhost:4321`, where you can view and edit the documentation.
 
 ### Building the Documentation
 
 To build the documentation for production:
 
-\```bash
+```bash
 npm run build
 # or
 yarn build
-\```
+```
 
 The built files will be output to the `dist` directory.
 
