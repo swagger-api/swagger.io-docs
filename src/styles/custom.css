@@ -392,3 +392,9 @@ footer {
 #searchComponent .app-input-auto {
 	color: #333333;
 }
+
+.sidebar a[target="_blank"]::after {
+	content: "↗";
+	margin-left: 0.25rem;
+	opacity: .4;
+}

@@ -21,10 +21,12 @@ export default defineConfig({
         {
           label: "SwaggerHub",
           link: "https://support.smartbear.com/swaggerhub/docs/",
+          attrs: { target: '_blank' },
         },
         {
           label: "SwaggerHub Explore",
           link: "https://support.smartbear.com/swaggerhub-explore/docs/",
+          attrs: { target: '_blank' },
         },
         {
           label: "Open Source Tools",
