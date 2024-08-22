@@ -1,7 +1,7 @@
 ---
-title: Installation
+title: Swagger UI Installation
 sidebar:
-  label: Installation
+  label: Swagger UI Installation
   order: 1
 ---
 

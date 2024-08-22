@@ -35,7 +35,7 @@ import heroImage from "../assets/hero-img.png";
 <section
   class="max-w-[1490px] mx-auto mb-[70px] sm:mb-[80px] md:mb-[106px] lg:mb-[75px] xl:mb-[90px] 2xl:mb-[110px] px-[18px] sm:px-[33px] md:px-[97px] lg:px-[31px] xl:px-[45px]"
 >
-  <div class="grid gap-8 2xl:gap-10 grid-cols-1 lg:grid-cols-2">
+  <div class="!mt-[30px] lg:!mt-[75px] grid gap-8 2xl:gap-10 grid-cols-1 lg:grid-cols-3">
     <Card
       title="OpenAPI Specification"
       description="A standard format for defining APIs, ensuring structured and consistent endpoints, methods, parameters, and responses."
@@ -64,6 +64,28 @@ import heroImage from "../assets/hero-img.png";
       optionalText="Try Free"
       path="https://support.smartbear.com/swaggerhub/docs/"
       optionalPath="https://app.swaggerhub.com/start-trial"
+      cards={2}
+    >
+      <svg
+        height="16"
+        width="16"
+        viewBox="0 0 16 10"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          id="Primary"
+          d="M15.7063 5.70627C16.0969 5.31565 16.0969 4.68127 15.7063 4.29065L11.7063 0.290649C11.3156 -0.0999756 10.6812 -0.0999756 10.2906 0.290649C9.9 0.681274 9.9 1.31565 10.2906 1.70627L12.5844 4.00002H1C0.446875 4.00002 0 4.4469 0 5.00002C0 5.55315 0.446875 6.00002 1 6.00002H12.5844L10.2906 8.29377C9.9 8.6844 9.9 9.31878 10.2906 9.7094C10.6812 10.1 11.3156 10.1 11.7063 9.7094L15.7063 5.7094V5.70627Z"
+        ></path>
+      </svg>
+    </Card>
+    <Card
+      title="SwaggerHub Explore"
+      description="A comprehensive and collaborative platform for designing, documenting, and managing APIs across the API lifecycle."
+      buttonTitle="View Docs"
+      optionalText="Create Free Account" 
+      path="https://support.smartbear.com/swaggerhub-explore/docs/"
+      optionalPath="https://explore.swaggerhub.com/start-trial"
       cards={2}
     >
       <svg

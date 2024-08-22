@@ -385,3 +385,10 @@ mobile-starlight-toc nav {
 footer {
 	margin-top: 0 !important;
 }
+
+/* Search */
+#searchComponent input,
+#searchComponent .fal.fa-search,
+#searchComponent .app-input-auto {
+	color: #333333;
+}

@@ -23,6 +23,10 @@ export default defineConfig({
           link: "https://support.smartbear.com/swaggerhub/docs/",
         },
         {
+          label: "SwaggerHub Explore",
+          link: "https://support.smartbear.com/swaggerhub-explore/docs/",
+        },
+        {
           label: "Open Source Tools",
           items: [
             {
@@ -40,7 +44,7 @@ export default defineConfig({
                   label: "Usage",
                   items: [
                     {
-                      label: "Installation",
+                      label: "Swagger UI Installation",
                       link: "open-source-tools/swagger-ui/usage/installation/",
                     },
                     {
@@ -124,157 +128,157 @@ export default defineConfig({
               items: [
             {
               label: "What Is OpenAPI?",
-              link: "specification/about/",
+              link: "specification/v3_0/about/",
             },
             {
               label: "Basic Structure",
-              link: "specification/basic-structure/",
+              link: "specification/v3_0/basic-structure/",
             },
             {
               label: "API Server and Base Path",
-              link: "specification/api-host-and-base-path/",
+              link: "specification/v3_0/api-host-and-base-path/",
             },
             {
               label: "Media Types",
-              link: "specification/media-types/",
+              link: "specification/v3_0/media-types/",
             },
             {
               label: "Paths and Operations",
-              link: "specification/paths-and-operations/",
+              link: "specification/v3_0/paths-and-operations/",
             },
             {
               label: "Describing Parameters",
-              link: "specification/describing-parameters/",
+              link: "specification/v3_0/describing-parameters/",
             },
             {
               label: "Parameter Serialization",
-              link: "specification/serialization/",
+              link: "specification/v3_0/serialization/",
             },
             {
               label: "Describing Request Body",
               items: [
                 {
                   label: "Overview",
-                  link: "specification/describing-request-body/describing-request-body",
+                  link: "specification/v3_0/describing-request-body/describing-request-body",
                 },
                 {
                   label: "File Upload",
-                  link: "specification/describing-request-body/file-upload/",
+                  link: "specification/v3_0/describing-request-body/file-upload/",
                 },
                 {
                   label: "Multipart Requests",
-                  link: "specification/describing-request-body/multipart-requests/",
+                  link: "specification/v3_0/describing-request-body/multipart-requests/",
                 },
               ],
               collapsed: true,
             },
             {
               label: "Describing Responses",
-              link: "specification/describing-responses/",
+              link: "specification/v3_0/describing-responses/",
             },
             {
               label: "Data Models",
               items: [
                 {
                   label: "Overview",
-                  link: "specification/data-models/data-models/",
+                  link: "specification/v3_0/data-models/data-models/",
                 },
                 {
                   label: "Data Types",
-                  link: "specification/data-models/data-types/",
+                  link: "specification/v3_0/data-models/data-types/",
                 },
                 {
                   label: "Enums",
-                  link: "specification/data-models/enums/",
+                  link: "specification/v3_0/data-models/enums/",
                 },
                 {
                   label: "Dictionaries, Hashmaps, Associative Arrays",
-                  link: "/specification/data-models/dictionaries/",
+                  link: "/specification/v3_0/data-models/dictionaries/",
                 },
                 {
                   label: "oneOf, anyOf, allOf, not",
-                  link: "specification/data-models/oneof-anyof-allof-not/",
+                  link: "specification/v3_0/data-models/oneof-anyof-allof-not/",
                 },
                 {
                   label: "Inheritance and Polymorphism",
-                  link: "specification/data-models/inheritance-and-polymorphism/",
+                  link: "specification/v3_0/data-models/inheritance-and-polymorphism/",
                 },
                 {
                   label: "Representing XML",
-                  link: "specification/data-models/representing-xml/",
+                  link: "specification/v3_0/data-models/representing-xml/",
                 },
                 {
                   label: "Supported JSON Schema Keywords",
-                  link: "specification/data-models/keywords/",
+                  link: "specification/v3_0/data-models/keywords/",
                 },
               ],
               collapsed: true,
             },
             {
               label: "Adding Examples",
-              link: "specification/adding-examples/",
+              link: "specification/v3_0/adding-examples/",
             },
             {
               label: "Authentication",
               items: [
                 {
                   label: "Overview",
-                  link: "specification/authentication/",
+                  link: "specification/v3_0/authentication/",
                 },
                 {
                   label: "Basic Authentication",
-                  link: "specification/authentication/basic-authentication/",
+                  link: "specification/v3_0/authentication/basic-authentication/",
                 },
                 {
                   label: "API Keys",
-                  link: "specification/authentication/api-keys/",
+                  link: "specification/v3_0/authentication/api-keys/",
                 },
                 {
                   label: "Bearer Authentication",
-                  link: "specification/authentication/bearer-authentication/",
+                  link: "specification/v3_0/authentication/bearer-authentication/",
                 },
                 {
                   label: "OAuth 2.0",
-                  link: "specification/authentication/oauth2/",
+                  link: "specification/v3_0/authentication/oauth2/",
                 },
                 {
                   label: "OpenID Connect Discovery",
-                  link: "specification/authentication/openid-connect-discovery/",
+                  link: "specification/v3_0/authentication/openid-connect-discovery/",
                 },
                 {
                   label: "Cookie Authentication",
-                  link: "specification/authentication/cookie-authentication/",
+                  link: "specification/v3_0/authentication/cookie-authentication/",
                 },
               ],
               collapsed: true,
             },
             {
               label: "Links",
-              link: "specification/links/",
+              link: "specification/v3_0/links/",
             },
             {
               label: "Callbacks",
-              link: "specification/callbacks/",
+              link: "specification/v3_0/callbacks/",
             },
             {
               label: "Components Section",
-              link: "specification/components/",
+              link: "specification/v3_0/components/",
             },
             {
               label: "Using $ref",
-              link: "specification/using-ref/",
+              link: "specification/v3_0/using-ref/",
             },
             {
               label: "API General Info",
-              link: "specification/api-general-info/",
+              link: "specification/v3_0/api-general-info/",
             },
             {
               label: "Grouping Operations With Tags",
-              link: "specification/grouping-operations-with-tags/",
+              link: "specification/v3_0/grouping-operations-with-tags/",
             },
             {
               label: "OpenAPI Extensions",
-              link: "specification/openapi-extensions/",
+              link: "specification/v3_0/openapi-extensions/",
             },
           ],
         },
