@@ -295,5 +295,6 @@ export default defineConfig({
   }), tailwind({
     // Disable the default base styles:
     applyBaseStyles: false
-  }), sitemap()]
+  }), sitemap()],
+  base: '/docs-1/',
 });

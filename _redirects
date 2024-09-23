@@ -14,6 +14,7 @@
 /specification/2-0/file-upload/  /specification/v2_0/file-upload/ 301
 /specification/2-0/grouping-operations-with-tags/  /specification/v2_0/grouping-operations-with-tags/ 301
 /specification/2-0/mime-types/ /specification/v2_0/mime-types/ 301
+/specification/mime-types/ /specification/v2_0/mime-types/ 301
 /specification/2-0/paths-and-operations/ /specification/v2_0/paths-and-operations/ 301
 /specification/2-0/swagger-extensions/ /specification/v2_0/swagger-extensions/ 301
 /specification/2-0/what-is-swagger/ /specification/v2_0/what-is-swagger/ 301
@@ -72,4 +73,3 @@
 /swagger-tools/ /open-source-tools/swagger-editor/ 301
 /usage/deep-linking.md /open-source-tools/swagger-ui/usage/deep-linking/ 301
 /usage/deep-linking.md/ /open-source-tools/swagger-ui/usage/deep-linking/ 301
-/open-source-tools/swagger-ui/usage/ /open-source-tools/swagger-ui/usage/installation/ 301
