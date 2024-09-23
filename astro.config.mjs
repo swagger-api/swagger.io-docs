@@ -213,7 +213,8 @@ export default defineConfig({
         }, {
           label: "OpenAPI Extensions",
           link: "specification/v3_0/openapi-extensions/"
-        }]
+        }],
+        collapsed: true
       }, {
         label: "Version 2.0",
         items: [{
