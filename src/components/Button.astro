@@ -5,9 +5,9 @@ const { variant, text, path } = Astro.props;
 
 const buttonVariants: { [key: string]: string } = {
   default:
-    "!text-[16px] dark:!text-[var(--clr-accent-1)] !text-[var(--clr-accent-2)] font-bold cursor-pointer no-underline ml-0 md:ml-2 lg:ml-0 xl:ml-2 flex items-center hover:underline",
+    "relative !text-[16px] dark:!text-[var(--clr-accent-1)] !no-underline !text-[var(--clr-accent-2)] font-bold cursor-pointer ml-0 md:ml-2 lg:ml-0 xl:ml-2 flex items-center hover:!text-[#065C83] before:content-[''] before:absolute before:w-full before:h-[2px] before:bg-[#065C83] dark:before:bg-[var(--clr-accent-1)] before:left-0 before:bottom-[-4px] before:hidden hover:before:block",
   primary:
-    "w-max !text-[16px] dark:!bg-[var(--clr-accent-1)] !bg-[var(--clr-accent-2)] !border-[var(--clr-accent-2)] !text-[var(--clr-neutral-1)] dark:!text-[var(--clr-neutral-14)]  bg-none cursor-pointer rounded px-[15px] py-[11px] text-base font-bold inline-block m-0 no-underline leading-none border border-solid border-transparent transition-all duration-200 ease-in-out hover:!bg-[var(--clr-accent-3)] hover:!border-[var(--clr-accent-3)] hover:text-white",
+    "w-max !text-[16px] dark:!bg-[var(--clr-accent-1)] !bg-[var(--clr-accent-2)]  !text-[var(--clr-neutral-1)] dark:!text-[var(--clr-neutral-14)] bg-none cursor-pointer rounded px-[24px] py-[12px] text-base font-bold inline-block m-0 no-underline leading-none  transition-all duration-200 ease-in-out hover:!bg-[var(--clr-accent-3)]  hover:text-white dark:hover:!bg-[#58C6FF]",
 
   // Add more variants as needed
 };
