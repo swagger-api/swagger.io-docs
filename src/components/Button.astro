@@ -1,0 +1,33 @@
+---
+import "../styles/custom.css";
+
+const { variant, text, path } = Astro.props;
+
+const buttonVariants: { [key: string]: string } = {
+  default:
+    "relative !text-[16px] dark:!text-[var(--clr-accent-1)] !no-underline !text-[var(--clr-accent-2)] font-bold cursor-pointer ml-0 md:ml-2 lg:ml-0 xl:ml-2 flex items-center hover:!text-[#065C83] before:content-[''] before:absolute before:w-full before:h-[2px] before:bg-[#065C83] dark:before:bg-[var(--clr-accent-1)] before:left-0 before:bottom-[-4px] before:hidden hover:before:block",
+  primary:
+    "w-max !text-[16px] dark:!bg-[var(--clr-accent-1)] !bg-[var(--clr-accent-2)]  !text-[var(--clr-neutral-1)] dark:!text-[var(--clr-neutral-14)] bg-none cursor-pointer rounded px-[24px] py-[12px] text-base font-bold inline-block m-0 no-underline leading-none  transition-all duration-200 ease-in-out hover:!bg-[var(--clr-accent-3)]  hover:text-white dark:hover:!bg-[#58C6FF]",
+
+  // Add more variants as needed
+};
+
+const buttonClasses = buttonVariants[variant] || buttonVariants["default"];
+---
+
+<a href={path} class={buttonClasses}>
+  <div class="!mt-0 flex items-center">
+    <span class="button-content whitespace-nowrap items-center flex">
+      <slot />
+    </span>
+  </div>
+</a>
+
+<style is:inline>
+  .button-content svg {
+    fill: currentColor;
+    margin-left: 10px;
+    width: 16px;
+    height: 16px;
+  }
+</style>

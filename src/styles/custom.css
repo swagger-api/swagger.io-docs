@@ -1,0 +1,400 @@
+:root {
+	--sl-font: 'Open Sans', sans-serif;
+	--sl-mobile-docs-height: 60px;
+	--sl-nav-height: 4rem;
+	--clr-accent-1: #20B1FD;
+	--clr-accent-2: #097EB2;
+	--clr-accent-3: #00537C;
+	--clr-accent-4: #173647;
+	--clr-accent-5: #112838;
+	--clr-neutral-1: #FFFFFF;
+	--clr-neutral-2: #F8FAFB;
+	--clr-neutral-3: #F0F3F5;
+	--clr-neutral-4: #E4EAF1;
+	--clr-neutral-5: #DEE5ED;
+	--clr-neutral-6: #D8DDE4;
+	--clr-neutral-7: #C7D7E2;
+	--clr-neutral-8: #AFC4CE;
+	--clr-neutral-9: #8EADBF;
+	--clr-neutral-10: #7E96A5;
+	--clr-neutral-11: #566D7A;
+	--clr-neutral-12: #3B505B;
+	--clr-neutral-13: #173647;
+	--clr-neutral-14: #212529;
+	--clr-neutral-15: #1A1D20;
+	--clr-green: #5BD621;
+	--white: #FFFFFF;
+	--black: #000000;
+	--sb-mobile-menu-width: 300px;
+	--transition: 0.3s ease-in-out;
+}
+
+/* Light Mode */
+:root[data-theme='light'] {
+	--sl-color-accent: var(--clr-neutral-6);
+	--sl-color-gray-1: var(--clr-neutral-15);
+	--sl-color-gray-2: var(--clr-neutral-14);
+	--sl-color-gray-6: var(--clr-neutral-3);
+	--sl-color-gray-7: var(--clr-neutral-2);
+	--sl-color-black: var(--clr-neutral-1);
+	--sl-color-text-accent: var(--clr-accent-2);
+	--sl-color-white: var(--clr-accent-4);
+	--sl-color-header-bg: var(--clr-neutral-1);
+	--sb-nav-cta: var(--clr-accent-2);
+
+	--sl-shadow-md: 0 10px 20px -12px rgb(0 0 0 / 0.25);
+
+	/* Search icon color */
+	.nav-item-search {
+		color: var(--clr-neutral-15);
+	}
+
+	/* Pagination colors */
+	.pagination-links a {
+		border-color: var(--clr-neutral-6);
+		&:hover {
+			border-color: var(--clr-neutral-12);
+		}
+	}
+
+	/* On this page */
+	details .toggle:hover {
+		border-color: var(--clr-neutral-12);
+	}
+
+	/* TOC Sidebar */
+	.right-sidebar-panel a[aria-current=true] {
+		background-color: var(--clr-neutral-3);
+		border-left: 2px solid var(--clr-accent-2);
+		border-top-left-radius: 0px;
+		border-bottom-left-radius: 0px;
+		color: var(--clr-accent-4);
+		font-weight: 600;
+	}
+
+	/* Sidebar border color */
+	.right-sidebar-container {
+		--sl-color-gray-6: var(--clr-neutral-3);
+	}
+
+	/* Documentation Sidebar */
+	.sidebar-content a {
+		--sl-color-text-accent: var(--clr-neutral-3);
+		--sl-color-text-invert: var(--clr-accent-4);
+		&[aria-current=page] {
+			border-left: 2px solid var(--clr-accent-2);
+			border-top-left-radius: 0px;
+			border-bottom-left-radius: 0px;
+		}
+	}
+	.sidebar-pane {
+		background-color: var(--clr-neutral-1);
+		top: calc(var(--sl-nav-height) + var(--sl-mobile-toc-height));
+		@media (min-width: 50rem) {
+			top: calc(var(--sl-nav-height));
+		}
+	}
+
+	/* Code */
+	code {
+		--sl-color-bg-inline-code: var(--clr-neutral-3);
+	}
+	.expressive-code .frame {
+		--code-background: var(--clr-neutral-3);
+	}
+
+	.expressive-code pre {
+		border: 1px solid var(--sl-color-accent);
+	}
+
+
+	/* Link color */
+	.sl-markdown-content a:not(:where(.not-content *)) {
+		color: var(--clr-accent-2);
+	}
+
+	/* Mobile TOC colors */
+	mobile-starlight-toc nav {
+		background-color: var(--clr-neutral-1);
+	}
+
+	/* Banners */
+	.starlight-aside .starlight-aside__title {
+		color: var(--clr-neutral-14);
+	}
+
+	/* Mobile documentation menu */
+	starlight-menu-button {
+		background-color: var(--sl-color-gray-6);
+		button {
+			background-color: var(--sl-color-gray-6) !important;
+		}
+	}
+}
+
+/* Dark Mode */
+:root[data-theme=dark]{
+	--sl-color-accent: var(--clr-neutral-9);
+	--sl-color-gray-1: var(--clr-neutral-1);
+	--sl-color-gray-2: var(--clr-neutral-1);
+	--sl-color-gray-6: var(--clr-accent-2);
+	--sl-color-gray-7: var(--clr-neutral-15);
+	--sl-color-black: var(--clr-neutral-14);
+	--sl-color-text: var(--clr-neutral-3);
+	--sl-color-text-accent: var(--clr-accent-2);
+	--sl-color-white: var(--clr-neutral-1);
+	--sl-color-header-bg: #2B3239;
+	--sl-color-code-bg: var(--clr-neutral-15);
+	--sb-nav-cta: var(--clr-accent-2);
+
+	/* Search icon color */
+	.nav-item-search {
+		color: var(--clr-neutral-1);
+	}
+
+	/* Pagination colors */
+	.pagination-links a {
+		border-color: transparent;
+		background-color: var(--sl-color-header-bg);
+		&:hover {
+			border-color: var(--clr-neutral-9);
+		}
+	}
+
+	/* On this page */
+	details {
+		color: var(--clr-neutral-1);
+	}
+	details .toggle:hover {
+		border-color: var(--clr-neutral-9);
+	}
+
+	/* Content panel */
+	.content-panel {
+		border-top: 1px solid var(--sl-color-header-bg);
+	}
+
+	/* Code */
+	code {
+		--sl-color-bg-inline-code: var(--sl-color-header-bg);
+	}
+	.expressive-code .frame pre {
+		--code-background: var(--sl-color-code-bg);
+	}
+
+	.expressive-code pre {
+		border: 1px solid var(--sl-color-header-bg);
+	}
+
+	/* Link colors for dark mode */
+	.sl-markdown-content a:not(:where(.not-content *)) {
+		color: var(--clr-accent-1);
+	}
+
+	/* TOC Sidebar */
+	.right-sidebar {
+		border-inline-start: 1px solid var(--sl-color-header-bg);
+	}
+	.right-sidebar-panel a {
+		color: var(--clr-neutral-3);
+	}
+	.right-sidebar-panel a[aria-current=true] {
+		background-color: var(--sl-color-code-bg);
+		border-left: 2px solid var(--clr-accent-1);
+		border-top-left-radius: 0px;
+		border-bottom-left-radius: 0px;
+		color: var(--clr-neutral-1);
+		font-weight: 600;
+	}
+
+	/* Sidebar border color */
+	.right-sidebar-container {
+		--sl-color-gray-6: var(--sl-color-header-bg);
+	}
+
+	/* Documentation sidebar */
+	.sidebar-content {
+		a {
+			--sl-color-text-accent: var(--sl-color-code-bg);
+			color: var(--clr-neutral-3);
+			&[aria-current=page] {
+				border-left: 2px solid var(--clr-accent-1);
+				border-top-left-radius: 0px;
+				border-bottom-left-radius: 0px;
+				color: var(--clr-neutral-1);
+			}
+		}
+		.large {
+			color: var(--clr-neutral-3);
+		}
+	}
+	.sidebar-pane {
+		background-color: var(--sl-color-header-bg);
+	}
+
+	/* Mobile TOC background */
+	mobile-starlight-toc nav {
+		background-color: var(--clr-neutral-14);
+	}
+
+	/* Banners */
+	.starlight-aside .starlight-aside__title {
+		color: var(--sl-color-white);
+	}
+
+	/* Mobile documentation menu */
+	starlight-menu-button {
+		background-color: var(--sl-color-code-bg);
+		button {
+			background-color: var(--sl-color-code-bg) !important;
+		}
+	}
+}
+
+/* Make skip link visible */
+.page {
+	isolation: isolate;
+}
+
+/* Change focus style */
+:focus-visible {
+	outline: 1px solid var(--clr-accent-2);
+	border-radius: 0.25rem;
+}
+
+/* Remove focus outline from theme switcher */
+.icon.label-icon + select:focus-visible {
+	outline: none;
+}
+
+/* Main */
+main {
+	padding: 0 !important;
+}
+
+/* Banners */
+.starlight-aside--note {
+	border-color: var(--clr-accent-1);
+	background-color: hsla(201, 90%, 50%, 0.1);
+}
+.starlight-aside--tip {
+	border-color: var(--clr-green);
+	background-color: hsla(120, 100%, 50%, 0.1); 
+}
+
+/* Remove pagination shadows */
+.pagination-links a {
+	box-shadow: none;
+}
+
+/* Sidebar pane */
+.sidebar-pane {
+	transition: left var(--transition);
+}
+starlight-menu-button {
+	.menu-text {
+		color: var(--sl-color-white);
+	}
+}
+.sidebar-content .large {
+	font-weight: 400;
+	font-size: 0.875rem;
+}
+
+/* Right sidebar */
+@media (min-width: 72rem) {
+	.right-sidebar-container {
+		border-inline-start: 1px solid var(--sl-color-gray-6);
+	}
+	.right-sidebar {
+		position: sticky;
+		top: 65px;
+		padding-top: 0px;
+		padding-bottom: 10px;
+		height: auto;
+		border-inline-start: none;
+	}
+}
+
+/* Override starlight theme's left position */
+.nav-toggle .sidebar-pane {
+	left: var(--sb-mobile-menu-width);
+}
+
+/* Table of contents */
+mobile-starlight-toc nav {
+	top: calc(var(--sl-nav-height) + var(--sl-mobile-docs-height) - 1px);
+}
+@media (min-width: 50rem) {
+	mobile-starlight-toc nav {
+		top: calc(var(--sl-nav-height) - 1px);
+	}
+}
+#starlight__mobile-toc {
+	position: relative;
+	left: 0px;
+	transition: left var(--transition);
+	border-inline-start: 1px solid var(--sl-color-header-bg)
+}
+
+/* Prevent overflow */
+.main-frame {
+	max-width: 100%;
+}
+@media (min-width: 50rem) {
+	.sidebar {
+		width: calc(var(--sb-mobile-menu-width) + 1px);
+	}
+	.main-frame {
+		width: calc(100% - calc(var(--sb-mobile-menu-width) + 1px));
+	}
+}
+
+/* Move TOC menu to left once Swagger nav menu opens */
+.nav-toggle #starlight__mobile-toc {
+	left: var(--sb-mobile-menu-width);
+}
+
+/* Top position of sidebar pane and main content*/
+.sidebar-pane {
+	top: calc(var(--sl-nav-height) + var(--sl-mobile-toc-height));
+	@media (min-width: 50rem) {
+		top: calc(var(--sl-nav-height));
+	}
+}
+.main-frame {
+	flex: 1;
+	padding-top: calc(var(--sl-nav-height) + var(--sl-mobile-toc-height) + var(--sl-mobile-docs-height));
+	isolation: isolate;
+	@media (min-width: 50rem) {
+		padding-top: calc(var(--sl-nav-height) + var(--sl-mobile-toc-height));
+	}
+}
+
+/* Fix overflow due to code blocks on small screens */
+.expressive-code pre.wrap .ec-line .code {
+	min-width: min(9ch, var(--ecMaxLine, 9ch)) !important;
+}
+
+/* Hide dark/light theme selector in documentation nav */
+.mobile-preferences {
+	display: none;
+}
+
+/* Footer */
+footer {
+	margin-top: 0 !important;
+}
+
+/* Search */
+#searchComponent input,
+#searchComponent .fal.fa-search,
+#searchComponent .app-input-auto {
+	color: #333333;
+}
+
+.sidebar a[target="_blank"]::after {
+	content: "↗";
+	margin-left: 0.25rem;
+	opacity: .4;
+}

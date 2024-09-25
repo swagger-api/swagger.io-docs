@@ -1,0 +1,85 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  buttonTitle?: string;
+  optionalText?: string;
+  optionalPath?: string;
+  path?: string;
+  alternative?: boolean;
+  cards?: number;
+}
+
+const {
+  title,
+  description,
+  buttonTitle,
+  optionalText,
+  optionalPath,
+  path,
+  alternative,
+  cards,
+} = Astro.props;
+
+import Button from "./Button.astro";
+import "../styles/custom.css";
+---
+
+{
+  alternative ? (
+    <a
+      href={path}
+      class="flex gap-5 flex-col justify-between dark:!bg-[#2B3239] !bg-[var(--clr-neutral-1)] p-[20px] md:p-[30px] lg:p-[40px] rounded-[10px] mt-0 alternative-box no-underline text-inherit overflow-hidden"
+    >
+      <h3
+        class="font-roboto dark:!text-[var(--clr-neutral-1)] !text-[var(--clr-accent-4)] 
+            !text-[20px] sm:!text-[22px] md:!text-[23.5px] lg:!text-[25px] xl:!text-[25px]
+      font-bold"
+      >
+        {title}
+      </h3>
+      <p class="grow dark:!text-[var(--clr-neutral-9)] !text-[var(--clr-neutral-14)] !text-[14.75px] sm:!text-[15.25px] md:!text-[15.75px] xl:!text-[16px] !mt-0">
+        {description}
+      </p>
+      <div class="!mt-0 flex items-center">
+        <span class="w-max !text-[16px] dark:!bg-[var(--clr-accent-1)] !bg-[var(--clr-accent-2)]  !text-[var(--clr-neutral-1)] dark:!text-[var(--clr-neutral-14)] bg-none cursor-pointer rounded px-[24px] py-[12px] text-base font-bold inline-block m-0 no-underline leading-none  transition-all duration-200 ease-in-out hover:!bg-[var(--clr-accent-3)]  hover:text-white dark:hover:!bg-[#58C6FF] mt-2">
+          {buttonTitle}
+        </span>
+      </div>
+    </a>
+  ) : (
+    <div class={`flex flex-col gap-5 xl:gap-[30px] justify-between dark:bg-[#2B3239] bg-[var(--clr-neutral-1)] rounded-[10px] !mt-0 overflow-hidden ${cards === 3 ? "p-[20px] md:p-[30px] lg:p-[20px] xl:p-[40px]" : "p-[20px] md:p-[30px] xl:p-[40px]" }`}>
+      <h2
+        class="font-roboto dark:!text-[var(--clr-neutral-1)] !text-[var(--clr-accent-4)]
+      !text-[22px] sm:!text-[28px] md:!text-[28px] lg:!text-[28px] xl:!text-[31px] font-bold"
+      >
+        {title}
+      </h2>
+      <p class="grow dark:!text-[var(--clr-neutral-9)] !text-[var(--clr-neutral-14)] !text-[14.75px] sm:!text-[15.25px] md:!text-[15.75px] xl:!text-[16px] !mt-0">
+        {description}
+      </p>
+      <div class="!mt-0 flex items-center">
+        <Button variant="primary" path={path}>
+          {buttonTitle}
+        </Button>
+        {optionalText && optionalPath && (
+          <div class="ml-4 !mt-0">
+            <Button path={optionalPath}>
+              {optionalText}
+              <slot />
+            </Button>
+          </div>
+        )}
+      </div>
+    </div>
+  )
+}
+<style>
+  .alternative-box {
+    transition: box-shadow 0.4s ease-out;
+  }
+  .alternative-box:hover {
+    transition: box-shadow 0.2s ease-in;
+    box-shadow: 16px 20px 40px 0px rgba(0, 0, 0, 0.08);
+  }
+</style>
