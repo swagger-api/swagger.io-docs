@@ -73,3 +73,8 @@
 /swagger-tools/ /open-source-tools/swagger-editor/ 301
 /usage/deep-linking.md /open-source-tools/swagger-ui/usage/deep-linking/ 301
 /usage/deep-linking.md/ /open-source-tools/swagger-ui/usage/deep-linking/ 301
+/specification/2-0/mime-types/ /specification/v2_0/mime-types/ 301
+/specification/2-0/authentication/ /specification/v2_0/authentication/authentication/ 301
+/specification/describing-request-body/describing-request-body /specification/v3_0/describing-request-body/describing-request-body/ 301
+/specification/data-models/enums /specification/v3_0/data-models/enums/ 301
+/specification/describing-request-body/describing-request-body/ /specification/v3_0/describing-request-body/describing-request-body/ 301
