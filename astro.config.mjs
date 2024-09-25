@@ -2,11 +2,11 @@ import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 import tailwind from "@astrojs/tailwind";
 import { pluginLineNumbers } from "@expressive-code/plugin-line-numbers";
-
 import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://swagger.io",
   integrations: [starlight({
     title: "Swagger Docs",
     customCss: [
@@ -296,5 +296,5 @@ export default defineConfig({
     // Disable the default base styles:
     applyBaseStyles: false
   }), sitemap()], 
-  base: "/docs-1/",
+  base: "/docs/",
 });

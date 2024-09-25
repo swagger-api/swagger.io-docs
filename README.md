@@ -16,7 +16,7 @@ We use [Astro](https://astro.build) to build and maintain our documentation. Ast
 
 We welcome contributions from the community! To contribute:
 
-1. Clone the repository. (`git clone https://github.com/swagger-api/swagger.io.git`)
+1. Clone the repository. (`git clone https://github.com/swagger-api/swagger.io-docs.git`)
 2. Create a new branch (`git checkout -b feature-branch-name`).
 3. Make your changes.
 4. Commit your changes (`git commit -m 'Add some feature'`).
@@ -24,25 +24,26 @@ We welcome contributions from the community! To contribute:
 6. Open a pull request.
 7. A maintainer will review your changes and merge them if they are approved.
 
-Please ensure your change adheres to our coding standards and is well-documented.
+Please ensure your change adheres to best practices and is well-documented.
 
+## Running the Documentation Locally
 
-## Getting Started
+### Getting Started
 
 To get started with contributing to the Swagger Open Source Docs, follow these steps:
 
-### Prerequisites
+#### Prerequisites
 
 Ensure you have the following installed on your machine:
 - [Node.js](https://nodejs.org/) (version 14 or later)
 - [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 
-### Installation
+#### Installation
 
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/swagger-api/swagger.io.git
+    git clone https://github.com/swagger-api/swagger.io-docs.git
     cd swagger.io
     ```
 
@@ -54,7 +55,7 @@ Ensure you have the following installed on your machine:
     yarn install
     ```
 
-### Running the Development Server
+#### Running the Development Server
 
 To start the development server and view the documentation locally:
 
@@ -66,7 +67,7 @@ yarn dev
 
 This will start the development server at `http://localhost:4321`, where you can view and edit the documentation.
 
-### Building the Documentation
+#### Building the Documentation
 
 To build the documentation for production:
 
