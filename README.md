@@ -16,13 +16,14 @@ We use [Astro](https://astro.build) to build and maintain our documentation. Ast
 
 We welcome contributions from the community! To contribute:
 
-1. Clone the repository. (`git clone https://github.com/swagger-api/swagger.io-docs.git`)
-2. Create a new branch (`git checkout -b feature-branch-name`).
-3. Make your changes.
-4. Commit your changes (`git commit -m 'Add some feature'`).
-5. Push to the branch (`git push origin feature-branch-name`).
-6. Open a pull request.
-7. A maintainer will review your changes and merge them if they are approved.
+1. Fork the repository by clicking the "Fork" button on the top right of the repo page (this creates a copy under your GitHub account).
+2. Clone your fork (`git clone https://github.com/your-username/swagger.io-docs.git`).
+3. Create a new branch for your feature (`git checkout -b feature-branch-name`).
+4. Make your changes locally.
+5. Commit your changes (`git commit -m 'Add some feature'`).
+6. Push to your fork (`git push origin feature-branch-name`).
+7. Open a pull request from your fork on GitHub.
+8. A maintainer will review your changes and merge them if approved.
 
 Please ensure your change adheres to best practices and is well-documented.
 
