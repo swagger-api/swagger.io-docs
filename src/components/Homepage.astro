@@ -16,7 +16,7 @@ const basePath = import.meta.env.BASE_URL;
         >
           <div
             class="absolute h-[175px] w-[50vw] hidden md:block bg-no-repeat bg-contain left-0 md:-left-28 2xl:left-0 homepage-bubbles"
-            style="background-image: url(/hero-bubbles.svg);"
+            style={`background-image: url(${basePath}hero-bubbles.svg);`}
           >
           </div>
           <h2
@@ -178,12 +178,12 @@ const basePath = import.meta.env.BASE_URL;
   >
     <div class="mx-auto text-center">
       <img
-        src="/smartbear-logo.svg"
+        src={`${basePath}smartbear-logo.svg`}
         alt="SmartBear Logo"
         class="mx-auto mb-4 !block dark:!hidden"
       />
       <img
-        src="/smartbear-logo-white.svg"
+        src={`${basePath}smartbear-logo-white.svg`}
         alt="SmartBear Logo"
         class="mx-auto mb-4 !hidden dark:!block"
       />
