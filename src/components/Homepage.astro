@@ -2,6 +2,8 @@
 import Card from "./Card.astro";
 import { Image } from "astro:assets";
 import heroImage from "../assets/hero-img.png";
+const basePath = import.meta.env.BASE_URL;
+console.log(basePath);
 ---
 
 <section class="relative overflow-hidden antialiased">
@@ -41,7 +43,7 @@ import heroImage from "../assets/hero-img.png";
       description="A standard format for defining APIs, ensuring structured and consistent endpoints, methods, parameters, and responses."
       buttonTitle="View Docs"
       optionalText="View on GitHub"
-      path="/docs/specification/v3_0/about/"
+      path={`${basePath}specification/v3_0/about/`}
       optionalPath="https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md"
       cards={2}
       ><svg
@@ -111,7 +113,7 @@ import heroImage from "../assets/hero-img.png";
       description="A user-friendly tool for creating, editing, and visualizing API definitions, streamlining the validation of API documentation."
       buttonTitle="View Docs"
       optionalText="Download"
-      path="/docs/open-source-tools/swagger-editor/"
+      path={`${basePath}open-source-tools/swagger-editor/`}
       optionalPath="https://swagger.io/tools/swagger-editor/download/"
       cards={3}
       ><svg
@@ -131,7 +133,7 @@ import heroImage from "../assets/hero-img.png";
       description="An interactive interface for exploring and testing APIs, making it easy to visualize and understand their functionality."
       buttonTitle="View Docs"
       optionalText="Download"
-      path="/docs/open-source-tools/swagger-ui/usage/installation"
+      path={`${basePath}open-source-tools/swagger-ui/usage/installation`}
       optionalPath="https://swagger.io/tools/swagger-ui/download/"
       cards={3}
     >
@@ -152,7 +154,7 @@ import heroImage from "../assets/hero-img.png";
       description="Automate the generation of client libraries, server stubs, and API documentation efficiently based on API definitions."
       buttonTitle="View Docs"
       optionalText="Download"
-      path="/docs/open-source-tools/swagger-codegen/"
+      path={`${basePath}open-source-tools/swagger-codegen/`}
       optionalPath="https://swagger.io/tools/swagger-codegen/download"
       cards={3}
     >

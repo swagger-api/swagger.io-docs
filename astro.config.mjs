@@ -4,6 +4,9 @@ import tailwind from "@astrojs/tailwind";
 import { pluginLineNumbers } from "@expressive-code/plugin-line-numbers";
 import sitemap from "@astrojs/sitemap";
 
+// Set base path depending on the branch (main branch gets "/docs/", others have no base path)
+const basePath = process.env.CF_PAGES_BRANCH === 'main' ? '/docs/' : '/' || '/';
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://swagger.io",
@@ -296,5 +299,5 @@ export default defineConfig({
     // Disable the default base styles:
     applyBaseStyles: false
   }), sitemap()], 
-  base: "/docs/",
+  base: basePath,
 });
