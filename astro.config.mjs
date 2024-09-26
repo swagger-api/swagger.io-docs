@@ -10,6 +10,8 @@ const basePath = process.env.CF_PAGES_BRANCH === 'main' ? '/docs/' : '/' || '/';
 // https://astro.build/config
 export default defineConfig({
   site: "https://swagger.io",
+  base: basePath,
+  trailingSlash: 'ignore',
   integrations: [starlight({
     title: "Swagger Docs",
     customCss: [
@@ -299,5 +301,4 @@ export default defineConfig({
     // Disable the default base styles:
     applyBaseStyles: false
   }), sitemap()], 
-  base: basePath,
 });
