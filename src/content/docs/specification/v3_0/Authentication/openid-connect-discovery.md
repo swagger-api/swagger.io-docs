@@ -8,7 +8,7 @@ sidebar:
 OAS **3** This guide is for OpenAPI 3.0.
 :::
 
-[**OpenID Connect (OIDC)**](http://openid.net/connect/) is an identity layer built on top of the [OAuth 2.0](/specification/authentication/oauth2/) protocol and supported by some OAuth 2.0 providers, such as Google and Azure Active Directory. It defines a sign-in flow that enables a client application to authenticate a user, and to obtain information (or "claims") about that user, such as the user name, email, and so on. User identity information is encoded in a secure JSON Web Token (JWT), called ID token. OpenID Connect defines a discovery mechanism, called [**OpenID Connect Discovery**](https://openid.net/specs/openid-connect-discovery-1_0.html), where an OpenID server publishes its metadata at a well-known URL, typically
+[**OpenID Connect (OIDC)**](http://openid.net/connect/) is an identity layer built on top of the [OAuth 2.0](/docs/specification/authentication/oauth2/) protocol and supported by some OAuth 2.0 providers, such as Google and Azure Active Directory. It defines a sign-in flow that enables a client application to authenticate a user, and to obtain information (or "claims") about that user, such as the user name, email, and so on. User identity information is encoded in a secure JSON Web Token (JWT), called ID token. OpenID Connect defines a discovery mechanism, called [**OpenID Connect Discovery**](https://openid.net/specs/openid-connect-discovery-1_0.html), where an OpenID server publishes its metadata at a well-known URL, typically
 
 `https://server.com/.well-known/openid-configuration`
 
@@ -72,7 +72,7 @@ paths:
 
 ### Relative Discovery URL
 
-`openIdConnectUrl` can be specified relative to the [server URL](/specification/api-host-and-base-path/), like so:
+`openIdConnectUrl` can be specified relative to the [server URL](/docs/specification/api-host-and-base-path/), like so:
 
 ```yaml
 servers:

@@ -5,7 +5,7 @@ sidebar:
 ---
 
 :::note
-OAS **2** This page applies to OpenAPI Specification ver. 2 (fka Swagger). To learn about the latest version, visit [OpenAPI 3 pages](/specification/paths-and-operations/).
+OAS **2** This page applies to OpenAPI Specification ver. 2 (fka Swagger). To learn about the latest version, visit [OpenAPI 3 pages](/docs/specification/paths-and-operations/).
 :::
 
 In Swagger terms, **paths** are endpoints (resources) that your API exposes, such as `/users` or `/reports/summary`, and **operations** are the HTTP methods used to manipulate these paths, such as GET, POST or DELETE.
@@ -21,11 +21,11 @@ paths:
   /users/{id}: ...
 ```
 
-All paths are relative to `basePath` (see [API Host and Base URL](/specification/v2_0/api-host-and-base-path/)). The full request URL is constructed as `scheme://host/basePath/path`.
+All paths are relative to `basePath` (see [API Host and Base URL](/docs/specification/v2_0/api-host-and-base-path/)). The full request URL is constructed as `scheme://host/basePath/path`.
 
 ### Path Templating
 
-Swagger supports path templating, meaning you can use curly braces `{}` to mark parts of a URL as [path parameters](/specification/v2_0/describing-parameters/#path-parameters):
+Swagger supports path templating, meaning you can use curly braces `{}` to mark parts of a URL as [path parameters](/docs/specification/v2_0/describing-parameters/#path-parameters):
 
 ```yaml
 /users/{id}
@@ -100,7 +100,7 @@ Operations support some optional elements for documentation purposes:
 
 ### Operation Parameters
 
-Swagger supports operation parameters passed via path, query string, headers and request body. For details, see [Describing Parameters](/specification/v2_0/describing-parameters/#query-parameters).
+Swagger supports operation parameters passed via path, query string, headers and request body. For details, see [Describing Parameters](/docs/specification/v2_0/describing-parameters/#query-parameters).
 
 ### operationId
 
@@ -125,7 +125,7 @@ Each operation may specify a unique `operationId`. Some code generators use this
 
 ### Query String in Paths
 
-Query string parameters **must not** be included in paths. They should be defined as [query parameters](/specification/v2_0/describing-parameters/#query-parameters) instead. Incorrect:
+Query string parameters **must not** be included in paths. They should be defined as [query parameters](/docs/specification/v2_0/describing-parameters/#query-parameters) instead. Incorrect:
 
 ```yaml
 paths:

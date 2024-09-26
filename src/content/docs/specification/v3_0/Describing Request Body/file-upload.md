@@ -5,7 +5,7 @@ sidebar:
 ---
 
 :::note
-OAS **3** This guide is for OpenAPI 3.0. If you use OpenAPI 2.0, see our [OpenAPI 2.0 guide](/specification/v2_0/file-upload/).
+OAS **3** This guide is for OpenAPI 3.0. If you use OpenAPI 2.0, see our [OpenAPI 2.0 guide](/docs/specification/v2_0/file-upload/).
 :::
 
 In OpenAPI 3.0, you can describe files uploaded directly with the request content and files uploaded with `multipart` requests. Use the `requestBody` keyword to describe the request payload containing a file. Under `content`, specify the request media type (such as `image/png` or `application/octet-stream`). Files use a `type: string` schema with `format: binary` or `format: base64`, depending on how the file contents will be encoded. For example:
