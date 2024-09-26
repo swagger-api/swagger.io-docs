@@ -181,20 +181,20 @@ In a similar way, you can define [custom response headers](/docs/specification/d
 			<td>Request content type: <code>requestBody.content.&lt;media-type&gt;</code><br>
 			<br>
 			Response content type: <code>responses.&lt;code&gt;.content.&lt;media-type&gt;</code></td>
-			<td><a href="/specification/describing-request-body/describing-request-body/">Describing Request Body</a>,<br>
-			<a href="/specification/describing-responses/">Describing Responses</a>,<br>
-			<a href="/specification/media-types">Media Types</a></td>
+			<td><a href="/docs/specification/describing-request-body/describing-request-body/">Describing Request Body</a>,<br>
+			<a href="/docs/specification/describing-responses/">Describing Responses</a>,<br>
+			<a href="/docs/specification/media-types">Media Types</a></td>
 		</tr>
 		<tr>
 			<td><code>Accept</code></td>
 			<td><code>responses.&lt;code&gt;.content.&lt;media-type&gt;</code></td>
-			<td><a href="/specification/describing-responses/">Describing Responses</a>,<br>
-			<a href="/specification/media-types">Media Types</a></td>
+			<td><a href="/docs/specification/describing-responses/">Describing Responses</a>,<br>
+			<a href="/docs/specification/media-types">Media Types</a></td>
 		</tr>
 		<tr>
 			<td><code>Authorization</code></td>
 			<td><code>securitySchemes</code>, <code>security</code></td>
-			<td><a href="/specification/authentication/">Authentication</a></td>
+			<td><a href="/docs/specification/authentication/">Authentication</a></td>
 		</tr>
 	</tbody>
 </table>
