@@ -6,7 +6,7 @@ sidebar:
 
 :::note
 OAS **2** This page applies to OpenAPI Specification ver. 2 (fka Swagger).  
-To learn about the latest version, visit [OpenAPI 3 pages](/specification/openapi-extensions/).
+To learn about the latest version, visit [OpenAPI 3 pages](/docs/specification/openapi-extensions/).
 :::
 
 Extensions, or vendor extensions, are custom properties that start with `x-`, such as `x-logo`. They can be used to describe extra functionality that is not covered by the standard Swagger specification. Many API-related products that support Swagger make use of extensions to document their own attributes, such as Amazon API Gateway, ReDoc, APIMatic and others. Extensions are supported on the root level of the API spec and in the following places:

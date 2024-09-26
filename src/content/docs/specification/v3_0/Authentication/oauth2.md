@@ -172,7 +172,7 @@ security:
 
 ### Relative Endpoint URLs
 
-In OpenAPI 3.0, `authorizationUrl`, `tokenUrl` and `refreshUrl` can be specified relative to the [API server URL](/specification/api-host-and-base-path/). This is handy if these endpoints are on same server as the rest of the API operations.
+In OpenAPI 3.0, `authorizationUrl`, `tokenUrl` and `refreshUrl` can be specified relative to the [API server URL](/docs/specification/api-host-and-base-path/). This is handy if these endpoints are on same server as the rest of the API operations.
 
 ```yaml
 servers:

@@ -5,7 +5,7 @@ sidebar:
 ---
 
 :::note
-OAS **3** This page is about OpenAPI 3.0. If you use OpenAPI 2.0, visit [OpenAPI 2.0 pages](/specification/v2_0/basic-structure/).
+OAS **3** This page is about OpenAPI 3.0. If you use OpenAPI 2.0, visit [OpenAPI 2.0 pages](/docs/specification/v2_0/basic-structure/).
 :::
 
 You can write OpenAPI definitions in [YAML](https://en.wikipedia.org/wiki/YAML) or [JSON](https://en.wikipedia.org/wiki/JSON). In this guide, we use only YAML examples but JSON works equally well. A sample OpenAPI 3.0 definition written in YAML looks like:
@@ -76,7 +76,7 @@ servers:
     description: Optional server description, e.g. Internal staging server for testing
 ```
 
-All API paths are relative to the server URL. In the example above, `/users` means `http://api.example.com/v1/users` or `http://staging-api.example.com/users`, depending on the server used. For more information, see [API Server and Base Path](/specification/api-host-and-base-path/).
+All API paths are relative to the server URL. In the example above, `/users` means `http://api.example.com/v1/users` or `http://staging-api.example.com/users`, depending on the server used. For more information, see [API Server and Base Path](/docs/specification/api-host-and-base-path/).
 
 ### Paths
 

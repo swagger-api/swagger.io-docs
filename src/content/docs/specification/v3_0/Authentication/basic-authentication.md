@@ -5,7 +5,7 @@ sidebar:
 ---
 
 :::note
-OAS **3** This guide is for OpenAPI 3.0. If you use OpenAPI 2.0, see our [OpenAPI 2.0 guide](/specification/v2_0/authentication/basic-authentication/).
+OAS **3** This guide is for OpenAPI 3.0. If you use OpenAPI 2.0, see our [OpenAPI 2.0 guide](/docs/specification/v2_0/authentication/basic-authentication/).
 :::
 
 [Basic authentication](https://en.wikipedia.org/wiki/Basic_access_authentication) is a simple authentication scheme built into the HTTP protocol. The client sends HTTP requests with the `Authorization` header that contains the word `Basic` word followed by a space and a base64-encoded string `username:password`. For example, to authorize as `demo / p@55w0rd` the client would send
@@ -43,7 +43,7 @@ paths:
         - basicAuth: []
 ```
 
-Basic authentication can also be combined with other authentication methods as explained in [Using Multiple Authentication Types](/specification/authentication/#multiple).
+Basic authentication can also be combined with other authentication methods as explained in [Using Multiple Authentication Types](/docs/specification/authentication/#multiple).
 
 ### 401 Response
 
@@ -75,7 +75,7 @@ components:
             type: string
 ```
 
-To learn more about the `responses` syntax, see [Describing Responses](/specification/describing-responses/).
+To learn more about the `responses` syntax, see [Describing Responses](/docs/specification/describing-responses/).
 
 _Did not find what you were looking for? [Ask the community](https://community.smartbear.com/t5/Swagger-Open-Source-Tools/bd-p/SwaggerOSTools)  
 Found a mistake? [Let us know](https://github.com/swagger-api/swagger.io/issues)_

@@ -5,7 +5,7 @@ sidebar:
 ---
 
 :::note
-OAS **3** This guide is for OpenAPI 3.0. If you use OpenAPI 2.0, see our [OpenAPI 2.0 guide](/specification/v2_0/describing-responses/).
+OAS **3** This guide is for OpenAPI 3.0. If you use OpenAPI 2.0, see our [OpenAPI 2.0 guide](/docs/specification/v2_0/describing-responses/).
 :::
 
 An API specification needs to specify the `responses` for all API operations. Each operation must have at least one response defined, usually a successful response. A response is defined by its HTTP status code and the data returned in the response body and/or headers. Here is a minimal example:
@@ -61,7 +61,7 @@ paths:
                 format: binary
 ```
 
-_More info:_ [Media Types](/specification/media-types/).
+_More info:_ [Media Types](/docs/specification/media-types/).
 
 ### HTTP Status Codes
 
@@ -89,7 +89,7 @@ The `schema` keyword is used to describe the response body. A schema can define:
 
 - an `object` or an `array` — typically used with JSON and XML APIs,
 - a primitive data type such as a number or string – used for plain text responses,
-- a file – (see [below](/specification/describing-responses/#response-that-returns-a-file)).
+- a file – (see [below](/docs/specification/describing-responses/#response-that-returns-a-file)).
 
 Schema can be defined inline in the operation:
 
@@ -358,7 +358,7 @@ Note that responses defined in `components.responses` are not automatically appl
 
 ### Linking Response Values to Other Operations
 
-Certain values in the response could be used as parameters to other operations. A typical example is the "create resource" operation that returns the ID of the created resource, and this ID can be used to get that resource, update or delete it. OpenAPI 3.0 provides the `links` keyword to describe such relationships between a response and other API calls. For more information, see [Links](/specification/links/).
+Certain values in the response could be used as parameters to other operations. A typical example is the "create resource" operation that returns the ID of the created resource, and this ID can be used to get that resource, update or delete it. OpenAPI 3.0 provides the `links` keyword to describe such relationships between a response and other API calls. For more information, see [Links](/docs/specification/links/).
 
 ### FAQ
 

@@ -5,7 +5,7 @@ sidebar:
 ---
 
 :::note
-OAS **3** This page is about OpenAPI 3.0. If you use OpenAPI 2.0, see the [OpenAPI 2.0 guide](/specification/v2_0/mime-types/).
+OAS **3** This page is about OpenAPI 3.0. If you use OpenAPI 2.0, see the [OpenAPI 2.0 guide](/docs/specification/v2_0/mime-types/).
 :::
 
 **Media type** is a format of a request or response body data. Web service operations can accept and return data in different formats, the most common being JSON, XML and images. You specify the media type in request and response definitions. Here is an example of a response definition:
@@ -35,7 +35,7 @@ paths:
                   fullTime: true
 ```
 
-Under `responses` we have definitions of individual responses. As you can see, each response is defined by its code (`'200'` in our example.). The keyword `content` below the code corresponds to the response body. One or multiple media types go as child keywords of this `content` keyword. Each media type includes a `schema`, defining the data type of the message body, and, optionally, one or several examples. For more information on defining body data, see [Defining Request Body](/specification/describing-request-body/describing-request-body/) and [Defining Responses](/specification/describing-responses/).
+Under `responses` we have definitions of individual responses. As you can see, each response is defined by its code (`'200'` in our example.). The keyword `content` below the code corresponds to the response body. One or multiple media types go as child keywords of this `content` keyword. Each media type includes a `schema`, defining the data type of the message body, and, optionally, one or several examples. For more information on defining body data, see [Defining Request Body](/docs/specification/describing-request-body/describing-request-body/) and [Defining Responses](/docs/specification/describing-responses/).
 
 ### Media Type Names
 
@@ -144,7 +144,7 @@ paths:
 The value you use as media type – `image/*` in our example – is very similar to what you can see in the `Accept` or `Content-Type` headers of HTTP requests and responses. Do not confuse the placeholder and the actual value of the `Accept` or `Content-Type` headers. For example, the `image/*` placeholder for a response body means that the server will use the same data structure for all the responses that match the placeholder. It does not mean that the string _image/\*_ will be specified in the `Content-Type` header. The `Content-Type` header most likely will have _image/png_, _image/jpeg_, or some other similar value.
 
 \_Did not find what you were looking for? [Ask the community](https://community.smartbear.com/t5/Swagger-Open-Source-Tools/bd-p/SwaggerOSTools)
-Found a mistake? [Let us know](https://github.com/swagger-api/swagger.io/issues)\_OAS **3** This page is about OpenAPI 3.0. If you use OpenAPI 2.0, see the [OpenAPI 2.0 guide](/specification/v2_0/mime-types/).
+Found a mistake? [Let us know](https://github.com/swagger-api/swagger.io/issues)\_OAS **3** This page is about OpenAPI 3.0. If you use OpenAPI 2.0, see the [OpenAPI 2.0 guide](/docs/specification/v2_0/mime-types/).
 
 ## Media Types
 
@@ -175,7 +175,7 @@ paths:
                   fullTime: true
 ```
 
-Under `responses` we have definitions of individual responses. As you can see, each response is defined by its code (`'200'` in our example.). The keyword `content` below the code corresponds to the response body. One or multiple media types go as child keywords of this `content` keyword. Each media type includes a `schema`, defining the data type of the message body, and, optionally, one or several examples. For more information on defining body data, see [Defining Request Body](/specification/describing-request-body/describing-request-body/) and [Defining Responses](/specification/describing-responses/).
+Under `responses` we have definitions of individual responses. As you can see, each response is defined by its code (`'200'` in our example.). The keyword `content` below the code corresponds to the response body. One or multiple media types go as child keywords of this `content` keyword. Each media type includes a `schema`, defining the data type of the message body, and, optionally, one or several examples. For more information on defining body data, see [Defining Request Body](/docs/specification/describing-request-body/describing-request-body/) and [Defining Responses](/docs/specification/describing-responses/).
 
 ### Media Type Names
 

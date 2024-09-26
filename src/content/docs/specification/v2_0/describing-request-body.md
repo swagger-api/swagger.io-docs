@@ -5,12 +5,12 @@ sidebar:
 ---
 
 :::note
-OAS **2** This page applies to OpenAPI Specification ver. 2 (fka Swagger). To learn about the latest version, visit [OpenAPI 3 pages](/specification/describing-request-body/describing-request-body).
+OAS **2** This page applies to OpenAPI Specification ver. 2 (fka Swagger). To learn about the latest version, visit [OpenAPI 3 pages](/docs/specification/describing-request-body/describing-request-body).
 :::
 
 The POST, PUT and PATCH requests can have the request body (payload), such as JSON or XML data. In Swagger terms, the request body is called a **body parameter**. There can be only one body parameter, although the operation may have other parameters (path, query, header).
 
-**Note:** The payload of the `application/x-www-form-urlencoded` and `multipart/form-data` requests is described by using [form parameters](/specification/v2_0/describing-parameters/#form-parameters), not body parameters.
+**Note:** The payload of the `application/x-www-form-urlencoded` and `multipart/form-data` requests is described by using [form parameters](/docs/specification/v2_0/describing-parameters/#form-parameters), not body parameters.
 
 The body parameter is defined in the operation’s parameters section and includes the following:
 
