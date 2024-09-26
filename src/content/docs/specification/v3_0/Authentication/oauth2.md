@@ -81,7 +81,7 @@ The `flows` object can specify multiple flows, but only one of each type. Each f
 	<tbody>
 		<tr>
 			<td><code>authorizationUrl</code></td>
-			<td>The authorization URL to use for this flow. Can be relative to the <a href="/specification/api-host-and-base-path/">API server URL</a>.</td>
+			<td>The authorization URL to use for this flow. Can be relative to the <a href="/docs/specification/api-host-and-base-path/">API server URL</a>.</td>
 			<td>+</td>
 			<td>+</td>
 			<td>-</td>
