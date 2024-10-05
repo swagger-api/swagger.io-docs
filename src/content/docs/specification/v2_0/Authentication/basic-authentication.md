@@ -6,7 +6,7 @@ sidebar:
 
 :::note
 OAS **2** This page applies to OpenAPI Specification ver. 2 (fka Swagger).  
-To learn about the latest version, visit [OpenAPI 3 pages](/specification/authentication/basic-authentication/).
+To learn about the latest version, visit [OpenAPI 3 pages](/docs/specification/authentication/basic-authentication/).
 :::
 [Basic authentication](https://en.wikipedia.org/wiki/Basic_access_authentication) is a very simple authentication scheme that is built into the HTTP protocol. The client sends HTTP requests with the Authorization header that contains the `Basic` word followed by a space and a base64-encoded `username:password` string. For example, a header containing the `demo` / `p@55w0rd` credentials would be encoded as:
 

@@ -5,7 +5,7 @@ sidebar:
 ---
 
 :::note
-OAS **2** This page applies to OpenAPI Specification ver. 2 (fka Swagger). To learn about the latest version, visit [OpenAPI 3 pages](/specification/api-host-and-base-path/).
+OAS **2** This page applies to OpenAPI Specification ver. 2 (fka Swagger). To learn about the latest version, visit [OpenAPI 3 pages](/docs/specification/api-host-and-base-path/).
 :::
 
 REST APIs have a base URL to which the endpoint paths are appended. The base URL is defined by `schemes`, `host` and `basePath` on the root level of the API specification.
@@ -83,7 +83,7 @@ v2
 
 ##### **Can I specify multiple hosts, e.g. development, test and production?**
 
-Multiple hosts are supported in [OpenAPI 3.0](/specification/api-host-and-base-path/). 2.0 supports only one `host` per API specification (or two if you count HTTP and HTTPS as different hosts). A possible way to target multiple hosts is to omit the `host` and `schemes` from your specification and serve it from each host. In this case, each copy of the specification will target the corresponding host.
+Multiple hosts are supported in [OpenAPI 3.0](/docs/specification/api-host-and-base-path/). 2.0 supports only one `host` per API specification (or two if you count HTTP and HTTPS as different hosts). A possible way to target multiple hosts is to omit the `host` and `schemes` from your specification and serve it from each host. In this case, each copy of the specification will target the corresponding host.
 
 ##### **Do host and basePath support templating? Such as:**
 
@@ -92,7 +92,7 @@ https://{customer_id}.saas-app.com/api/v1
 https://api.saas-app.com/v1/{customer_id}/apis
 ```
 
-This is supported in [OpenAPI 3.0](/specification/api-host-and-base-path/), but not in 2.0. For a workaround for host templating, see the previous question.
+This is supported in [OpenAPI 3.0](/docs/specification/api-host-and-base-path/), but not in 2.0. For a workaround for host templating, see the previous question.
 
 ##### **Can I specify different ports for HTTP and HTTPS? Such as:**
 
@@ -101,7 +101,7 @@ http://example.com:8080
 https://example.com:8443
 ```
 
-This is supported in [OpenAPI 3.0](/specification/api-host-and-base-path/), but not in 2.0. In 2.0, you can omit the `host` and `schemes` and serve the specification from both hosts. This way, each copy of the specification will target the host and port used to access that specification.
+This is supported in [OpenAPI 3.0](/docs/specification/api-host-and-base-path/), but not in 2.0. In 2.0, you can omit the `host` and `schemes` and serve the specification from both hosts. This way, each copy of the specification will target the host and port used to access that specification.
 
 ### Reference
 

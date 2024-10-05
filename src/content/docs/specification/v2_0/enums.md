@@ -5,7 +5,7 @@ sidebar:
 ---
 
 :::note
-OAS **2** This page applies to OpenAPI Specification ver. 2 (fka Swagger). To learn about the latest version, visit [OpenAPI 3 pages](/specification/data-models/enums/).
+OAS **2** This page applies to OpenAPI Specification ver. 2 (fka Swagger). To learn about the latest version, visit [OpenAPI 3 pages](/docs/specification/data-models/enums/).
 :::
 
 You can use the `enum` keyword to specify possible values of a request parameter or a model property. For example, the sort parameter in:
@@ -51,7 +51,7 @@ description: >
 
 ### Reusable Enums
 
-Reusable enum definitions are [supported](/specification/data-models/enums/) in OpenAPI 3.0.
+Reusable enum definitions are [supported](/docs/specification/data-models/enums/) in OpenAPI 3.0.
 
 While Swagger 2.0 does not have built-in support for reusable enums, it is possible to define them in YAML using YAML anchors – provided that your tool supports them. Anchors are a handy feature of YAML where you can mark a key with `&anchor-name` and then further down use `*anchor-name` to reference that key's value. This lets you easily duplicate the content across a YAML file.
 

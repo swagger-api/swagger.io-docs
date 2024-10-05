@@ -81,7 +81,7 @@ The `flows` object can specify multiple flows, but only one of each type. Each f
 	<tbody>
 		<tr>
 			<td><code>authorizationUrl</code></td>
-			<td>The authorization URL to use for this flow. Can be relative to the <a href="/specification/api-host-and-base-path/">API server URL</a>.</td>
+			<td>The authorization URL to use for this flow. Can be relative to the <a href="/docs/specification/api-host-and-base-path/">API server URL</a>.</td>
 			<td>+</td>
 			<td>+</td>
 			<td>-</td>
@@ -172,7 +172,7 @@ security:
 
 ### Relative Endpoint URLs
 
-In OpenAPI 3.0, `authorizationUrl`, `tokenUrl` and `refreshUrl` can be specified relative to the [API server URL](/specification/api-host-and-base-path/). This is handy if these endpoints are on same server as the rest of the API operations.
+In OpenAPI 3.0, `authorizationUrl`, `tokenUrl` and `refreshUrl` can be specified relative to the [API server URL](/docs/specification/api-host-and-base-path/). This is handy if these endpoints are on same server as the rest of the API operations.
 
 ```yaml
 servers:

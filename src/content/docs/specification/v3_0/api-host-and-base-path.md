@@ -5,7 +5,7 @@ sidebar:
 ---
 
 :::note
-OAS **3** This page is about OpenAPI 3.0. If you use OpenAPI 2.0, see the [OpenAPI 2.0 guide](/specification/v2_0/api-host-and-base-path/).
+OAS **3** This page is about OpenAPI 3.0. If you use OpenAPI 2.0, see the [OpenAPI 2.0 guide](/docs/specification/v2_0/api-host-and-base-path/).
 :::
 
 All API endpoints are relative to the base URL. For example, assuming the base URL of `https://api.example.com/v1`, the `/users` endpoint refers to `https://api.example.com/v1/users`.
@@ -87,7 +87,7 @@ servers:
         default: '443'
 ```
 
-Unlike [path parameters](/specification/describing-parameters/#path), server variables do not use a `schema`. Instead, they are assumed to be strings. Variables can have arbitrary values, or may be restricted to an `enum`. In any case, a `default` value is required, which will be used if the client does not supply a value. Variable `description` is optional, but useful to have and supports Markdown ([CommonMark](http://commonmark.org/help/)) for rich text formatting. Common use cases for server templating:
+Unlike [path parameters](/docs/specification/describing-parameters/#path), server variables do not use a `schema`. Instead, they are assumed to be strings. Variables can have arbitrary values, or may be restricted to an `enum`. In any case, a `default` value is required, which will be used if the client does not supply a value. Variable `description` is optional, but useful to have and supports Markdown ([CommonMark](http://commonmark.org/help/)) for rich text formatting. Common use cases for server templating:
 
 - Specifying multiple protocols (such as HTTP vs HTTPS).
 - SaaS (hosted) applications where each customer has their own subdomain.

@@ -8,7 +8,7 @@ sidebar:
 OAS **3** This guide is for OpenAPI 3.0.
 :::
 
-Serialization means translating data structures or object state into a format that can be transmitted and reconstructed later. OpenAPI 3.0 supports arrays and objects in [operation parameters](/specification/describing-parameters/) (path, query, header, and cookie) and lets you specify how these parameters should be serialized. The serialization method is defined by the `style` and `explode` keywords:
+Serialization means translating data structures or object state into a format that can be transmitted and reconstructed later. OpenAPI 3.0 supports arrays and objects in [operation parameters](/docs/specification/describing-parameters/) (path, query, header, and cookie) and lets you specify how these parameters should be serialized. The serialization method is defined by the `style` and `explode` keywords:
 
 - `style` defines how multiple values are delimited. Possible styles depend on the parameter location – [path](#path), [query](#query), [header](#header) or [cookie](#cookie).
 - `explode` (true/false) specifies whether arrays and objects should generate separate parameters for each array item or object property.
@@ -141,7 +141,7 @@ A client application can then use an URI template library to generate the reques
 
 ### Other Serialization Methods
 
-`style` and `explode` cover the most common serialization methods, but not all. For more complex scenarios (for example, a JSON-formatted object in the query string), you can use the `content` keyword and specify the media type that defines the serialization format. For more information, see [schema vs content](/specification/describing-parameters/#schema-vs-content).
+`style` and `explode` cover the most common serialization methods, but not all. For more complex scenarios (for example, a JSON-formatted object in the query string), you can use the `content` keyword and specify the media type that defines the serialization format. For more information, see [schema vs content](/docs/specification/describing-parameters/#schema-vs-content).
 
 _Did not find what you were looking for? [Ask the community](https://community.smartbear.com/t5/Swagger-Open-Source-Tools/bd-p/SwaggerOSTools)  
 Found a mistake? [Let us know](https://github.com/swagger-api/swagger.io/issues)_

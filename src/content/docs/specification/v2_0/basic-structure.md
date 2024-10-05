@@ -5,7 +5,7 @@ sidebar:
 ---
 
 :::note
-OAS **2** This page applies to OpenAPI Specification ver. 2 (fka Swagger). To learn about the latest version, visit [OpenAPI 3 pages](/specification/basic-structure).
+OAS **2** This page applies to OpenAPI Specification ver. 2 (fka Swagger). To learn about the latest version, visit [OpenAPI 3 pages](/docs/specification/basic-structure).
 :::
 
 Swagger definitions can be written in [JSON](https://en.wikipedia.org/wiki/JSON) or [YAML](https://en.wikipedia.org/wiki/YAML). In this guide, we only use YAML examples, but JSON works equally well. A sample Swagger specification written in YAML looks like:
@@ -64,7 +64,7 @@ schemes:
   - https
 ```
 
-All API paths are relative to the base URL. For example, _/users_ actually means _https://api.example.com/v1/users_. _More info:_ [API Host and Base URL](/specification/v2_0/api-host-and-base-path/).
+All API paths are relative to the base URL. For example, _/users_ actually means _https://api.example.com/v1/users_. _More info:_ [API Host and Base URL](/docs/specification/v2_0/api-host-and-base-path/).
 
 ### Consumes, Produces
 
@@ -79,7 +79,7 @@ produces:
   - application/xml
 ```
 
-_More info:_ [MIME Types](/specification/v2_0/mime-types/).
+_More info:_ [MIME Types](/docs/specification/v2_0/mime-types/).
 
 ### Paths
 
@@ -98,7 +98,7 @@ paths:
           description: OK
 ```
 
-_More info:_ [Paths and Operations](/specification/v2_0/paths-and-operations/).
+_More info:_ [Paths and Operations](/docs/specification/v2_0/paths-and-operations/).
 
 ### Parameters
 
@@ -121,7 +121,7 @@ paths:
           description: OK
 ```
 
-_More info:_ [Describing Parameters](/specification/v2_0/describing-parameters/).
+_More info:_ [Describing Parameters](/docs/specification/v2_0/describing-parameters/).
 
 ### Responses
 
@@ -159,7 +159,7 @@ paths:
           description: Unexpected error
 ```
 
-_More info:_ [Describing Responses](/specification/v2_0/describing-responses/).
+_More info:_ [Describing Responses](/docs/specification/v2_0/describing-responses/).
 
 ### Input and Output Models
 
@@ -233,11 +233,11 @@ security:
 
 Supported authentication methods are:
 
-- [Basic authentication](/specification/v2_0/authentication/basic-authentication/)
-- [API key](/specification/v2_0/authentication/api-keys/) (as a header or query parameter)
+- [Basic authentication](/docs/specification/v2_0/authentication/basic-authentication/)
+- [API key](/docs/specification/v2_0/authentication/api-keys/) (as a header or query parameter)
 - OAuth 2 common flows (implicit, password, application and access code)
 
-_More info:_ [Authentication](/specification/v2_0/authentication/authentication/).
+_More info:_ [Authentication](/docs/specification/v2_0/authentication/authentication/).
 
 _Did not find what you were looking for? [Ask the community](https://community.smartbear.com/t5/Swagger-Open-Source-Tools/bd-p/SwaggerOSTools)  
 Found a mistake? [Let us know](https://github.com/swagger-api/swagger.io/issues)_

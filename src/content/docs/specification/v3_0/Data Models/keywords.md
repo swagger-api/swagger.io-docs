@@ -15,35 +15,35 @@ OpenAPI 3.0 uses an extended subset of [JSON Schema Specification](http://json-s
 These keywords have the **same meaning** as in JSON Schema:
 
 - `title`
-- [`pattern`](/specification/data-models/data-types/#pattern)
-- [`required`](/specification/data-models/data-types/#required)
-- [`enum`](/specification/data-models/enums/)
-- [`minimum`](/specification/data-models/data-types/#range)
-- [`maximum`](/specification/data-models/data-types/#range)
-- [`exclusiveMinimum`](/specification/data-models/data-types/#range)
-- [`exclusiveMaximum`](/specification/data-models/data-types/#range)
-- [`multipleOf`](/specification/data-models/data-types/#multipleOf)
-- [`minLength`](/specification/data-models/data-types/#string)
-- [`maxLength`](/specification/data-models/data-types/#string)
-- [`minItems`](/specification/data-models/data-types/#array-length)
-- [`maxItems`](/specification/data-models/data-types/#array-length)
-- [`uniqueItems`](/specification/data-models/data-types/#uniqueItems)
-- [`minProperties`](/specification/data-models/data-types/#property-count)
-- [`maxProperties`](/specification/data-models/data-types/#property-count)
+- [`pattern`](/docs/specification/data-models/data-types/#pattern)
+- [`required`](/docs/specification/data-models/data-types/#required)
+- [`enum`](/docs/specification/data-models/enums/)
+- [`minimum`](/docs/specification/data-models/data-types/#range)
+- [`maximum`](/docs/specification/data-models/data-types/#range)
+- [`exclusiveMinimum`](/docs/specification/data-models/data-types/#range)
+- [`exclusiveMaximum`](/docs/specification/data-models/data-types/#range)
+- [`multipleOf`](/docs/specification/data-models/data-types/#multipleOf)
+- [`minLength`](/docs/specification/data-models/data-types/#string)
+- [`maxLength`](/docs/specification/data-models/data-types/#string)
+- [`minItems`](/docs/specification/data-models/data-types/#array-length)
+- [`maxItems`](/docs/specification/data-models/data-types/#array-length)
+- [`uniqueItems`](/docs/specification/data-models/data-types/#uniqueItems)
+- [`minProperties`](/docs/specification/data-models/data-types/#property-count)
+- [`maxProperties`](/docs/specification/data-models/data-types/#property-count)
 
 These keywords are **supported with minor differences**:
 
-- [`type`](/specification/data-models/data-types/#type) – the value must be a single type and not an array of types. `null` is not supported as a type, use the [`nullable: true`](/specification/data-models/data-types/#null) keyword instead.
+- [`type`](/docs/specification/data-models/data-types/#type) – the value must be a single type and not an array of types. `null` is not supported as a type, use the [`nullable: true`](/docs/specification/data-models/data-types/#null) keyword instead.
 - `format` – OpenAPI has its own predefined formats and also allows custom formats.
 - `description` – supports [CommonMark](http://commonmark.org/help/) syntax for rich text representation.
-- [`items`](/specification/data-models/data-types/#array) – must be present if `type` is `array`. The item schema must be an OpenAPI schema and not a standard JSON Schema.
-- [`properties`](/specification/data-models/data-types/#object) – individual property definitions must follow OpenAPI schema rules and not standard JSON Schema.
-- [`additionalProperties`](/specification/data-models/data-types/#additionalProperties) – the value can be a boolean (`true` or `false`) or an OpenAPI schema.
-- [`default`](/specification/data-models/data-types/#default) – the default value must conform to the specified schema.
-- [`allOf`](/specification/data-models/oneof-anyof-allof-not/) – the subschemas must be OpenAPI schemas and not standard JSON Schemas.
-- [`oneOf`](/specification/data-models/oneof-anyof-allof-not/) – the subschemas must be OpenAPI schemas and not standard JSON Schemas.
-- [`anyOf`](/specification/data-models/oneof-anyof-allof-not/) – the subschemas must be OpenAPI schemas and not standard JSON Schemas.
-- [`not`](/specification/data-models/oneof-anyof-allof-not/) – the subschema must be an OpenAPI schema and not a standard JSON Schema.
+- [`items`](/docs/specification/data-models/data-types/#array) – must be present if `type` is `array`. The item schema must be an OpenAPI schema and not a standard JSON Schema.
+- [`properties`](/docs/specification/data-models/data-types/#object) – individual property definitions must follow OpenAPI schema rules and not standard JSON Schema.
+- [`additionalProperties`](/docs/specification/data-models/data-types/#additionalProperties) – the value can be a boolean (`true` or `false`) or an OpenAPI schema.
+- [`default`](/docs/specification/data-models/data-types/#default) – the default value must conform to the specified schema.
+- [`allOf`](/docs/specification/data-models/oneof-anyof-allof-not/) – the subschemas must be OpenAPI schemas and not standard JSON Schemas.
+- [`oneOf`](/docs/specification/data-models/oneof-anyof-allof-not/) – the subschemas must be OpenAPI schemas and not standard JSON Schemas.
+- [`anyOf`](/docs/specification/data-models/oneof-anyof-allof-not/) – the subschemas must be OpenAPI schemas and not standard JSON Schemas.
+- [`not`](/docs/specification/data-models/oneof-anyof-allof-not/) – the subschema must be an OpenAPI schema and not a standard JSON Schema.
 
 ### Unsupported Keywords
 
@@ -62,13 +62,13 @@ These keywords are **supported with minor differences**:
 OpenAPI schemas can also use the following keywords that are not part of JSON Schema:
 
 - `deprecated`
-- [`discriminator`](/specification/data-models/inheritance-and-polymorphism/)
-- [`example`](/specification/adding-examples/)
+- [`discriminator`](/docs/specification/data-models/inheritance-and-polymorphism/)
+- [`example`](/docs/specification/adding-examples/)
 - `externalDocs`
-- [`nullable`](/specification/data-models/data-types/#null)
-- [`readOnly`](/specification/data-models/data-types/#readonly-writeonly)
-- [`writeOnly`](/specification/data-models/data-types/#readonly-writeonly)
-- [`xml`](/specification/data-models/representing-xml/)
+- [`nullable`](/docs/specification/data-models/data-types/#null)
+- [`readOnly`](/docs/specification/data-models/data-types/#readonly-writeonly)
+- [`writeOnly`](/docs/specification/data-models/data-types/#readonly-writeonly)
+- [`xml`](/docs/specification/data-models/representing-xml/)
 
 ### References
 

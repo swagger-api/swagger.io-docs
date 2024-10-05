@@ -31,7 +31,7 @@ Cookie: JSESSIONID=abcde12345
 
 ### Describing Cookie Authentication
 
-In OpenAPI 3.0 terms, cookie authentication is an [API key](/specification/authentication/api-keys/) that is sent `in: cookie`. For example, authentication via a cookie named `JSESSIONID` is defined as follows:
+In OpenAPI 3.0 terms, cookie authentication is an [API key](/docs/specification/authentication/api-keys/) that is sent `in: cookie`. For example, authentication via a cookie named `JSESSIONID` is defined as follows:
 
 ```yaml
 openapi: 3.0.0
@@ -63,7 +63,7 @@ paths:
           description: OK
 ```
 
-Cookie authentication can be combined with other authentication methods as explained in [Using Multiple Authentication Types](/specification/authentication/#multiple).
+Cookie authentication can be combined with other authentication methods as explained in [Using Multiple Authentication Types](/docs/specification/authentication/#multiple).
 
 ### Describing the Set-Cookie Header
 

@@ -5,7 +5,7 @@ sidebar:
 ---
 
 :::note
-OAS **2** This page applies to OpenAPI Specification ver. 2 (fka Swagger). To learn about the latest version, visit [OpenAPI 3 pages](/specification/describing-parameters).
+OAS **2** This page applies to OpenAPI Specification ver. 2 (fka Swagger). To learn about the latest version, visit [OpenAPI 3 pages](/docs/specification/describing-parameters).
 :::
 
 In Swagger, API operation parameters are defined under the `parameters` section in the operation definition. Each parameter has `name`, value `type` (for primitive value parameters) or `schema` (for request body), and optional `description`. Here is an example:
@@ -32,8 +32,8 @@ Swagger distinguishes between the following parameter types based on the paramet
 - [query parameters](#query-parameters), such as `/users?role=admin`
 - [path parameters](#path-parameters), such as `/users/{id}`
 - [header parameters](#header-parameters), such as `X-MyHeader: Value`
-- body parameters that describe the body of POST, PUT and PATCH requests (see [Describing Request Body](/specification/v2_0/describing-request-body/))
-- [form parameters](#form-parameters) – a variety of body parameters used to describe the payload of requests with `Content-Type` of `application/x-www-form-urlencoded` and `multipart/form-data` (the latter is typically used for [file uploads](/specification/v2_0/file-upload/))
+- body parameters that describe the body of POST, PUT and PATCH requests (see [Describing Request Body](/docs/specification/v2_0/describing-request-body/))
+- [form parameters](#form-parameters) – a variety of body parameters used to describe the payload of requests with `Content-Type` of `application/x-www-form-urlencoded` and `multipart/form-data` (the latter is typically used for [file uploads](/docs/specification/v2_0/file-upload/))
 
 ### Query Parameters
 
@@ -60,7 +60,7 @@ parameters:
 
 Query parameters only support primitive types. You can have an `array`, but the `items` must be a primitive value type. Objects are not supported.
 
-**Note:** To describe API keys passed as query parameters, use a security definition instead. See [API Keys](/specification/v2_0/authentication/api-keys/).
+**Note:** To describe API keys passed as query parameters, use a security definition instead. See [API Keys](/docs/specification/v2_0/authentication/api-keys/).
 
 ### Path Parameters
 
@@ -115,7 +115,7 @@ paths:
           required: true
 ```
 
-In a similar way, you can define [custom response headers](/specification/v2_0/describing-responses/#headers).
+In a similar way, you can define [custom response headers](/docs/specification/v2_0/describing-responses/#headers).
 
 **Note:** Swagger specification has special keywords for some headers:
 
@@ -198,7 +198,7 @@ paths:
           description: OK
 ```
 
-To learn how to define form parameters for file uploads, see [File Upload](/specification/v2_0/file-upload/).
+To learn how to define form parameters for file uploads, see [File Upload](/docs/specification/v2_0/file-upload/).
 
 ### Required and Optional Parameters
 
@@ -261,7 +261,7 @@ The `enum` keyword allows you to restrict a parameter value to a fixed set of va
   enum: [available, pending, sold]
 ```
 
-More info: [Defining an Enum](/specification/v2_0/enums/).
+More info: [Defining an Enum](/docs/specification/v2_0/enums/).
 
 ### Array and Multi-Value Parameters
 
@@ -596,7 +596,7 @@ schema is only used with `in: body` parameters. Any other parameters expect a pr
 
 **Can I have an object as a query parameter?**
 
-This is possible in [OpenAPI 3.0](/specification/describing-parameters/#query-parameters), but not in 2.0.
+This is possible in [OpenAPI 3.0](/docs/specification/describing-parameters/#query-parameters), but not in 2.0.
 
 _Did not find what you were looking for? [Ask the community](https://community.smartbear.com/t5/Swagger-Open-Source-Tools/bd-p/SwaggerOSTools)  
 Found a mistake? [Let us know](https://github.com/swagger-api/swagger.io/issues)_

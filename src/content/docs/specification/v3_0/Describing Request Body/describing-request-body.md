@@ -5,7 +5,7 @@ sidebar:
 ---
 
 :::note
-OAS **3** This guide is for OpenAPI 3.0. If you use OpenAPI 2.0, see our [OpenAPI 2.0 guide](/specification/v2_0/describing-request-body/).
+OAS **3** This guide is for OpenAPI 3.0. If you use OpenAPI 2.0, see our [OpenAPI 2.0 guide](/docs/specification/v2_0/describing-request-body/).
 :::
 
 Request bodies are typically used with “create” and “update” operations (POST, PUT, PATCH). For example, when creating a resource using POST or PUT, the request body usually contains the representation of the resource to be created. OpenAPI 3.0 provides the `requestBody` keyword to describe request bodies.
@@ -24,7 +24,7 @@ If you used OpenAPI 2.0 before, here is a summary of changes to help you get sta
 
 ### requestBody, content and Media Types
 
-Unlike OpenAPI 2.0, where the request body was defined using `body` and `formData` parameters, OpenAPI 3.0 uses the `requestBody` keyword to distinguish the payload from [parameters](/specification/describing-parameters/) (such as query string). The `requestBody` is more flexible in that it lets you consume different media types, such as JSON, XML, form data, plain text, and others, and use different schemas for different media types. `requestBody` consists of the `content` object, an optional [Markdown](https://commonmark.org/help/)\-formatted `description`, and an optional `required` flag (`false` by default). `content` lists the media types consumed by the operation (such as `application/json`) and specifies the `schema` for each media type. **Request bodies are optional by default**. To mark the body as required, use `required: true`.
+Unlike OpenAPI 2.0, where the request body was defined using `body` and `formData` parameters, OpenAPI 3.0 uses the `requestBody` keyword to distinguish the payload from [parameters](/docs/specification/describing-parameters/) (such as query string). The `requestBody` is more flexible in that it lets you consume different media types, such as JSON, XML, form data, plain text, and others, and use different schemas for different media types. `requestBody` consists of the `content` object, an optional [Markdown](https://commonmark.org/help/)\-formatted `description`, and an optional `required` flag (`false` by default). `content` lists the media types consumed by the operation (such as `application/json`) and specifies the `schema` for each media type. **Request bodies are optional by default**. To mark the body as required, use `required: true`.
 
 ```yaml
 paths:
@@ -87,7 +87,7 @@ requestBody:
 
 ### File Upload
 
-To learn how to describe file upload, see [File Upload](/specification/describing-request-body/file-upload/) and [Multipart Requests](/specification/describing-request-body/multipart-requests/).
+To learn how to describe file upload, see [File Upload](/docs/specification/describing-request-body/file-upload/) and [Multipart Requests](/docs/specification/describing-request-body/multipart-requests/).
 
 ### Request Body Examples
 
@@ -138,7 +138,7 @@ requestBody:
           petType: hamster
 ```
 
-See [Adding Examples](/specification/adding-examples/) for more information.
+See [Adding Examples](/docs/specification/adding-examples/) for more information.
 
 ### Reusable Bodies
 
@@ -174,8 +174,8 @@ components:
 
 The term “form data” is used for the media types `application/x-www-form-urlencoded` and `multipart/form-data`, which are commonly used to submit HTML forms.
 
-- `application/x-www-form-urlencoded` is used to send simple ASCII text data as `key=value` pairs. The payload format is similar to [query parameters](/specification/describing-parameters/#query-parameters).
-- `multipart/form-data` allows submitting binary data as well as multiple media types in a single message (for example, image and JSON). Each form field has its own section in the payload with internal HTTP headers. `multipart` requests are commonly used for [file uploads](/specification/describing-request-body/file-upload/).
+- `application/x-www-form-urlencoded` is used to send simple ASCII text data as `key=value` pairs. The payload format is similar to [query parameters](/docs/specification/describing-parameters/#query-parameters).
+- `multipart/form-data` allows submitting binary data as well as multiple media types in a single message (for example, image and JSON). Each form field has its own section in the payload with internal HTTP headers. `multipart` requests are commonly used for [file uploads](/docs/specification/describing-request-body/file-upload/).
 
 To illustrate form data, consider an HTML POST form:
 

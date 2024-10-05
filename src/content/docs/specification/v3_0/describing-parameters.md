@@ -5,7 +5,7 @@ sidebar:
 ---
 
 :::note
-OAS **3** This page is about OpenAPI 3.0. If you use OpenAPI 2.0, see our [OpenAPI 2.0 guide](/specification/v2_0/describing-parameters/).
+OAS **3** This page is about OpenAPI 3.0. If you use OpenAPI 2.0, see our [OpenAPI 2.0 guide](/docs/specification/v2_0/describing-parameters/).
 :::
 
 In OpenAPI 3.0, parameters are defined in the `parameters` section of an operation or path. To describe a parameter, you specify its `name`, location (`in`), data type (defined by either `schema` or `content`) and other attributes, such as `description` or `required`. Here is an example:
@@ -67,7 +67,7 @@ Path parameters containing arrays and objects can be serialized in different way
 - label expansion – dot-prefixed, such as `/color.R=100.G=200.B=150`
 - simple-style – comma-delimited, such as `/users/12,34,56`
 
-The serialization method is specified by the `style` and `explode` keywords. To learn more, see [Parameter Serialization](/specification/serialization/).
+The serialization method is specified by the `style` and `explode` keywords. To learn more, see [Parameter Serialization](/docs/specification/serialization/).
 
 ### Query Parameters
 
@@ -94,7 +94,7 @@ parameters:
     description: The numbers of items to return
 ```
 
-**Note:** To describe API keys passed as query parameters, use `securitySchemes` and `security` instead. See [API Keys](/specification/authentication/api-keys/).
+**Note:** To describe API keys passed as query parameters, use `securitySchemes` and `security` instead. See [API Keys](/docs/specification/authentication/api-keys/).
 
 Query parameters can be primitive values, arrays and objects. OpenAPI 3.0 provides several ways to serialize objects and arrays in the query string.
 
@@ -109,7 +109,7 @@ Objects can be serialized as:
 - `form` – `/points?color=R,100,G,200,B,150` or `/points?R=100&G=200&B=150`, depending on the `explode` keyword
 - `deepObject` – `/points?color[R]=100&color[G]=200&color[B]=150`
 
-The serialization method is specified by the `style` and `explode` keywords. To learn more, see [Parameter Serialization](/specification/serialization/).
+The serialization method is specified by the `style` and `explode` keywords. To learn more, see [Parameter Serialization](/docs/specification/serialization/).
 
 #### Reserved Characters in Query Parameters
 
@@ -163,7 +163,7 @@ paths:
           required: true
 ```
 
-In a similar way, you can define [custom response headers](/specification/describing-responses/#response-headers). Header parameter can be primitives, arrays and objects. Arrays and objects are serialized using the `simple` style. For more information, see [Parameter Serialization](/specification/serialization/).
+In a similar way, you can define [custom response headers](/docs/specification/describing-responses/#response-headers). Header parameter can be primitives, arrays and objects. Arrays and objects are serialized using the `simple` style. For more information, see [Parameter Serialization](/docs/specification/serialization/).
 
 **Note:** Header parameters named `Accept`, `Content-Type` and `Authorization` are not allowed. To describe these headers, use the corresponding OpenAPI keywords:
 
@@ -181,20 +181,20 @@ In a similar way, you can define [custom response headers](/specification/descri
 			<td>Request content type: <code>requestBody.content.&lt;media-type&gt;</code><br>
 			<br>
 			Response content type: <code>responses.&lt;code&gt;.content.&lt;media-type&gt;</code></td>
-			<td><a href="/specification/describing-request-body/describing-request-body/">Describing Request Body</a>,<br>
-			<a href="/specification/describing-responses/">Describing Responses</a>,<br>
-			<a href="/specification/media-types">Media Types</a></td>
+			<td><a href="/docs/specification/describing-request-body/describing-request-body/">Describing Request Body</a>,<br>
+			<a href="/docs/specification/describing-responses/">Describing Responses</a>,<br>
+			<a href="/docs/specification/media-types">Media Types</a></td>
 		</tr>
 		<tr>
 			<td><code>Accept</code></td>
 			<td><code>responses.&lt;code&gt;.content.&lt;media-type&gt;</code></td>
-			<td><a href="/specification/describing-responses/">Describing Responses</a>,<br>
-			<a href="/specification/media-types">Media Types</a></td>
+			<td><a href="/docs/specification/describing-responses/">Describing Responses</a>,<br>
+			<a href="/docs/specification/media-types">Media Types</a></td>
 		</tr>
 		<tr>
 			<td><code>Authorization</code></td>
 			<td><code>securitySchemes</code>, <code>security</code></td>
-			<td><a href="/specification/authentication/">Authentication</a></td>
+			<td><a href="/docs/specification/authentication/">Authentication</a></td>
 		</tr>
 	</tbody>
 </table>
@@ -225,9 +225,9 @@ parameters:
       type: string
 ```
 
-Cookie parameters can be primitive values, arrays and objects. Arrays and objects are serialized using the `form` style. For more information, see [Parameter Serialization](/specification/serialization/).
+Cookie parameters can be primitive values, arrays and objects. Arrays and objects are serialized using the `form` style. For more information, see [Parameter Serialization](/docs/specification/serialization/).
 
-**Note:** To define cookie authentication, use [API keys](/specification/authentication/api-keys/) instead.
+**Note:** To define cookie authentication, use [API keys](/docs/specification/authentication/api-keys/) instead.
 
 ### Required and Optional Parameters
 
@@ -325,7 +325,7 @@ parameters:
 There are two common mistakes when using the `default` keyword:
 
 - Using `default` with `required` parameters or properties, for example, with path parameters. This does not make sense – if a value is required, the client must always send it, and the default value is never used.
-- Using `default` to specify a sample value. This is not intended use of `default` and can lead to unexpected behavior in some Swagger tools. Use the `example` or `examples` keyword for this purpose instead. See [Adding Examples](/specification/adding-examples/).
+- Using `default` to specify a sample value. This is not intended use of `default` and can lead to unexpected behavior in some Swagger tools. Use the `example` or `examples` keyword for this purpose instead. See [Adding Examples](/docs/specification/adding-examples/).
 
 ### Enum Parameters
 
@@ -343,7 +343,7 @@ parameters:
         - sold
 ```
 
-More info: [Defining an Enum](/specification/data-models/enums).
+More info: [Defining an Enum](/docs/specification/data-models/enums).
 
 ### Constant Parameters
 
@@ -431,7 +431,7 @@ parameters:
         value: [1, 5, 7] # ?ids=1,5,7
 ```
 
-For details, see [Adding Examples](/specification/adding-examples/).
+For details, see [Adding Examples](/docs/specification/adding-examples/).
 
 ### Deprecated Parameters
 

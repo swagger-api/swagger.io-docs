@@ -6,7 +6,7 @@ sidebar:
 
 :::note
 OAS **2** This page applies to OpenAPI Specification ver. 2 (fka Swagger).  
-To learn about the latest version, visit [OpenAPI 3 pages](/specification/adding-examples).
+To learn about the latest version, visit [OpenAPI 3 pages](/docs/specification/adding-examples).
 :::
 An API specification can include examples for:
 
@@ -242,7 +242,7 @@ If there are multiple examples on different levels (property, schema, response),
 
 OpenAPI 2.0 `example` and `examples` keywords require inline examples and **do not support `$ref`**. The example values are displayed as is, so `$ref` would be displayed as an object property named `$ref`.
 
-Referencing examples is [supported in OpenAPI 3.0](/specification/adding-examples/).
+Referencing examples is [supported in OpenAPI 3.0](/docs/specification/adding-examples/).
 
 _Did not find what you were looking for? [Ask the community](https://community.smartbear.com/t5/Swagger-Open-Source-Tools/bd-p/SwaggerOSTools)  
 Found a mistake? [Let us know](https://github.com/swagger-api/swagger.io/issues)_
