@@ -10,10 +10,10 @@ OAS **3** This guide is for OpenAPI 3.0.
 
 Serialization means translating data structures or object state into a format that can be transmitted and reconstructed later. OpenAPI 3.0 supports arrays and objects in [operation parameters](/docs/specification/describing-parameters/) (path, query, header, and cookie) and lets you specify how these parameters should be serialized. The serialization method is defined by the `style` and `explode` keywords:
 
-- `style` defines how multiple values are delimited. Possible styles depend on the parameter location – [path](#path), [query](#query), [header](#header) or [cookie](#cookie).
+- `style` defines how multiple values are delimited. Possible styles depend on the parameter location – [path](#path-parameters), [query](#query-parameters), [header](#header-parameters) or [cookie](#cookie-parameters).
 - `explode` (true/false) specifies whether arrays and objects should generate separate parameters for each array item or object property.
 
-OpenAPI serialization rules are based on a subset of URI template patterns defined by [RFC 6570](https://tools.ietf.org/html/rfc6570). Tool implementers can use existing URI template libraries to handle the serialization, as explained [below](#uri-templates).
+OpenAPI serialization rules are based on a subset of URI template patterns defined by [RFC 6570](https://tools.ietf.org/html/rfc6570). Tool implementers can use existing URI template libraries to handle the serialization, as explained [below](#serialization-and-rfc-6570).
 
 ### Path Parameters
 
