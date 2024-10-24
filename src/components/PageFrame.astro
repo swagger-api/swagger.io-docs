@@ -1,8 +1,8 @@
 ---
-import MobileMenuToggle from './MobileMenuToggle.astro';
-import type { Props } from '@astrojs/starlight/props';
-import Footer from './Footer.astro';
-import SwaggerFooter from './SwaggerFooter.astro';
+import MobileMenuToggle from "./MobileMenuToggle.astro";
+import type { Props } from "@astrojs/starlight/props";
+import Footer from "./Footer.astro";
+import SwaggerFooter from "./SwaggerFooter.astro";
 const { hasSidebar, labels } = Astro.props;
 ---
 
@@ -11,9 +11,15 @@ const { hasSidebar, labels } = Astro.props;
 	<div class="flex flex-wrap md:flex-nowrap">
 		{
 			hasSidebar && (
-				<nav class="sidebar relative z-[3] pb-[1px] bg-[var(--sl-color-header-bg)]" aria-label={labels['sidebarNav.accessibleLabel']}>
+				<nav
+					class="sidebar relative z-[3] pb-[1px] bg-[var(--sl-color-header-bg)]"
+					aria-label={labels["sidebarNav.accessibleLabel"]}
+				>
 					<MobileMenuToggle {...Astro.props} />
-					<div id="starlight__sidebar" class="sidebar-pane fixed menu-md:sticky top-1">
+					<div
+						id="starlight__sidebar"
+						class="sidebar-pane fixed menu-md:sticky top-1"
+					>
 						<div class="sidebar-content sl-flex h-auto max-h-0 min-h-auto menu-md:max-h-screen">
 							<slot name="sidebar" />
 						</div>
@@ -24,7 +30,7 @@ const { hasSidebar, labels } = Astro.props;
 		<div class="main-frame"><slot /></div>
 	</div>
 	<SwaggerFooter />
-	<Footer/>
+	<Footer />
 </div>
 
 <style>
@@ -50,7 +56,9 @@ const { hasSidebar, labels } = Astro.props;
 	}
 
 	:global([data-has-sidebar]) .header {
-		padding-inline-end: calc(var(--sl-nav-gap) + var(--sl-nav-pad-x) + var(--sl-menu-button-size));
+		padding-inline-end: calc(
+			var(--sl-nav-gap) + var(--sl-nav-pad-x) + var(--sl-menu-button-size)
+		);
 	}
 
 	.sidebar-pane {
@@ -64,7 +72,7 @@ const { hasSidebar, labels } = Astro.props;
 		overflow-y: auto;
 	}
 
-	:global([aria-expanded='true']) ~ .sidebar-pane {
+	:global([aria-expanded="true"]) ~ .sidebar-pane {
 		--sl-sidebar-visibility: visible;
 	}
 
@@ -78,7 +86,7 @@ const { hasSidebar, labels } = Astro.props;
 
 	@media (min-width: 50rem) {
 		.sidebar-content::after {
-			content: '';
+			content: "";
 			padding-bottom: 1px;
 		}
 	}
@@ -107,11 +115,27 @@ const { hasSidebar, labels } = Astro.props;
 
 <script>
 	// Clicking on a group label element should trigger the click on the first link inside it
-	const groupLabelElements = document.querySelectorAll('.group-label');
+	const groupLabelElements = document.querySelectorAll(".group-label");
 	groupLabelElements.forEach((groupLabel) => {
-		groupLabel.addEventListener('click', (event) => {
-			groupLabel.parentElement?.nextElementSibling?.querySelector('a')?.click();
+		groupLabel.addEventListener("click", (event) => {
+			groupLabel.parentElement?.nextElementSibling
+				?.querySelector("a")
+				?.click();
 			event.stopPropagation();
 		});
+	});
+</script>
+<!-- inject Gartner Promo -->
+<script is:inline>
+	window.addEventListener("DOMContentLoaded", function () {
+		var targetElement = document.querySelector(".right-sidebar-panel");
+		if (!targetElement) {
+			return;
+		} else {
+			var newElement = document.createElement("div");
+			newElement.innerHTML =
+				'<style>@media screen and (max-width: 1151px) {.hide-on-small {display: none;}}</style><a class=" px-5 pt-5 hide-on-small" href="https://smartbear.com/resources/webinars/leader-2024-gartner-magic-quadrant/?utm_me[%E2%80%A6]eb&utm_source=swagger.io&utm_campaign=webinar&utm_content=docs" target="_blank"><img src="https://static0.smartbear.co/swagger/media/images/swagger_docs_sidebar_ad.png" width="250" alt="For the webinar: Driving API Innovation SmartBear Named a Leader by Gartner"/></a>';
+			targetElement.insertAdjacentElement("afterend", newElement);
+		}
 	});
 </script>
