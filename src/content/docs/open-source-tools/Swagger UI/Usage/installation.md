@@ -115,7 +115,7 @@ You can allow/disallow [embedding](https://developer.mozilla.org/en-US/docs/Web/
 docker run -p 80:80 -e EMBEDDING=true swaggerapi/swagger-ui
 ```
 
-For more information on controlling Swagger UI through the Docker image, see the Docker section of the [Configuration documentation](/open-source-tools/swagger-ui/usage/configuration#docker).
+For more information on controlling Swagger UI through the Docker image, see the Docker section of the [Configuration documentation](/docs/open-source-tools/swagger-ui/usage/configuration/#docker).
 
 ### unpkg
 
