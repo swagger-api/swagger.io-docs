@@ -10,12 +10,12 @@ OAS **3** This guide is for OpenAPI 3.0.
 
 The data type of a schema is defined by the `type` keyword, for example, `type: string`. OpenAPI defines the following basic types:
 
-- [`string`](#string) (this includes dates and [files](#file))
+- [`string`](#strings) (this includes dates and [files](#files))
 - [`number`](#numbers)
 - [`integer`](#numbers)
 - [`boolean`](#boolean)
-- [`array`](#array)
-- [`object`](#object)
+- [`array`](#arrays)
+- [`object`](#objects)
 
 These types exist in most programming languages, though they may go by different names. Using these types, you can describe any data structures.
 
@@ -43,7 +43,7 @@ oneOf:
   - type: integer
 ```
 
-See also [Any Type](#any).
+See also [Any Type](#any-type).
 
 ### Numbers
 
@@ -189,7 +189,7 @@ An optional `format` modifier serves as a hint at the contents and format of the
 - `date-time` – the date-time notation as defined by [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6), for example, _2017-07-21T17:32:28Z_
 - `password` – a hint to UIs to mask the input
 - `byte` – base64-encoded characters, for example, _U3dhZ2dlciByb2Nrcw==_
-- `binary` – binary data, used to describe files (see [Files](#file) below)
+- `binary` – binary data, used to describe files (see [Files](#files) below)
 
 However, `format` is an open value, so you can use any formats, even not those defined by the OpenAPI Specification, such as:
 
@@ -314,7 +314,7 @@ items: {}
 
     # [ "hello", -2, true, [5.7], {"id": 5} ]
 
-Here, `{}` is the “any-type” schema (see [below](#any)). Note that the following syntax for `items` is not valid:
+Here, `{}` is the “any-type” schema (see [below](#any-type)). Note that the following syntax for `items` is not valid:
 
 ```yaml
 # Incorrect
