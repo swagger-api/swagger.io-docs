@@ -14,7 +14,7 @@ The data type of a schema is defined by the `type` keyword, for example, `type: 
 - [`number`](#numbers)
 - [`integer`](#numbers)
 - [`boolean`](#boolean)
-- [`array`](#array)
+- [`array`](#arrays)
 - [`object`](#object)
 
 These types exist in most programming languages, though they may go by different names. Using these types, you can describe any data structures.
