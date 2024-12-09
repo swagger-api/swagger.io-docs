@@ -54,7 +54,7 @@ Swagger Codegen Version    | Release Date | Swagger / OpenAPI Spec compatibility
 3.0.65-SNAPSHOT (current 3.0.0, upcoming minor release) [SNAPSHOT](https://oss.sonatype.org/content/repositories/snapshots/io/swagger/codegen/v3/swagger-codegen-cli/3.0.65-SNAPSHOT/)| TBD          | 1.0, 1.1, 1.2, 2.0, 3.0 | Minor release
 2.4.44-SNAPSHOT (current master, upcoming minor release) [SNAPSHOT](https://oss.sonatype.org/content/repositories/snapshots/io/swagger/swagger-codegen-cli/2.4.44-SNAPSHOT/)| TBD          | 1.0, 1.1, 1.2, 2.0   | Minor release
 
-For detailed breakdown of all versions, please see the [full compatibility listing](./docs/compatibility.md).
+For detailed breakdown of all versions, please see the [full compatibility listing](./compatibility).
 
 ### Getting Started
 
@@ -183,7 +183,7 @@ Other languages have petstore samples, too:
 
 It's just as easy--just use the `-i` flag to point to either a server or file.
 
-🔧 Swagger Codegen comes with a tonne of flexibility to support your code generation preferences. Checkout the [generators documentation](./docs/generators.md) which takes you through some of the possibilities as well as showcasing how to generate from local files and ignore file formats.
+🔧 Swagger Codegen comes with a tonne of flexibility to support your code generation preferences. Checkout the [generators documentation](../generators) which takes you through some of the possibilities as well as showcasing how to generate from local files and ignore file formats.
 
 ### Selective generation
 
