@@ -40,7 +40,7 @@ Parameter name | Docker variable | Description
 
 ##### Plugin system
 
-Read more about the plugin system in the [Customization documentation](https://github.com/swagger-api/swagger-ui/blob/master/docs/customization/overview.md).
+Read more about the plugin system in the [Customization documentation](/docs/customization/overview.md).
 
 Parameter name | Docker variable | Description
 --- | --- | -----
@@ -64,7 +64,7 @@ Parameter name | Docker variable | Description
         <td><code>DEEP_LINKING</code></td>
         <td><code>Boolean=false</code>. If set to <code>true</code>, enables
             deep linking for tags and operations. See the <a
-                    href="/open-source-tools/swagger-ui/usage/deep-linking/">Deep Linking
+                    href="/docs/usage/deep-linking.md">Deep Linking
                 documentation</a> for more information.
         </td>
     </tr>
@@ -316,7 +316,7 @@ Parameter name | Docker variable | Description
 
 Method name | Docker variable | Description
 --- | --- | -----
-<a name="initOAuth"></a>`initOAuth` | [_See `oauth2.md`_](https://github.com/swagger-api/swagger-ui/blob/master/docs/usage/oauth2.md) | `(configObj) => void`. Provide Swagger UI with information about your OAuth server - see the [OAuth 2.0 documentation](https://github.com/swagger-api/swagger-ui/blob/master/docs/usage/oauth2.md) for more information.
+<a name="initOAuth"></a>`initOAuth` | [_See `oauth2.md`_](./oauth2.md) | `(configObj) => void`. Provide Swagger UI with information about your OAuth server - see the [OAuth 2.0 documentation](./oauth2.md) for more information.
 <a name="preauthorizeBasic"></a>`preauthorizeBasic` | _Unavailable_ | `(authDefinitionKey, username, password) => action`. Programmatically set values for a Basic authorization scheme.
 <a name="preauthorizeApiKey"></a>`preauthorizeApiKey` | _Unavailable_ | `(authDefinitionKey, apiKeyValue) => action`. Programmatically set values for an API key or Bearer authorization scheme. In case of OpenAPI 3.0 Bearer scheme, `apiKeyValue` must contain just the token itself without the `Bearer` prefix.
 
