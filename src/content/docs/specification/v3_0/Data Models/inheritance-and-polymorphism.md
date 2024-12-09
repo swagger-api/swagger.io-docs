@@ -164,14 +164,6 @@ components:
         objectType:
           type: string
       …
-    sysObject:
-      type: object
-      required:
-        - objectType
-      properties:
-        objectType:
-          type: string
-      …
 ```
 
 In this example, the _`obj1`_ value is mapped to the `Object1` model that is defined in the same spec, _`obj2`_ – to `Object2`, and the value _`system`_ matches the `sysObject` model that is located in an external file. All these objects must have the `objectType` property with the value _`"obj1"`_, _`"obj2"`_ or _`"system"`_, respectively.
