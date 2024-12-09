@@ -127,7 +127,7 @@ The `discriminator` keyword can be used by various API consumers. One possible e
 
 ### Mapping Type Names
 
-It is implied, that the property to which discriminator refers, contains the name of the target schema. In the example above, the `objectType` property should contain either `_simpleObject_`, or `_complexObject_` string. If the property values do not match the schema names, you can map the values to the names. To do this, use the `discriminator/mapping` keyword:
+It is implied, that the property to which discriminator refers, contains the name of the target schema. In the example above, the `objectType` property should contain either _`simpleObject`_, or _`complexObject`_ string. If the property values do not match the schema names, you can map the values to the names. To do this, use the `discriminator/mapping` keyword:
 
 ```yaml
 components:
@@ -144,7 +144,7 @@ components:
               propertyName: objectType
               mapping:
                 obj1: '#/components/schemas/Object1'
-    obj2: '#/components/schemas/Object2'
+                obj2: '#/components/schemas/Object2'
                 system: 'sysObject.json#/sysObject'
   …
   schemas:
@@ -166,7 +166,7 @@ components:
       …
 ```
 
-In this example, the `_obj1_` value is mapped to the `Object1` model that is defined in the same spec, `_obj2_` – to `Object2`, and the value `_system_` matches the `sysObject` model that is located in an external file. All these objects must have the `objectType` property with the value `_"obj1"_`, `_"obj2"_` or `_"system"_`, respectively.
+In this example, the _`obj1`_ value is mapped to the `Object1` model that is defined in the same spec, _`obj2`_ – to `Object2`, and the value _`system`_ matches the `sysObject` model that is located in an external file. All these objects must have the `objectType` property with the value _`"obj1"`_, _`"obj2"`_ or _`"system"`_, respectively.
 
 _Did not find what you were looking for? [Ask the community](https://community.smartbear.com/t5/Swagger-Open-Source-Tools/bd-p/SwaggerOSTools)  
 Found a mistake? [Let us know](https://github.com/swagger-api/swagger.io/issues)_
