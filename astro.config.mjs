@@ -102,7 +102,105 @@ export default defineConfig({
         collapsed: true
       }, {
         label: "Swagger Codegen",
-        link: "open-source-tools/swagger-codegen/"
+        items: [
+          {
+            label: "Codegen v3",
+            items: [
+              {
+                label: "What is Swagger Codegen?",
+                link: "open-source-tools/swagger-codegen/codegen-v3/about/"
+              },
+              {
+                label: "Versioning",
+                link: "open-source-tools/swagger-codegen/codegen-v3/versioning/"
+              },
+              {
+                label: "Compatibility",
+                link: "open-source-tools/swagger-codegen/codegen-v3/compatibility/"
+              },
+              {
+                label: "Prerequisites",
+                link: "open-source-tools/swagger-codegen/codegen-v3/prerequisites/"
+              },
+              {
+                label: "Building",
+                link: "open-source-tools/swagger-codegen/codegen-v3/building/"
+              },
+              {
+                label: "Using Docker",
+                link: "open-source-tools/swagger-codegen/codegen-v3/docker/"
+              },
+              {
+                label: "Generators",
+                link: "open-source-tools/swagger-codegen/codegen-v3/generators/"
+              },
+              {
+                label: "Selective Generation",
+                link: "open-source-tools/swagger-codegen/codegen-v3/generation-selective/"
+              },
+              {
+                label: "Advanced Generator Configuration",
+                link: "open-source-tools/swagger-codegen/codegen-v3/generators-configuration/"
+              },
+              {
+                label: "Workflow Integration",
+                link: "open-source-tools/swagger-codegen/codegen-v3/workflow-integration/"
+              },
+              {
+                label: "Online Generators",
+                link: "open-source-tools/swagger-codegen/codegen-v3/online-generators/"
+              }
+            ]            
+          },
+          {
+          label: "Codegen v2",
+          items: [
+            {
+              label: "What is Swagger Codegen?",
+              link: "open-source-tools/swagger-codegen/codegen-v2/about/"
+            },
+            {
+              label: "Versioning",
+              link: "open-source-tools/swagger-codegen/codegen-v2/versioning/"
+            },
+            {
+              label: "Compatibility",
+              link: "open-source-tools/swagger-codegen/codegen-v2/compatibility/"
+            },
+            {
+              label: "Prerequisites",
+              link: "open-source-tools/swagger-codegen/codegen-v2/prerequisites/"
+            },
+            {
+              label: "Building",
+              link: "open-source-tools/swagger-codegen/codegen-v2/building/"
+            },
+            {
+              label: "Using Docker",
+              link: "open-source-tools/swagger-codegen/codegen-v2/docker/"
+            },
+            {
+              label: "Generators",
+              link: "open-source-tools/swagger-codegen/codegen-v2/generators/"
+            },
+            {
+              label: "Selective Generation",
+              link: "open-source-tools/swagger-codegen/codegen-v2/generation-selective/"
+            },
+            {
+              label: "Advanced Generator Configuration",
+              link: "open-source-tools/swagger-codegen/codegen-v2/generators-configuration/"
+            },
+            {
+              label: "Workflow Integration",
+              link: "open-source-tools/swagger-codegen/codegen-v2/workflow-integration/"
+            },
+            {
+              label: "Online Generators",
+              link: "open-source-tools/swagger-codegen/codegen-v2/online-generators/"
+            }
+          ]
+        }]
       }],
       collapsed: true
     }, {
