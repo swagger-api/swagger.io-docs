@@ -38,11 +38,11 @@ info:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
 
-  # Link to the external documentation (if any).
-  # Code or documentation generation tools can use description as the text of the link.
-  externalDocs:
-    description: Find out more
-    url: http://example.com
+# Link to the external documentation (if any).
+# Code or documentation generation tools can use description as the text of the link.
+externalDocs:
+  description: Find out more
+  url: http://example.com
 ```
 
 The `title` and `version` properties are required, others are optional.
