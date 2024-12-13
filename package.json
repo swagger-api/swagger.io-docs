@@ -7,7 +7,8 @@
     "start": "astro dev",
     "build": "astro build && node ./scripts/copy-redirects.js",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "process-content": "node ./src/imports/import-content.js"
   },
   "dependencies": {
     "@astrojs/check": "^0.5.9",

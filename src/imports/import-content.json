@@ -1,3 +1,4 @@
+
 {
   "swagger-imports": {
     "pages": {
@@ -140,8 +141,229 @@
           "label": "Version detection",
           "order": 7
         }
+      },     
+      "page15": {
+        "title": "Swagger Codegen",
+        "src": "https://raw.githubusercontent.com/swagger-api/swagger-codegen/master/README.md",
+        "folder": "../../src/content/docs/open-source-tools/Swagger Codegen/Codegen v2/",
+        "localFile": "about.md",
+        "pageOptions": {
+          "title": "Swagger Codegen",
+          "label": "Swagger Codegen v2",
+          "order": 1
+        }
+      },
+      "page16": {
+        "title": "Swagger Codegen Documentation",
+        "src": "https://raw.githubusercontent.com/swagger-api/swagger-codegen/master/docs/versioning.md",
+        "folder": "../../src/content/docs/open-source-tools/Swagger Codegen/Codegen v2/",
+        "pageOptions": {
+          "title": "Swagger Codegen Versioning",
+          "label": "Swagger Codegen v2",
+          "order": 2
+        }
+      },
+      "page17": {
+        "title": "Swagger Codegen Compatibility",
+        "src": "https://raw.githubusercontent.com/swagger-api/swagger-codegen/master/docs/compatibility.md",
+        "folder": "../../src/content/docs/open-source-tools/Swagger Codegen/Codegen v2/",
+        "pageOptions": {
+          "title": "Swagger Codegen Compatibility",
+          "label": "Swagger Codegen v2",
+          "order": 3
+        }
+      },
+      "page18": {
+        "title": "Swagger Codegen Prerequisites",
+        "src": "https://raw.githubusercontent.com/swagger-api/swagger-codegen/master/docs/prerequisites.md",
+        "folder": "../../src/content/docs/open-source-tools/Swagger Codegen/Codegen v2/",
+        "pageOptions": {
+          "title": "Swagger Codegen Prerequisites",
+          "label": "Swagger Codegen v2",
+          "order": 4
+        }
+      },     
+      "page19": {
+        "title": "Swagger Codegen Building",
+        "src": "https://raw.githubusercontent.com/swagger-api/swagger-codegen/master/docs/building.md",
+        "folder": "../../src/content/docs/open-source-tools/Swagger Codegen/Codegen v2/",
+        "pageOptions": {
+          "title": "Swagger Codegen Building",
+          "label": "Swagger Codegen v2",
+          "order": 5
+        }
+      },      
+      "page20": {
+        "title": "Swagger Codegen Using Docker",
+        "src": "https://raw.githubusercontent.com/swagger-api/swagger-codegen/master/docs/docker.md",
+        "folder": "../../src/content/docs/open-source-tools/Swagger Codegen/Codegen v2/",
+        "pageOptions": {
+          "title": "Swagger Codegen Using Docker",
+          "label": "Swagger Codegen v2",
+          "order": 5
+        }
+      },
+      "page21": {
+        "title": "Swagger Codegen Generators",
+        "src": "https://raw.githubusercontent.com/swagger-api/swagger-codegen/master/docs/generators.md",
+        "folder": "../../src/content/docs/open-source-tools/Swagger Codegen/Codegen v2/",
+        "pageOptions": {
+          "title": "Swagger Codegen Generators",
+          "label": "Swagger Codegen v2",
+          "order": 6
+        }
+      },      
+      "page22": {
+        "title": "Swagger Codegen Selective Generation",
+        "src": "https://raw.githubusercontent.com/swagger-api/swagger-codegen/master/docs/generation-selective.md",
+        "folder": "../../src/content/docs/open-source-tools/Swagger Codegen/Codegen v2/",
+        "pageOptions": {
+          "title": "Swagger Codegen Selective Generation",
+          "label": "Swagger Codegen v2",
+          "order": 6
+        }
+      },
+      "page23": {
+        "title": "Swagger Codegen Generators Configuration",
+        "src": "https://raw.githubusercontent.com/swagger-api/swagger-codegen/master/docs/generators-configuration.md",
+        "folder": "../../src/content/docs/open-source-tools/Swagger Codegen/Codegen v2/",
+        "pageOptions": {
+          "title": "Swagger Codegen Generators Configuration",
+          "label": "Swagger Codegen v2",
+          "order": 7
+        }
+      },
+      "page24": {
+        "title": "Swagger Codegen Workflow Integration",
+        "src": "https://raw.githubusercontent.com/swagger-api/swagger-codegen/master/docs/workflow-integration.md",
+        "folder": "../../src/content/docs/open-source-tools/Swagger Codegen/Codegen v2/",
+        "pageOptions": {
+          "title": "Swagger Codegen Workflow Integration",
+          "label": "Swagger Codegen v2",
+          "order": 8
+        }
+      },
+      "page25": {
+        "title": "Swagger Codegen Online Generators",
+        "src": "https://raw.githubusercontent.com/swagger-api/swagger-codegen/master/docs/online-generators.md",
+        "folder": "../../src/content/docs/open-source-tools/Swagger Codegen/Codegen v2/",
+        "pageOptions": {
+          "title": "Swagger Codegen Online Generators",
+          "label": "Swagger Codegen v2",
+          "order": 9
+        }
+      },     
+      "page26": {
+        "title": "Swagger Codegen",
+        "src": "https://raw.githubusercontent.com/swagger-api/swagger-codegen/3.0.0/README.md",
+        "folder": "../../src/content/docs/open-source-tools/Swagger Codegen/Codegen v3/",
+        "localFile": "about.md",
+        "pageOptions": {
+          "title": "Swagger Codegen",
+          "label": "Swagger Codegen v3",
+          "order": 1
+        }
+      },
+      "page27": {
+        "title": "Swagger Codegen Documentation",
+        "src": "https://raw.githubusercontent.com/swagger-api/swagger-codegen/3.0.0/docs/versioning.md",
+        "folder": "../../src/content/docs/open-source-tools/Swagger Codegen/Codegen v3/",
+        "pageOptions": {
+          "title": "Swagger Codegen Versioning",
+          "label": "Swagger Codegen v3",
+          "order": 2
+        }
+      },
+      "page28": {
+        "title": "Swagger Codegen Compatibility",
+        "src": "https://raw.githubusercontent.com/swagger-api/swagger-codegen/3.0.0/docs/compatibility.md",
+        "folder": "../../src/content/docs/open-source-tools/Swagger Codegen/Codegen v3/",
+        "pageOptions": {
+          "title": "Swagger Codegen Compatibility",
+          "label": "Swagger Codegen v3",
+          "order": 3
+        }
+      },
+      "page29": {
+        "title": "Swagger Codegen Prerequisites",
+        "src": "https://raw.githubusercontent.com/swagger-api/swagger-codegen/3.0.0/docs/prerequisites.md",
+        "folder": "../../src/content/docs/open-source-tools/Swagger Codegen/Codegen v3/",
+        "pageOptions": {
+          "title": "Swagger Codegen Prerequisites",
+          "label": "Swagger Codegen v3",
+          "order": 4
+        }
+      },     
+      "page30": {
+        "title": "Swagger Codegen Building",
+        "src": "https://raw.githubusercontent.com/swagger-api/swagger-codegen/3.0.0/docs/building.md",
+        "folder": "../../src/content/docs/open-source-tools/Swagger Codegen/Codegen v3/",
+        "pageOptions": {
+          "title": "Swagger Codegen Building",
+          "label": "Swagger Codegen v3",
+          "order": 5
+        }
+      },      
+      "page31": {
+        "title": "Swagger Codegen Using Docker",
+        "src": "https://raw.githubusercontent.com/swagger-api/swagger-codegen/3.0.0/docs/docker.md",
+        "folder": "../../src/content/docs/open-source-tools/Swagger Codegen/Codegen v3/",
+        "pageOptions": {
+          "title": "Swagger Codegen Using Docker",
+          "label": "Swagger Codegen v3",
+          "order": 5
+        }
+      },
+      "page32": {
+        "title": "Swagger Codegen Generators",
+        "src": "https://raw.githubusercontent.com/swagger-api/swagger-codegen/3.0.0/docs/generators.md",
+        "folder": "../../src/content/docs/open-source-tools/Swagger Codegen/Codegen v3/",
+        "pageOptions": {
+          "title": "Swagger Codegen Generators",
+          "label": "Swagger Codegen v3",
+          "order": 6
+        }
+      },      
+      "page33": {
+        "title": "Swagger Codegen Selective Generation",
+        "src": "https://raw.githubusercontent.com/swagger-api/swagger-codegen/3.0.0/docs/generation-selective.md",
+        "folder": "../../src/content/docs/open-source-tools/Swagger Codegen/Codegen v3/",
+        "pageOptions": {
+          "title": "Swagger Codegen Selective Generation",
+          "label": "Swagger Codegen v3",
+          "order": 6
+        }
+      },
+      "page34": {
+        "title": "Swagger Codegen Generators Configuration",
+        "src": "https://raw.githubusercontent.com/swagger-api/swagger-codegen/3.0.0/docs/generators-configuration.md",
+        "folder": "../../src/content/docs/open-source-tools/Swagger Codegen/Codegen v3/",
+        "pageOptions": {
+          "title": "Swagger Codegen Generators Configuration",
+          "label": "Swagger Codegen v3",
+          "order": 7
+        }
+      },
+      "page35": {
+        "title": "Swagger Codegen Workflow Integration",
+        "src": "https://raw.githubusercontent.com/swagger-api/swagger-codegen/3.0.0/docs/workflow-integration.md",
+        "folder": "../../src/content/docs/open-source-tools/Swagger Codegen/Codegen v3/",
+        "pageOptions": {
+          "title": "Swagger Codegen Workflow Integration",
+          "label": "Swagger Codegen v3",
+          "order": 8
+        }
+      },
+      "page36": {
+        "title": "Swagger Codegen Online Generators",
+        "src": "https://raw.githubusercontent.com/swagger-api/swagger-codegen/3.0.0/docs/online-generators.md",
+        "folder": "../../src/content/docs/open-source-tools/Swagger Codegen/Codegen v3/",
+        "pageOptions": {
+          "title": "Swagger Codegen Online Generators",
+          "label": "Swagger Codegen v3",
+          "order": 9
+        }
       }
-      
     }
   }
 }

@@ -1,7 +1,7 @@
 ---
-title: Swagger UI Installation
+title: Installation
 sidebar:
-  label: Swagger UI Installation
+  label: Installation
   order: 1
 ---
 
@@ -26,7 +26,7 @@ SwaggerUI({
 })
 ```
 
-See the [Webpack Getting Started](https://github.com/swagger-api/swagger-ui/blob/master/docs/samples/webpack-getting-started) sample for details.
+See the [Webpack Getting Started](../samples/webpack-getting-started) sample for details.
 
 In contrast, **`swagger-ui-dist`** is meant for server-side projects that need assets to serve to clients. The module, when imported, includes an `absolutePath` helper function that returns the absolute filesystem path to where the `swagger-ui-dist` module is installed.
 
@@ -116,6 +116,7 @@ docker run -p 80:80 -e EMBEDDING=true swaggerapi/swagger-ui
 ```
 
 For more information on controlling Swagger UI through the Docker image, see the Docker section of the [Configuration documentation](/docs/open-source-tools/swagger-ui/usage/configuration/#docker).
+
 
 ### unpkg
 
