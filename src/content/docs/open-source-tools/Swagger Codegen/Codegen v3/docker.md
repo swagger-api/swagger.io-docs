@@ -83,7 +83,7 @@ This docker image supports custom generators by dropping the generator jar into 
 
 Please note that up to version 3.0.20 you need to provide`-v /{WHATEVER_DIR}:/jetty_home/lib/shared` even if not using custom generators.
 
-See also [online generators](./online-generators.md).
+See also [online generators](../online-generators).
 
 ### Swagger Generator "Minimal" Docker Image
 
@@ -116,7 +116,7 @@ docker stop $CID && docker rm $CID
 
 In the example above, `result.zip` will contain the generated client.
 
-See also [online generators](../README.md#online-generators).
+See also [online generators](../about#online-generators).
 
 ### Swagger Codegen CLI Docker Image
 
