@@ -15,7 +15,7 @@ This is the Swagger Codegen project, which allows generation of API client libra
 
 ## Versioning
 
-> ⚠️ this document refers to version 2.X, check [here](../Codegen%20v3/about) for 3.X.
+> ⚠️ this document refers to version 2.X, check [here](../../codegen-v3/about) for 3.X.
 
 Both **2.X** and **3.X** version lines of Swagger Codegen are available and are independently maintained.
 
@@ -44,17 +44,17 @@ The OpenAPI Specification has undergone 3 revisions since initial creation in 20
 
 Swagger Codegen Version    | Release Date | Swagger / OpenAPI Spec compatibility | Notes
 -------------------------- |--------------| -------------------------- | -----
-[3.0.64](https://github.com/swagger-api/swagger-codegen/releases/tag/v3.0.64) (**current stable**) | 2024-11-07   | 1.0, 1.1, 1.2, 2.0, 3.0   | [tag v3.0.64](https://github.com/swagger-api/swagger-codegen/tree/v3.0.64)
-[2.4.43](https://github.com/swagger-api/swagger-codegen/releases/tag/v2.4.43) (**current stable**) | 2024-08-09   | 1.0, 1.1, 1.2, 2.0   | [tag v2.4.42](https://github.com/swagger-api/swagger-codegen/tree/v2.4.43)
+[3.0.65](https://github.com/swagger-api/swagger-codegen/releases/tag/v3.0.65) (**current stable**) | 2024-12-18   | 1.0, 1.1, 1.2, 2.0, 3.0   | [tag v3.0.65](https://github.com/swagger-api/swagger-codegen/tree/v3.0.65)
+[2.4.44](https://github.com/swagger-api/swagger-codegen/releases/tag/v2.4.44) (**current stable**) | 2024-12-18   | 1.0, 1.1, 1.2, 2.0   | [tag v2.4.44](https://github.com/swagger-api/swagger-codegen/tree/v2.4.43)
 
 💁 Here's also an overview of what's coming around the corner:
 
 Swagger Codegen Version    | Release Date | Swagger / OpenAPI Spec compatibility | Notes
 -------------------------- |--------------| -------------------------- | -----
-3.0.65-SNAPSHOT (current 3.0.0, upcoming minor release) [SNAPSHOT](https://oss.sonatype.org/content/repositories/snapshots/io/swagger/codegen/v3/swagger-codegen-cli/3.0.65-SNAPSHOT/)| TBD          | 1.0, 1.1, 1.2, 2.0, 3.0 | Minor release
-2.4.44-SNAPSHOT (current master, upcoming minor release) [SNAPSHOT](https://oss.sonatype.org/content/repositories/snapshots/io/swagger/swagger-codegen-cli/2.4.44-SNAPSHOT/)| TBD          | 1.0, 1.1, 1.2, 2.0   | Minor release
+3.0.66-SNAPSHOT (current 3.0.0, upcoming minor release) [SNAPSHOT](https://oss.sonatype.org/content/repositories/snapshots/io/swagger/codegen/v3/swagger-codegen-cli/3.0.66-SNAPSHOT/)| TBD          | 1.0, 1.1, 1.2, 2.0, 3.0 | Minor release
+2.4.45-SNAPSHOT (current master, upcoming minor release) [SNAPSHOT](https://oss.sonatype.org/content/repositories/snapshots/io/swagger/swagger-codegen-cli/2.4.45-SNAPSHOT/)| TBD          | 1.0, 1.1, 1.2, 2.0   | Minor release
 
-For detailed breakdown of all versions, please see the [full compatibility listing](./compatibility).
+For detailed breakdown of all versions, please see the [full compatibility listing](../compatibility).
 
 ### Getting Started
 
@@ -84,7 +84,7 @@ java -jar modules/swagger-codegen-cli/target/swagger-codegen-cli.jar generate \
 java -jar modules\swagger-codegen-cli\target\swagger-codegen-cli.jar generate -i https://petstore.swagger.io/v2/swagger.json -l php -o c:\temp\php_api_client
 ```
 
-You can also download the JAR (latest release) directly from [maven.org](https://repo1.maven.org/maven2/io/swagger/swagger-codegen-cli/2.4.43/swagger-codegen-cli-2.4.43.jar)
+You can also download the JAR (latest release) directly from [maven.org](https://repo1.maven.org/maven2/io/swagger/swagger-codegen-cli/2.4.44/swagger-codegen-cli-2.4.44.jar)
 
 To get a list of **general** options available, you can run the following:
 
@@ -173,6 +173,7 @@ mvn package
 ```
 
 Other languages have petstore samples, too:
+
 ```sh
 ./bin/android-petstore.sh
 ./bin/java-petstore.sh
@@ -226,7 +227,7 @@ It's possible to leverage Swagger Codegen directly within your preferred CI/CD w
 
 ## Online Generators
 
-If you don't want to run and host your own code generation instance, check our our [online generators](../online-generators) information.
+If you don't want to run and host your own code generation instance, check our our [online generators](./online-generators) information.
 
 ## Contributing
 
@@ -235,3 +236,7 @@ Please refer to this [page](https://github.com/swagger-api/swagger-codegen/blob/
 ## Security contact
 
 Please disclose any security-related issues or vulnerabilities by emailing [security@swagger.io](mailto:security@swagger.io), instead of using the public issue tracker.
+
+## Thank You
+
+💚💚💚 We'd like to give a big shout out to all those who've contributed to Swagger Codegen, be that in raising issues, fixing bugs, authoring templates, or crafting useful content for others to benefit from. 💚💚💚
