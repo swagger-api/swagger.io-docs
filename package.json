@@ -21,7 +21,7 @@
     "@fontsource-variable/open-sans": "^5.0.28",
     "@fontsource/monda": "^5.0.14",
     "@fontsource/roboto": "^5.0.13",
-    "astro": "^4.10.3",
+    "astro": "^4.16.18",
     "marked": "^12.0.1",
     "node-fetch": "^3.3.2",
     "sharp": "^0.32.5",
