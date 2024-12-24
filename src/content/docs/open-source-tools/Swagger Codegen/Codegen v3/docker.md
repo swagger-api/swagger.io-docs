@@ -116,7 +116,7 @@ docker stop $CID && docker rm $CID
 
 In the example above, `result.zip` will contain the generated client.
 
-See also [online generators](../README.md#online-generators).
+See also [online generators](../about#online-generators).
 
 ### Swagger Codegen CLI Docker Image
 
