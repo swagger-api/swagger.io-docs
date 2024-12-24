@@ -227,7 +227,7 @@ It's possible to leverage Swagger Codegen directly within your preferred CI/CD w
 
 ## Online Generators
 
-If you don't want to run and host your own code generation instance, check our our [online generators](./online-generators) information.
+If you don't want to run and host your own code generation instance, check our our [online generators](../online-generators) information.
 
 ## Contributing
 
