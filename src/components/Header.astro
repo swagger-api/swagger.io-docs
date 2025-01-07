@@ -425,7 +425,7 @@ import type { Props } from '@astrojs/starlight/props';
                     <div class='dropdown-mega'>
                         <!-- Nav tabs -->
                         <ul
-                        class='nav nav-tabs list-none p-0'
+                        class='nav nav-tabs list-none pt-5'
                         role='tablist'
                     >
                         <li>
@@ -464,68 +464,91 @@ import type { Props } from '@astrojs/starlight/props';
                             id='proDocumentation'
                         >
                             <a
-                                href='https://swagger.io/tools/swaggerhub/'
+                                href='/api-hub/'
                                 class='item-main-wrapper'
                                 ><span class='item-main link-underline'
-                                    >SwaggerHub</span
+                                    >API Hub</span
                                 >
-                                <p class='content'
+                                <p class='content !mb-5'
                                     >Accelerate API development with
                                     quality and consistency across
                                     OpenAPI and AsyncAPI.</p
                                 >
                             </a>
                             <ul
-                                class='p-0 -mt-2 mb-6 list-none'
+                                class='p-0 -mt-2 mb-6 list-none overflow-hidden'
                                 role='list'
                             >
-                                <li class='mb-2'>
+                                <li class='list-item mb-2 pt-1'>
                                     <a
-                                        href='https://swagger.io/tools/swaggerhub/features/swaggerhub-portal/'
-                                        aria-label='Developer Portal - Improve API discoverability'
+                                        class="list-item__link"
+                                        href='/api-hub/design/'
+                                        aria-label='Design - Collaborate on API Design'
                                     >
-                                        <i
-                                            class='text-clr-green fas fa-level-up-alt fa-rotate-90 ml-1 text-xs'
-                                            aria-hidden='true'></i>
                                         <span
-                                            class='text-dark font-semibold ml-2 link-underline text-sm'
-                                            >Developer Portal</span
+                                            class='list-item__title font-semibold link-underline text-sm'
+                                            >Design</span
                                         >
                                         <span
-                                            class='block txt-clr-neutral-12 ml-6 text-xs'
-                                            >Improve API discoverability
-                                            and developer experience in
-                                            a fully customizable
-                                            portal.&nbsp;</span
+                                            class='list-item__description block txt-clr-neutral-12 text-xs'
+                                            >Collaborate on API Design</span
                                         >
                                     </a>
                                 </li>
-                                <li>
+                                <li class='list-item mb-2'>
                                     <a
-                                        href='https://swagger.io/tools/swaggerhub-explore/'
-                                        aria-label='Exploration - Evaluate the functionality of any API instantly'
+                                        class="list-item__link"
+                                        href='/api-hub/portal/'
+                                        aria-label='Portal - Deliver Up-to-date API Documentation'
                                     >
-                                        <i
-                                            class='text-clr-green fas fa-level-up-alt fa-rotate-90 ml-1 text-xs'
-                                            aria-hidden='true'></i>
                                         <span
-                                            class='text-dark font-semibold ml-2 link-underline text-sm'
-                                            >Exploration</span
+                                            class='list-item__title font-semibold link-underline text-sm'
+                                            >Portal</span
                                         >
                                         <span
-                                            class='block txt-clr-neutral-12 ml-6 text-xs'
-                                            >Evaluate the functionality
-                                            of any API instantly,
-                                            regardless of protocol.</span
+                                            class='list-item__description block txt-clr-neutral-12 text-xs'
+                                            >Deliver Up-to-date API Documentation</span
+                                        >
+                                    </a>
+                                </li>
+                                <li class='list-item mb-2'>
+                                    <a
+                                        class="list-item__link"
+                                        href='/api-hub/contract-testing/'
+                                        aria-label='Contract Testing - Block API Breaking Changes'
+                                    >
+                                        <span
+                                            class='list-item__title font-semibold link-underline text-sm'
+                                            >Contract Testing</span
+                                        >
+                                        <span
+                                            class='list-item__description block txt-clr-neutral-12 text-xs'
+                                            >Block API Breaking Changes</span
+                                        >
+                                    </a>
+                                </li>
+                                <li class='list-item mb-0'>
+                                    <a
+                                        class="list-item__link"
+                                        href='/api-hub/explore/'
+                                        aria-label='Explore - Quickly Test and Explore APIs'
+                                    >
+                                        <span
+                                            class='list-item__title font-semibold link-underline text-sm bg-clr-neutral-1 dark:bg-clr-neutral-14'
+                                            >Explore</span
+                                        >
+                                        <span
+                                            class='list-item__description block txt-clr-neutral-12 text-xs'
+                                            >Quickly Test and Explore APIs</span
                                         >
                                     </a>
                                 </li>
                             </ul>
                             <a
-                                href='https://swagger.io/tools/swaggerhub/enterprise/'
-                                class='item-main-wrapper'
+                                href='/api-hub/enterprise/'
+                                class='item-main-wrapper border-t border-clr-neutral-6 pt-5 pb-0 menu-xl:pb-5'
                                 ><span class='item-main link-underline'
-                                    >SwaggerHub Enterprise</span
+                                    >API Hub Enterprise</span
                                 >
                                 <p class='content'>
                                     Standardize your APIs with projects,
@@ -542,36 +565,35 @@ import type { Props } from '@astrojs/starlight/props';
                                 href="https://swagger.io/tools/open-source/" 
                                 class="item-main-wrapper">
                                     <span class="item-main link-underline">Swagger Open Source</span>
-                                    <p class="content"> Ideal for individuals and small teams to design, build,
+                                    <p class="content !mb-5"> Ideal for individuals and small teams to design, build,
                                         and document APIs.</p>
                             </a>
-                            <ul class="p-0 -mt-2 list-none" role="list">
-                                <li class="mb-2">
-                                    <a href="https://swagger.io/tools/swagger-codegen/" aria-label="Swagger Codegen - Generate server stubs and client SDKs">
-                                        <i class="text-clr-green fas fa-level-up-alt fa-rotate-90 text-xs ml-1" aria-hidden="true"></i>
-                                        <span class="text-dark text-sm font-semibold ml-2 link-underline">Swagger
+                            <ul class="p-0 -mt-2 list-none overflow-hidden" role="list">
+                                <li class="list-item mb-2 pt-1">
+                                    <a class="list-item__link" href="https://swagger.io/tools/swagger-codegen/" aria-label="Swagger Codegen - Generate server stubs and client SDKs">
+                                        <span class="list-item__title text-sm font-semibold link-underline">Swagger
                                             Codegen</span>
-                                        <span class="block txt-clr-neutral-12 text-xs ml-6">Generate server
+                                        <span class="list-item__description block txt-clr-neutral-12 text-xs">Generate server
                                             stubs and client SDKs from OpenAPI Specification
                                             definitions.</span>
                                     </a>
                                 </li>
-                                <li class="mb-2">
-                                    <a href="https://swagger.io/tools/swagger-editor/" aria-label="Swagger Editor - API editor for designing APIs">
-                                        <i class="text-clr-green fas fa-level-up-alt fa-rotate-90 text-xs ml-1" aria-hidden="true"></i>
-                                        <span class="text-dark text-sm font-semibold ml-2 link-underline">Swagger
+                                <li class="list-item mb-2">
+                                    <a class="list-item__link" href="https://swagger.io/tools/swagger-editor/" aria-label="Swagger Editor - API editor for designing APIs">
+                                        <span class="list-item__title text-sm font-semibold link-underline">Swagger
                                             Editor</span>
-                                        <span class="block txt-clr-neutral-12 text-xs ml-6">API editor for
+                                        <span class="list-item__description block txt-clr-neutral-12 text-xs">API editor for
                                             designing APIs with the OpenAPI and AsyncAPI
                                             specifications.</span>
                                     </a>
                                 </li>
-                                <li class="mb-1 pb-3">
-                                    <a href="https://swagger.io/tools/swagger-ui/" aria-label="Swagger UI - Visualize OpenAPI Specification">
-                                        <i class="text-clr-green fas fa-level-up-alt fa-rotate-90 text-xs ml-1" aria-hidden="true"></i>
-                                        <span class="text-dark text-sm font-semibold ml-2 link-underline">Swagger
-                                            UI</span>
-                                        <span class="block txt-clr-neutral-12 text-xs ml-6">Visualize OpenAPI
+                                <li class="list-item">
+                                    <a class="list-item__link" href="https://swagger.io/tools/swagger-ui/" aria-label="Swagger UI - Visualize OpenAPI Specification">
+                                        <span 
+                                            class="list-item__title text-sm font-semibold link-underline bg-clr-neutral-1 lg:bg-transparent menu-xl:bg-clr-neutral-2 dark:bg-clr-neutral-14 dark:lg:clr-neutral-14 dark:menu-xl:bg-clr-neutral-15">
+                                            Swagger UI
+                                        </span>
+                                        <span class="list-item__description block txt-clr-neutral-12 text-xs">Visualize OpenAPI
                                             Specification definitions in an interactive UI.</span>
                                     </a>
                                 </li>
@@ -790,6 +812,52 @@ import type { Props } from '@astrojs/starlight/props';
         }
     }
 
+    .list-item {
+        margin-bottom: 15px;
+        margin-left: 32px;
+    }
+    .list-item__link {
+        position: relative;
+    }
+    .list-item__title{
+        color: var(--sl-color-gray-1);
+    }
+    .list-item__title::before {
+        content: "";
+        pointer-events: none;
+        width: 10px;
+        height: 82px;
+        position: absolute;
+        top: 12px;
+        left: -16px;
+        border: 1px solid #d8dde4;
+        border-bottom: 0;
+        border-right: 0;
+    }
+
+    .list-item:first-of-type .list-item__title::after {
+        content: "";
+        pointer-events: none;
+        width: 10px;
+        height: 34px;
+        position: absolute;
+        top: -20px;
+        left: -16px;
+        border-left: 1px solid #d8dde4;
+    }
+    .list-item:last-of-type .list-item__title::before {
+        content: "";
+        pointer-events: none;
+        width: 10px;
+        height: 34px;
+        position: absolute;
+        top: 13px;
+        left: -16px;
+        border: 0px;
+        border-top: 1px solid #d8dde4;
+        background-color: inherit;
+    }
+
     .nav-main .dropdown-menu .item,
     .nav-main .dropdown-menu .tabbed-resource-cards .item-checked,
     .nav-main .dropdown-menu .tabbed-resource-cards .item-header,
@@ -911,7 +979,6 @@ import type { Props } from '@astrojs/starlight/props';
     .nav-main .dropdown-menu .content {
         color: var(--sl-color-gray-2);
         font-size: 12px;
-        padding: 5px 0 20px;
     }
 
     .nav-main {
