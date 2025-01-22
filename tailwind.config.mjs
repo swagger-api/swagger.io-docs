@@ -48,6 +48,6 @@ export default {
 		extend: {},
 	},
 	corePlugins: {
-		preflight: true,
+		preflight: false,
 	}
 }
