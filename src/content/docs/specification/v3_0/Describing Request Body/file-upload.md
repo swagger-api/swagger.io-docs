@@ -110,7 +110,7 @@ Content-Disposition: form-data; name="fileName"; filename="file2.png"
 Content-Type: image/png
 
 [file content goes there]
-------WebKitFormBoundaryWfPNVh4wuWBlyEyQ
+--abcde12345
 Content-Disposition: form-data; name="fileName"; filename="file3.jpg"
 Content-Type: image/jpeg
 
