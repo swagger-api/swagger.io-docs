@@ -2,7 +2,6 @@
 import MobileMenuToggle from "./MobileMenuToggle.astro";
 import type { Props } from "@astrojs/starlight/props";
 import Footer from "./Footer.astro";
-import SwaggerFooter from "./SwaggerFooter.astro";
 const { hasSidebar, labels } = Astro.props;
 ---
 
@@ -29,7 +28,6 @@ const { hasSidebar, labels } = Astro.props;
 		}
 		<div class="main-frame"><slot /></div>
 	</div>
-	<SwaggerFooter />
 	<Footer />
 </div>
 
