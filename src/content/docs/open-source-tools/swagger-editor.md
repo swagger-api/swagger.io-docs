@@ -5,30 +5,246 @@ sidebar:
   order: 1
 ---
 
-This page is about the current Swagger Editor. If you're looking for Swagger Editor Next (beta) docs, visit [Swagger
-Editor Next (beta)](/open-source-tools/swagger-editor-next).
+This page is about the current Swagger Editor. If you're looking for Swagger Editor Next (beta) (otherwise known as `SwaggerEditor@5`) docs, visit [Swagger
+Editor Next (beta)](../swagger-editor-next).
 
-The Swagger Editor is an open source editor to design, define and document RESTful APIs in the Swagger Specification.
+The Swagger Editor is an open source editor to design, define and document HTTP (RESTful) APIs in the OpenAPI Specification.
 The source code for the Swagger Editor can be found in GitHub.
 
 GitHub: [https://github.com/swagger-api/swagger-editor](https://github.com/swagger-api/swagger-editor)
 
-### Download
+Only **Swagger Editor Next** supports [OpenAPI 3.1.0](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md). 
+SwaggerEditor@4 will not receive OpenAPI 3.1.0 support and is considered legacy at this point.
+The plan is to continually migrate fully to SwaggerEditor@5 and deprecate the SwaggerEditor@4 in the future.
 
-#### Using the Editor on the Web
+## Using the Editor on the Web
 
 The Editor works in any web browser, and can be hosted locally or accessed from the web.
 
 [Take Me To The Web Version](https://editor.swagger.io)
 
-#### Using the Editor on a local machine
+## Running locally
 
-You can run and use the Swagger Editor on your machine as well.
+### Prerequisites
 
-##### Prerequisites
+- git, any version
+- **Node.js >=20.3.0** and **npm >=9.6.7** are the minimum required versions that this repo runs on, but we always recommend using the latest version of Node.js.
 
-The following dependencies would need to be installed on your machine before downloading and running the Swagger Editor.
+```shell
+ $ npm i --legacy-peer-deps
+```
 
-- [NodeJS](https://nodejs.org/en/)
+If you have Node.js and npm installed, you can run `npm start` to spin up a static server.
 
-Once NodeJS is installed successfully, please install all the npm dependencies using
+Otherwise, you can open `index.html` directly from your filesystem in your browser.
+
+If you'd like to make code changes to Swagger Editor, you can start up a Webpack hot-reloading dev server via `npm run dev`.
+
+##### Browser support
+
+Swagger Editor works in the latest versions of Chrome, Safari, Firefox, and Edge.
+
+### Known Issues
+
+To help with the migration, here are the currently known issues with 3.X. This list will update regularly, and will not include features that were not implemented in previous versions.
+
+- Everything listed in [Swagger UI's Known Issues](https://github.com/swagger-api/swagger-ui/blob/master/README.md#known-issues).
+- The integration with the codegen is still missing.
+
+## Helpful scripts
+
+Any of the scripts below can be run by typing `npm run <script name>` in the project's root directory.
+
+### Developing
+Script name | Description
+--- | ---
+`dev` | Spawn a hot-reloading dev server on port 3200.
+`deps-check` | Generate a size and licensing report on Swagger Editors's dependencies.
+`lint` | Report ESLint style errors and warnings.
+`lint-errors` | Report ESLint style errors, without warnings.
+`lint-fix` | Attempt to fix style errors automatically.
+`watch` | Rebuild the core files in `/dist` when the source code changes. Useful for `npm link`.
+
+### Building
+Script name | Description
+--- | ---
+`build` | Build a new set of JS and CSS assets, and output them to `/dist`.
+`build:bundle` | Build `swagger-editor-bundle.js` only (commonJS).
+`build:core` | Build `swagger-editor.(js\|css)` only (commonJS).
+`build:standalone` | Build `swagger-editor-standalone-preset.js` only (commonJS).
+`build:stylesheets` | Build `swagger-editor.css` only.
+`build:es:bundle` | Build `swagger-editor-es-bundle.js` only (es2015).
+`build:es:bundle:core` | Build `swagger-editor-es-bundle-core.js` only (es2015).
+
+### Testing
+Script name | Description
+--- | ---
+`test` | Run unit tests in Node, run Cypress end-to-end tests, and run ESLint in errors-only mode.
+`test:unit-mocha` | Run Mocha-based unit tests in Node.
+`test:unit-jest` | Run Jest-based unit tests in Node.
+`e2e` | Run end-to-end browser tests with Cypress.
+`lint` | Run ESLint test
+`test:artifact` | Run list of bundle artifact tests in Jest
+`test:artifact:umd:bundle` | Run unit test that confirms `swagger-editor-bundle` exports as a Function
+`test:artifact:es:bundle` | Run unit test that confirms `swagger-editor-es-bundle` exports as a Function
+`test:artifact:es:bundle:core` | Run unit test that confirms `swagger-editor-es-bundle-core` exports as a Function
+
+## Docker
+
+### Running the image from DockerHub
+
+There is a docker image published in **docker.swagger.io** registry.
+
+To use this, run the following:
+
+```
+docker pull docker.swagger.io/swaggerapi/swagger-editor
+docker run -d -p 80:8080 docker.swagger.io/swaggerapi/swagger-editor
+```
+
+This will run Swagger Editor (in detached mode) on port 80 on your machine, so you can open it by navigating to `http://localhost` in your browser.  
+
+* You can provide a URL pointing to an API definition (may not be available if some security policies such as CSP or CORS are enforced):
+
+```
+docker run -d -p 80:8080 -e URL="https://petstore3.swagger.io/api/v3/openapi.json" docker.swagger.io/swaggerapi/swagger-editor
+```
+
+* You can provide your own `json` or `yaml` definition file from your local host:
+
+```
+docker run -d -p 80:8080 -v $(pwd):/tmp -e SWAGGER_FILE=/tmp/swagger.json docker.swagger.io/swaggerapi/swagger-editor
+```
+
+**Note:** When both `URL` and `SWAGGER_FILE` environment variables are set, `URL` has priority and `SWAGGER_FILE` is ignored.
+
+* You can specify a different base url via `BASE_URL` variable for accessing the application - for example if you want the application to be available at `http://localhost/swagger-editor/`:
+
+```
+docker run -d -p 80:8080 -e BASE_URL=/swagger-editor docker.swagger.io/swaggerapi/swagger-editor
+```
+
+* You can specify a different port via `PORT` variable for accessing the application, default is `8080`.
+
+```
+docker run -d -p 80:80 -e PORT=80 docker.swagger.io/swaggerapi/swagger-editor
+```
+
+* You can specify Google Tag Manager ID via `GTM` variable for tracking the usage of the swagger-editor.
+
+```
+docker run -d -p 80:8080 -e GTM=GTM-XXXXXX docker.swagger.io/swaggerapi/swagger-editor
+```
+
+You can also customize the different endpoints used by the Swagger Editor with the following environment variables. For instance, this can be useful if you have your own Swagger generator server:
+
+Environment variable | Default value
+--- | ---
+`URL_SWAGGER2_GENERATOR` | `https://generator.swagger.io/api/swagger.json`
+`URL_OAS3_GENERATOR` | `https://generator3.swagger.io/openapi.json`
+`URL_SWAGGER2_CONVERTER` | `https://converter.swagger.io/api/convert`
+
+If you want to run the Swagger Editor locally without the Codegen features (Generate Server and Generate Client) you can set the above environment variables to `null` (`URL_SWAGGER2_CONVERTER=null`).
+
+### Building and running an image locally
+
+To build and run a docker image with the code checked out on your machine, run the following from the root directory of the project:
+
+```
+# Install npm packages (if needed)
+npm install
+
+# Build the app
+npm run build
+
+# Build an image
+docker build -t swagger-editor .
+
+# Run the container
+docker run -d -p 80:8080 swagger-editor
+```
+
+You can then view the app by navigating to `http://localhost` in your browser.
+
+## Documentation
+
+* [Importing your OpenAPI document](docs/import.md)
+
+* [Contributing](https://github.com/swagger-api/.github/blob/master/CONTRIBUTING.md)
+
+### Using older version of React
+
+> [!IMPORTANT]
+> By older versions we specifically refer to `React >=17 <18`.
+
+By default [swagger-editor@4](https://www.npmjs.com/package/swagger-editor) npm package comes with latest version of [React@18](https://react.dev/blog/2022/03/29/react-v18).
+It's possible to use _swagger-editor@4_ npm package with older version of React.
+
+Let's say my application integrates with _swagger-editor@4_ npm package and uses [React@17.0.2](https://www.npmjs.com/package/react/v/17.0.2).
+
+### npm
+
+In order to inform `swagger-editor@4` npm package that I require it to use my React version, I need to use [npm overrides](https://docs.npmjs.com/cli/v9/configuring-npm/package-json#overrides).
+
+```json
+{
+  "dependencies": {
+    "react": "=17.0.2",
+    "react-dom": "=17.0.2"
+  },
+  "overrides": {
+    "swagger-editor": {
+      "react": "$react",
+      "react": "$react-dom",
+      "react-redux": "^8"
+    }
+  }
+}
+```
+
+> [!NOTE]
+> The React and ReactDOM override are defined as a reference to the dependency. Since _react-redux@9_ only supports `React >= 18`, we need to use _react-redux@8_.
+
+
+### yarn
+
+In order to inform `swagger-editor@4` npm package that I require it to use my specific React version, I need to use [yarn resolutions](https://yarnpkg.com/cli/set/resolution).
+
+
+```json
+{
+  "dependencies": {
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "resolutions": {
+    "swagger-editor/react": "17.0.2",
+    "swagger-editor/react-dom": "17.0.2",
+    "swagger-editor/react-redux": "^8"
+  }
+}
+```
+
+> [!NOTE]
+> The React and ReactDOM resolution cannot be defined as a reference to the dependency. Unfortunately *yarn* does not support aliasing like `$react` or `$react-dom` as *npm* does. You'll need to specify the exact versions.
+
+## Security contact
+
+Please disclose any security-related issues or vulnerabilities by emailing [security@swagger.io](mailto:security@swagger.io), instead of using the public issue tracker.
+
+## Anonymized analytics
+
+Swagger Editor uses [Scarf](https://scarf.sh/) to collect [anonymized installation analytics](https://github.com/scarf-sh/scarf-js?tab=readme-ov-file#as-a-user-of-a-package-using-scarf-js-what-information-does-scarf-js-send-about-me). These analytics help support the maintainers of this library and ONLY run during installation. To [opt out](https://github.com/scarf-sh/scarf-js?tab=readme-ov-file#as-a-user-of-a-package-using-scarf-js-how-can-i-opt-out-of-analytics), you can set the `scarfSettings.enabled` field to `false` in your project's `package.json`:
+
+```
+// package.json
+{
+  // ...
+  "scarfSettings": {
+    "enabled": false
+  }
+  // ...
+}
+```
+
+Alternatively, you can set the environment variable `SCARF_ANALYTICS` to `false` as part of the environment that installs your npm packages, e.g., `SCARF_ANALYTICS=false npm install`.
