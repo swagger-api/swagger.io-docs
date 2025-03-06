@@ -8,7 +8,7 @@ sidebar:
 OAS **3** This guide is for OpenAPI 3.0.
 :::
 
-OpenAPI 3.0 data types are based on an extended subset [JSON Schema Specification Wright Draft 00](https://tools.ietf.org/html/draft-wright-json-schema-00#section-4.2) (aka Draft 5). The data types are described using a [Schema object](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#schemaObject). To learn how to model various data types, see the following topics:
+OpenAPI 3.0 data types are based on an extended subset [JSON Schema Specification Wright Draft 00](https://tools.ietf.org/html/draft-wright-json-schema-00#section-4.2) (aka Draft 5). The data types are described using a [Schema object](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.4.md#schema-object). To learn how to model various data types, see the following topics:
 
 - [Data Types](/docs/specification/data-models/data-types/)
 - [Enums](/docs/specification/data-models/enums/)

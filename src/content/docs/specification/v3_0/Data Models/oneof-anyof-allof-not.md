@@ -156,8 +156,6 @@ The following request bodies are **not valid**:
   "age": 3        # Does not include the pet_type property
 }
 
-
-
 {
   "pet_type": "Cat",
   "bark": true    # The `Cat` schema does not have the `bark` property

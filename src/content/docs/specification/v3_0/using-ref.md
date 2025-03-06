@@ -98,10 +98,10 @@ $ref: "#/paths/~1blogs~1{blog_id}~1new~0posts"
 
 #### Places Where $ref Can Be Used
 
-A common misconception is that `$ref` is allowed anywhere in an OpenAPI specification file. Actually `$ref` is only allowed in places where the [OpenAPI 3.0 Specification](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md) explicitly states that the value may be a _reference_. For example, `$ref` cannot be used in the `info` section and directly under `paths`:
+A common misconception is that `$ref` is allowed anywhere in an OpenAPI specification file. Actually `$ref` is only allowed in places where the [OpenAPI 3.0 Specification](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.4.md) explicitly states that the value may be a _reference_. For example, `$ref` cannot be used in the `info` section and directly under `paths`:
 
 ```yaml
-openapi: 3.0.0
+openapi: 3.0.4
 
 # Incorrect!
 info:

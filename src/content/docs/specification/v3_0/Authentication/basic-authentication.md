@@ -21,7 +21,7 @@ Authorization: Basic ZGVtbzpwQDU1dzByZA==
 Using OpenAPI 3.0, you can describe Basic authentication as follows:
 
 ```yaml
-openapi: 3.0.0
+openapi: 3.0.4
 ---
 components:
   securitySchemes:

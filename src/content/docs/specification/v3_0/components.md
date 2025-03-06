@@ -274,7 +274,7 @@ OpenAPI 2.0                    OpenAPI 3.0
 
 ### References
 
-[Components Object](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#componentsObject)
+[Components Object](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.4.md#components-object)
 
 _Did not find what you were looking for? [Ask the community](https://community.smartbear.com/t5/Swagger-Open-Source-Tools/bd-p/SwaggerOSTools)  
 Found a mistake? [Let us know](https://github.com/swagger-api/swagger.io/issues)_

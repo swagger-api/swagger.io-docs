@@ -45,7 +45,7 @@ Content-Type: application/json
 Let’s now define the `/subscribe` operation:
 
 ```yaml
-openapi: 3.0.0
+openapi: 3.0.4
 info:
   version: 0.0.0
   title: test
@@ -151,7 +151,7 @@ Please note that when you define a callback, you define a specification of your 
 
 ### Use Runtime Expressions to Refer to Request Fields
 
-As you can see, we use the `{$request.body#/callbackUrl}` expression in our example. It is a [runtime expression](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#runtimeExpression) that sets which data of the `POST /subscribe` request will be used in callbacks. _Runtime_ means that unlike API endpoints, this URL is not known beforehand and is evaluated at run time based on the data supplied by API clients. This value varies from one client to another. For example, the `POST /subscribe` request can look as follows:
+As you can see, we use the `{$request.body#/callbackUrl}` expression in our example. It is a [runtime expression](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.4.md#runtime-expressions) that sets which data of the `POST /subscribe` request will be used in callbacks. _Runtime_ means that unlike API endpoints, this URL is not known beforehand and is evaluated at run time based on the data supplied by API clients. This value varies from one client to another. For example, the `POST /subscribe` request can look as follows:
 
 ```yaml
 POST /subscribe?p1=query-param-value HTTP/1.1

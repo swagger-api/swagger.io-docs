@@ -35,7 +35,7 @@ API keys are supposed to be a secret that only the client and server know. Like 
 In OpenAPI 3.0, API keys are described as follows:
 
 ```yaml
-openapi: 3.0.0
+openapi: 3.0.4
 ---
 # 1) Define the key name and location
 components:
