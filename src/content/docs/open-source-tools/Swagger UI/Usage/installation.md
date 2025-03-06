@@ -16,6 +16,23 @@ We publish three modules to npm: **`swagger-ui`**, **`swagger-ui-dist`** and **`
 such as Webpack, Browserify, and Rollup. Its main file exports Swagger UI's main function,
 and the module also includes a namespaced stylesheet at `swagger-ui/dist/swagger-ui.css`. Here's an example:
 
+### Installation
+
+You can now install SwaggerUI packages using `npm`:
+
+```sh
+ $ npm install swagger-ui 
+````
+
+```sh
+ $ npm install swagger-ui-react 
+````
+
+```sh
+ $ npm install swagger-ui-dist 
+````
+
+
 ```javascript
 import SwaggerUI from 'swagger-ui'
 // or use require if you prefer
@@ -68,7 +85,7 @@ const ui = SwaggerUIBundle({
 
 ### Docker
 
-You can pull a pre-built docker image of the swagger-ui directly from Docker Hub:
+You can pull a pre-built docker image of the swagger-ui directly from **docker.swagger.io**:
 
 ```sh
 docker pull docker.swagger.io/swaggerapi/swagger-ui
