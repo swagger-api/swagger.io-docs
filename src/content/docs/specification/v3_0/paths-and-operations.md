@@ -183,7 +183,7 @@ GET /users/findByRole?role=value
 Some common use cases for operationId are:
 
 - Some code generators use this value to name the corresponding methods in code.
-- [Links](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.2.md#linkObject) can refer to the linked operations by `operationId`.
+- [Links](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.4.md#link-object) can refer to the linked operations by `operationId`.
 
 ### Deprecated Operations
 

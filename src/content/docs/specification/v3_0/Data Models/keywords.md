@@ -72,7 +72,7 @@ OpenAPI schemas can also use the following keywords that are not part of JSON Sc
 
 ### References
 
-[OpenAPI 3.0 – Schema Object](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#schema-object)
+[OpenAPI 3.0 – Schema Object](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.4.md#schema-object)
 
 [JSON Schema Validation](https://tools.ietf.org/html/draft-wright-json-schema-validation-00) – JSON Schema keyword reference
 
