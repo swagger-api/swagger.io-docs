@@ -17,7 +17,7 @@ server URL       endpoint    query parameters
 path
 ```
 
-In OpenAPI 3.0, you use the `servers` array to specify one or more base URLs for your API. `servers` replaces the `host`, `basePath` and `schemes` keywords used in OpenAPI 2.0. Each server has an `url` and an optional Markdown-formatted `description`.
+In OpenAPI 3.0, you use the `servers` array to specify one or more base URLs for your API. `servers` replaces the `host`, `basePath` and `schemes` keywords used in OpenAPI 2.0. Each server has a `url` and an optional Markdown-formatted `description`.
 
 ```yaml
 servers:
