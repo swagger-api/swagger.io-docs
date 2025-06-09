@@ -8,7 +8,7 @@ sidebar:
 OAS **3** This guide is for OpenAPI 3.0. If you use OpenAPI 2.0, see our [OpenAPI 2.0 guide](/docs/specification/v2_0/authentication/basic-authentication/).
 :::
 
-[Basic authentication](https://en.wikipedia.org/wiki/Basic_access_authentication) is a simple authentication scheme built into the HTTP protocol. The client sends HTTP requests with the `Authorization` header that contains the word `Basic` word followed by a space and a base64-encoded string `username:password`. For example, to authorize as `demo / p@55w0rd` the client would send
+[Basic authentication](https://en.wikipedia.org/wiki/Basic_access_authentication) is a simple authentication scheme built into the HTTP protocol. The client sends HTTP requests with the `Authorization` header that contains the word `Basic` followed by a space and a base64-encoded string `username:password`. For example, to authorize as `demo / p@55w0rd` the client would send
 
 ```yaml
 Authorization: Basic ZGVtbzpwQDU1dzByZA==
