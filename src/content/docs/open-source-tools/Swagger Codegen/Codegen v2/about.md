@@ -51,7 +51,7 @@ Swagger Codegen Version    | Release Date | Swagger / OpenAPI Spec compatibility
 
 Swagger Codegen Version    | Release Date | Swagger / OpenAPI Spec compatibility | Notes
 -------------------------- |--------------| -------------------------- | -----
-3.0.66-SNAPSHOT (current 3.0.0, upcoming minor release) [SNAPSHOT](https://central.sonatype.com/service/rest/repository/browse/maven-snapshots/io/swagger/codegen/v3/swagger-codegen-cli/3.0.66-SNAPSHOT/)| TBD          | 1.0, 1.1, 1.2, 2.0, 3.0 | Minor release
+3.0.66-SNAPSHOT (current 3.0.0, upcoming minor release) [SNAPSHOT](https://central.sonatype.com/service/rest/repository/browse/maven-snapshots/io/swagger/codegen/v3/swagger-codegen-cli/3.0.69-SNAPSHOT/)| TBD          | 1.0, 1.1, 1.2, 2.0, 3.0 | Minor release
 2.4.46-SNAPSHOT (current master, upcoming minor release) [SNAPSHOT](https://central.sonatype.com/service/rest/repository/browse/maven-snapshots/io/swagger/swagger-codegen-cli/2.4.46-SNAPSHOT/)| TBD          | 1.0, 1.1, 1.2, 2.0   | Minor release
 
 For detailed breakdown of all versions, please see the [full compatibility listing](../compatibility).
