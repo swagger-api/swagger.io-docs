@@ -294,7 +294,7 @@ Usage in **development** environment:
  $ npm run cy:dev
 ```
 
-Usage in **Continuos Integration (CI)** environment:
+Usage in **Continuous Integration (CI)** environment:
 
 ```sh
  $ npm run cy:ci
