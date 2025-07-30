@@ -40,7 +40,7 @@ Parameter name | Docker variable | Description
 
 ##### Plugin system
 
-Read more about the plugin system in the [Customization documentation](/docs/customization/overview.md).
+Read more about the plugin system in the [Customization documentation](/docs/open-source-tools/swagger-ui/customization/overview/).
 
 Parameter name | Docker variable | Description
 --- | --- | -----
