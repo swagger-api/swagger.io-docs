@@ -178,7 +178,7 @@ paths:
         description: Override base path for all operations with the /files path
     ...
 
-/ping:
+  /ping:
     get:
       servers:
         - url: https://echo.example.com
