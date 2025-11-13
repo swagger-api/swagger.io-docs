@@ -50,7 +50,7 @@ import type { Props } from '@astrojs/starlight/props';
                         fill: #85ea2d;
                     }
                     .st6 {
-                        fill: #f4cf14;
+                        fill: #f4ctext-[14px];
                     }
                     .st7 {
                         fill: none;
@@ -281,198 +281,110 @@ import type { Props } from '@astrojs/starlight/props';
                     role='button'
                     aria-haspopup='true'
                     aria-expanded='false'
-                    >Tools<svg class="ml-1" width="1.25rem" height="1.25rem" viewBox="0 0 48 48"><path fill="currentColor" d="M8.366 16.116a1.25 1.25 0 0 0 0 1.768l14.75 14.75a1.25 1.25 0 0 0 1.768 0l14.75-14.75a1.25 1.25 0 0 0-1.768-1.768L24 29.982L10.134 16.116a1.25 1.25 0 0 0-1.768 0"></path></svg></a
+                    >Products<svg class="ml-1" width="1.25rem" height="1.25rem" viewBox="0 0 48 48"><path fill="currentColor" d="M8.366 16.116a1.25 1.25 0 0 0 0 1.768l14.75 14.75a1.25 1.25 0 0 0 1.768 0l14.75-14.75a1.25 1.25 0 0 0-1.768-1.768L24 29.982L10.134 16.116a1.25 1.25 0 0 0-1.768 0"></path></svg></a
                 >
-                <div class='dropdown-menu menu-double'>
-                    <div class='dropdown-mega'>
-                        <!-- Nav tabs -->
-                        <ul
-                        class='nav nav-tabs list-none pt-5'
-                        role='tablist'
-                    >
-                        <li>
-                            <a
-                                href='#proDocumentation'
-                                aria-controls='proDocumentation'
-                                role='tab'
-                                data-toggle='tab'
-                                class='active'
-                            >
-                                <p
-                                    class='header-tools txt-clr-accent-4 font-monda text-xs uppercase'
-                                    >Pro</p
-                                >
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href='#openSource'
-                                aria-controls='openSource'
-                                role='tab'
-                                data-toggle='tab'
-                            >
-                                <p
-                                    class='header-tools txt-clr-accent-4 font-monda text-xs uppercase'
-                                    >Open Source</p
-                                >
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- Tab panes -->
-                    <div class='tab-content mt-4 menu-xl:mt-0'>
-                        <div
-                            role='tabpanel'
-                            class='tab-pane active menu-xl:pl-4 lg:pr-12 grow basis-0'
-                            id='proDocumentation'
-                        >
-                            <a
-                                href='/api-hub/'
-                                class='item-main-wrapper'
-                                ><span class='item-main link-underline'
-                                    >API Hub</span
-                                >
-                                <p class='content !mb-5 leading-5'
-                                    >Accelerate API development with
-                                    quality and consistency across
-                                    OpenAPI and AsyncAPI.</p
-                                >
-                            </a>
-                            <ul
-                                class='p-0 -mt-2 mb-6 list-none overflow-hidden'
-                                role='list'
-                            >
-                                <li class='list-item mb-2 pt-1'>
-                                    <a
-                                        class="list-item__link"
-                                        href='/api-hub/design/'
-                                        aria-label='Design - Collaborate on API Design'
-                                    >
-                                        <span
-                                            class='list-item__title font-semibold link-underline text-sm'
-                                            >Design</span
-                                        >
-                                        <span
-                                            class='list-item__description leading-5 block txt-clr-neutral-12 text-xs'
-                                            >Collaborate on API Design</span
-                                        >
-                                    </a>
-                                </li>
-                                <li class='list-item mb-2'>
-                                    <a
-                                        class="list-item__link"
-                                        href='/api-hub/portal/'
-                                        aria-label='Portal - Deliver Up-to-date API Documentation'
-                                    >
-                                        <span
-                                            class='list-item__title font-semibold link-underline text-sm'
-                                            >Portal</span
-                                        >
-                                        <span
-                                            class='list-item__description leading-5 block txt-clr-neutral-12 text-xs'
-                                            >Deliver Up-to-date API Documentation</span
-                                        >
-                                    </a>
-                                </li>
-                                <li class='list-item mb-2'>
-                                    <a
-                                        class="list-item__link"
-                                        href='/api-hub/contract-testing/'
-                                        aria-label='Contract Testing - Block API Breaking Changes'
-                                    >
-                                        <span
-                                            class='list-item__title font-semibold link-underline text-sm'
-                                            >Contract Testing</span
-                                        >
-                                        <span
-                                            class='list-item__description leading-5 block txt-clr-neutral-12 text-xs'
-                                            >Block API Breaking Changes</span
-                                        >
-                                    </a>
-                                </li>
-                                <li class='list-item mb-0'>
-                                    <a
-                                        class="list-item__link"
-                                        href='/api-hub/explore/'
-                                        aria-label='Explore - Quickly Test and Explore APIs'
-                                    >
-                                        <span
-                                            class='list-item__title font-semibold link-underline text-sm bg-clr-neutral-1 dark:bg-clr-neutral-14'
-                                            >Explore</span
-                                        >
-                                        <span
-                                            class='list-item__description leading-5 block txt-clr-neutral-12 text-xs'
-                                            >Quickly Test and Explore APIs</span
-                                        >
-                                    </a>
-                                </li>
-                            </ul>
-                            <a
-                                href='/api-hub/enterprise/'
-                                class='item-main-wrapper border-t border-clr-neutral-6 pt-5 pb-0 menu-xl:pb-5'
-                                ><span class='item-main link-underline'
-                                    >API Hub Enterprise</span
-                                >
-                                <p class='content leading-5'>
-                                    Standardize your APIs with projects,
-                                    style checks, and reusable domains.
-                                </p>
-                            </a>
-                        </div>
-                        <div
-                            role='tabpanel'
-                            class='tab-pane menu-xl:pl-10 lg:pr-12 grow basis-0'
-                            id='openSource'
-                        >
-                            <a 
-                                href="https://swagger.io/tools/open-source/" 
-                                class="item-main-wrapper">
-                                    <span class="item-main link-underline">Swagger Open Source</span>
-                                    <p class="content !mb-5 leading-5"> Ideal for individuals and small teams to design, build,
-                                        and document APIs.</p>
-                            </a>
-                            <ul class="p-0 -mt-2 list-none overflow-hidden" role="list">
-                                <li class="list-item mb-2 pt-1">
-                                    <a class="list-item__link" href="https://swagger.io/tools/swagger-codegen/" aria-label="Swagger Codegen - Generate server stubs and client SDKs">
-                                        <span class="list-item__title text-sm font-semibold link-underline">Swagger
-                                            Codegen</span>
-                                        <span class="list-item__description leading-5 block txt-clr-neutral-12 text-xs">Generate server
-                                            stubs and client SDKs from OpenAPI Specification
-                                            definitions.</span>
-                                    </a>
-                                </li>
-                                <li class="list-item mb-2">
-                                    <a class="list-item__link" href="https://swagger.io/tools/swagger-editor/" aria-label="Swagger Editor - API editor for designing APIs">
-                                        <span class="list-item__title text-sm font-semibold link-underline">Swagger
-                                            Editor</span>
-                                        <span class="list-item__description leading-5 block txt-clr-neutral-12 text-xs">API editor for
-                                            designing APIs with the OpenAPI and AsyncAPI
-                                            specifications.</span>
-                                    </a>
-                                </li>
-                                <li class="list-item">
-                                    <a class="list-item__link" href="https://swagger.io/tools/swagger-ui/" aria-label="Swagger UI - Visualize OpenAPI Specification">
-                                        <span 
-                                            class="list-item__title text-sm font-semibold link-underline bg-clr-neutral-1 lg:bg-transparent menu-xl:bg-clr-neutral-2 dark:bg-clr-neutral-14 dark:lg:clr-neutral-14 dark:menu-xl:bg-clr-neutral-15">
-                                            Swagger UI
-                                        </span>
-                                        <span class="list-item__description leading-5 block txt-clr-neutral-12 text-xs">Visualize OpenAPI
-                                            Specification definitions in an interactive UI.</span>
-                                    </a>
-                                </li>
-                            </ul>
+                <div class="dropdown-menu menu-single">
+                        <div class="dropdown-mega row pt-3">
+                            <div class="container">
+                                <!-- Tab panes -->
+                                <div class="col-12 px-[15px] pb-[15px]">
+                                    <div class="d-flex flex-column" id="proDocumentation">
+                                        <a href="/product/" class="item-main-wrapper"><span class="item-main inline-block link-underline pb-2">Swagger</span>
+                                            <p class="content pb-3">Accelerate API development with quality and consistency
+                                                across OpenAPI and AsyncAPI.</p>
+                                        </a>
+                                        <ul class="list p-0 mt--2 mb-4" role="list">
+                                            <li class="list-item mb-2">
+                                                <a class="list-item__link" href="/product/studio/" aria-label="Studio - Collaborate on API Design">
+                                                    <span class="list-item__title text-dark text-[14px] font-semibold link-underline">Studio</span>
+                                                    <span class="list-item__description block txt-clr-neutral-12 text-[12px] text-lg-nowrap">Collaborate on API Design</span>
+                                                </a>
+                                            </li>
+                                            <li class="list-item mb-2">
+                                                <a class="list-item__link" href="/product/portal/" aria-label="Portal - Deliver Up-to-date API Documentation">
+                                                    <span class="list-item__title text-dark text-[14px] font-semibold link-underline">Portal</span>
+                                                    <span class="list-item__description block txt-clr-neutral-12 text-[12px] text-lg-nowrap">Deliver Up-to-date API Documentation</span>
+                                                </a>
+                                            </li>
+                                            <li class="list-item mb-2">
+                                                <a class="list-item__link" href="/product/explore/" aria-label="Explore - Quickly Test and Explore APIs">
+                                                    <span class="list-item__title text-dark text-[14px] font-semibold link-underline">Explore</span>
+                                                    <span class="list-item__description block txt-clr-neutral-12 text-[12px] text-lg-nowrap">Quickly Test and Explore APIs</span>
+                                                </a>
+                                            </li>
+                                            <li class="list-item mb-2">
+                                                <a class="list-item__link" href="/product/functional-testing/" aria-label="Functional Testing - Automated API Testing">
+                                                    <span class="list-item__title text-dark text-[14px] font-semibold link-underline">Functional Testing</span>
+                                                    <span class="list-item__description block txt-clr-neutral-12 text-[12px]">Automated API Testing</span>
+                                                </a>
+                                            </li>
+                                            <li class="list-item mb-0">
+                                                <a class="list-item__link" href="/product/contract-testing/" aria-label="Contract Testing - Block API Breaking Changes">
+                                                    <span class="list-item__title text-dark text-[14px] bg-clr-neutral-1 dark:bg-[#212529] font-semibold link-underline">Contract Testing</span>
+                                                    <span class="list-item__description block txt-clr-neutral-12 text-[12px] text-lg-nowrap">Block API Breaking Changes</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <a href="/product/enterprise/" class="item-main-wrapper border-top pt-3 "><span class="item-main inline-block pb-2 link-underline">Swagger Enterprise</span>
+                                            <p class="content">
+                                                Standardize your APIs with projects,
+                                                style checks, and reusable domains.
+                                            </p>
+                                        </a>
+                                    </div>
+                                    
+                                </div>
+                            </div>
                         </div>
                     </div>
+            </li>
+            <li class='nav-item dropdown'>
+                <a
+                    class='nav-link dropdown-toggle flex items-center px-4 py-2'
+                    data-toggle='dropdown'
+                    data-display='static'
+                    href='#'
+                    role='button'
+                    aria-haspopup='true'
+                    aria-expanded='false'
+                    >Community<svg class="ml-1" width="1.25rem" height="1.25rem" viewBox="0 0 48 48"><path fill="currentColor" d="M8.366 16.116a1.25 1.25 0 0 0 0 1.768l14.75 14.75a1.25 1.25 0 0 0 1.768 0l14.75-14.75a1.25 1.25 0 0 0-1.768-1.768L24 29.982L10.134 16.116a1.25 1.25 0 0 0-1.768 0"></path></svg></a
+                >
+                <div class="dropdown-menu menu-single">
+                        <div class="dropdown-mega row pt-3">
+                            <div class="container">
+                                
+                                
+                                <!-- Tab panes -->
+                                <div class="col-12">
+                                    <div class="d-flex flex-column" id="openSource">
+                                        <a href="/tools/open-source/" class="item-main-wrapper"><span class="item-main inline-block link-underline pb-2">Swagger Open Source</span>
+                                            <p class="content pb-3">Ideal for individuals and small teams to design, build, and document APIs.</p>
+                                        </a>
+                                        <ul class="list p-0 mt--2 mb-4" role="list">
+                                            <li class="list-item mb-2">
+                                                <a class="list-item__link" href="/tools/swagger-codegen/" aria-label="Swagger Codegen - Generate server stubs and client SDKs">
+                                                    <span class="list-item__title text-dark text-[14px] font-semibold link-underline">Codegen</span>
+                                                    <span class="list-item__description block txt-clr-neutral-12 text-[12px] text-lg-nowrap">Generate server stubs and client SDKs from OpenAPI Specification definitions.</span>
+                                                </a>
+                                            </li>
+                                            <li class="list-item mb-2">
+                                                <a class="list-item__link" href="/tools/swagger-editor/" aria-label="Swagger Editor - API editor for designing APIs">
+                                                    <span class="list-item__title text-dark text-[14px] font-semibold link-underline">Editor</span>
+                                                    <span class="list-item__description block txt-clr-neutral-12 text-[12px] text-lg-nowrap">API editor for designing APIs with the OpenAPI and AsyncAPI specifications.</span>
+                                                </a>
+                                            </li>
+                                            <li class="list-item mb-0">
+                                                <a class="list-item__link" href="/tools/swagger-ui/" aria-label="Swagger UI - Visualize OpenAPI Specification">
+                                                    <span class="list-item__title bg-clr-neutral-1 dark:bg-[#212529] text-dark text-[14px] font-semibold link-underline">UI</span>
+                                                    <span class="list-item__description block txt-clr-neutral-12 text-[12px] text-lg-nowrap">Visualize OpenAPI Specification definitions in an interactive UI.</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div
-                        class='dropdown-menu-bottom-cta text-white small py-1 mt--4 m-lg-0'
-                    >
-                        <a class='py-1' href='https://swagger.io/tools'
-                            ><span class='font-bold link-underline'
-                                >Explore all tools</span
-                            ><i class='pl-2 far fa-chevron-right'></i></a
-                        >
-                    </div>
-                </div>
             </li>
             <li class='nav-item dropdown'>
                 <a
@@ -718,7 +630,7 @@ import type { Props } from '@astrojs/starlight/props';
             <li class='nav-item nav-item-free-trial'>
                 <a
                     class='block py-2 px-5'
-                    href='https://swagger.io/tools/swaggerhub/why-swaggerhub'>Try Free</a
+                    href='/why-swagger/'>Try Free</a
                 >
             </li>
         </ul>
