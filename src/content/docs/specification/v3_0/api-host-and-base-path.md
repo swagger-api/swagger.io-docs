@@ -10,11 +10,11 @@ OAS **3** This page is about OpenAPI 3.0. If you use OpenAPI 2.0, see the [OpenA
 
 All API endpoints are relative to the base URL. For example, assuming the base URL of `https://api.example.com/v1`, the `/users` endpoint refers to `https://api.example.com/v1/users`.
 
-```yaml
+```text
 https://api.example.com/v1/users?role=admin&status=active
-\________________________/\____/ \______________________/
-server URL       endpoint    query parameters
-path
+\________________________/\    / \______________________/
+       server URL          \__/      query parameters
+                      endpoint path
 ```
 
 In OpenAPI 3.0, you use the `servers` array to specify one or more base URLs for your API. `servers` replaces the `host`, `basePath` and `schemes` keywords used in OpenAPI 2.0. Each server has a `url` and an optional Markdown-formatted `description`.
@@ -38,13 +38,13 @@ servers:
 
 Server URL format follows [RFC 3986](https://tools.ietf.org/html/rfc3986) and usually looks like this:
 
-```yaml
+```
 scheme://host[:port][/path]
 ```
 
 The host can be a name or IP address (IPv4 or IPv6). WebSocket schemes _ws://_ and _wss://_ from OpenAPI 2.0 are also supported in OpenAPI 3.0. Examples of valid server URLs:
 
-```yaml
+```text
 https://api.example.com
 https://api.example.com:8443/v1/reports
 http://localhost:3025/v1
@@ -58,7 +58,7 @@ wss://api.example.com/v1
 
 If the server URL is relative, it is resolved against the server where the given OpenAPI definition file is hosted (more on that [below](#relative-urls)). **Note:** Server URL must not include query string parameters. For example, this is invalid:
 
-```yaml
+```text
 https://api.example.com/v1?route=
 ```
 
@@ -176,7 +176,7 @@ paths:
     servers:
       - url: https://files.example.com
         description: Override base path for all operations with the /files path
-    ...
+    # ...
 
   /ping:
     get:
