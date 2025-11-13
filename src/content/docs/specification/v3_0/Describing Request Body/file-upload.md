@@ -110,7 +110,7 @@ Content-Disposition: form-data; name="fileName"; filename="file2.png"
 Content-Type: image/png
 
 [file content goes there]
-------WebKitFormBoundaryWfPNVh4wuWBlyEyQ
+--abcde12345
 Content-Disposition: form-data; name="fileName"; filename="file3.jpg"
 Content-Type: image/jpeg
 
@@ -122,9 +122,9 @@ Content-Type: image/jpeg
 
 For more information about file upload in OpenAPI, see the following sections of the OpenAPI 3.0 Specification:
 
-[Considerations for File Uploads](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#considerations-for-file-uploads)
+[Considerations for File Uploads](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.4.md#considerations-for-file-uploads)
 
-[Special Considerations for multipart Content](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#special-considerations-for-multipart-content)
+[Special Considerations for multipart Content](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.4.md#special-considerations-for-multipart-content)
 
 _Did not find what you were looking for? [Ask the community](https://community.smartbear.com/t5/Swagger-Open-Source-Tools/bd-p/SwaggerOSTools)  
 Found a mistake? [Let us know](https://github.com/swagger-api/swagger.io/issues)_

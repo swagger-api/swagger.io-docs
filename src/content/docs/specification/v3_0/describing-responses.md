@@ -373,11 +373,11 @@ In OpenAPI 3.0, you can use `oneOf` to specify alternate schemas for the respons
 
 ### Reference
 
-[Response Object](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#responsesObject)
+[Response Object](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.4.md#responses-object)
 
-[MediaType Object](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#mediaTypeObject)
+[MediaType Object](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.4.md#media-type-object)
 
-[Components Object](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#componentsObject)
+[Components Object](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.4.md#components-object)
 
 _Did not find what you were looking for? [Ask the community](https://community.smartbear.com/t5/Swagger-Open-Source-Tools/bd-p/SwaggerOSTools)  
 Found a mistake? [Let us know](https://github.com/swagger-api/swagger.io/issues)_

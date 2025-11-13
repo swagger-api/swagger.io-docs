@@ -40,7 +40,7 @@ Parameter name | Docker variable | Description
 
 ##### Plugin system
 
-Read more about the plugin system in the [Customization documentation](/docs/customization/overview.md).
+Read more about the plugin system in the [Customization documentation](/docs/open-source-tools/swagger-ui/customization/overview/).
 
 Parameter name | Docker variable | Description
 --- | --- | -----
@@ -228,7 +228,7 @@ Parameter name | Docker variable | Description
         <td><em>Unavailable</em></td>
         <td><code>String=["agate"*, "arta", "monokai", "nord", "obsidian",
             "tomorrow-night", "idea"]</code>. <a
-                href="https://highlightjs.org/static/demo/" rel="nofollow">Highlight.js</a>
+                href="https://highlightjs.org/demo/" rel="nofollow">Highlight.js</a>
             syntax coloring theme to use. (Only these 7 styles are available.)
         </td>
     </tr>
@@ -377,7 +377,7 @@ Set the value to the literal object value you'd like, taking care to escape char
 Example:
 
 ```sh
-SPEC="{ \"openapi\": \"3.0.0\" }"
+SPEC="{ \"openapi\": \"3.0.4\" }"
 ```
 
 ### Docker-Compose

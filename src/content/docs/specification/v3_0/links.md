@@ -78,7 +78,7 @@ responses:
 To better understand this, let’s look at a complete example. This API defines the “create user” and “get user” operations, and the result of “create user” is used as an input to “get user”.
 
 ```yaml
-openapi: 3.0.0
+openapi: 3.0.4
 info:
   version: 0.0.0
   title: Links example
@@ -223,7 +223,7 @@ links:
     requestBody: "$response.body#/id"
 ```
 
-The syntax is `_parameter_name: value_` or _`requestBody: value`_. The parameter names and request body are those of the target operation. There is no need to list all the parameters, just those required to follow the link. Similarly, `requestBody` is only used if the target operation has a [body](/docs/specification/describing-request-body/describing-request-body/) and the link purpose is to define the body contents. If two or more parameters have the same name, prefix the names with the parameter location – _path_, _query_, *header* or _cookie_, like so:
+The syntax is `_parameter_name: value_` or _`requestBody: value`_. The parameter names and request body are those of the target operation. There is no need to list all the parameters, just those required to follow the link. Similarly, `requestBody` is only used if the target operation has a [body](/docs/specification/describing-request-body/describing-request-body/) and the link purpose is to define the body contents. If two or more parameters have the same name, prefix the names with the parameter location – _path_, _query_, _header_, or _cookie_, like so:
 
 ```yaml
 parameters:
@@ -446,7 +446,7 @@ components:
 
 ### References
 
-[Link Object](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#linkObject)
+[Link Object](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.4.md#link-object)
 
 _Did not find what you were looking for? [Ask the community](https://community.smartbear.com/t5/Swagger-Open-Source-Tools/bd-p/SwaggerOSTools)  
 Found a mistake? [Let us know](https://github.com/swagger-api/swagger.io/issues)_

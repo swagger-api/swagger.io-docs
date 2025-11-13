@@ -284,7 +284,7 @@ payload={"text":"Swagger is awesome"}
 This can be described as:
 
 ```yaml
-openapi: 3.0.0
+openapi: 3.0.4
 info:
   version: 1.0.0
   title: Slack Incoming Webhook
@@ -333,9 +333,9 @@ components:
 
 ### References
 
-[RequestBody Object](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#requestBodyObject)
+[RequestBody Object](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.4.md#request-body-object)
 
-[MediaType Object](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#mediaTypeObject)
+[MediaType Object](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.4.md#media-type-object)
 
 _Did not find what you were looking for? [Ask the community](https://community.smartbear.com/t5/Swagger-Open-Source-Tools/bd-p/SwaggerOSTools)  
 Found a mistake? [Let us know](https://github.com/swagger-api/swagger.io/issues)_

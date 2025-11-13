@@ -11,7 +11,7 @@ OAS **3** This page is about OpenAPI 3.0. If you use OpenAPI 2.0, visit [OpenAPI
 You can write OpenAPI definitions in [YAML](https://en.wikipedia.org/wiki/YAML) or [JSON](https://en.wikipedia.org/wiki/JSON). In this guide, we use only YAML examples but JSON works equally well. A sample OpenAPI 3.0 definition written in YAML looks like:
 
 ```yaml
-openapi: 3.0.0
+openapi: 3.0.4
 info:
   title: Sample API
   description: Optional multiline or single-line description in [CommonMark](http://commonmark.org/help/) or HTML.
@@ -46,10 +46,10 @@ All keyword names are **case-sensitive**.
 Every API definition must include the version of the OpenAPI Specification that this definition is based on:
 
 ```yml
-openapi: 3.0.0
+openapi: 3.0.4
 ```
 
-The OpenAPI version defines the overall structure of an API definition – what you can document and how you document it. OpenAPI 3.0 uses [semantic versioning](http://semver.org/) with a three-part version number. The [available versions](https://github.com/OAI/OpenAPI-Specification/releases) are `3.0.0`, `3.0.1`, `3.0.2`, and `3.0.3`; they are functionally the same.
+The OpenAPI version defines the overall structure of an API definition – what you can document and how you document it. OpenAPI 3.0 uses [semantic versioning](http://semver.org/) with a three-part version number. The [available versions](https://github.com/OAI/OpenAPI-Specification/releases) are `3.0.0`, `3.0.1`, `3.0.2`, `3.0.3`, and `3.0.4`; they are functionally the same.
 
 The `info` section contains API information: `title`, `description` (optional), `version`:
 
@@ -62,7 +62,7 @@ info:
 
 `title` is your API name. `description` is extended information about your API. It can be [multiline](http://stackoverflow.com/a/21699210) and supports the [CommonMark](http://commonmark.org/help/) dialect of Markdown for rich text representation. HTML is supported to the extent provided by CommonMark (see [HTML Blocks](http://spec.commonmark.org/0.27/) in [CommonMark 0.27 Specification](http://spec.commonmark.org/0.27/)). `version` is an arbitrary string that specifies the version of your API (do not confuse it with file revision or the `openapi` version). You can use [semantic versioning](http://semver.org/) like _major.minor.patch_, or an arbitrary string like _1.0-beta_ or _2017-07-25_. `info` also supports other keywords for contact information, license, terms of service, and other details.
 
-Reference: [Info Object](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#infoObject).
+Reference: [Info Object](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.4.md#info-object).
 
 ### Servers
 

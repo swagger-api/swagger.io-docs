@@ -33,7 +33,7 @@ This URL returns a JSON listing of the OpenID/OAuth endpoints, supported scopes 
 OpenAPI 3.0 lets you describe OpenID Connect Discovery as follows:
 
 ```yaml
-openapi: 3.0.0
+openapi: 3.0.4
 ---
 # 1) Define the security scheme type and attributes
 components:

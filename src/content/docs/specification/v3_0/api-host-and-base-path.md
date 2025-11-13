@@ -17,7 +17,7 @@ server URL       endpoint    query parameters
 path
 ```
 
-In OpenAPI 3.0, you use the `servers` array to specify one or more base URLs for your API. `servers` replaces the `host`, `basePath` and `schemes` keywords used in OpenAPI 2.0. Each server has an `url` and an optional Markdown-formatted `description`.
+In OpenAPI 3.0, you use the `servers` array to specify one or more base URLs for your API. `servers` replaces the `host`, `basePath` and `schemes` keywords used in OpenAPI 2.0. Each server has a `url` and an optional Markdown-formatted `description`.
 
 ```yaml
 servers:
@@ -220,9 +220,9 @@ Note that if using multiple servers, the resources specified by relative URLs ar
 
 ### References
 
-[Server Object](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#server-object)
+[Server Object](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.4.md#server-object)
 
-[Relative References in URLs](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#relativeReferences)
+[Relative References in URLs](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.4.md#relative-references-in-urls)
 
 _Did not find what you were looking for? [Ask the community](https://community.smartbear.com/t5/Swagger-Open-Source-Tools/bd-p/SwaggerOSTools)
 Found a mistake? [Let us know](https://github.com/swagger-api/swagger.io/issues)_

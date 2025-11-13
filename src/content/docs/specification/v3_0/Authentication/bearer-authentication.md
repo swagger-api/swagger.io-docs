@@ -21,7 +21,7 @@ The Bearer authentication scheme was originally created as part of [OAuth 2.0](/
 In OpenAPI 3.0, Bearer authentication is a security scheme with `type: http` and `scheme: bearer`. You first need to define the security scheme under `components/securitySchemes`, then use the `security` keyword to apply this scheme to the desired scope – global (as in the example below) or specific operations:
 
 ```yaml
-openapi: 3.0.0
+openapi: 3.0.4
 ---
 # 1) Define the security scheme type (HTTP bearer)
 components:

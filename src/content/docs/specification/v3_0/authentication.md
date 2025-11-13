@@ -219,9 +219,9 @@ security:
 
 ### Reference
 
-[Security Scheme Object](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#securitySchemeObject)
+[Security Scheme Object](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.4.md#security-scheme-object)
 
-[Security Requirement Object](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#security-requirement-object)
+[Security Requirement Object](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.4.md#security-requirement-object)
 
 _Did not find what you were looking for? [Ask the community](https://community.smartbear.com/t5/Swagger-Open-Source-Tools/bd-p/SwaggerOSTools)  
 Found a mistake? [Let us know](https://github.com/swagger-api/swagger.io/issues)_

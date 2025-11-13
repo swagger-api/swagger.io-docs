@@ -11,7 +11,7 @@ OAS **3** This guide is OpenAPI 3.0.
 It is considered to be a good practice to include general information about your API into the specification: version number, license notes, contact data, links to documentation, and more. We particularly recommend doing this for publicly available APIs; as this will can increase user confidence in the services, your company provides. To specify the API metadata, you use properties of the top-level `info` object:
 
 ```yaml
-openapi: 3.0.0
+openapi: 3.0.4
 info:
   # You application title. Required.
   title: Sample Pet Store App
@@ -49,7 +49,7 @@ The `title` and `version` properties are required, others are optional.
 
 ### Reference
 
-[Info Object](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#infoObject)
+[Info Object](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.4.md#info-object)
 
 _Did not find what you were looking for? [Ask the community](https://community.smartbear.com/t5/Swagger-Open-Source-Tools/bd-p/SwaggerOSTools)  
 Found a mistake? [Let us know](https://github.com/swagger-api/swagger.io/issues)_
