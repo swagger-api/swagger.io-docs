@@ -1,7 +1,6 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 import tailwind from "@astrojs/tailwind";
-import { pluginLineNumbers } from "@expressive-code/plugin-line-numbers";
 import sitemap from "@astrojs/sitemap";
 
 // Set base path depending on the branch (main branch gets "/docs/", others have no base path)
@@ -22,8 +21,13 @@ export default defineConfig({
     customCss: [
     // Path to your Tailwind base styles:
     "./src/tailwind.css", "./src/styles/fonts.css", "./src/styles/custom.css"],
-    social: {
-      github: "https://github.com/withastro/starlight"
+    expressiveCode: {
+      defaultProps: {
+        showLineNumbers: true
+      },
+      shiki: {
+        langs: ['shellscript', 'bash', 'shell']
+      }
     },
     sidebar: [{
       label: "SwaggerHub",
@@ -388,13 +392,6 @@ export default defineConfig({
       Select: "./src/components/Select.astro",
       ThemeSelect: "./src/components/ThemeSelect.astro",
       MobileMenuToggle: "./src/components/MobileMenuToggle.astro"
-    },
-    expressiveCode: {
-      defaultProps: {
-        wrap: true
-      },
-      themes: ["dracula", "github-light"],
-      plugins: [pluginLineNumbers()]
     },
     editLink: {
       baseUrl: 'https://github.com/swagger-api/swagger.io/tree/stage'
