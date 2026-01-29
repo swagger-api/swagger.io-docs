@@ -3,18 +3,26 @@ import Select from './Select.astro';
 import type { Props } from '@astrojs/starlight/props';
 
 const { labels } = Astro.props;
+
+// Provide fallback values for theme labels
+const themeLabels = {
+	accessibleLabel: labels?.['themeSelect.accessibleLabel'] || 'Select theme',
+	dark: labels?.['themeSelect.dark'] || 'Dark',
+	light: labels?.['themeSelect.light'] || 'Light',
+	auto: labels?.['themeSelect.auto'] || 'Auto',
+};
 ---
 
 <starlight-theme-select>
-	{/* TODO: Can we give this select a width that works well for each language’s strings? */}
+	{/* TODO: Can we give this select a width that works well for each language's strings? */}
 	<Select
 		icon="laptop"
-		label={labels['themeSelect.accessibleLabel']}
+		label={themeLabels.accessibleLabel}
 		value="auto"
 		options={[
-			{ label: labels['themeSelect.dark'], selected: false, value: 'dark' },
-			{ label: labels['themeSelect.light'], selected: false, value: 'light' },
-			{ label: labels['themeSelect.auto'], selected: true, value: 'auto' },
+			{ label: themeLabels.dark, selected: false, value: 'dark' },
+			{ label: themeLabels.light, selected: false, value: 'light' },
+			{ label: themeLabels.auto, selected: true, value: 'auto' },
 		]}
 		width="6.25em"
 	/>
