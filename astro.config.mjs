@@ -1,6 +1,6 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
-import tailwind from "@astrojs/tailwind";
+import tailwindcss from "@tailwindcss/vite";
 import { pluginLineNumbers } from "@expressive-code/plugin-line-numbers";
 import sitemap from "@astrojs/sitemap";
 
@@ -22,9 +22,9 @@ export default defineConfig({
     customCss: [
     // Path to your Tailwind base styles:
     "./src/tailwind.css", "./src/styles/fonts.css", "./src/styles/custom.css"],
-    social: {
-      github: "https://github.com/withastro/starlight"
-    },
+    social: [
+      { icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }
+    ],
     sidebar: [{
       label: "SwaggerHub",
       link: "https://support.smartbear.com/swaggerhub/docs/",
@@ -400,8 +400,8 @@ export default defineConfig({
       baseUrl: 'https://github.com/swagger-api/swagger.io/tree/stage'
     },
     favicon: 'favicon.svg'
-  }), tailwind({
-    // Disable the default base styles:
-    applyBaseStyles: false
-  }), sitemap()], 
+  }), sitemap()],
+  vite: {
+    plugins: [tailwindcss()],
+  },
 });

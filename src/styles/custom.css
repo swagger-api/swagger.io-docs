@@ -1,5 +1,6 @@
 :root {
 	--sl-font: 'Open Sans', sans-serif;
+	--sl-line-height: 1.8;
 	--sl-mobile-docs-height: 60px;
 	--sl-nav-height: 4rem;
 	--clr-accent-1: #20B1FD;
