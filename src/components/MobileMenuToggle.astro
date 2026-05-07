@@ -1,15 +1,12 @@
 ---
-import Icon from '../../node_modules/@astrojs/starlight/user-components/Icon.astro';
-import type { Props } from '@astrojs/starlight/props';
-
-const { labels } = Astro.props;
+import { Icon } from '@astrojs/starlight/components';
 ---
 
 <starlight-menu-button class="docs-menu">
     <span class="menu-text flex items-center font-bold text-2xl"><Icon class="mr-1" name="document"/> Documentation</span>
 	<button
 		aria-expanded="false"
-		aria-label={labels['menuButton.accessibleLabel']}
+		aria-label={Astro.locals.t('menuButton.accessibleLabel')}
 		aria-controls="starlight__sidebar"
 		class="sl-flex md:sl-hidden"
 	>
