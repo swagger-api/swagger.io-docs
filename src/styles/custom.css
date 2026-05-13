@@ -490,7 +490,7 @@ footer {
 }
 
 .sl-markdown-content :not(h1,h2,h3,h4,h5,h6)+:is(h1,h2,h3,h4,h5,h6):not(:where(.not-content *)) {
-    margin-top: 1.5em
+    margin-top: 1.5em !important;
 }
 
 .sl-markdown-content li+li:not(:where(.not-content *)),.sl-markdown-content dt+dt:not(:where(.not-content *)),.sl-markdown-content dt+dd:not(:where(.not-content *)),.sl-markdown-content dd+dd:not(:where(.not-content *)) {
@@ -602,8 +602,11 @@ footer {
 
 .sl-markdown-content th:not([align]):not(:where(.not-content *)) {
     text-align: center;
+	font-weight: bold;
 }
-
+.sl-markdown-content :is(th,td):not(:where(.not-content *)) {
+	vertical-align: middle;
+}
 
 .sl-markdown-content :not(a,strong,em,del,span,input,code)+:not(a,strong,em,del,span,input,code,:where(.not-content *)) {
     margin-top: 1rem;
@@ -613,6 +616,10 @@ footer {
     margin-top: .25rem;
 }
 
-.sl-markdown-content :not(h1,h2,h3,h4,h5,h6)+:is(h1,h2,h3,h4,h5,h6):not(:where(.not-content *)) {
-    margin-top: 1.5em !important;
+.sl-markdown-content :not(h1, h2, h3, h4, h5, h6, .sl-heading-wrapper) + :is(.sl-heading-wrapper) {
+	margin-top: 1.5em !important;
+}
+
+.starlight-aside__title + .starlight-aside__content {
+	margin-top: .5rem;
 }
