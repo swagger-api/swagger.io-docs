@@ -64,7 +64,7 @@ paths:
           description: OK (successfully authenticated)
 ```
 
-Note that it is possible to support multiple authorization types in an API. See [Using Multiple Authentication Types](/docs/specification/authentication/#multiple).
+Note that it is possible to support multiple authorization types in an API. See [Using Multiple Authentication Types](/docs/specification/authentication/#using-multiple-authentication-types).
 
 ### Multiple API Keys
 
@@ -95,7 +95,7 @@ security:
   - appId: []
 ```
 
-which means either key can be used (as in logical OR). For more examples, see [Using Multiple Authentication Types](/docs/specification/authentication/#multiple).
+which means either key can be used (as in logical OR). For more examples, see [Using Multiple Authentication Types](/docs/specification/authentication/#using-multiple-authentication-types).
 
 ### 401 Response
 
