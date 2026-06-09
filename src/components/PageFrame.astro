@@ -1,8 +1,7 @@
 ---
 import MobileMenuToggle from "./MobileMenuToggle.astro";
-import type { Props } from "@astrojs/starlight/props";
 import Footer from "./Footer.astro";
-const { hasSidebar, labels } = Astro.props;
+const { hasSidebar } = Astro.locals.starlightRoute;
 ---
 
 <div class="page sl-flex antialiased">
@@ -12,9 +11,9 @@ const { hasSidebar, labels } = Astro.props;
 			hasSidebar && (
 				<nav
 					class="sidebar relative z-[3] pb-[1px] bg-[var(--sl-color-header-bg)]"
-					aria-label={labels["sidebarNav.accessibleLabel"]}
+					aria-label={Astro.locals.t("sidebarNav.accessibleLabel")}
 				>
-					<MobileMenuToggle {...Astro.props} />
+					<MobileMenuToggle />
 					<div
 						id="starlight__sidebar"
 						class="sidebar-pane fixed menu-md:sticky top-1"
@@ -61,7 +60,6 @@ const { hasSidebar, labels } = Astro.props;
 
 	.sidebar-pane {
 		visibility: var(--sl-sidebar-visibility, hidden);
-		position: fixed;
 		z-index: var(--sl-z-index-menu);
 		inset-block: var(--sl-nav-height) 0;
 		inset-inline-start: 0;

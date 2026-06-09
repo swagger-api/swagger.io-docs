@@ -1,6 +1,5 @@
 ---
 import ThemeSelect from './ThemeSelect.astro';
-import type { Props } from '@astrojs/starlight/props';
 ---
 
 <!-- Google Tag Manager (noscript) -->
@@ -617,8 +616,8 @@ import type { Props } from '@astrojs/starlight/props';
                     href='#'><svg width="1.25rem" height="1.25rem" viewBox="0 0 256 256"><path fill="currentColor" d="m228.24 219.76l-51.38-51.38a86.15 86.15 0 1 0-8.48 8.48l51.38 51.38a6 6 0 0 0 8.48-8.48M38 112a74 74 0 1 1 74 74a74.09 74.09 0 0 1-74-74"></path></svg></a
                 >
             </li>
-            <li class='nav-item nav-theme-select border-t-1 border-[#ddd] border-solid'>
-                <ThemeSelect {...Astro.props} />
+            <li class='nav-item nav-theme-select border-[#ddd] border-solid'>
+                <ThemeSelect />
             </li>
             <li class='nav-item nav-item-login'>
                 <a
@@ -641,7 +640,7 @@ import type { Props } from '@astrojs/starlight/props';
 </div>
 
 <style is:global>
-    .header {
+    header.header {
         --sl-nav-height: 4.0625rem;
         --sl-nav-pad-x: 0.9375rem;
         --sl-nav-pad-y: 0rem;
@@ -664,7 +663,7 @@ import type { Props } from '@astrojs/starlight/props';
     }
 
     .nav-toggle {
-        .header {
+        header.header {
             left: var(--sb-mobile-menu-width);
         }
     }
@@ -737,11 +736,11 @@ import type { Props } from '@astrojs/starlight/props';
         position: relative;
     }
     .list-item__title{
-        --border: 1px solid var(--clr-neutral-6);
+        --border: 1px solid #d8dde4;
         color: var(--sl-color-gray-1);
     }
     [data-theme='dark'] .list-item__title {
-        --border: 1px solid var(--clr-neutral-12);
+        --border: 1px solid #d8dde4;
     }
     .list-item__title::before {
         content: "";
