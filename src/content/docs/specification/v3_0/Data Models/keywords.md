@@ -66,8 +66,8 @@ OpenAPI schemas can also use the following keywords that are not part of JSON Sc
 - [`example`](/docs/specification/adding-examples/)
 - `externalDocs`
 - [`nullable`](/docs/specification/data-models/data-types/#null)
-- [`readOnly`](/docs/specification/data-models/data-types/#readonly-writeonly)
-- [`writeOnly`](/docs/specification/data-models/data-types/#readonly-writeonly)
+- [`readOnly`](/docs/specification/data-models/data-types/#read-only-and-write-only-properties)
+- [`writeOnly`](/docs/specification/data-models/data-types/#read-only-and-write-only-properties)
 - [`xml`](/docs/specification/data-models/representing-xml/)
 
 ### References
