@@ -13,7 +13,7 @@ All API endpoints are relative to the base URL. For example, assuming the base U
 ```yaml
 https://api.example.com/v1/users?role=admin&status=active
 \________________________/\____/ \______________________/
-server URL       endpoint    query parameters
+server URL               endpoint    query parameters
 path
 ```
 
